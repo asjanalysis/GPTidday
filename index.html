@@ -18,11 +18,12 @@
 
   <header class="hero">
     <div class="logo">🌊 Surfside Vibes</div>
+    <div class="spot-row" id="spot-row" aria-label="Surf spot selection"></div>
     <div class="hero-grid">
       <div class="hero-content">
-        <p class="eyebrow">Daily Surf Report • Capitola, CA</p>
+        <p class="eyebrow" id="location-eyebrow">Daily Surf Report • Capitola, CA</p>
         <h1>Real-time ocean data pulled from open public sources.</h1>
-        <p class="lede">
+        <p class="lede" id="hero-lede">
           Conditions for Capitola, California powered by Open-Meteo marine weather and NOAA tides. Every stat on this page is
           calculated directly from those feeds so you know exactly what the buoy and forecast models are saying.
         </p>
@@ -42,7 +43,7 @@
         <div class="card-header">
           <div>
             <p class="label">Featured Break</p>
-            <h3>Capitola, CA</h3>
+            <h3 id="hero-spot-name">Capitola, CA</h3>
           </div>
           <span class="badge badge-green" id="status-badge">Live</span>
         </div>
@@ -118,7 +119,7 @@
       <div class="panel-block">
         <div class="panel-header compact">
           <p class="eyebrow">Hourly Outlook</p>
-          <h2>Next few hours in Capitola</h2>
+          <h2 id="timeline-title">Next few hours in Capitola</h2>
         </div>
         <div class="timeline" id="timeline">
           <div class="timeline-item">
@@ -207,11 +208,56 @@
   </footer>
 
   <script>
-    const coords = { lat: 36.9741, lon: -121.9533 };
-    const tideStation = '9413745'; // Santa Cruz, closest NOAA station to Capitola
-    const timezone = 'America/Los_Angeles';
-
     const $ = (id) => document.getElementById(id);
+
+    const spots = [
+      {
+        id: 'capitola',
+        name: 'Capitola',
+        display: 'Capitola, CA',
+        region: 'Monterey Bay',
+        blurb: 'Sheltered cove with a mellow point break.',
+        lat: 36.9741,
+        lon: -121.9533,
+        tideStation: '9413745',
+        timezone: 'America/Los_Angeles',
+      },
+      {
+        id: 'hook',
+        name: 'The Hook',
+        display: 'The Hook — Santa Cruz, CA',
+        region: 'Santa Cruz',
+        blurb: 'Eastside point that lights up with south swells.',
+        lat: 36.9644,
+        lon: -121.9654,
+        tideStation: '9413745',
+        timezone: 'America/Los_Angeles',
+      },
+      {
+        id: 'pleasure',
+        name: 'Pleasure Point',
+        display: 'Pleasure Point — Santa Cruz, CA',
+        region: 'Santa Cruz',
+        blurb: 'Long right walls with plenty of takeoff spots.',
+        lat: 36.9567,
+        lon: -121.967,
+        tideStation: '9413745',
+        timezone: 'America/Los_Angeles',
+      },
+      {
+        id: 'manresa',
+        name: 'Manresa State Beach',
+        display: 'Manresa State Beach, CA',
+        region: 'South County',
+        blurb: 'Open beachbreak exposed to west and south energy.',
+        lat: 36.9361,
+        lon: -121.8477,
+        tideStation: '9413450',
+        timezone: 'America/Los_Angeles',
+      },
+    ];
+
+    let activeSpot = spots[0];
 
     const buttons = document.querySelectorAll('.cta');
     const refreshButton = buttons[0];
@@ -220,6 +266,43 @@
       window.open('https://open-meteo.com/', '_blank');
       window.open('https://api.tidesandcurrents.noaa.gov/api/prod/', '_blank');
     });
+
+    const updateSpotCopy = () => {
+      $('location-eyebrow').textContent = `Daily Surf Report • ${activeSpot.display}`;
+      $('hero-lede').textContent = `Conditions for ${activeSpot.display} powered by Open-Meteo marine weather and NOAA tides. Every stat on this page is calculated directly from those feeds so you know exactly what the buoy and forecast models are saying.`;
+      $('hero-spot-name').textContent = activeSpot.display;
+      $('timeline-title').textContent = `Next few hours in ${activeSpot.name}`;
+    };
+
+    const setActiveSpot = (spotId) => {
+      const nextSpot = spots.find((spot) => spot.id === spotId);
+      if (!nextSpot || nextSpot.id === activeSpot.id) return;
+      activeSpot = nextSpot;
+      document.querySelectorAll('.spot-card').forEach((card) => {
+        card.classList.toggle('active', card.dataset.spot === spotId);
+      });
+      updateSpotCopy();
+      refreshButton.textContent = 'Refreshing…';
+      loadData().finally(() => (refreshButton.textContent = 'Refresh Data'));
+    };
+
+    const renderSpotRow = () => {
+      const row = $('spot-row');
+      row.innerHTML = '';
+      spots.forEach((spot) => {
+        const card = document.createElement('button');
+        card.className = 'spot-card';
+        card.dataset.spot = spot.id;
+        if (spot.id === activeSpot.id) card.classList.add('active');
+        card.innerHTML = `
+          <div class="spot-card__eyebrow">${spot.region}</div>
+          <div class="spot-card__title">${spot.display}</div>
+          <p class="spot-card__meta">${spot.blurb}</p>
+        `;
+        card.addEventListener('click', () => setActiveSpot(spot.id));
+        row.appendChild(card);
+      });
+    };
 
     refreshButton.addEventListener('click', () => {
       refreshButton.textContent = 'Refreshing…';
@@ -237,11 +320,11 @@
       return `${dirs[Math.round(deg / 22.5) % 16]} ${Math.round(deg)}°`;
     };
 
-    const toLocal = (iso) =>
-      new Date(iso).toLocaleString('en-US', { timeZone: timezone, hour: 'numeric', minute: '2-digit' });
+    const toLocal = (iso, tz = activeSpot.timezone) =>
+      new Date(iso).toLocaleString('en-US', { timeZone: tz, hour: 'numeric', minute: '2-digit' });
 
-    const getCurrentIndex = (times) => {
-      const now = new Date(new Date().toLocaleString('en-US', { timeZone: timezone }));
+    const getCurrentIndex = (times, tz = activeSpot.timezone) => {
+      const now = new Date(new Date().toLocaleString('en-US', { timeZone: tz }));
       let best = 0;
       let min = Infinity;
       times.forEach((time, idx) => {
@@ -261,8 +344,9 @@
 
     const loadData = async () => {
       try {
-        const marineUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${coords.lat}&longitude=${coords.lon}&hourly=wave_height,wave_direction,wave_period,wind_wave_height,wind_wave_direction,wind_wave_period,sea_surface_temperature&daily=swell_wave_height_max,swell_wave_direction_dominant,swell_wave_period_max&timezone=${timezone}`;
-        const forecastUrl = `https://api.open-meteo.com/v1/forecast?latitude=${coords.lat}&longitude=${coords.lon}&hourly=wind_speed_10m,wind_direction_10m,temperature_2m,uv_index&daily=sunrise,sunset,uv_index_max&current_weather=true&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=${timezone}`;
+        const { lat, lon, tideStation, timezone } = activeSpot;
+        const marineUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_direction,wave_period,wind_wave_height,wind_wave_direction,wind_wave_period,sea_surface_temperature&daily=swell_wave_height_max,swell_wave_direction_dominant,swell_wave_period_max&timezone=${timezone}`;
+        const forecastUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=wind_speed_10m,wind_direction_10m,temperature_2m,uv_index&daily=sunrise,sunset,uv_index_max&current_weather=true&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=${timezone}`;
         const tideUrl = `https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&application=SurfsideVibes&station=${tideStation}&datum=MLLW&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
 
         const [marineRes, forecastRes, tideRes] = await Promise.all([
@@ -306,7 +390,7 @@
         }
 
         $('uv-index').textContent = uvMax ? uvMax.toFixed(1) : '—';
-        $('uv-meta').textContent = 'Daily maximum UV forecasted for Capitola.';
+        $('uv-meta').textContent = `Daily maximum UV forecasted for ${activeSpot.name}.`;
 
         $('sunrise').textContent = `Sunrise ${toLocal(forecast.daily.sunrise[0])}`;
         $('sunset').textContent = `Sunset ${toLocal(forecast.daily.sunset[0])}`;
@@ -330,7 +414,7 @@
     };
 
     const buildTimeline = (marine, forecast) => {
-      const now = new Date(new Date().toLocaleString('en-US', { timeZone: timezone }));
+      const now = new Date(new Date().toLocaleString('en-US', { timeZone: activeSpot.timezone }));
       const timeline = $('timeline');
       timeline.innerHTML = '';
 
@@ -363,7 +447,7 @@
 
     const buildTides = (tides) => {
       if (!tides?.predictions) return;
-      const now = new Date(new Date().toLocaleString('en-US', { timeZone: timezone }));
+      const now = new Date(new Date().toLocaleString('en-US', { timeZone: activeSpot.timezone }));
       const future = tides.predictions.map((p) => ({ ...p, date: new Date(p.t) })).filter((p) => p.date > now);
       const nextHigh = future.find((p) => p.type === 'H');
       const nextLow = future.find((p) => p.type === 'L');
@@ -379,15 +463,17 @@
       $('story-now-meta').textContent = 'Values above come straight from the latest marine and wind feeds.';
 
       const timelineWind = windText || 'wind data pending';
-      $('story-next').textContent = `Next hours stay near ${waveFt?.toFixed(1) || '—'} ft with ${timelineWind}.`;
+      $('story-next').textContent = `Next hours at ${activeSpot.name} stay near ${waveFt?.toFixed(1) || '—'} ft with ${timelineWind}.`;
       $('story-next-meta').textContent = 'Forecast numbers are taken as-is from Open-Meteo with no manual tweaking.';
 
       const nextHigh = $('next-high').textContent;
       const nextLow = $('next-low').textContent;
-      $('story-day').textContent = `Sunrise and sunset are updated for Capitola. Next tide marks: ${nextHigh} high / ${nextLow} low.`;
-      $('story-day-meta').textContent = 'Daylight and tide cues are referenced directly from the APIs above.';
+      $('story-day').textContent = `Sunrise and sunset are updated for ${activeSpot.display}. Next tide marks: ${nextHigh} high / ${nextLow} low.`;
+      $('story-day-meta').textContent = `Daylight and tide cues are referenced directly from the APIs above for ${activeSpot.name}.`;
     };
 
+    renderSpotRow();
+    updateSpotCopy();
     loadData();
   </script>
 </body>
