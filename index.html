@@ -24,8 +24,8 @@
         <p class="eyebrow" id="location-eyebrow">Daily Surf Report • Capitola, CA</p>
         <h1>Real-time ocean data pulled from open public sources.</h1>
         <p class="lede" id="hero-lede">
-          Conditions for Capitola, California powered by Open-Meteo marine weather and NOAA tides. Every stat on this page is
-          calculated directly from those feeds so you know exactly what the buoy and forecast models are saying.
+          Conditions for Capitola, California powered by Open-Meteo marine weather and tide predictions. Every stat on this page
+          is calculated directly from those feeds so you know exactly what the buoy and forecast models are saying.
         </p>
         <div class="hero-actions">
           <button class="cta">Refresh Data</button>
@@ -78,7 +78,7 @@
         <div class="chip-group" id="chip-row">
           <span class="chip">Live buoy + forecast data</span>
           <span class="chip">Open-Meteo marine</span>
-          <span class="chip">NOAA tides</span>
+          <span class="chip">Open-Meteo tides</span>
         </div>
       </div>
       <div class="cards-grid">
@@ -95,7 +95,7 @@
         <article class="stat-card">
           <p class="label">Tide</p>
           <h3 id="tide-state">—</h3>
-          <p class="muted" id="tide-meta">Next high and low pulled from NOAA.</p>
+            <p class="muted" id="tide-meta">Next high and low pulled from Open-Meteo tides.</p>
         </article>
         <article class="stat-card">
           <p class="label">Wind</p>
@@ -142,12 +142,12 @@
           <div class="support-card">
             <p class="label">Next High</p>
             <h3 id="next-high">—</h3>
-            <p class="muted" id="next-high-meta">Time and height from NOAA tides.</p>
+            <p class="muted" id="next-high-meta">Time and height from Open-Meteo tides.</p>
           </div>
           <div class="support-card">
             <p class="label">Next Low</p>
             <h3 id="next-low">—</h3>
-            <p class="muted" id="next-low-meta">Time and height from NOAA tides.</p>
+            <p class="muted" id="next-low-meta">Time and height from Open-Meteo tides.</p>
           </div>
           <div class="support-card">
             <p class="label">Wind Window</p>
@@ -191,7 +191,7 @@
         </article>
         <article class="vibe-card">
           <div class="vibe-tag">Daylight</div>
-          <h3 id="story-day">Sunrise and sunset update from NOAA-ready times.</h3>
+          <h3 id="story-day">Sunrise and sunset update from Open-Meteo-ready times.</h3>
           <p id="story-day-meta">We only cite daylight windows provided by the forecast API.</p>
         </article>
       </div>
@@ -219,7 +219,6 @@
         blurb: 'Sheltered cove with a mellow point break.',
         lat: 36.9739,
         lon: -121.9534,
-        tideStation: '9413745',
         timezone: 'America/Los_Angeles',
       },
       {
@@ -230,7 +229,6 @@
         blurb: 'Eastside point that lights up with south swells.',
         lat: 36.9649,
         lon: -121.9647,
-        tideStation: '9413745',
         timezone: 'America/Los_Angeles',
       },
       {
@@ -241,7 +239,6 @@
         blurb: 'Long right walls with plenty of takeoff spots.',
         lat: 36.9569,
         lon: -121.9668,
-        tideStation: '9413745',
         timezone: 'America/Los_Angeles',
       },
       {
@@ -252,7 +249,6 @@
         blurb: 'Open beachbreak exposed to west and south energy.',
         lat: 36.9377,
         lon: -121.8536,
-        tideStation: '9413450',
         timezone: 'America/Los_Angeles',
       },
     ];
@@ -264,12 +260,12 @@
 
     document.getElementById('source-link').addEventListener('click', () => {
       window.open('https://open-meteo.com/', '_blank');
-      window.open('https://api.tidesandcurrents.noaa.gov/api/prod/', '_blank');
+      window.open('https://open-meteo.com/en/docs/tide-api', '_blank');
     });
 
     const updateSpotCopy = () => {
       $('location-eyebrow').textContent = `Daily Surf Report • ${activeSpot.display}`;
-      $('hero-lede').textContent = `Conditions for ${activeSpot.display} powered by Open-Meteo marine weather and NOAA tides. Every stat on this page is calculated directly from those feeds so you know exactly what the buoy and forecast models are saying.`;
+      $('hero-lede').textContent = `Conditions for ${activeSpot.display} powered by Open-Meteo marine weather and tide predictions. Every stat on this page is calculated directly from those feeds so you know exactly what the buoy and forecast models are saying.`;
       $('hero-spot-name').textContent = activeSpot.display;
       $('timeline-title').textContent = `Next few hours in ${activeSpot.name}`;
     };
@@ -344,10 +340,10 @@
 
     const loadData = async () => {
       try {
-        const { lat, lon, tideStation, timezone } = activeSpot;
+        const { lat, lon, timezone } = activeSpot;
         const marineUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_direction,wave_period,wind_wave_height,wind_wave_direction,wind_wave_period,sea_surface_temperature&daily=swell_wave_height_max,swell_wave_direction_dominant,swell_wave_period_max&timezone=${timezone}`;
         const forecastUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=wind_speed_10m,wind_direction_10m,temperature_2m,uv_index&daily=sunrise,sunset,uv_index_max&current_weather=true&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=${timezone}`;
-        const tideUrl = `https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&application=SurfsideVibes&station=${tideStation}&datum=MLLW&time_zone=lst_ldt&units=english&interval=hilo&format=json`;
+        const tideUrl = `https://marine-api.open-meteo.com/v1/tide?latitude=${lat}&longitude=${lon}&length=72&timezone=${timezone}`;
 
         const [marineRes, forecastRes, tideRes] = await Promise.all([
           fetch(marineUrl),
@@ -446,16 +442,55 @@
     };
 
     const buildTides = (tides) => {
-      if (!tides?.predictions) return;
-      const now = new Date(new Date().toLocaleString('en-US', { timeZone: activeSpot.timezone }));
-      const future = tides.predictions.map((p) => ({ ...p, date: new Date(p.t) })).filter((p) => p.date > now);
-      const nextHigh = future.find((p) => p.type === 'H');
-      const nextLow = future.find((p) => p.type === 'L');
+      const series = tides?.tide ?? tides?.hourly ?? tides;
+      const times =
+        series?.time ||
+        series?.timestamps ||
+        series?.time_local ||
+        series?.data?.map((entry) => entry.time) ||
+        [];
+      const heights =
+        series?.height ||
+        series?.heights ||
+        series?.tide_height ||
+        series?.data?.map((entry) => entry.height) ||
+        [];
 
-      $('next-high').textContent = nextHigh ? `${toLocal(nextHigh.t)} • ${parseFloat(nextHigh.v).toFixed(1)} ft` : '—';
-      $('next-low').textContent = nextLow ? `${toLocal(nextLow.t)} • ${parseFloat(nextLow.v).toFixed(1)} ft` : '—';
+      if (!Array.isArray(times) || !Array.isArray(heights) || times.length === 0 || heights.length === 0) return;
+
+      const toDate = (value) => (typeof value === 'number' ? new Date(value * 1000) : new Date(value));
+
+      const samples = times.map((t, idx) => ({
+        t: toDate(t).toISOString(),
+        height: parseFloat(heights[idx]),
+        date: toDate(t),
+      }));
+
+      const extremes = [];
+      for (let i = 1; i < samples.length - 1; i += 1) {
+        const prev = samples[i - 1];
+        const curr = samples[i];
+        const next = samples[i + 1];
+
+        if ([prev, curr, next].some((p) => Number.isNaN(p.height))) continue;
+
+        if (curr.height > prev.height && curr.height >= next.height) {
+          extremes.push({ ...curr, type: 'H' });
+        }
+
+        if (curr.height < prev.height && curr.height <= next.height) {
+          extremes.push({ ...curr, type: 'L' });
+        }
+      }
+
+      const now = new Date(new Date().toLocaleString('en-US', { timeZone: activeSpot.timezone }));
+      const nextHigh = extremes.find((p) => p.type === 'H' && p.date > now);
+      const nextLow = extremes.find((p) => p.type === 'L' && p.date > now);
+
+      $('next-high').textContent = nextHigh ? `${toLocal(nextHigh.t)} • ${nextHigh.height.toFixed(1)} ft` : '—';
+      $('next-low').textContent = nextLow ? `${toLocal(nextLow.t)} • ${nextLow.height.toFixed(1)} ft` : '—';
       $('tide-state').textContent = nextHigh && nextLow ? (nextHigh.date < nextLow.date ? 'Rising' : 'Dropping') : '—';
-      $('tide-meta').textContent = 'Upcoming tides pulled directly from NOAA predictions.';
+      $('tide-meta').textContent = 'Upcoming tides pulled directly from Open-Meteo tide predictions.';
     };
 
     const buildStories = (waveFt, period, windText, tides) => {
