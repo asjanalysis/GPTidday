@@ -71,6 +71,48 @@ body {
   margin-bottom: 18px;
 }
 
+.spot-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.spot-card {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  text-align: left;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.spot-card:hover { box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28); }
+
+.spot-card.active {
+  border-color: var(--accent-2);
+  background: linear-gradient(135deg, rgba(0, 209, 255, 0.2), rgba(124, 245, 196, 0.18));
+  box-shadow: 0 14px 32px rgba(0, 209, 255, 0.16);
+}
+
+.spot-card__eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+.spot-card__title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 6px 0 4px;
+}
+
+.spot-card__meta { color: var(--muted); }
+
 .hero-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
