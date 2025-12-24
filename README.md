@@ -15,6 +15,9 @@ Think of GPTidday as a sandbox for GPT-driven experiments, demos, and the occasi
 2. Open the code in your editor of choice (or the one your team lead "strongly recommends").
 3. Make changes, run tests, and tell your rubber duck everything will be fine.
 
+## Surf report page
+The main branch now serves a colorful, modern single-page surf report (see `index.html` and `styles.css`). Open `index.html` in your browser or point GitHub Pages at the root for a quick, vibrant view of today's swell, tides, and surf vibes.
+
 ## Contributing
 Pull requests, issues, and dad jokes are welcome. If your change makes the codebase happier (or at least more functional), we'll probably merge it. Bonus points for adding comments that future-you won't regret.
 
