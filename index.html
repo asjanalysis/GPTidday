@@ -21,17 +21,12 @@
 
     <header class="hero">
       <div class="logo">🌊 Surfside Vibes</div>
-      <div
-        class="spot-row"
-        id="spot-row"
-        aria-label="Surf spot selection"
-      ></div>
       <div class="hero-grid">
         <div class="hero-content">
           <p class="eyebrow" id="location-eyebrow">
             Daily Surf Report • Capitola, CA
           </p>
-          <h1>Real-time ocean data pulled from open public sources.</h1>
+          <h1>Capitola’s live conditions, cameras, and local picks.</h1>
           <p class="lede" id="hero-lede">
             Conditions for Capitola, California powered by Open-Meteo marine
             weather and tide predictions. Every stat on this page is calculated
@@ -79,6 +74,15 @@
           <p class="muted" id="confidence-copy">
             Confidence updates once the latest observations load.
           </p>
+          <a
+            class="ghost full-width"
+            id="webcam-link"
+            href="https://www.cityofcapitola.org/webcam"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Capitola Beach & Jetty Webcams ↗
+          </a>
         </div>
       </div>
     </header>
@@ -237,6 +241,262 @@
           </article>
         </div>
       </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Capitola Village Guide</p>
+            <h2>Local picks while you watch the surf</h2>
+          </div>
+          <div class="tab-row" role="tablist" aria-label="Village guide">
+            <button class="tab active" data-tab="food" role="tab">
+              Food & Restaurants
+            </button>
+            <button class="tab" data-tab="shopping" role="tab">
+              Shopping
+            </button>
+            <button class="tab" data-tab="services" role="tab">
+              Parks & Services
+            </button>
+            <button class="tab" data-tab="transit" role="tab">
+              Public Transportation
+            </button>
+          </div>
+        </div>
+        <div class="tab-panels" id="tab-panels">
+          <div class="listing-grid" data-panel="food" role="tabpanel">
+            <article class="listing-card">
+              <div>
+                <p class="label">Beachfront Brunch</p>
+                <h3>
+                  <a
+                    href="https://www.yelp.com/biz/zeldas-on-the-beach-capitola"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Zelda's on the Beach
+                  </a>
+                </h3>
+                <p class="muted">
+                  Longtime oceanfront staple with seafood, cocktails, and live
+                  music on weekends.
+                </p>
+              </div>
+              <a class="call-chip" href="tel:18314754900">Call (831) 475-4900</a>
+            </article>
+            <article class="listing-card">
+              <div>
+                <p class="label">Iconic Date Night</p>
+                <h3>
+                  <a
+                    href="https://www.yelp.com/biz/shadowbrook-restaurant-capitola"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Shadowbrook Restaurant
+                  </a>
+                </h3>
+                <p class="muted">
+                  Creekside dining famous for its hillside cable car and cozy
+                  fireside booths.
+                </p>
+              </div>
+              <a class="call-chip" href="tel:18314751511">Call (831) 475-1511</a>
+            </article>
+            <article class="listing-card">
+              <div>
+                <p class="label">Casual Seafood</p>
+                <h3>
+                  <a
+                    href="https://www.yelp.com/biz/wharf-house-restaurant-capitola"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Wharf House Restaurant
+                  </a>
+                </h3>
+                <p class="muted">
+                  Easygoing spot at the end of Capitola Wharf serving chowder,
+                  fish tacos, and sunny patio views.
+                </p>
+              </div>
+              <a class="call-chip" href="tel:18314762090">Call (831) 476-2090</a>
+            </article>
+          </div>
+
+          <div class="listing-grid hidden" data-panel="shopping" role="tabpanel">
+            <article class="listing-card">
+              <div>
+                <p class="label">Village Boutiques</p>
+                <h3>
+                  <a
+                    href="https://www.yelp.com/biz/capitola-mercantile-capitola"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Capitola Mercantile
+                  </a>
+                </h3>
+                <p class="muted">
+                  Indoor collection of local shops for coastal gifts, jewelry,
+                  and beachwear a block from the sand.
+                </p>
+              </div>
+              <a class="call-chip" href="tel:18314760297">Call (831) 476-0297</a>
+            </article>
+            <article class="listing-card">
+              <div>
+                <p class="label">Surf Essentials</p>
+                <h3>
+                  <a
+                    href="https://www.yelp.com/biz/ozzi-surf-shop-capitola"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    O'Neill Surf Shop Capitola
+                  </a>
+                </h3>
+                <p class="muted">
+                  Wetsuits, soft-tops, and rentals right across from the beach
+                  for quick sessions.
+                </p>
+              </div>
+              <a class="call-chip" href="tel:18314766299">Call (831) 476-6299</a>
+            </article>
+            <article class="listing-card">
+              <div>
+                <p class="label">Gifts & Art</p>
+                <h3>
+                  <a
+                    href="https://www.yelp.com/biz/phoebes-jewelry-and-art-capitola"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Phoebe's Fine Jewelry & Art Glass
+                  </a>
+                </h3>
+                <p class="muted">
+                  Handcrafted jewelry and glass art celebrating Capitola’s surf
+                  culture and seaside colors.
+                </p>
+              </div>
+              <a class="call-chip" href="tel:18314620562">Call (831) 462-0562</a>
+            </article>
+          </div>
+
+          <div class="listing-grid hidden" data-panel="services" role="tabpanel">
+            <article class="listing-card">
+              <div>
+                <p class="label">Beachfront Green</p>
+                <h3>
+                  <a
+                    href="https://www.yelp.com/biz/esplanade-park-capitola"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Esplanade Park
+                  </a>
+                </h3>
+                <p class="muted">
+                  Lawn next to Capitola Beach with bandstand, benches, and quick
+                  access to coffee and snacks.
+                </p>
+              </div>
+              <a class="call-chip" href="tel:18314757300">City Info (831) 475-7300</a>
+            </article>
+            <article class="listing-card">
+              <div>
+                <p class="label">Wharf Access</p>
+                <h3>
+                  <a
+                    href="https://www.cityofcapitola.org/parksrec/page/capitola-wharf"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Capitola Wharf
+                  </a>
+                </h3>
+                <p class="muted">
+                  Fishing deck, ocean views, and the quickest path to the Wharf
+                  House webcam angle.
+                </p>
+              </div>
+              <a class="call-chip" href="tel:18314757300">City Info (831) 475-7300</a>
+            </article>
+            <article class="listing-card">
+              <div>
+                <p class="label">Lifeguards</p>
+                <h3>Capitola Beach Patrol</h3>
+                <p class="muted">
+                  Seasonal lifeguards keep an eye on swimmers and surfers; call
+                  dispatch for safety updates.
+                </p>
+              </div>
+              <a class="call-chip" href="tel:18314174515">Dispatch (831) 417-4515</a>
+            </article>
+          </div>
+
+          <div class="listing-grid hidden" data-panel="transit" role="tabpanel">
+            <article class="listing-card">
+              <div>
+                <p class="label">Local Buses</p>
+                <h3>
+                  <a
+                    href="https://www.scmtd.com/en/routes/schedule/66"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Santa Cruz Metro Route 66/68
+                  </a>
+                </h3>
+                <p class="muted">
+                  Service along Soquel Dr. with stops at Capitola Mall for quick
+                  transfers into the Village.
+                </p>
+              </div>
+              <a class="call-chip" href="tel:18314251824">Metro Info (831) 425-1824</a>
+            </article>
+            <article class="listing-card">
+              <div>
+                <p class="label">Highway Express</p>
+                <h3>
+                  <a
+                    href="https://www.scmtd.com/en/routes/schedule/91x"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Hwy 17 Express (Scotts Valley / SJ)
+                  </a>
+                </h3>
+                <p class="muted">
+                  Fastest transit link between Capitola connections and San Jose
+                  Diridon on Caltrain/ACE.
+                </p>
+              </div>
+              <a class="call-chip" href="tel:18314251824">Metro Info (831) 425-1824</a>
+            </article>
+            <article class="listing-card">
+              <div>
+                <p class="label">Rail Trail</p>
+                <h3>
+                  <a
+                    href="https://www.cityofcapitola.org/publicworks/page/monterey-bay-sanctuary-scenic-trail"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Monterey Bay Sanctuary Scenic Trail
+                  </a>
+                </h3>
+                <p class="muted">
+                  Walkable and bike-friendly corridor parallel to the coast for
+                  car-free trips between the Wharf and New Brighton.
+                </p>
+              </div>
+              <a class="call-chip" href="tel:18314757300">City Info (831) 475-7300</a>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -251,50 +511,16 @@
     <script>
       const $ = (id) => document.getElementById(id);
 
-      const spots = [
-        {
-          id: "capitola",
-          name: "Capitola",
-          display: "Capitola, CA",
-          region: "Monterey Bay",
-          blurb: "Sheltered cove with a mellow point break.",
-          lat: 36.9745,
-          lon: -121.9536,
-          timezone: "America/Los_Angeles",
-        },
-        {
-          id: "hook",
-          name: "The Hook",
-          display: "The Hook — Santa Cruz, CA",
-          region: "Santa Cruz",
-          blurb: "Eastside point that lights up with south swells.",
-          lat: 36.9652,
-          lon: -121.965,
-          timezone: "America/Los_Angeles",
-        },
-        {
-          id: "pleasure",
-          name: "Pleasure Point",
-          display: "Pleasure Point — Santa Cruz, CA",
-          region: "Santa Cruz",
-          blurb: "Long right walls with plenty of takeoff spots.",
-          lat: 36.9559,
-          lon: -121.9656,
-          timezone: "America/Los_Angeles",
-        },
-        {
-          id: "manresa",
-          name: "Manresa State Beach",
-          display: "Manresa State Beach, CA",
-          region: "South County",
-          blurb: "Open beachbreak exposed to west and south energy.",
-          lat: 36.9352,
-          lon: -121.8627,
-          timezone: "America/Los_Angeles",
-        },
-      ];
-
-      let activeSpot = spots[0];
+      const activeSpot = {
+        id: "capitola",
+        name: "Capitola",
+        display: "Capitola, CA",
+        region: "Monterey Bay",
+        blurb: "Sheltered cove with a mellow point break.",
+        lat: 36.9745,
+        lon: -121.9536,
+        timezone: "America/Los_Angeles",
+      };
 
       const buttons = document.querySelectorAll(".cta");
       const refreshButton = buttons[0];
@@ -351,36 +577,6 @@
         $("timeline-title").textContent =
           `Next few hours in ${activeSpot.name}`;
         updateSourceLink();
-      };
-
-      const setActiveSpot = (spotId) => {
-        const nextSpot = spots.find((spot) => spot.id === spotId);
-        if (!nextSpot || nextSpot.id === activeSpot.id) return;
-        activeSpot = nextSpot;
-        document.querySelectorAll(".spot-card").forEach((card) => {
-          card.classList.toggle("active", card.dataset.spot === spotId);
-        });
-        updateSpotCopy();
-        refreshButton.textContent = "Refreshing…";
-        loadData().finally(() => (refreshButton.textContent = "Refresh Data"));
-      };
-
-      const renderSpotRow = () => {
-        const row = $("spot-row");
-        row.innerHTML = "";
-        spots.forEach((spot) => {
-          const card = document.createElement("button");
-          card.className = "spot-card";
-          card.dataset.spot = spot.id;
-          if (spot.id === activeSpot.id) card.classList.add("active");
-          card.innerHTML = `
-          <div class="spot-card__eyebrow">${spot.region}</div>
-          <div class="spot-card__title">${spot.display}</div>
-          <p class="spot-card__meta">${spot.blurb}</p>
-        `;
-          card.addEventListener("click", () => setActiveSpot(spot.id));
-          row.appendChild(card);
-        });
       };
 
       refreshButton.addEventListener("click", () => {
@@ -676,7 +872,28 @@
           `Daylight and tide cues are referenced directly from the APIs above for ${activeSpot.name}.`;
       };
 
-      renderSpotRow();
+      const tabButtons = document.querySelectorAll(".tab");
+      const tabPanels = document.querySelectorAll("[data-panel]");
+
+      const activateTab = (tab) => {
+        tabButtons.forEach((btn) => {
+          const isActive = btn.dataset.tab === tab.dataset.tab;
+          btn.classList.toggle("active", isActive);
+          btn.setAttribute("aria-selected", isActive);
+        });
+
+        tabPanels.forEach((panel) => {
+          const isActive = panel.dataset.panel === tab.dataset.tab;
+          panel.classList.toggle("hidden", !isActive);
+        });
+      };
+
+      tabButtons.forEach((btn) => {
+        btn.addEventListener("click", () => activateTab(btn));
+      });
+
+      if (tabButtons.length) activateTab(tabButtons[0]);
+
       updateSpotCopy();
       loadData();
     </script>
