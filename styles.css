@@ -259,6 +259,16 @@ button:hover {
   backdrop-filter: blur(8px);
 }
 
+.webcam-links {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.webcam-links .ghost {
+  text-align: center;
+}
+
 .card-header {
   display: flex;
   justify-content: space-between;
