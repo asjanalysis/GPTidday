@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -28,10 +28,10 @@
           </p>
           <h1>Capitola’s live conditions, cameras, and local picks.</h1>
           <p class="lede" id="hero-lede">
-            Conditions for Capitola, California powered by Open-Meteo marine
-            weather with redundant tide predictions. Every stat on this page
-            is calculated directly from those feeds so you know exactly what
-            the buoy and forecast models are saying.
+            Open-Meteo powers the core surf math while WeatherAPI adds air
+            details and Stormglass or Freewebapi keep tides flowing. Everything
+            you see is stitched together with a playful Georgia-inspired vibe
+            that keeps the local surf story readable.
           </p>
           <div class="hero-actions">
             <button class="cta">Refresh Data</button>
@@ -115,9 +115,9 @@
             <h2>Current Conditions</h2>
           </div>
           <div class="chip-group" id="chip-row">
-            <span class="chip">Live buoy + forecast data</span>
-            <span class="chip">Open-Meteo marine</span>
-            <span class="chip">Tide sources with fallback</span>
+            <span class="chip">Open-Meteo primary</span>
+            <span class="chip">WeatherAPI + UV extras</span>
+            <span class="chip">Freewebapi & Stormglass tides</span>
           </div>
         </div>
         <div class="cards-grid">
@@ -137,7 +137,7 @@
             <p class="label">Tide</p>
             <h3 id="tide-state">—</h3>
             <p class="muted" id="tide-meta">
-              Next high and low pulled from Freewebapi tides.
+              Next highs and lows with fallback from Stormglass and Open-Meteo.
             </p>
           </article>
           <article class="stat-card">
@@ -158,6 +158,20 @@
             <p class="label">UV Index</p>
             <h3 id="uv-index">—</h3>
             <p class="muted" id="uv-meta">Daily max UV from Open-Meteo.</p>
+          </article>
+          <article class="stat-card">
+            <p class="label">Feels Like</p>
+            <h3 id="feels-like">—</h3>
+            <p class="muted" id="feels-like-meta">
+              Apparent temperature blended from Open-Meteo and WeatherAPI.
+            </p>
+          </article>
+          <article class="stat-card">
+            <p class="label">Humidity & Pressure</p>
+            <h3 id="humidity">—</h3>
+            <p class="muted" id="humidity-meta">
+              Relative humidity and sea-level pressure from forecast feeds.
+            </p>
           </article>
         </div>
       </section>
@@ -192,14 +206,14 @@
               <p class="label">Next High</p>
               <h3 id="next-high">—</h3>
               <p class="muted" id="next-high-meta">
-                Time and height from Freewebapi tides.
+                Freewebapi tides backed by Stormglass and Open-Meteo.
               </p>
             </div>
             <div class="support-card">
               <p class="label">Next Low</p>
               <h3 id="next-low">—</h3>
               <p class="muted" id="next-low-meta">
-                Time and height from Freewebapi tides.
+                Tide fallback chain rotates through each provider.
               </p>
             </div>
             <div class="support-card">
@@ -599,21 +613,52 @@
         timezone: "America/Los_Angeles",
       };
 
+      const apiKeys = {
+        weatherapi: "YOUR_WEATHERAPI_KEY",
+        stormglass: "YOUR_STORMGLASS_KEY",
+      };
+
       const buttons = document.querySelectorAll(".cta");
       const refreshButton = buttons[0];
       const sourceLink = document.getElementById("source-link");
 
+      const hasKey = (key) => key && !String(key).startsWith("YOUR_");
+
       const buildSourceUrls = (spot) => {
         const { lat, lon, timezone } = spot;
 
-        const marineUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_direction,wave_period,wind_wave_height,wind_wave_direction,wind_wave_period,sea_surface_temperature&daily=swell_wave_height_max,swell_wave_direction_dominant,swell_wave_period_max&timezone=${timezone}`;
-        const forecastUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=wind_speed_10m,wind_direction_10m,temperature_2m,uv_index&daily=sunrise,sunset,uv_index_max&current_weather=true&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=${timezone}`;
+        const marineUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_direction,wave_period,wind_wave_height,wind_wave_direction,wind_wave_period,sea_surface_temperature,tide_height&daily=swell_wave_height_max,swell_wave_direction_dominant,swell_wave_period_max&timezone=${timezone}`;
+        const forecastUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=wind_speed_10m,wind_direction_10m,temperature_2m,uv_index,apparent_temperature,relativehumidity_2m,pressure_msl&daily=sunrise,sunset,uv_index_max&current_weather=true&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=${timezone}`;
 
-        // Primary tide source plus a resilient Open-Meteo backup using tide_height.
-        const tideUrl = `https://freewebapi.com/api/v1/tides?latitude=${lat}&longitude=${lon}&range_hours=72&timezone=${timezone}`;
-        const tideFallbackUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=tide_height&timezone=${timezone}`;
+        const weatherFallbackUrl = hasKey(apiKeys.weatherapi)
+          ? `https://api.weatherapi.com/v1/forecast.json?key=${apiKeys.weatherapi}&q=${lat},${lon}&days=3&aqi=no&alerts=no`
+          : null;
 
-        return { marineUrl, forecastUrl, tideUrl, tideFallbackUrl };
+        const now = Math.floor(Date.now() / 1000);
+        const threeDays = now + 60 * 60 * 72;
+        const tideSources = [
+          {
+            label: "Freewebapi tides",
+            url: `https://freewebapi.com/api/v1/tides?latitude=${lat}&longitude=${lon}&range_hours=72&timezone=${timezone}`,
+          },
+          hasKey(apiKeys.stormglass)
+            ? {
+                label: "Stormglass tide extremes",
+                url: `https://api.stormglass.io/v2/tide/extremes/point?lat=${lat}&lng=${lon}&start=${now}&end=${threeDays}`,
+                options: {
+                  headers: {
+                    Authorization: apiKeys.stormglass,
+                  },
+                },
+              }
+            : null,
+          {
+            label: "Open-Meteo tide height",
+            url: `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=tide_height&timezone=${timezone}`,
+          },
+        ];
+
+        return { marineUrl, forecastUrl, tideSources, weatherFallbackUrl };
       };
 
       const renderSourceChips = () => {
@@ -622,8 +667,12 @@
 
         const chips = [
           `Marine grid @ ${activeSpot.lat.toFixed(3)}, ${activeSpot.lon.toFixed(3)}`,
-          "Open-Meteo forecast + UV",
-          "Tides with backup feed",
+          hasKey(apiKeys.weatherapi)
+            ? "Open-Meteo + WeatherAPI safety net"
+            : "Open-Meteo forecast first",
+          hasKey(apiKeys.stormglass)
+            ? "Freewebapi → Stormglass → Open-Meteo tides"
+            : "Freewebapi + Open-Meteo tide backup",
         ];
 
         chips.forEach((text) => {
@@ -635,12 +684,15 @@
       };
 
       const updateSourceLink = () => {
-        const { marineUrl, forecastUrl, tideUrl, tideFallbackUrl } =
+        const { marineUrl, forecastUrl, tideSources, weatherFallbackUrl } =
           buildSourceUrls(activeSpot);
         sourceLink.onclick = () => {
-          [marineUrl, forecastUrl, tideUrl, tideFallbackUrl].forEach((url) =>
-            window.open(url, "_blank"),
-          );
+          [
+            marineUrl,
+            forecastUrl,
+            weatherFallbackUrl,
+            ...tideSources.map((source) => source?.url),
+          ].forEach((url) => url && window.open(url, "_blank"));
         };
         sourceLink.setAttribute(
           "aria-label",
@@ -653,7 +705,7 @@
         $("location-eyebrow").textContent =
           `Daily Surf Report • ${activeSpot.display}`;
         $("hero-lede").textContent =
-          `Conditions for ${activeSpot.display} powered by Open-Meteo marine weather and Freewebapi tide predictions. Every stat on this page is calculated directly from those feeds so you know exactly what the buoy and forecast models are saying.`;
+          `Conditions for ${activeSpot.display} powered by Open-Meteo marine weather with WeatherAPI air assist and Freewebapi / Stormglass tides. Every stat on this page is calculated directly from those feeds so you know exactly what the buoy and forecast models are saying.`;
         $("hero-spot-name").textContent = activeSpot.display;
         $("timeline-title").textContent =
           `Next few hours in ${activeSpot.name}`;
@@ -722,8 +774,8 @@
         return `Sets are around ${waveFt.toFixed(1)} ft with a ${period.toFixed(0)}s period. Wind is ${windText.toLowerCase()}, all pulled directly from today\'s feeds.`;
       };
 
-      const fetchJson = async (url) => {
-        const res = await fetch(url);
+      const fetchJson = async (url, options = {}) => {
+        const res = await fetch(url, options);
         if (!res.ok) {
           throw new Error(`Request failed for ${url} (${res.status})`);
         }
@@ -731,43 +783,130 @@
       };
 
       const fetchJsonWithFallback = async (urls) => {
-        for (const url of urls) {
+        for (const source of urls) {
+          if (!source) continue;
+          const { url, options, label } =
+            typeof source === "string" ? { url: source } : source;
           if (!url) continue;
           try {
-            return await fetchJson(url);
+            return await fetchJson(url, options);
           } catch (err) {
-            console.warn(`Failed tide source ${url}`, err);
+            console.warn(`Failed tide source ${label || url}`, err);
           }
         }
         throw new Error("No tide source succeeded");
       };
 
+      const toIsoFromLocalClock = (dateStr, timeStr, tz) => {
+        if (!dateStr || !timeStr) return undefined;
+        const [clock, meridiem] = timeStr.split(" ");
+        const [hourRaw, minute = 0] = clock.split(":");
+        let hour = Number(hourRaw);
+        if (meridiem?.toUpperCase() === "PM" && hour < 12) hour += 12;
+        if (meridiem?.toUpperCase() === "AM" && hour === 12) hour = 0;
+
+        const [year, month, day] = dateStr.split("-").map(Number);
+        const utcDate = new Date(Date.UTC(year, month - 1, day, hour, minute));
+        const tzDate = new Date(
+          utcDate.toLocaleString("en-US", { timeZone: tz || activeSpot.timezone }),
+        );
+        const offset = utcDate.getTime() - tzDate.getTime();
+        return new Date(utcDate.getTime() + offset).toISOString();
+      };
+
+      const normalizeWeatherApi = (data) => {
+        if (!data?.forecast?.forecastday?.length) return null;
+        const tz = data.location?.tz_id || activeSpot.timezone;
+        const today = data.forecast.forecastday[0];
+        const hours = today.hour || [];
+
+        return {
+          timezone: tz,
+          hourly: {
+            time: hours.map((h) => new Date(h.time.replace(" ", "T")).toISOString()),
+            wind_speed_10m: hours.map((h) => h.wind_mph),
+            wind_direction_10m: hours.map((h) => h.wind_degree),
+            temperature_2m: hours.map((h) => h.temp_f),
+            apparent_temperature: hours.map((h) => h.feelslike_f),
+            relativehumidity_2m: hours.map((h) => h.humidity),
+            pressure_msl: hours.map((h) => h.pressure_mb),
+            uv_index: hours.map((h) => h.uv),
+          },
+          current_weather: {
+            windspeed: data.current?.wind_mph,
+            winddirection: data.current?.wind_degree,
+          },
+          daily: {
+            sunrise: data.forecast.forecastday.map((d) =>
+              toIsoFromLocalClock(d.date, d.astro?.sunrise, tz),
+            ),
+            sunset: data.forecast.forecastday.map((d) =>
+              toIsoFromLocalClock(d.date, d.astro?.sunset, tz),
+            ),
+            uv_index_max: data.forecast.forecastday.map((d) => d.day?.uv),
+          },
+        };
+      };
+
       const loadData = async () => {
         try {
-          const { marineUrl, forecastUrl, tideUrl, tideFallbackUrl } =
+          const { marineUrl, forecastUrl, tideSources, weatherFallbackUrl } =
             buildSourceUrls(activeSpot);
 
-          const [marine, forecast, tides] = await Promise.all([
-            fetchJson(marineUrl),
-            fetchJson(forecastUrl),
-            fetchJsonWithFallback([tideUrl, tideFallbackUrl]),
+          const marinePromise = fetchJson(marineUrl);
+          const forecastPromise = fetchJson(forecastUrl).catch((err) => {
+            console.warn("Open-Meteo forecast failed", err);
+            return null;
+          });
+          const weatherPromise = weatherFallbackUrl
+            ? fetchJson(weatherFallbackUrl).catch((err) => {
+                console.warn("WeatherAPI fallback failed", err);
+                return null;
+              })
+            : Promise.resolve(null);
+
+          const [marine, forecastRaw, weatherAssistRaw, tides] = await Promise.all([
+            marinePromise,
+            forecastPromise,
+            weatherPromise,
+            fetchJsonWithFallback(tideSources),
           ]);
 
+          const weatherAssist = normalizeWeatherApi(weatherAssistRaw);
+          const forecast = forecastRaw || weatherAssist;
+
+          if (!forecast) throw new Error("No forecast source succeeded");
+
           const idx = getCurrentIndex(marine.hourly.time);
+          const forecastIdx = getCurrentIndex(
+            forecast.hourly.time || marine.hourly.time,
+            forecast.timezone || activeSpot.timezone,
+          );
           const waveMeters = marine.hourly.wave_height[idx];
           const waveFt = waveMeters * 3.28084;
           const wavePeriod = marine.hourly.wave_period[idx];
           const waveDir = marine.hourly.wave_direction[idx];
           const windSpeed =
             forecast.current_weather?.windspeed ??
-            forecast.hourly.wind_speed_10m[idx];
+            forecast.hourly.wind_speed_10m?.[forecastIdx];
           const windDir =
             forecast.current_weather?.winddirection ??
-            forecast.hourly.wind_direction_10m[idx];
-          const airTemp = forecast.hourly.temperature_2m[idx];
+            forecast.hourly.wind_direction_10m?.[forecastIdx];
+          const airTemp = forecast.hourly.temperature_2m?.[forecastIdx];
+          const feelsLike =
+            forecast.hourly.apparent_temperature?.[forecastIdx] ??
+            weatherAssist?.hourly?.apparent_temperature?.[forecastIdx];
+          const humidity =
+            forecast.hourly.relativehumidity_2m?.[forecastIdx] ??
+            weatherAssist?.hourly?.relativehumidity_2m?.[forecastIdx];
+          const pressure =
+            forecast.hourly.pressure_msl?.[forecastIdx] ??
+            weatherAssist?.hourly?.pressure_msl?.[forecastIdx];
           const waterTempC = marine.hourly.sea_surface_temperature[idx];
           const waterTempF = waterTempC ? (waterTempC * 9) / 5 + 32 : undefined;
-          const uvMax = forecast.daily.uv_index_max?.[0];
+          const uvMax =
+            forecast.daily?.uv_index_max?.[0] ??
+            weatherAssist?.daily?.uv_index_max?.[0];
 
           $("wave-height").textContent = formatFeet(waveMeters);
           $("wave-height-meta").textContent =
@@ -786,20 +925,42 @@
             "Wind from Open-Meteo current_weather / hourly feed.";
 
           if (waterTempF) {
-            $("water-temp").textContent = `${waterTempF.toFixed(0)}°F`;
-            $("water-temp-meta").textContent =
-              "Sea surface temperature at the latest marine timestep.";
-            $("temp-card").textContent = `${waterTempF.toFixed(0)}°F`;
+          $("water-temp").textContent = `${waterTempF.toFixed(0)}°F`;
+          $("water-temp-meta").textContent =
+            "Sea surface temperature at the latest marine timestep.";
+          $("temp-card").textContent = `${waterTempF.toFixed(0)}°F`;
           }
 
           $("uv-index").textContent = uvMax ? uvMax.toFixed(1) : "—";
           $("uv-meta").textContent =
             `Daily maximum UV forecasted for ${activeSpot.name}.`;
 
-          $("sunrise").textContent =
-            `Sunrise ${toLocal(forecast.daily.sunrise[0])}`;
-          $("sunset").textContent =
-            `Sunset ${toLocal(forecast.daily.sunset[0])}`;
+          $("feels-like").textContent = feelsLike
+            ? `${feelsLike.toFixed(0)}°F`
+            : "—";
+          $("feels-like-meta").textContent =
+            weatherAssistRaw
+              ? "Blended from Open-Meteo with WeatherAPI backup."
+              : "Calculated directly from Open-Meteo apparent temperature.";
+
+          const pressureLabel = pressure
+            ? `${pressure.toFixed(0)} mb`
+            : "—";
+          $("humidity").textContent = humidity
+            ? `${humidity.toFixed(0)}% / ${pressureLabel}`
+            : pressureLabel;
+          $("humidity-meta").textContent =
+            "Humidity and pressure update each forecast hour from the active source.";
+
+          const sunrise = forecast.daily?.sunrise?.[0] || weatherAssist?.daily?.sunrise?.[0];
+          const sunset = forecast.daily?.sunset?.[0] || weatherAssist?.daily?.sunset?.[0];
+
+          $("sunrise").textContent = sunrise
+            ? `Sunrise ${toLocal(sunrise)}`
+            : "Sunrise —";
+          $("sunset").textContent = sunset
+            ? `Sunset ${toLocal(sunset)}`
+            : "Sunset —";
           $("water-air").textContent =
             `Water ${waterTempF ? waterTempF.toFixed(0) : "—"}°F / Air ${airTemp?.toFixed(0) || "—"}°F`;
           $("primary-swell").textContent = formatFeet(waveMeters);
@@ -980,7 +1141,7 @@
               : "Dropping"
             : "—";
         $("tide-meta").textContent =
-          "Upcoming tides pulled directly from the Freewebapi tides feed.";
+          "Tide timing rotates through Freewebapi, Stormglass, then Open-Meteo heights.";
       };
 
       const buildStories = (waveFt, period, windText, tides) => {
@@ -992,14 +1153,14 @@
         $("story-next").textContent =
           `Next hours at ${activeSpot.name} stay near ${waveFt?.toFixed(1) || "—"} ft with ${timelineWind}.`;
         $("story-next-meta").textContent =
-          "Forecast numbers are taken as-is from Open-Meteo with no manual tweaking.";
+          "Forecast numbers lean on Open-Meteo with WeatherAPI as a gentle assist.";
 
         const nextHigh = $("next-high").textContent;
         const nextLow = $("next-low").textContent;
         $("story-day").textContent =
           `Sunrise and sunset are updated for ${activeSpot.display}. Next tide marks: ${nextHigh} high / ${nextLow} low.`;
         $("story-day-meta").textContent =
-          `Daylight and tide cues are referenced directly from the APIs above for ${activeSpot.name}.`;
+          `Daylight and tide cues flow from Open-Meteo, WeatherAPI, Freewebapi, and Stormglass in that order.`;
       };
 
       const tabButtons = document.querySelectorAll(".tab");
