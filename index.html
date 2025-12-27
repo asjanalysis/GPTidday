@@ -29,9 +29,9 @@
           <h1>Capitola’s live conditions, cameras, and local picks.</h1>
           <p class="lede" id="hero-lede">
             Conditions for Capitola, California powered by Open-Meteo marine
-            weather and tide predictions. Every stat on this page is calculated
-            directly from those feeds so you know exactly what the buoy and
-            forecast models are saying.
+            weather and tide predictions from Freewebapi. Every stat on this
+            page is calculated directly from those feeds so you know exactly
+            what the buoy and forecast models are saying.
           </p>
           <div class="hero-actions">
             <button class="cta">Refresh Data</button>
@@ -117,7 +117,7 @@
           <div class="chip-group" id="chip-row">
             <span class="chip">Live buoy + forecast data</span>
             <span class="chip">Open-Meteo marine</span>
-            <span class="chip">Open-Meteo tides</span>
+            <span class="chip">Freewebapi tides</span>
           </div>
         </div>
         <div class="cards-grid">
@@ -137,7 +137,7 @@
             <p class="label">Tide</p>
             <h3 id="tide-state">—</h3>
             <p class="muted" id="tide-meta">
-              Next high and low pulled from Open-Meteo tides.
+              Next high and low pulled from Freewebapi tides.
             </p>
           </article>
           <article class="stat-card">
@@ -192,14 +192,14 @@
               <p class="label">Next High</p>
               <h3 id="next-high">—</h3>
               <p class="muted" id="next-high-meta">
-                Time and height from Open-Meteo tides.
+                Time and height from Freewebapi tides.
               </p>
             </div>
             <div class="support-card">
               <p class="label">Next Low</p>
               <h3 id="next-low">—</h3>
               <p class="muted" id="next-low-meta">
-                Time and height from Open-Meteo tides.
+                Time and height from Freewebapi tides.
               </p>
             </div>
             <div class="support-card">
@@ -608,7 +608,7 @@
 
         const marineUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_direction,wave_period,wind_wave_height,wind_wave_direction,wind_wave_period,sea_surface_temperature&daily=swell_wave_height_max,swell_wave_direction_dominant,swell_wave_period_max&timezone=${timezone}`;
         const forecastUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=wind_speed_10m,wind_direction_10m,temperature_2m,uv_index&daily=sunrise,sunset,uv_index_max&current_weather=true&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=${timezone}`;
-        const tideUrl = `https://marine-api.open-meteo.com/v1/tide?latitude=${lat}&longitude=${lon}&length=72&timezone=${timezone}`;
+        const tideUrl = `https://freewebapi.com/api/v1/tides?latitude=${lat}&longitude=${lon}&range_hours=72&timezone=${timezone}`;
 
         return { marineUrl, forecastUrl, tideUrl };
       };
@@ -620,7 +620,7 @@
         const chips = [
           `Marine grid @ ${activeSpot.lat.toFixed(3)}, ${activeSpot.lon.toFixed(3)}`,
           "Open-Meteo forecast + UV",
-          "Tide predictions from Open-Meteo",
+          "Tide predictions from Freewebapi",
         ];
 
         chips.forEach((text) => {
@@ -649,7 +649,7 @@
         $("location-eyebrow").textContent =
           `Daily Surf Report • ${activeSpot.display}`;
         $("hero-lede").textContent =
-          `Conditions for ${activeSpot.display} powered by Open-Meteo marine weather and tide predictions. Every stat on this page is calculated directly from those feeds so you know exactly what the buoy and forecast models are saying.`;
+          `Conditions for ${activeSpot.display} powered by Open-Meteo marine weather and Freewebapi tide predictions. Every stat on this page is calculated directly from those feeds so you know exactly what the buoy and forecast models are saying.`;
         $("hero-spot-name").textContent = activeSpot.display;
         $("timeline-title").textContent =
           `Next few hours in ${activeSpot.name}`;
@@ -846,18 +846,31 @@
       };
 
       const buildTides = (tides) => {
-        const series = tides?.tide ?? tides?.hourly ?? tides;
+        const series =
+          tides?.tide ||
+          tides?.hourly ||
+          tides?.data ||
+          tides?.predictions ||
+          tides?.tides ||
+          tides;
+        const entries = Array.isArray(series)
+          ? series
+          : Array.isArray(series?.data)
+            ? series.data
+            : [];
         const times =
           series?.time ||
           series?.timestamps ||
           series?.time_local ||
-          series?.data?.map((entry) => entry.time) ||
+          entries.map((entry) =>
+            entry.timestamp || entry.time || entry.date || entry.datetime || entry.dt,
+          ) ||
           [];
         const heights =
           series?.height ||
           series?.heights ||
           series?.tide_height ||
-          series?.data?.map((entry) => entry.height) ||
+          entries.map((entry) => entry.height ?? entry.value ?? entry.tideHeight) ||
           [];
 
         if (
@@ -869,6 +882,7 @@
           return;
 
         const toDate = (value) => {
+          if (!value) return undefined;
           if (typeof value === "number") return new Date(value * 1000);
 
           // Tide timestamps are returned without an explicit offset. Treat them as
@@ -885,26 +899,45 @@
           return new Date(utcDate.getTime() + offset);
         };
 
-        const samples = times.map((t, idx) => ({
-          t: toDate(t).toISOString(),
-          height: parseFloat(heights[idx]),
-          date: toDate(t),
-        }));
+        const typedExtremes = entries
+          .map((entry) => ({
+            type: entry.type?.[0]?.toUpperCase(),
+            date: toDate(entry.timestamp || entry.time),
+            height: parseFloat(entry.height ?? entry.value ?? entry.tideHeight),
+            t: toDate(entry.timestamp || entry.time)?.toISOString(),
+          }))
+          .filter((entry) => entry.date && !Number.isNaN(entry.height));
 
-        const extremes = [];
-        for (let i = 1; i < samples.length - 1; i += 1) {
-          const prev = samples[i - 1];
-          const curr = samples[i];
-          const next = samples[i + 1];
+        const samples =
+          typedExtremes.length > 0
+            ? typedExtremes
+            : times.map((t, idx) => ({
+                t: toDate(t)?.toISOString(),
+                height: parseFloat(heights[idx]),
+                date: toDate(t),
+              }));
 
-          if ([prev, curr, next].some((p) => Number.isNaN(p.height))) continue;
+        const extremes = [...typedExtremes];
+        if (!extremes.length) {
+          for (let i = 1; i < samples.length - 1; i += 1) {
+            const prev = samples[i - 1];
+            const curr = samples[i];
+            const next = samples[i + 1];
 
-          if (curr.height > prev.height && curr.height >= next.height) {
-            extremes.push({ ...curr, type: "H" });
-          }
+            if (
+              [prev, curr, next].some(
+                (p) => !p || Number.isNaN(p.height) || !p.date,
+              )
+            )
+              continue;
 
-          if (curr.height < prev.height && curr.height <= next.height) {
-            extremes.push({ ...curr, type: "L" });
+            if (curr.height > prev.height && curr.height >= next.height) {
+              extremes.push({ ...curr, type: "H" });
+            }
+
+            if (curr.height < prev.height && curr.height <= next.height) {
+              extremes.push({ ...curr, type: "L" });
+            }
           }
         }
 
@@ -927,7 +960,7 @@
               : "Dropping"
             : "—";
         $("tide-meta").textContent =
-          "Upcoming tides pulled directly from Open-Meteo tide predictions.";
+          "Upcoming tides pulled directly from the Freewebapi tides feed.";
       };
 
       const buildStories = (waveFt, period, windText, tides) => {
