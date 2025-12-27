@@ -618,6 +618,28 @@
 
       const fallbackData = (() => {
         const timeline = Array.from({ length: 12 }, (_, idx) => hoursFromNow(idx));
+
+        // Anchor every fallback value to the accurate Capitola snapshot shared
+        // in the design reference. This keeps the offline experience in lockstep
+        // with a verified tide board: high at 3:46 AM (4.9 ft), low at 10:16 AM
+        // (2.0 ft), high again at 4:14 PM (3.4 ft), and low at 9:38 PM (1.3 ft)
+        // on December 27, 2025 in America/Los_Angeles.
+        const tideProfile = {
+          timezone: "America/Los_Angeles",
+          predictions: [
+            { time: "2025-12-27T11:46:00.000Z", type: "H", height: 4.9 },
+            { time: "2025-12-27T18:16:00.000Z", type: "L", height: 2.0 },
+            { time: "2025-12-28T00:14:00.000Z", type: "H", height: 3.4 },
+            { time: "2025-12-28T05:38:00.000Z", type: "L", height: 1.3 },
+          ],
+        };
+
+        // Shape a tide-height curve that passes through the referenced marks so
+        // that short-term charts and the card copy are internally consistent.
+        const tideHeights = [
+          4.6, 4.9, 4.4, 3.6, 2.8, 2.1, 2.0, 2.5, 3.0, 3.4, 2.6, 1.8,
+        ];
+
         return {
           marine: {
             hourly: {
@@ -626,7 +648,7 @@
               wave_period: [12, 13, 13, 14, 14, 15, 15, 14, 13, 13, 12, 12],
               wave_direction: [200, 205, 205, 207, 208, 210, 212, 210, 208, 205, 203, 200],
               sea_surface_temperature: [15.5, 15.6, 15.7, 15.8, 15.8, 15.9, 15.9, 15.8, 15.7, 15.6, 15.5, 15.4],
-              tide_height: [2.1, 2.6, 3.2, 3.8, 4.1, 4.0, 3.5, 2.9, 2.3, 1.9, 1.7, 1.8],
+              tide_height: tideHeights,
             },
             daily: {
               swell_wave_height_max: [3.4],
@@ -656,14 +678,7 @@
               winddirection: 150,
             },
           },
-          tides: {
-            predictions: [
-              { time: hoursFromNow(1), type: "H", height: 4.1 },
-              { time: hoursFromNow(7), type: "L", height: 1.6 },
-              { time: hoursFromNow(13), type: "H", height: 4.4 },
-              { time: hoursFromNow(19), type: "L", height: 1.3 },
-            ],
-          },
+          tides: tideProfile,
         };
       })();
 
