@@ -29,9 +29,9 @@
           <h1>Capitola’s live conditions, cameras, and local picks.</h1>
           <p class="lede" id="hero-lede">
             Conditions for Capitola, California powered by Open-Meteo marine
-            weather and tide predictions from Freewebapi. Every stat on this
-            page is calculated directly from those feeds so you know exactly
-            what the buoy and forecast models are saying.
+            weather with redundant tide predictions. Every stat on this page
+            is calculated directly from those feeds so you know exactly what
+            the buoy and forecast models are saying.
           </p>
           <div class="hero-actions">
             <button class="cta">Refresh Data</button>
@@ -117,7 +117,7 @@
           <div class="chip-group" id="chip-row">
             <span class="chip">Live buoy + forecast data</span>
             <span class="chip">Open-Meteo marine</span>
-            <span class="chip">Freewebapi tides</span>
+            <span class="chip">Tide sources with fallback</span>
           </div>
         </div>
         <div class="cards-grid">
@@ -608,9 +608,12 @@
 
         const marineUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_direction,wave_period,wind_wave_height,wind_wave_direction,wind_wave_period,sea_surface_temperature&daily=swell_wave_height_max,swell_wave_direction_dominant,swell_wave_period_max&timezone=${timezone}`;
         const forecastUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=wind_speed_10m,wind_direction_10m,temperature_2m,uv_index&daily=sunrise,sunset,uv_index_max&current_weather=true&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=${timezone}`;
-        const tideUrl = `https://freewebapi.com/api/v1/tides?latitude=${lat}&longitude=${lon}&range_hours=72&timezone=${timezone}`;
 
-        return { marineUrl, forecastUrl, tideUrl };
+        // Primary tide source plus a resilient Open-Meteo backup using tide_height.
+        const tideUrl = `https://freewebapi.com/api/v1/tides?latitude=${lat}&longitude=${lon}&range_hours=72&timezone=${timezone}`;
+        const tideFallbackUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=tide_height&timezone=${timezone}`;
+
+        return { marineUrl, forecastUrl, tideUrl, tideFallbackUrl };
       };
 
       const renderSourceChips = () => {
@@ -620,7 +623,7 @@
         const chips = [
           `Marine grid @ ${activeSpot.lat.toFixed(3)}, ${activeSpot.lon.toFixed(3)}`,
           "Open-Meteo forecast + UV",
-          "Tide predictions from Freewebapi",
+          "Tides with backup feed",
         ];
 
         chips.forEach((text) => {
@@ -632,9 +635,10 @@
       };
 
       const updateSourceLink = () => {
-        const { marineUrl, forecastUrl, tideUrl } = buildSourceUrls(activeSpot);
+        const { marineUrl, forecastUrl, tideUrl, tideFallbackUrl } =
+          buildSourceUrls(activeSpot);
         sourceLink.onclick = () => {
-          [marineUrl, forecastUrl, tideUrl].forEach((url) =>
+          [marineUrl, forecastUrl, tideUrl, tideFallbackUrl].forEach((url) =>
             window.open(url, "_blank"),
           );
         };
@@ -718,21 +722,35 @@
         return `Sets are around ${waveFt.toFixed(1)} ft with a ${period.toFixed(0)}s period. Wind is ${windText.toLowerCase()}, all pulled directly from today\'s feeds.`;
       };
 
+      const fetchJson = async (url) => {
+        const res = await fetch(url);
+        if (!res.ok) {
+          throw new Error(`Request failed for ${url} (${res.status})`);
+        }
+        return res.json();
+      };
+
+      const fetchJsonWithFallback = async (urls) => {
+        for (const url of urls) {
+          if (!url) continue;
+          try {
+            return await fetchJson(url);
+          } catch (err) {
+            console.warn(`Failed tide source ${url}`, err);
+          }
+        }
+        throw new Error("No tide source succeeded");
+      };
+
       const loadData = async () => {
         try {
-          const { marineUrl, forecastUrl, tideUrl } =
+          const { marineUrl, forecastUrl, tideUrl, tideFallbackUrl } =
             buildSourceUrls(activeSpot);
 
-          const [marineRes, forecastRes, tideRes] = await Promise.all([
-            fetch(marineUrl),
-            fetch(forecastUrl),
-            fetch(tideUrl),
-          ]);
-
           const [marine, forecast, tides] = await Promise.all([
-            marineRes.json(),
-            forecastRes.json(),
-            tideRes.json(),
+            fetchJson(marineUrl),
+            fetchJson(forecastUrl),
+            fetchJsonWithFallback([tideUrl, tideFallbackUrl]),
           ]);
 
           const idx = getCurrentIndex(marine.hourly.time);
@@ -870,7 +888,9 @@
           series?.height ||
           series?.heights ||
           series?.tide_height ||
-          entries.map((entry) => entry.height ?? entry.value ?? entry.tideHeight) ||
+          entries.map((entry) =>
+            entry.height ?? entry.value ?? entry.tideHeight ?? entry.tide_height,
+          ) ||
           [];
 
         if (
