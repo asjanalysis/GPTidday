@@ -1052,6 +1052,7 @@
       };
 
       const buildTides = (tides) => {
+        const tideTimezone = tides?.timezone || activeSpot.timezone;
         const series =
           tides?.tide ||
           tides?.hourly ||
@@ -1069,7 +1070,12 @@
           series?.timestamps ||
           series?.time_local ||
           entries.map((entry) =>
-            entry.timestamp || entry.time || entry.date || entry.datetime || entry.dt,
+            entry.timestamp ||
+            entry.time ||
+            entry.date ||
+            entry.datetime ||
+            entry.dt ||
+            entry.t,
           ) ||
           [];
         const heights =
@@ -1077,7 +1083,11 @@
           series?.heights ||
           series?.tide_height ||
           entries.map((entry) =>
-            entry.height ?? entry.value ?? entry.tideHeight ?? entry.tide_height,
+            entry.height ??
+            entry.value ??
+            entry.tideHeight ??
+            entry.tide_height ??
+            entry.v,
           ) ||
           [];
 
@@ -1093,16 +1103,22 @@
           if (!value) return undefined;
           if (typeof value === "number") return new Date(value * 1000);
 
+          const strValue = String(value);
+          const hasOffset = /Z|[+-]\d{2}:?\d{2}$/.test(strValue);
+          if (hasOffset && !Number.isNaN(Date.parse(strValue))) {
+            return new Date(strValue);
+          }
+
           // Tide timestamps are returned without an explicit offset. Treat them as
           // local times in the requested spot timezone instead of assuming UTC.
-          const normalized = String(value).replace(" ", "T");
+          const normalized = strValue.replace(" ", "T");
           const [datePart, timePart = "00:00"] = normalized.split("T");
           const [year, month, day] = datePart.split("-").map(Number);
           const [hour, minute = 0] = timePart.split(":").map(Number);
 
           const utcDate = new Date(Date.UTC(year, month - 1, day, hour, minute));
           const tzDate = new Date(
-            utcDate.toLocaleString("en-US", { timeZone: activeSpot.timezone }),
+            utcDate.toLocaleString("en-US", { timeZone: tideTimezone }),
           );
           const offset = utcDate.getTime() - tzDate.getTime();
           return new Date(utcDate.getTime() + offset);
@@ -1111,9 +1127,29 @@
         const typedExtremes = entries
           .map((entry) => ({
             type: entry.type?.[0]?.toUpperCase(),
-            date: toDate(entry.timestamp || entry.time),
-            height: parseFloat(entry.height ?? entry.value ?? entry.tideHeight),
-            t: toDate(entry.timestamp || entry.time)?.toISOString(),
+            date: toDate(
+              entry.timestamp ||
+                entry.time ||
+                entry.date ||
+                entry.datetime ||
+                entry.dt ||
+                entry.t,
+            ),
+            height: parseFloat(
+              entry.height ??
+                entry.value ??
+                entry.tideHeight ??
+                entry.tide_height ??
+                entry.v,
+            ),
+            t: toDate(
+              entry.timestamp ||
+                entry.time ||
+                entry.date ||
+                entry.datetime ||
+                entry.dt ||
+                entry.t,
+            )?.toISOString(),
           }))
           .filter((entry) => entry.date && !Number.isNaN(entry.height));
 
@@ -1151,16 +1187,16 @@
         }
 
         const now = new Date(
-          new Date().toLocaleString("en-US", { timeZone: activeSpot.timezone }),
+          new Date().toLocaleString("en-US", { timeZone: tideTimezone }),
         );
         const nextHigh = extremes.find((p) => p.type === "H" && p.date > now);
         const nextLow = extremes.find((p) => p.type === "L" && p.date > now);
 
         $("next-high").textContent = nextHigh
-          ? `${toLocal(nextHigh.t)} • ${nextHigh.height.toFixed(1)} ft`
+          ? `${toLocal(nextHigh.t, tideTimezone)} • ${nextHigh.height.toFixed(1)} ft`
           : "—";
         $("next-low").textContent = nextLow
-          ? `${toLocal(nextLow.t)} • ${nextLow.height.toFixed(1)} ft`
+          ? `${toLocal(nextLow.t, tideTimezone)} • ${nextLow.height.toFixed(1)} ft`
           : "—";
         $("tide-state").textContent =
           nextHigh && nextLow
