@@ -18,6 +18,15 @@ Think of GPTidday as a sandbox for GPT-driven experiments, demos, and the occasi
 ## Surf report page
 The main branch now serves a colorful, modern single-page surf report (see `index.html` and `styles.css`). Open `index.html` in your browser or point GitHub Pages at the root for a quick, vibrant view of today's swell, tides, and surf vibes.
 
+### Tide API setup
+The page pulls tide data from the [RapidAPI Tides API](https://rapidapi.com/apihood/api/tides). Add your RapidAPI key to `localStorage` before loading the page with:
+
+```js
+localStorage.setItem("tideApiKey", "<YOUR_RAPIDAPI_KEY>");
+```
+
+Alternatively, set `window.TIDES_API_KEY` before the script runs. Without a key, tide data will not load.
+
 ## Contributing
 Pull requests, issues, and dad jokes are welcome. If your change makes the codebase happier (or at least more functional), we'll probably merge it. Bonus points for adding comments that future-you won't regret.
 

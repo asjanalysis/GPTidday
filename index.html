@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Surf Report | Ocean Beach</title>
+    <title>Surf Report | Capitola Beach</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,8 +18,8 @@
       <header class="masthead">
         <div>
           <p class="eyebrow">Surf @ Report</p>
-          <h1>Ocean Beach · San Francisco</h1>
-          <p class="subtitle">Live conditions pulled from Open-Meteo + NOAA</p>
+          <h1>Capitola Beach · Capitola, CA</h1>
+          <p class="subtitle">Live conditions pulled from Open-Meteo + RapidAPI tides</p>
         </div>
         <button id="refresh" class="ghost">Refresh data</button>
       </header>
@@ -68,7 +68,7 @@
           <article class="stat">
             <p class="label">Next Tide</p>
             <h3 id="next-tide">—</h3>
-            <p class="muted" id="tide-meta">NOAA 9414290 (S.F.)</p>
+            <p class="muted" id="tide-meta">Capitola tide extremes</p>
           </article>
           <article class="stat">
             <p class="label">Day Outlook</p>
@@ -99,7 +99,7 @@
             <p id="forecast-status">Pending…</p>
           </div>
           <div class="mini-card">
-            <p class="label">NOAA Tides</p>
+            <p class="label">RapidAPI Tides</p>
             <p id="tide-status">Pending…</p>
           </div>
         </div>
@@ -108,13 +108,16 @@
 
     <script>
       const spot = {
-        name: "Ocean Beach",
-        city: "San Francisco",
-        latitude: 37.7749,
-        longitude: -122.5149,
+        name: "Capitola Beach",
+        city: "Capitola",
+        latitude: 36.972,
+        longitude: -122.026,
         timezone: "America/Los_Angeles",
-        noaaStation: "9414290",
       };
+
+      const tideApiKey =
+        window.TIDES_API_KEY || localStorage.getItem("tideApiKey") || "";
+      const tideApiHost = "tides.p.rapidapi.com";
 
       const conditionMap = {
         0: "Clear sky",
@@ -188,22 +191,25 @@
       }
 
       async function fetchTides() {
+        if (!tideApiKey) {
+          throw new Error("RapidAPI tide key missing");
+        }
+
         const params = new URLSearchParams({
-          station: spot.noaaStation,
-          product: "predictions",
-          datum: "MLLW",
-          time_zone: "lst_ldt",
-          units: "english",
-          interval: "hilo",
-          format: "json",
-          date: "today",
+          latitude: spot.latitude,
+          longitude: spot.longitude,
+          interval: 60,
+          duration: 72,
         });
-        const res = await fetch(
-          `https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?${params}`
-        );
-        if (!res.ok) throw new Error("NOAA tide API failed");
+        const res = await fetch(`https://${tideApiHost}/tides?${params}`, {
+          headers: {
+            "X-RapidAPI-Key": tideApiKey,
+            "X-RapidAPI-Host": tideApiHost,
+          },
+        });
+        if (!res.ok) throw new Error("RapidAPI tide API failed");
         const data = await res.json();
-        if (!data.predictions) throw new Error("Unexpected tide response");
+        if (!data.extremes) throw new Error("Unexpected tide response");
         return data;
       }
 
@@ -225,9 +231,16 @@
         return `${h.toFixed(1)} ft @ ${p.toFixed(0)} s`;
       }
 
-      function nextTide(predictions) {
+      function nextTide(extremes) {
         const now = new Date();
-        const next = predictions.find((p) => new Date(p.t) > now);
+        const parsed = extremes
+          .map((p) => ({
+            time: new Date(p.dt || p.t),
+            type: p.type,
+            height: p.height ?? p.v,
+          }))
+          .sort((a, b) => a.time - b.time);
+        const next = parsed.find((p) => p.time > now);
         if (!next) return null;
         return next;
       }
@@ -268,17 +281,19 @@
           ).toFixed(1)} ft`;
           status("marine-status", "Marine API loaded");
 
-          const tide = nextTide(tides.predictions);
+          const tide = nextTide(tides.extremes);
           if (tide) {
             const label = tide.type === "H" ? "High" : "Low";
-            dom("next-tide").textContent = `${label} ${tide.v} ft @ ${formatTime(
-              tide.t
+            dom("next-tide").textContent = `${label} ${tide.height.toFixed(
+              2
+            )} ft @ ${formatTime(
+              tide.time
             )}`;
-            dom("tide-meta").textContent = `Next tides today: ${tides.predictions
+            dom("tide-meta").textContent = `Upcoming tides: ${tides.extremes
               .slice(0, 4)
-              .map((p) => `${p.type} ${formatTime(p.t)}`)
+              .map((p) => `${p.type} ${formatTime(p.dt || p.t)}`)
               .join(" · ")}`;
-            status("tide-status", "NOAA tide data loaded");
+            status("tide-status", "RapidAPI tide data loaded");
           } else {
             status("tide-status", "No tide entries", false);
           }
