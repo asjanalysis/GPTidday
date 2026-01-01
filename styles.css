@@ -34,6 +34,14 @@ body {
   min-height: 100vh;
 }
 
+.page {
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
 h1,
 h2,
 h3,
@@ -356,7 +364,18 @@ button:hover {
 .content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 14px;
+}
+
+.nav-panel {
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+}
+
+.compact-panel {
+  padding: 18px;
 }
 
 .panel {
@@ -466,6 +485,10 @@ button:hover {
   gap: 8px;
 }
 
+.tab-row.dense .tab {
+  padding: 8px 14px;
+}
+
 .tab {
   background: rgba(255, 255, 255, 0.08);
   color: var(--text);
@@ -483,6 +506,20 @@ button:hover {
 
 .tab-panels {
   margin-top: 12px;
+}
+
+.tab-panel {
+  animation: fade 0.25s ease;
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.cards-grid.tight {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .listing-grid {
@@ -537,10 +574,11 @@ button:hover {
 }
 
 .panel-block {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  padding: 16px;
 }
 
 .timeline {

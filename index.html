@@ -19,285 +19,322 @@
       <div class="wave wave-3"></div>
     </div>
 
-    <header class="hero">
-      <div class="logo">🌊 Surfside Vibes</div>
-      <div class="hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow" id="location-eyebrow">
-            Daily Surf Report • Capitola, CA
-          </p>
-          <h1>Live swell intel with a neon surf-punk dashboard.</h1>
-          <p class="lede" id="hero-lede">
-            Open-Meteo marine + forecast handle waves, wind, and temps while a
-            NOAA tide station backs up tide calls. Every metric is wired into a
-            graphic control deck built for surfers, skaters, and data nerds.
-          </p>
-          <div class="hero-actions">
-            <button class="cta">Refresh Data</button>
-            <button class="ghost" id="source-link">View API Sources</button>
-          </div>
-          <div class="hero-meta" id="meta-row">
-            <span id="sunrise">Sunrise —</span>
-            <span class="dot"></span>
-            <span id="sunset">Sunset —</span>
-            <span class="dot"></span>
-            <span id="water-air">Water — / Air —</span>
-          </div>
-        </div>
-        <div class="hero-card">
-          <div class="card-header">
-            <div>
-              <p class="label">Featured Break</p>
-              <h3 id="hero-spot-name">Capitola, CA</h3>
+    <div class="page">
+      <header class="hero">
+        <div class="logo">🌊 Surfside Vibes</div>
+        <div class="hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow" id="location-eyebrow">
+              Daily Surf Report • Capitola, CA
+            </p>
+            <h1>Live swell intel with a neon surf-punk dashboard.</h1>
+            <p class="lede" id="hero-lede">
+              Open-Meteo marine + forecast handle waves, wind, and temps while a
+              NOAA tide station backs up tide calls. Every metric is wired into a
+              graphic control deck built for surfers, skaters, and data nerds.
+            </p>
+            <div class="hero-actions">
+              <button class="cta">Refresh Data</button>
+              <button class="ghost" id="source-link">View API Sources</button>
             </div>
-            <span class="badge badge-green" id="status-badge">Live</span>
-          </div>
-          <div class="hero-mega">
-            <div>
-              <p class="label">Primary Swell</p>
-              <h2 id="primary-swell">—</h2>
-              <p class="muted" id="primary-swell-meta">
-                Loading direction & period…
-              </p>
-            </div>
-            <div class="divider"></div>
-            <div>
-              <p class="label">Wind</p>
-              <h2 id="wind-now">—</h2>
-              <p class="muted" id="wind-meta">Fetching wind trend…</p>
+            <div class="hero-meta" id="meta-row">
+              <span id="sunrise">Sunrise —</span>
+              <span class="dot"></span>
+              <span id="sunset">Sunset —</span>
+              <span class="dot"></span>
+              <span id="water-air">Water — / Air —</span>
             </div>
           </div>
-          <div class="meter">
-            <span id="confidence-bar" style="width: 0%"></span>
-          </div>
-          <p class="muted" id="confidence-copy">
-            Confidence updates once the latest observations load.
-          </p>
-          <div class="webcam-links" aria-label="Capitola live webcams">
-            <a
-              class="ghost full-width"
-              id="webcam-link-beach"
-              href="https://www.cityofcapitola.org/community/page/capitola-beach-cameras"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Capitola Beach Cam ↗
-            </a>
-            <a
-              class="ghost full-width"
-              id="webcam-link-jetty"
-              href="https://www.cityofcapitola.org/community/page/capitola-beach-cameras"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Capitola Jetty Cam ↗
-            </a>
-            <a
-              class="ghost full-width"
-              id="webcam-link-wharf"
-              href="https://www.cityofcapitola.org/community/page/capitola-beach-cameras"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Capitola Wharf Cam ↗
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main class="content">
-      <section class="panel">
-        <div class="panel-header">
-          <div>
-            <p class="eyebrow">Now Playing</p>
-            <h2>Current Conditions</h2>
-          </div>
-          <div class="chip-group" id="chip-row">
-            <span class="chip">Open-Meteo marine primary</span>
-            <span class="chip">Open-Meteo forecast + UV</span>
-            <span class="chip">NOAA tide station backup</span>
-          </div>
-        </div>
-        <div class="cards-grid">
-          <article class="stat-card">
-            <p class="label">Wave Height</p>
-            <h3 id="wave-height">—</h3>
-            <p class="muted" id="wave-height-meta">Waiting for marine feed…</p>
-          </article>
-          <article class="stat-card">
-            <p class="label">Swell Mix</p>
-            <h3 id="swell-mix">—</h3>
-            <p class="muted" id="swell-mix-meta">
-              Direction and dominant period populate from Open-Meteo.
-            </p>
-          </article>
-          <article class="stat-card">
-            <p class="label">Tide</p>
-            <h3 id="tide-state">—</h3>
-            <p class="muted" id="tide-meta">
-              Next highs and lows with NOAA primary and Open-Meteo backup.
-            </p>
-          </article>
-          <article class="stat-card">
-            <p class="label">Wind</p>
-            <h3 id="wind-card">—</h3>
-            <p class="muted" id="wind-card-meta">
-              Hourly wind from Open-Meteo forecast.
-            </p>
-          </article>
-          <article class="stat-card">
-            <p class="label">Water Temp</p>
-            <h3 id="water-temp">—</h3>
-            <p class="muted" id="water-temp-meta">
-              Sea surface temperature from marine API.
-            </p>
-          </article>
-          <article class="stat-card">
-            <p class="label">UV Index</p>
-            <h3 id="uv-index">—</h3>
-            <p class="muted" id="uv-meta">Daily max UV from Open-Meteo.</p>
-          </article>
-          <article class="stat-card">
-            <p class="label">Feels Like</p>
-            <h3 id="feels-like">—</h3>
-            <p class="muted" id="feels-like-meta">
-              Apparent temperature blended from Open-Meteo sources.
-            </p>
-          </article>
-          <article class="stat-card">
-            <p class="label">Humidity & Pressure</p>
-            <h3 id="humidity">—</h3>
-            <p class="muted" id="humidity-meta">
-              Relative humidity and sea-level pressure from forecast feeds.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel two-col">
-        <div class="panel-block">
-          <div class="panel-header compact">
-            <p class="eyebrow">Hourly Outlook</p>
-            <h2 id="timeline-title">Next few hours in Capitola</h2>
-          </div>
-          <div class="timeline" id="timeline">
-            <div class="timeline-item">
+          <div class="hero-card">
+            <div class="card-header">
               <div>
-                <p class="label">Loading</p>
-                <h4>Fetching forecast</h4>
-                <p class="muted">
-                  Wave and wind outlook will land here shortly.
+                <p class="label">Featured Break</p>
+                <h3 id="hero-spot-name">Capitola, CA</h3>
+              </div>
+              <span class="badge badge-green" id="status-badge">Live</span>
+            </div>
+            <div class="hero-mega">
+              <div>
+                <p class="label">Primary Swell</p>
+                <h2 id="primary-swell">—</h2>
+                <p class="muted" id="primary-swell-meta">
+                  Loading direction & period…
                 </p>
               </div>
-              <span class="badge badge-blue">—</span>
+              <div class="divider"></div>
+              <div>
+                <p class="label">Wind</p>
+                <h2 id="wind-now">—</h2>
+                <p class="muted" id="wind-meta">Fetching wind trend…</p>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div class="panel-block">
-          <div class="panel-header compact">
-            <p class="eyebrow">Tides & Wind</p>
-            <h2>Supporting Cast</h2>
-          </div>
-          <div class="support-grid">
-            <div class="support-card">
-              <p class="label">Next High</p>
-              <h3 id="next-high">—</h3>
-              <p class="muted" id="next-high-meta">
-                NOAA predictions with Open-Meteo tide height fallback.
-              </p>
+            <div class="meter">
+              <span id="confidence-bar" style="width: 0%"></span>
             </div>
-            <div class="support-card">
-              <p class="label">Next Low</p>
-              <h3 id="next-low">—</h3>
-              <p class="muted" id="next-low-meta">
-                Tide fallback rotates through each provider in order.
-              </p>
-            </div>
-            <div class="support-card">
-              <p class="label">Wind Window</p>
-              <h3 id="wind-window">—</h3>
-              <p class="muted" id="wind-window-meta">
-                Using forecasted 10 m wind over the next hours.
-              </p>
-            </div>
-            <div class="support-card">
-              <p class="label">Sea Surface Temp</p>
-              <h3 id="temp-card">—</h3>
-              <p class="muted">Direct reading from marine model.</p>
-            </div>
-          </div>
-          <div class="legend">
-            <span class="dot blue"></span>Offshore
-            <span class="dot coral"></span>Onshore
-            <span class="dot yellow"></span>Cross-shore
-          </div>
-        </div>
-      </section>
-
-      <section class="panel">
-        <div class="panel-header">
-          <div>
-            <p class="eyebrow">Surf Stories</p>
-            <h2>What the data suggests</h2>
-          </div>
-          <div class="chip-group" id="story-chips">
-            <span class="chip accent">Grounded in measured values</span>
-          </div>
-        </div>
-        <div class="vibe-grid">
-          <article class="vibe-card">
-            <div class="vibe-tag">Now</div>
-            <h3 id="story-now">Live conditions will populate soon.</h3>
-            <p id="story-now-meta">
-              We narrate only what the current wave, wind, and tide numbers
-              support.
+            <p class="muted" id="confidence-copy">
+              Confidence updates once the latest observations load.
             </p>
-          </article>
-          <article class="vibe-card">
-            <div class="vibe-tag">Next Hours</div>
-            <h3 id="story-next">Hourly forecast incoming.</h3>
-            <p id="story-next-meta">
-              Statements here are derived from Open-Meteo's marine and wind
-              projections.
-            </p>
-          </article>
-          <article class="vibe-card">
-            <div class="vibe-tag">Daylight</div>
-            <h3 id="story-day">
-              Sunrise and sunset update from Open-Meteo-ready times.
-            </h3>
-            <p id="story-day-meta">
-              We only cite daylight windows provided by the forecast API.
-            </p>
-          </article>
+            <div class="webcam-links" aria-label="Capitola live webcams">
+              <a
+                class="ghost full-width"
+                id="webcam-link-beach"
+                href="https://www.cityofcapitola.org/community/page/capitola-beach-cameras"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Capitola Beach Cam ↗
+              </a>
+              <a
+                class="ghost full-width"
+                id="webcam-link-jetty"
+                href="https://www.cityofcapitola.org/community/page/capitola-beach-cameras"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Capitola Jetty Cam ↗
+              </a>
+              <a
+                class="ghost full-width"
+                id="webcam-link-wharf"
+                href="https://www.cityofcapitola.org/community/page/capitola-beach-cameras"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Capitola Wharf Cam ↗
+              </a>
+            </div>
+          </div>
         </div>
-      </section>
+      </header>
 
-      <section class="panel">
-        <div class="panel-header">
-          <div>
-            <p class="eyebrow">Capitola Village Guide</p>
-            <h2>Local picks while you watch the surf</h2>
+      <main class="content">
+        <section class="panel nav-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Above-the-fold control deck</p>
+              <h2>Pick a view without endless scrolling</h2>
+            </div>
+            <div class="chip-group" id="chip-row">
+              <span class="chip">Open-Meteo marine primary</span>
+              <span class="chip">Open-Meteo forecast + UV</span>
+              <span class="chip">NOAA tide station backup</span>
+            </div>
           </div>
-          <div class="tab-row" role="tablist" aria-label="Village guide">
-            <button class="tab active" data-tab="food" role="tab">
-              Food & Restaurants
+          <div
+            class="tab-row dense"
+            role="tablist"
+            aria-label="Surfside dashboard"
+          >
+            <button class="tab active" data-tab="conditions" data-group="main">
+              Conditions
             </button>
-            <button class="tab" data-tab="shopping" role="tab">
-              Shopping
+            <button class="tab" data-tab="outlook" data-group="main">
+              Outlook
             </button>
-            <button class="tab" data-tab="services" role="tab">
-              Parks & Services
+            <button class="tab" data-tab="stories" data-group="main">
+              Stories
             </button>
-            <button class="tab" data-tab="transit" role="tab">
-              Public Transportation
+            <button class="tab" data-tab="guide" data-group="main">
+              Village Guide
             </button>
           </div>
-        </div>
-        <div class="tab-panels" id="tab-panels">
-          <div class="listing-grid" data-panel="food" role="tabpanel">
+        </section>
+
+        <section class="panel compact-panel">
+          <div class="tab-panels" id="main-tab-panels">
+            <div class="tab-panel" data-panel="conditions" data-group="main">
+              <div class="cards-grid tight">
+                <article class="stat-card">
+                  <p class="label">Wave Height</p>
+                  <h3 id="wave-height">—</h3>
+                  <p class="muted" id="wave-height-meta">
+                    Waiting for marine feed…
+                  </p>
+                </article>
+                <article class="stat-card">
+                  <p class="label">Swell Mix</p>
+                  <h3 id="swell-mix">—</h3>
+                  <p class="muted" id="swell-mix-meta">
+                    Direction and dominant period populate from Open-Meteo.
+                  </p>
+                </article>
+                <article class="stat-card">
+                  <p class="label">Tide</p>
+                  <h3 id="tide-state">—</h3>
+                  <p class="muted" id="tide-meta">
+                    Next highs and lows with NOAA primary and Open-Meteo backup.
+                  </p>
+                </article>
+                <article class="stat-card">
+                  <p class="label">Wind</p>
+                  <h3 id="wind-card">—</h3>
+                  <p class="muted" id="wind-card-meta">
+                    Hourly wind from Open-Meteo forecast.
+                  </p>
+                </article>
+                <article class="stat-card">
+                  <p class="label">Water Temp</p>
+                  <h3 id="water-temp">—</h3>
+                  <p class="muted" id="water-temp-meta">
+                    Sea surface temperature from marine API.
+                  </p>
+                </article>
+                <article class="stat-card">
+                  <p class="label">UV Index</p>
+                  <h3 id="uv-index">—</h3>
+                  <p class="muted" id="uv-meta">Daily max UV from Open-Meteo.</p>
+                </article>
+                <article class="stat-card">
+                  <p class="label">Feels Like</p>
+                  <h3 id="feels-like">—</h3>
+                  <p class="muted" id="feels-like-meta">
+                    Apparent temperature blended from Open-Meteo sources.
+                  </p>
+                </article>
+                <article class="stat-card">
+                  <p class="label">Humidity & Pressure</p>
+                  <h3 id="humidity">—</h3>
+                  <p class="muted" id="humidity-meta">
+                    Relative humidity and sea-level pressure from forecast
+                    feeds.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <div class="tab-panel hidden" data-panel="outlook" data-group="main">
+              <div class="panel-grid">
+                <div class="panel-block">
+                  <div class="panel-header compact">
+                    <p class="eyebrow">Hourly Outlook</p>
+                    <h2 id="timeline-title">Next few hours in Capitola</h2>
+                  </div>
+                  <div class="timeline" id="timeline">
+                    <div class="timeline-item">
+                      <div>
+                        <p class="label">Loading</p>
+                        <h4>Fetching forecast</h4>
+                        <p class="muted">
+                          Wave and wind outlook will land here shortly.
+                        </p>
+                      </div>
+                      <span class="badge badge-blue">—</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-block">
+                  <div class="panel-header compact">
+                    <p class="eyebrow">Tides & Wind</p>
+                    <h2>Supporting Cast</h2>
+                  </div>
+                  <div class="support-grid">
+                    <div class="support-card">
+                      <p class="label">Next High</p>
+                      <h3 id="next-high">—</h3>
+                      <p class="muted" id="next-high-meta">
+                        NOAA predictions with Open-Meteo tide height fallback.
+                      </p>
+                    </div>
+                    <div class="support-card">
+                      <p class="label">Next Low</p>
+                      <h3 id="next-low">—</h3>
+                      <p class="muted" id="next-low-meta">
+                        Tide fallback rotates through each provider in order.
+                      </p>
+                    </div>
+                    <div class="support-card">
+                      <p class="label">Wind Window</p>
+                      <h3 id="wind-window">—</h3>
+                      <p class="muted" id="wind-window-meta">
+                        Using forecasted 10 m wind over the next hours.
+                      </p>
+                    </div>
+                    <div class="support-card">
+                      <p class="label">Sea Surface Temp</p>
+                      <h3 id="temp-card">—</h3>
+                      <p class="muted">Direct reading from marine model.</p>
+                    </div>
+                  </div>
+                  <div class="legend">
+                    <span class="dot blue"></span>Offshore
+                    <span class="dot coral"></span>Onshore
+                    <span class="dot yellow"></span>Cross-shore
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-panel hidden" data-panel="stories" data-group="main">
+              <div class="panel-header compact">
+                <div>
+                  <p class="eyebrow">Surf Stories</p>
+                  <h2>What the data suggests</h2>
+                </div>
+                <div class="chip-group" id="story-chips">
+                  <span class="chip accent">Grounded in measured values</span>
+                </div>
+              </div>
+              <div class="vibe-grid">
+                <article class="vibe-card">
+                  <div class="vibe-tag">Now</div>
+                  <h3 id="story-now">Live conditions will populate soon.</h3>
+                  <p id="story-now-meta">
+                    We narrate only what the current wave, wind, and tide numbers
+                    support.
+                  </p>
+                </article>
+                <article class="vibe-card">
+                  <div class="vibe-tag">Next Hours</div>
+                  <h3 id="story-next">Hourly forecast incoming.</h3>
+                  <p id="story-next-meta">
+                    Statements here are derived from Open-Meteo's marine and wind
+                    projections.
+                  </p>
+                </article>
+                <article class="vibe-card">
+                  <div class="vibe-tag">Daylight</div>
+                  <h3 id="story-day">
+                    Sunrise and sunset update from Open-Meteo-ready times.
+                  </h3>
+                  <p id="story-day-meta">
+                    We only cite daylight windows provided by the forecast API.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <div class="tab-panel hidden" data-panel="guide" data-group="main">
+              <div class="panel-header compact">
+                <div>
+                  <p class="eyebrow">Capitola Village Guide</p>
+                  <h2>Local picks while you watch the surf</h2>
+                </div>
+                <div
+                  class="tab-row"
+                  role="tablist"
+                  aria-label="Village guide"
+                >
+                  <button class="tab active" data-tab="food" data-group="guide">
+                    Food & Restaurants
+                  </button>
+                  <button class="tab" data-tab="shopping" data-group="guide">
+                    Shopping
+                  </button>
+                  <button class="tab" data-tab="services" data-group="guide">
+                    Parks & Services
+                  </button>
+                  <button class="tab" data-tab="transit" data-group="guide">
+                    Public Transportation
+                  </button>
+                </div>
+              </div>
+              <div class="tab-panels" id="tab-panels">
+                <div
+                  class="listing-grid"
+                  data-panel="food"
+                  data-group="guide"
+                  role="tabpanel"
+                >
             <article class="listing-card">
               <div>
                 <p class="label">Beachfront Brunch</p>
@@ -414,7 +451,12 @@
             </article>
           </div>
 
-          <div class="listing-grid hidden" data-panel="shopping" role="tabpanel">
+          <div
+            class="listing-grid hidden"
+            data-panel="shopping"
+            data-group="guide"
+            role="tabpanel"
+          >
             <article class="listing-card">
               <div>
                 <p class="label">Village Boutiques</p>
@@ -474,7 +516,12 @@
             </article>
           </div>
 
-          <div class="listing-grid hidden" data-panel="services" role="tabpanel">
+          <div
+            class="listing-grid hidden"
+            data-panel="services"
+            data-group="guide"
+            role="tabpanel"
+          >
             <article class="listing-card">
               <div>
                 <p class="label">Beachfront Green</p>
@@ -526,7 +573,12 @@
             </article>
           </div>
 
-          <div class="listing-grid hidden" data-panel="transit" role="tabpanel">
+          <div
+            class="listing-grid hidden"
+            data-panel="transit"
+            data-group="guide"
+            role="tabpanel"
+          >
             <article class="listing-card">
               <div>
                 <p class="label">Local Buses</p>
@@ -597,6 +649,8 @@
       </div>
       <button class="cta">Get Alerts</button>
     </footer>
+
+    </div>
 
     <script>
       const $ = (id) => document.getElementById(id);
@@ -1242,19 +1296,26 @@
           `Daylight and tide cues flow from Open-Meteo marine + forecast with NOAA tides and a resilient local fallback.`;
       };
 
-      const tabButtons = document.querySelectorAll(".tab");
+      const tabButtons = document.querySelectorAll("[data-tab]");
       const tabPanels = document.querySelectorAll("[data-panel]");
 
+      const groupName = (node) => node.dataset.group || "default";
+
       const activateTab = (tab) => {
+        const group = groupName(tab);
+
         tabButtons.forEach((btn) => {
+          if (groupName(btn) !== group) return;
           const isActive = btn.dataset.tab === tab.dataset.tab;
           btn.classList.toggle("active", isActive);
-          btn.setAttribute("aria-selected", isActive);
+          btn.setAttribute("aria-selected", isActive ? "true" : "false");
         });
 
         tabPanels.forEach((panel) => {
+          if (groupName(panel) !== group) return;
           const isActive = panel.dataset.panel === tab.dataset.tab;
           panel.classList.toggle("hidden", !isActive);
+          panel.setAttribute("aria-hidden", isActive ? "false" : "true");
         });
       };
 
@@ -1262,7 +1323,13 @@
         btn.addEventListener("click", () => activateTab(btn));
       });
 
-      if (tabButtons.length) activateTab(tabButtons[0]);
+      const initializedGroups = new Set();
+      tabButtons.forEach((btn) => {
+        const group = groupName(btn);
+        if (initializedGroups.has(group)) return;
+        activateTab(btn);
+        initializedGroups.add(group);
+      });
 
       updateSpotCopy();
       loadData();
