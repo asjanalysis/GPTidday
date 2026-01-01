@@ -38,24 +38,62 @@
         <div class="phone">
           <div class="topline">
             <div class="badge">Capitola, CA</div>
-            <span class="small-pill">Fri 6:10 AM</span>
+            <span class="small-pill" id="local-time">Loading…</span>
           </div>
           <h2>Surf report and forecast →</h2>
           <div class="card">
-            <h3>Surf Report <span>6-8 ft · Fair</span></h3>
+            <h3>
+              Surf Report
+              <span id="surf-summary">Live conditions loading…</span>
+            </h3>
             <div class="data-row">
-              <div class="data-pill"><small>Surf</small><strong>6-8 ft</strong></div>
-              <div class="data-pill"><small>Wave height</small><strong>8.1 ft</strong></div>
-              <div class="data-pill"><small>Wave length</small><strong>7s</strong></div>
+              <div class="data-pill">
+                <small>Surf (Open‑Meteo)</small>
+                <strong id="surf-range">—</strong>
+              </div>
+              <div class="data-pill">
+                <small>Wave height</small>
+                <strong id="wave-height">—</strong>
+              </div>
+              <div class="data-pill">
+                <small>Period</small>
+                <strong id="wave-period">—</strong>
+              </div>
+            </div>
+            <div class="data-row">
+              <div class="data-pill">
+                <small>Buoy 46042 (NDBC)</small>
+                <strong id="ndbc-wave">—</strong>
+              </div>
+              <div class="data-pill">
+                <small>Wind</small>
+                <strong id="wind">—</strong>
+              </div>
+              <div class="data-pill">
+                <small>Direction</small>
+                <strong id="wave-direction">—</strong>
+              </div>
             </div>
           </div>
           <div class="section-card">
-            <h3>Today at 6:00 AM <span class="small-pill">WNW</span></h3>
+            <h3>
+              Today <span class="small-pill" id="tide-station">NOAA 9413745</span>
+            </h3>
             <div class="data-row">
-              <div class="data-pill"><small>Tide</small><strong>Rising</strong></div>
-              <div class="data-pill"><small>Wave</small><strong>0.3 ft · WNW</strong></div>
-              <div class="data-pill"><small>Wind</small><strong>5 mph · NNE</strong></div>
+              <div class="data-pill">
+                <small>Next tide (NOAA)</small>
+                <strong id="next-tide">—</strong>
+              </div>
+              <div class="data-pill">
+                <small>Tide (Open‑Meteo)</small>
+                <strong id="openmeteo-tide">—</strong>
+              </div>
+              <div class="data-pill">
+                <small>Wind</small>
+                <strong id="wind-inline">—</strong>
+              </div>
             </div>
+            <p class="footer-note" id="data-updated">Gathering live surf + tide intel…</p>
           </div>
         </div>
 
@@ -66,12 +104,24 @@
           </div>
           <div class="illustration" aria-hidden="true" style="border-radius: 18px; min-height: 220px;"></div>
           <div class="section-card">
-            <h3>Beach cams</h3>
+            <h3>Data sources (free & open)</h3>
             <div class="list">
-              <div class="list-item"><span>Capitola</span><span class="small-pill">HD live</span></div>
-              <div class="list-item"><span>New Brighton</span><span class="small-pill">HD live</span></div>
-              <div class="list-item"><span>Seacliff Beach</span><span class="small-pill">Live</span></div>
-              <div class="list-item"><span>Seacliff State Beach</span><span class="small-pill">Bookmark</span></div>
+              <div class="list-item">
+                <span>Open‑Meteo Marine forecast</span>
+                <span class="small-pill">Surf + tide</span>
+              </div>
+              <div class="list-item">
+                <span>NOAA NDBC Buoy 46042</span>
+                <span class="small-pill">Wave obs</span>
+              </div>
+              <div class="list-item">
+                <span>NOAA CO‑OPS 9413745</span>
+                <span class="small-pill">Tide predictions</span>
+              </div>
+              <div class="list-item">
+                <span>Open‑Meteo Tide</span>
+                <span class="small-pill">Secondary tide</span>
+              </div>
             </div>
           </div>
         </div>
@@ -79,5 +129,118 @@
 
       <p class="footer-note">Detailed surf snapshot aligned with the Capitola mockup.</p>
     </div>
+
+    <script>
+      const capitola = { lat: 36.9741, lon: -121.953, tideStation: '9413745' };
+
+      const toFeet = (meters) => (meters ? (meters * 3.28084).toFixed(1) : null);
+      const toKnots = (mps) => (mps ? (mps * 1.94384).toFixed(1) : null);
+
+      const cardinal = (degrees) => {
+        if (degrees === undefined || degrees === null) return '—';
+        const dirs = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
+        const ix = Math.round(((degrees % 360) / 22.5)) % 16;
+        return dirs[ix];
+      };
+
+      const setText = (id, text) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = text;
+      };
+
+      const updateTime = () => {
+        const formatter = new Intl.DateTimeFormat('en-US', {
+          timeZone: 'America/Los_Angeles',
+          weekday: 'short',
+          hour: 'numeric',
+          minute: '2-digit',
+        });
+        setText('local-time', formatter.format(new Date()));
+      };
+
+      async function fetchOpenMeteoMarine() {
+        const url = `https://marine-api.open-meteo.com/v1/marine?latitude=${capitola.lat}&longitude=${capitola.lon}&hourly=wave_height,wave_direction,wave_period,wind_speed_10m,wind_direction_10m,tide_height&current_weather=true&timezone=America/Los_Angeles`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('Open-Meteo marine unavailable');
+        return res.json();
+      }
+
+      async function fetchNdbc() {
+        const res = await fetch('https://www.ndbc.noaa.gov/data/realtime2/46042.txt');
+        if (!res.ok) throw new Error('NDBC buoy unavailable');
+        const text = await res.text();
+        const rows = text
+          .split('\n')
+          .filter((line) => line && !line.startsWith('#'));
+        if (!rows.length) throw new Error('No NDBC rows found');
+        const cols = rows[0].trim().split(/\s+/);
+        const wvhtMeters = parseFloat(cols[8]);
+        const swp = parseFloat(cols[10]);
+        const mwdir = parseFloat(cols[9]);
+        return { waveHeight: toFeet(wvhtMeters), swellPeriod: swp, meanDirection: cardinal(mwdir) };
+      }
+
+      async function fetchNoaaTides() {
+        const url = `https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&application=capitola-companion&datum=MLLW&station=${capitola.tideStation}&time_zone=lst_ldt&units=english&interval=hilo&format=json&date=today`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('NOAA tides unavailable');
+        const json = await res.json();
+        const next = json?.predictions?.find((p) => new Date(`${p.t} PDT`) > new Date());
+        return next ? `${next.type === 'H' ? 'High' : 'Low'} ${next.v} ft @ ${next.t}` : null;
+      }
+
+      function describeSurf(heightFt, periodSec) {
+        if (!heightFt || !periodSec) return 'Awaiting marine data';
+        const fair = heightFt <= 4 ? 'Clean' : heightFt <= 8 ? 'Fair' : 'Challenging';
+        return `${heightFt} ft @ ${periodSec}s · ${fair}`;
+      }
+
+      async function populate() {
+        updateTime();
+        try {
+          const [marine, buoy, tide] = await Promise.all([
+            fetchOpenMeteoMarine(),
+            fetchNdbc().catch((err) => ({ error: err.message })),
+            fetchNoaaTides().catch(() => null),
+          ]);
+
+          const heightMeters = marine?.hourly?.wave_height?.[0];
+          const waveHeightFt = toFeet(heightMeters);
+          const wavePeriod = marine?.hourly?.wave_period?.[0];
+          const waveDir = cardinal(marine?.hourly?.wave_direction?.[0]);
+          const windMps = marine?.hourly?.wind_speed_10m?.[0];
+          const windDir = cardinal(marine?.hourly?.wind_direction_10m?.[0]);
+
+          setText('surf-range', waveHeightFt ? `${waveHeightFt} ft` : '—');
+          setText('wave-height', waveHeightFt ? `${waveHeightFt} ft` : '—');
+          setText('wave-period', wavePeriod ? `${wavePeriod}s` : '—');
+          setText('wave-direction', waveDir);
+          setText('wind', windMps ? `${toKnots(windMps)} kt` : '—');
+          setText('wind-inline', windDir !== '—' && windMps ? `${windDir} ${toKnots(windMps)} kt` : '—');
+
+          if (!buoy?.error) {
+            setText('ndbc-wave', `${buoy.waveHeight || '—'} ft @ ${buoy.swellPeriod || '?'}s ${buoy.meanDirection}`);
+          } else {
+            setText('ndbc-wave', 'Buoy offline');
+          }
+
+          const summary = describeSurf(waveHeightFt, wavePeriod);
+          setText('surf-summary', summary);
+
+          const tideHeight = marine?.hourly?.tide_height?.[0];
+          setText('openmeteo-tide', tideHeight ? `${tideHeight.toFixed(1)} ft` : '—');
+          setText('next-tide', tide || 'Tide predictions unavailable');
+
+          const updated = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
+          setText('data-updated', `Updated ${updated} · Sources: Open-Meteo + NOAA`);
+        } catch (err) {
+          setText('surf-summary', 'Unable to load live data');
+          setText('data-updated', err.message);
+        }
+      }
+
+      populate();
+      setInterval(populate, 15 * 60 * 1000);
+    </script>
   </body>
 </html>
