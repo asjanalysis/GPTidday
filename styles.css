@@ -116,6 +116,8 @@ nav a.active {
   color: #fff;
   background: linear-gradient(135deg, var(--sky), #1c84ff);
   box-shadow: 0 12px 30px rgba(79, 178, 255, 0.3);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .button.secondary {
