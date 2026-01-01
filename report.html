@@ -159,8 +159,14 @@
       };
 
       async function fetchOpenMeteoMarine() {
-        const url = `https://marine-api.open-meteo.com/v1/marine?latitude=${capitola.lat}&longitude=${capitola.lon}&hourly=wave_height,wave_direction,wave_period,wind_speed_10m,wind_direction_10m,tide_height&current_weather=true&timezone=America/Los_Angeles`;
-        const res = await fetch(url);
+        const params = new URLSearchParams({
+          latitude: capitola.lat,
+          longitude: capitola.lon,
+          hourly: 'wave_height,wave_direction,wave_period,wind_speed_10m,wind_direction_10m,tide_height',
+          current_weather: 'true',
+          timezone: 'America/Los_Angeles',
+        });
+        const res = await fetch(`https://marine-api.open-meteo.com/v1/marine?${params.toString()}`);
         if (!res.ok) throw new Error('Open-Meteo marine unavailable');
         return res.json();
       }
@@ -181,8 +187,18 @@
       }
 
       async function fetchNoaaTides() {
-        const url = `https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&application=capitola-companion&datum=MLLW&station=${capitola.tideStation}&time_zone=lst_ldt&units=english&interval=hilo&format=json&date=today`;
-        const res = await fetch(url);
+        const params = new URLSearchParams({
+          product: 'predictions',
+          application: 'capitola-companion',
+          datum: 'MLLW',
+          station: capitola.tideStation,
+          time_zone: 'lst_ldt',
+          units: 'english',
+          interval: 'hilo',
+          format: 'json',
+          date: 'today',
+        });
+        const res = await fetch(`https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?${params.toString()}`);
         if (!res.ok) throw new Error('NOAA tides unavailable');
         const json = await res.json();
         const next = json?.predictions?.find((p) => new Date(`${p.t} PDT`) > new Date());
