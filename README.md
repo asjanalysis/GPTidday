@@ -1,34 +1,13 @@
-# GPTidday
+# Surf Capitola Mockup
 
-Welcome to GPTidday, the project that asks, "What if test repos could have a sense of humor?" If you were expecting a stoic enterprise app, please manage your expectations like a grown-up—preferably while holding a cup of coffee shaped like a rubber duck.
+A multi-page, static web recreation of the Capitola surf app mockup. Each page mirrors one of the reference screens, from the welcome hero to surf reports, hourly outlooks, exploration pins, and event picks.
 
-## What even is this?
-Think of GPTidday as a sandbox for GPT-driven experiments, demos, and the occasional coding shenanigan. The codebase is intentionally small so you can focus on prototyping ideas without wading through the software equivalent of a phone book.
+## Pages
+- **index.html** – Welcome splash with hero actions and two preview cards.
+- **report.html** – Capitola surf report, tide snapshot, and camera list.
+- **hourly.html** – Hourly temperature bars and tide progression.
+- **explore.html** – Map-inspired pins plus neighborhoods and restaurants.
+- **events.html** – Local events with personalized water and dining recommendations.
 
-## Features (such as they are)
-- **Compact codebase**: Small enough to fit in your mental RAM without running `swap`.
-- **Humor included**: Comedy may vary by timezone and caffeine level.
-- **Great for experiments**: Perfect for trying prompts, quick scripts, or seeing how many tests you can write before lunch.
-
-## Quick start
-1. Clone the repo like you mean it.
-2. Open the code in your editor of choice (or the one your team lead "strongly recommends").
-3. Make changes, run tests, and tell your rubber duck everything will be fine.
-
-## Surf report page
-The main branch now serves a colorful, modern single-page surf report (see `index.html` and `styles.css`). Open `index.html` in your browser or point GitHub Pages at the root for a quick, vibrant view of today's swell, tides, and surf vibes.
-
-### Tide API setup
-The page pulls tide data from the [RapidAPI Tides API](https://rapidapi.com/apihood/api/tides). Add your RapidAPI key to `localStorage` before loading the page with:
-
-```js
-localStorage.setItem("tideApiKey", "<YOUR_RAPIDAPI_KEY>");
-```
-
-Alternatively, set `window.TIDES_API_KEY` before the script runs. Without a key, tide data will not load.
-
-## Contributing
-Pull requests, issues, and dad jokes are welcome. If your change makes the codebase happier (or at least more functional), we'll probably merge it. Bonus points for adding comments that future-you won't regret.
-
-## License
-Check the repository for licensing information before deploying this to production, your fridge, or your neighbor's smart toaster.
+## Usage
+Open any page directly in your browser, or serve the folder locally (for example, `python -m http.server 8000`) and browse to the file you want. All styling lives in `styles.css`.
