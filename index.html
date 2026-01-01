@@ -3,1273 +3,295 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Surfside Vibes | Daily Surf Report</title>
+    <title>Surf Report | Ocean Beach</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <nav class="top-nav">
-        <div class="brand">🌊 Surfside Vibes</div>
-        <div class="nav-tabs" role="tablist" aria-label="Primary dashboard">
-          <button class="nav-tab active" data-tab="conditions" data-group="main">
-            Conditions
-          </button>
-          <button class="nav-tab" data-tab="outlook" data-group="main">
-            Outlook
-          </button>
-          <button class="nav-tab" data-tab="stories" data-group="main">
-            Stories
-          </button>
-          <button class="nav-tab" data-tab="guide" data-group="main">
-            Village Guide
-          </button>
+    <div class="backdrop"></div>
+    <main class="report">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">Surf @ Report</p>
+          <h1>Ocean Beach · San Francisco</h1>
+          <p class="subtitle">Live conditions pulled from Open-Meteo + NOAA</p>
         </div>
-        <button class="pill" id="source-link">Data Sources</button>
-      </nav>
-
-      <header class="hero">
-        <div class="hero-top">
-          <div class="pill-group" id="chip-row">
-            <span class="pill">Marine model</span>
-            <span class="pill">Forecast grid</span>
-            <span class="pill">NOAA tide station</span>
-          </div>
-          <button class="ghost" id="switcher">Switch Spot</button>
-        </div>
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow" id="location-eyebrow">Daily Surf Report</p>
-            <h1>Fresh coastal intel with expandable cards.</h1>
-            <p class="lede" id="hero-lede">
-              Conditions powered by Open-Meteo marine + forecast data with NOAA
-              tides as the anchor.
-            </p>
-            <div class="action-row">
-              <button class="cta">Refresh Data</button>
-              <button class="ghost" id="source-link-duplicate">
-                View API Sources
-              </button>
-            </div>
-            <div class="meta" id="meta-row">
-              <span id="sunrise">Sunrise —</span>
-              <span class="dot"></span>
-              <span id="sunset">Sunset —</span>
-              <span class="dot"></span>
-              <span id="water-air">Water — / Air —</span>
-            </div>
-          </div>
-          <div class="hero-card">
-            <div class="card-header">
-              <div>
-                <p class="label">Featured Break</p>
-                <h3 id="hero-spot-name">Capitola, CA</h3>
-              </div>
-              <span class="badge badge-green" id="status-badge">Live</span>
-            </div>
-            <div class="card-metrics">
-              <div>
-                <p class="label">Primary Swell</p>
-                <h2 id="primary-swell">—</h2>
-                <p class="muted" id="primary-swell-meta">
-                  Loading direction & period…
-                </p>
-              </div>
-              <div class="divider"></div>
-              <div>
-                <p class="label">Wind</p>
-                <h2 id="wind-now">—</h2>
-                <p class="muted" id="wind-meta">Fetching wind trend…</p>
-              </div>
-            </div>
-            <div class="meter"><span id="confidence-bar"></span></div>
-            <p class="muted" id="confidence-copy">
-              Confidence updates once the latest observations load.
-            </p>
-            <div class="webcam-links" aria-label="Capitola live webcams">
-              <a
-                class="ghost full-width"
-                id="webcam-link-beach"
-                href="https://www.cityofcapitola.org/community/page/capitola-beach-cameras"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Capitola Beach Cam ↗
-              </a>
-              <a
-                class="ghost full-width"
-                id="webcam-link-jetty"
-                href="https://www.cityofcapitola.org/community/page/capitola-beach-cameras"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Capitola Jetty Cam ↗
-              </a>
-              <a
-                class="ghost full-width"
-                id="webcam-link-wharf"
-                href="https://www.cityofcapitola.org/community/page/capitola-beach-cameras"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Capitola Wharf Cam ↗
-              </a>
-            </div>
-          </div>
-        </div>
+        <button id="refresh" class="ghost">Refresh data</button>
       </header>
 
-      <main class="main">
-        <section class="panel">
-          <div class="panel-header">
+      <section class="card glass">
+        <div class="card-top">
+          <div>
+            <p class="label">Now</p>
+            <div class="temp-row">
+              <div id="temperature" class="temp">—</div>
+              <div>
+                <div class="condition" id="condition">Loading conditions…</div>
+                <div class="muted" id="wind">Wind —</div>
+              </div>
+            </div>
+          </div>
+          <div class="sun-times">
             <div>
-              <p class="eyebrow">Card-forward layout</p>
-              <h2>Glanceable tabs keep everything above the fold</h2>
+              <p class="label">Sunrise</p>
+              <p id="sunrise">—</p>
+            </div>
+            <div>
+              <p class="label">Sunset</p>
+              <p id="sunset">—</p>
+            </div>
+            <div>
+              <p class="label">UV Max</p>
+              <p id="uv">—</p>
             </div>
           </div>
-          <div class="tab-panels" id="main-tab-panels">
-            <div class="tab-panel" data-panel="conditions" data-group="main">
-              <div class="card-grid">
-                <article class="stat-card">
-                  <p class="label">Wave Height</p>
-                  <h3 id="wave-height">—</h3>
-                  <p class="muted" id="wave-height-meta">
-                    Waiting for marine feed…
-                  </p>
-                </article>
-                <article class="stat-card">
-                  <p class="label">Swell Mix</p>
-                  <h3 id="swell-mix">—</h3>
-                  <p class="muted" id="swell-mix-meta">
-                    Direction and dominant period populate from Open-Meteo.
-                  </p>
-                </article>
-                <article class="stat-card">
-                  <p class="label">Tide</p>
-                  <h3 id="tide-state">—</h3>
-                  <p class="muted" id="tide-meta">
-                    Next highs and lows with NOAA primary and Open-Meteo backup.
-                  </p>
-                </article>
-                <article class="stat-card">
-                  <p class="label">Wind</p>
-                  <h3 id="wind-card">—</h3>
-                  <p class="muted" id="wind-card-meta">
-                    Hourly wind from Open-Meteo forecast.
-                  </p>
-                </article>
-                <article class="stat-card">
-                  <p class="label">Water Temp</p>
-                  <h3 id="water-temp">—</h3>
-                  <p class="muted" id="water-temp-meta">
-                    Sea surface temperature from marine API.
-                  </p>
-                </article>
-                <article class="stat-card">
-                  <p class="label">UV Index</p>
-                  <h3 id="uv-index">—</h3>
-                  <p class="muted" id="uv-meta">Daily max UV from Open-Meteo.</p>
-                </article>
-                <article class="stat-card">
-                  <p class="label">Feels Like</p>
-                  <h3 id="feels-like">—</h3>
-                  <p class="muted" id="feels-like-meta">
-                    Apparent temperature blended from Open-Meteo sources.
-                  </p>
-                </article>
-                <article class="stat-card">
-                  <p class="label">Humidity & Pressure</p>
-                  <h3 id="humidity">—</h3>
-                  <p class="muted" id="humidity-meta">
-                    Relative humidity and sea-level pressure from forecast feeds.
-                  </p>
-                </article>
-              </div>
-            </div>
+        </div>
 
-            <div class="tab-panel hidden" data-panel="outlook" data-group="main">
-              <div class="card-grid two-col">
-                <article class="panel-card">
-                  <div class="panel-card-header">
-                    <p class="eyebrow">Hourly Outlook</p>
-                    <h3 id="timeline-title">Next few hours in Capitola</h3>
-                  </div>
-                  <div class="timeline" id="timeline">
-                    <div class="timeline-item">
-                      <div>
-                        <p class="label">Loading</p>
-                        <h4>Fetching forecast</h4>
-                        <p class="muted">
-                          Wave and wind outlook will land here shortly.
-                        </p>
-                      </div>
-                      <span class="badge badge-blue">—</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="panel-card">
-                  <div class="panel-card-header">
-                    <p class="eyebrow">Tides & Wind</p>
-                    <h3>Supporting Cast</h3>
-                  </div>
-                  <div class="support-grid">
-                    <div class="support-card">
-                      <p class="label">Next High</p>
-                      <h3 id="next-high">—</h3>
-                      <p class="muted" id="next-high-meta">
-                        NOAA predictions with Open-Meteo tide height fallback.
-                      </p>
-                    </div>
-                    <div class="support-card">
-                      <p class="label">Next Low</p>
-                      <h3 id="next-low">—</h3>
-                      <p class="muted" id="next-low-meta">
-                        Tide fallback rotates through each provider in order.
-                      </p>
-                    </div>
-                    <div class="support-card">
-                      <p class="label">Wind Window</p>
-                      <h3 id="wind-window">—</h3>
-                      <p class="muted" id="wind-window-meta">
-                        Using forecasted 10 m wind over the next hours.
-                      </p>
-                    </div>
-                    <div class="support-card">
-                      <p class="label">Sea Surface Temp</p>
-                      <h3 id="temp-card">—</h3>
-                      <p class="muted">Direct reading from marine model.</p>
-                    </div>
-                  </div>
-                  <div class="legend">
-                    <span class="dot blue"></span>Offshore
-                    <span class="dot coral"></span>Onshore
-                    <span class="dot yellow"></span>Cross-shore
-                  </div>
-                </article>
-              </div>
-            </div>
+        <div class="divider"></div>
 
-            <div class="tab-panel hidden" data-panel="stories" data-group="main">
-              <div class="panel-card">
-                <div class="panel-card-header">
-                  <div>
-                    <p class="eyebrow">Surf Stories</p>
-                    <h3>Signals your crew can skim</h3>
-                  </div>
-                  <div class="pill-group" id="story-chips">
-                    <span class="pill accent">Grounded in measured values</span>
-                  </div>
-                </div>
-                <div class="vibe-grid">
-                  <article class="vibe-card">
-                    <div class="vibe-tag">Now</div>
-                    <h3 id="story-now">Live conditions will populate soon.</h3>
-                    <p id="story-now-meta">
-                      We narrate only what the current wave, wind, and tide numbers
-                      support.
-                    </p>
-                  </article>
-                  <article class="vibe-card">
-                    <div class="vibe-tag">Next Hours</div>
-                    <h3 id="story-next">Hourly forecast incoming.</h3>
-                    <p id="story-next-meta">
-                      Statements here are derived from Open-Meteo's marine and wind
-                      projections.
-                    </p>
-                  </article>
-                  <article class="vibe-card">
-                    <div class="vibe-tag">Daylight</div>
-                    <h3 id="story-day">
-                      Sunrise and sunset update from Open-Meteo-ready times.
-                    </h3>
-                    <p id="story-day-meta">
-                      We only cite daylight windows provided by the forecast API.
-                    </p>
-                  </article>
-                </div>
-              </div>
-            </div>
+        <div class="grid">
+          <article class="stat">
+            <p class="label">Primary Wave</p>
+            <h3 id="primary-wave">—</h3>
+            <p class="muted" id="primary-period">Height · Direction · Period</p>
+          </article>
+          <article class="stat">
+            <p class="label">Water Temp</p>
+            <h3 id="water-temp">—</h3>
+            <p class="muted">Marine model sea surface temp</p>
+          </article>
+          <article class="stat">
+            <p class="label">Next Tide</p>
+            <h3 id="next-tide">—</h3>
+            <p class="muted" id="tide-meta">NOAA 9414290 (S.F.)</p>
+          </article>
+          <article class="stat">
+            <p class="label">Day Outlook</p>
+            <h3 id="day-outlook">—</h3>
+            <p class="muted">Morning · Afternoon · Evening waves</p>
+          </article>
+        </div>
 
-            <div class="tab-panel hidden" data-panel="guide" data-group="main">
-              <div class="panel-card">
-                <div class="panel-card-header">
-                  <div>
-                    <p class="eyebrow">Capitola Village Guide</p>
-                    <h3>Local picks while you watch the surf</h3>
-                  </div>
-                  <div
-                    class="nav-tabs sub"
-                    role="tablist"
-                    aria-label="Village guide"
-                  >
-                    <button class="nav-tab active" data-tab="food" data-group="guide">
-                      Food & Restaurants
-                    </button>
-                    <button class="nav-tab" data-tab="shopping" data-group="guide">
-                      Shopping
-                    </button>
-                    <button class="nav-tab" data-tab="services" data-group="guide">
-                      Parks & Services
-                    </button>
-                    <button class="nav-tab" data-tab="transit" data-group="guide">
-                      Public Transportation
-                    </button>
-                  </div>
-                </div>
-                <div class="tab-panels" id="tab-panels">
-                  <div
-                    class="listing-grid"
-                    data-panel="food"
-                    data-group="guide"
-                    role="tabpanel"
-                  >
-            <article class="listing-card">
-              <div>
-                <p class="label">Beachfront Brunch</p>
-                <h3>
-                  <a
-                    href="https://www.yelp.com/biz/zeldas-on-the-beach-capitola"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Zelda's on the Beach
-                  </a>
-                </h3>
-                <p class="muted">
-                  Longtime oceanfront staple with seafood, cocktails, and live
-                  music on weekends.
-                </p>
-              </div>
-              <a class="pill" href="tel:18314754900">Call (831) 475-4900</a>
-            </article>
-            <article class="listing-card">
-              <div>
-                <p class="label">Iconic Date Night</p>
-                <h3>
-                  <a
-                    href="https://www.yelp.com/biz/shadowbrook-restaurant-capitola"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Shadowbrook Restaurant
-                  </a>
-                </h3>
-                <p class="muted">
-                  Creekside dining famous for its hillside cable car and cozy
-                  fireside booths.
-                </p>
-              </div>
-              <a class="pill" href="tel:18314751511">Call (831) 475-1511</a>
-            </article>
-            <article class="listing-card">
-              <div>
-                <p class="label">Beachfront Grill</p>
-                <h3>
-                  <a
-                    href="https://www.yelp.com/biz/paradise-beach-grille-capitola"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Paradise Beach Grille
-                  </a>
-                </h3>
-                <p class="muted">
-                  Seafood-focused American grill with a lively patio overlooking
-                  the Esplanade and Capitola Beach.
-                </p>
-              </div>
-              <a class="pill" href="tel:18314764900">Call (831) 476-4900</a>
-            </article>
-            <article class="listing-card">
-              <div>
-                <p class="label">Colorful Cantina</p>
-                <h3>
-                  <a
-                    href="https://www.yelp.com/biz/margaritaville-capitola"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Margaritaville Capitola
-                  </a>
-                </h3>
-                <p class="muted">
-                  Bright, seaside spot for Baja-inspired plates, margaritas, and
-                  views of the lagoon and village.
-                </p>
-              </div>
-              <a class="pill" href="tel:18314762263">Call (831) 476-2263</a>
-            </article>
-            <article class="listing-card">
-              <div>
-                <p class="label">Village Pizza</p>
-                <h3>
-                  <a
-                    href="https://www.yelp.com/biz/pizza-my-heart-capitola"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Pizza My Heart
-                  </a>
-                </h3>
-                <p class="muted">
-                  Iconic local pizza-by-the-slice counter with surf decor steps
-                  from the sand.
-                </p>
-              </div>
-              <a class="pill" href="tel:18314755714">Call (831) 475-5714</a>
-            </article>
-            <article class="listing-card">
-              <div>
-                <p class="label">British Pub</p>
-                <h3>
-                  <a
-                    href="https://www.yelp.com/biz/britannia-arms-of-capitola-capitola"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Britannia Arms of Capitola
-                  </a>
-                </h3>
-                <p class="muted">
-                  Classic English-style pub with fish and chips, taps, and a
-                  beach-facing patio in the heart of the Village.
-                </p>
-              </div>
-              <a class="pill" href="tel:18314754400">Call (831) 475-4400</a>
-            </article>
+        <div class="mini-grid" id="timeline">
+          <div class="mini-card">
+            <p class="label">Morning</p>
+            <p id="wave-morning">—</p>
           </div>
-
-          <div
-            class="listing-grid hidden"
-            data-panel="shopping"
-            data-group="guide"
-            role="tabpanel"
-          >
-            <article class="listing-card">
-              <div>
-                <p class="label">Village Boutiques</p>
-                <h3>
-                  <a
-                    href="https://www.yelp.com/biz/capitola-mercantile-capitola"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Capitola Mercantile
-                  </a>
-                </h3>
-                <p class="muted">
-                  Indoor collection of local shops for coastal gifts, jewelry,
-                  and beachwear a block from the sand.
-                </p>
-              </div>
-              <a class="pill" href="tel:18314760297">Call (831) 476-0297</a>
-            </article>
-            <article class="listing-card">
-              <div>
-                <p class="label">Surf Essentials</p>
-                <h3>
-                  <a
-                    href="https://www.yelp.com/biz/ozzi-surf-shop-capitola"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    O'Neill Surf Shop Capitola
-                  </a>
-                </h3>
-                <p class="muted">
-                  Wetsuits, soft-tops, and rentals right across from the beach
-                  for quick sessions.
-                </p>
-              </div>
-              <a class="pill" href="tel:18314766299">Call (831) 476-6299</a>
-            </article>
-            <article class="listing-card">
-              <div>
-                <p class="label">Gifts & Art</p>
-                <h3>
-                  <a
-                    href="https://www.yelp.com/biz/phoebes-jewelry-and-art-capitola"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Phoebe's Fine Jewelry & Art Glass
-                  </a>
-                </h3>
-                <p class="muted">
-                  Handcrafted jewelry and glass art celebrating Capitola’s surf
-                  culture and seaside colors.
-                </p>
-              </div>
-              <a class="pill" href="tel:18314620562">Call (831) 462-0562</a>
-            </article>
+          <div class="mini-card">
+            <p class="label">Midday</p>
+            <p id="wave-mid">—</p>
           </div>
-
-          <div
-            class="listing-grid hidden"
-            data-panel="services"
-            data-group="guide"
-            role="tabpanel"
-          >
-            <article class="listing-card">
-              <div>
-                <p class="label">Beach Viewpoint</p>
-                <h3>Capitola Jetty & Bluff</h3>
-                <p class="muted">
-                  Wander the seawall and bluff benches for a quick read on the
-                  lineup.
-                </p>
-              </div>
-              <span class="pill muted-pill">Public access</span>
-            </article>
-            <article class="listing-card">
-              <div>
-                <p class="label">Restrooms</p>
-                <h3>Capitola Beach Facilities</h3>
-                <p class="muted">
-                  Steps from the sand near the esplanade; busiest on summer
-                  weekends.
-                </p>
-              </div>
-              <span class="pill muted-pill">Open daily</span>
-            </article>
-            <article class="listing-card">
-              <div>
-                <p class="label">Parking</p>
-                <h3>Beach & Wharf Lots</h3>
-                <p class="muted">
-                  Paid lots closest to the sand; village garage a short walk
-                  uphill.
-                </p>
-              </div>
-              <span class="pill muted-pill">Paid</span>
-            </article>
+          <div class="mini-card">
+            <p class="label">Evening</p>
+            <p id="wave-eve">—</p>
           </div>
-
-          <div
-            class="listing-grid hidden"
-            data-panel="transit"
-            data-group="guide"
-            role="tabpanel"
-          >
-            <article class="listing-card">
-              <div>
-                <p class="label">Regional Bus</p>
-                <h3>Santa Cruz METRO Routes 55 & 66</h3>
-                <p class="muted">
-                  Runs between Capitola Mall, Santa Cruz, and Aptos with stops
-                  near the village.
-                </p>
-              </div>
-              <span class="pill muted-pill">Check schedule</span>
-            </article>
-            <article class="listing-card">
-              <div>
-                <p class="label">Rideshare</p>
-                <h3>Pickups at Cliff & Stockton</h3>
-                <p class="muted">
-                  Request just above the village to avoid Esplanade congestion.
-                </p>
-              </div>
-              <span class="pill muted-pill">ETA varies</span>
-            </article>
+          <div class="mini-card">
+            <p class="label">Marine API</p>
+            <p id="marine-status">Pending…</p>
           </div>
-                </div>
-              </div>
-            </div>
+          <div class="mini-card">
+            <p class="label">Forecast API</p>
+            <p id="forecast-status">Pending…</p>
           </div>
-        </section>
-      </main>
-    </div>
+          <div class="mini-card">
+            <p class="label">NOAA Tides</p>
+            <p id="tide-status">Pending…</p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script>
-      const $ = (id) => document.getElementById(id);
-
-      const activeSpot = {
-        id: "capitola",
-        name: "Capitola",
-        display: "Capitola, CA",
-        region: "Monterey Bay",
-        blurb: "Sheltered cove with a mellow point break.",
-        lat: 36.9745,
-        lon: -121.9536,
+      const spot = {
+        name: "Ocean Beach",
+        city: "San Francisco",
+        latitude: 37.7749,
+        longitude: -122.5149,
         timezone: "America/Los_Angeles",
-        tideStation: "9413745",
+        noaaStation: "9414290",
       };
 
-      const hoursFromNow = (h) =>
-        new Date(Date.now() + h * 60 * 60 * 1000).toISOString();
-
-      const fallbackData = (() => {
-        const timeline = Array.from({ length: 12 }, (_, idx) => hoursFromNow(idx));
-
-        // Anchor every fallback value to the accurate Capitola snapshot shared
-        // in the design reference. This keeps the offline experience in lockstep
-        // with a verified tide board: high at 3:46 AM (4.9 ft), low at 10:16 AM
-        // (2.0 ft), high again at 4:14 PM (3.4 ft), and low at 9:38 PM (1.3 ft)
-        // on December 27, 2025 in America/Los_Angeles.
-        const tideProfile = {
-          timezone: "America/Los_Angeles",
-          predictions: [
-            { time: "2025-12-27T11:46:00.000Z", type: "H", height: 4.9 },
-            { time: "2025-12-27T18:16:00.000Z", type: "L", height: 2.0 },
-            { time: "2025-12-28T00:14:00.000Z", type: "H", height: 3.4 },
-            { time: "2025-12-28T05:38:00.000Z", type: "L", height: 1.3 },
-          ],
-        };
-
-        // Shape a tide-height curve that passes through the referenced marks so
-        // that short-term charts and the card copy are internally consistent.
-        const tideHeights = [
-          4.6, 4.9, 4.4, 3.6, 2.8, 2.1, 2.0, 2.5, 3.0, 3.4, 2.6, 1.8,
-        ];
-
-        return {
-          marine: {
-            hourly: {
-              time: timeline,
-              wave_height: [2.1, 2.4, 2.6, 2.8, 3.0, 3.2, 3.1, 2.9, 2.7, 2.5, 2.3, 2.2],
-              wave_period: [12, 13, 13, 14, 14, 15, 15, 14, 13, 13, 12, 12],
-              wave_direction: [200, 205, 205, 207, 208, 210, 212, 210, 208, 205, 203, 200],
-              sea_surface_temperature: [15.5, 15.6, 15.7, 15.8, 15.8, 15.9, 15.9, 15.8, 15.7, 15.6, 15.5, 15.4],
-              tide_height: tideHeights,
-            },
-            daily: {
-              swell_wave_height_max: [3.4],
-              swell_wave_direction_dominant: [207],
-              swell_wave_period_max: [15],
-            },
-          },
-          forecast: {
-            timezone: "America/Los_Angeles",
-            hourly: {
-              time: timeline,
-              wind_speed_10m: [6, 7, 8, 9, 10, 11, 12, 11, 10, 9, 7, 6],
-              wind_direction_10m: [140, 145, 150, 155, 160, 165, 170, 165, 160, 150, 145, 140],
-              temperature_2m: [58, 59, 60, 61, 62, 63, 64, 64, 63, 61, 60, 59],
-              apparent_temperature: [58, 59, 60, 61, 62, 63, 64, 64, 63, 61, 60, 59],
-              relativehumidity_2m: [78, 76, 75, 74, 73, 72, 70, 70, 71, 73, 75, 77],
-              pressure_msl: [1014, 1014, 1013, 1013, 1013, 1012, 1012, 1012, 1013, 1013, 1014, 1014],
-              uv_index: [1, 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1],
-            },
-            daily: {
-              sunrise: [hoursFromNow(-3)],
-              sunset: [hoursFromNow(10)],
-              uv_index_max: [6],
-            },
-            current_weather: {
-              windspeed: 8,
-              winddirection: 150,
-            },
-          },
-          tides: tideProfile,
-        };
-      })();
-
-      const buttons = document.querySelectorAll(".cta");
-      const refreshButton = buttons[0];
-      const sourceLink = document.getElementById("source-link");
-
-      const buildSourceUrls = (spot) => {
-        const { lat, lon, timezone } = spot;
-
-        const marineUrl = `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=wave_height,wave_direction,wave_period,wind_wave_height,wind_wave_direction,wind_wave_period,sea_surface_temperature,tide_height&daily=swell_wave_height_max,swell_wave_direction_dominant,swell_wave_period_max&timezone=${timezone}`;
-        const forecastUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=wind_speed_10m,wind_direction_10m,temperature_2m,uv_index,apparent_temperature,relativehumidity_2m,pressure_msl&daily=sunrise,sunset,uv_index_max&current_weather=true&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=${timezone}`;
-        const tideSources = [
-          {
-            label: "NOAA tide station",
-            url: `https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&application=surfside&format=json&datum=MLLW&units=english&time_zone=lst_ldt&interval=hilo&station=${spot.tideStation}&date=now&range=72`,
-          },
-          {
-            label: "Open-Meteo tide height",
-            url: `https://marine-api.open-meteo.com/v1/marine?latitude=${lat}&longitude=${lon}&hourly=tide_height&timezone=${timezone}`,
-          },
-          { label: "Local fallback", data: fallbackData.tides },
-        ];
-
-        return { marineUrl, forecastUrl, tideSources };
+      const conditionMap = {
+        0: "Clear sky",
+        1: "Mostly clear",
+        2: "Partly cloudy",
+        3: "Overcast",
+        45: "Foggy",
+        48: "Foggy",
+        51: "Drizzle",
+        61: "Light rain",
+        80: "Showers",
+        95: "Thunderstorms",
       };
 
-      const renderSourceChips = () => {
-        const chipRow = $("chip-row");
-        chipRow.innerHTML = "";
+      const dom = (id) => document.getElementById(id);
 
-        const chips = [
-          `Marine grid @ ${activeSpot.lat.toFixed(3)}, ${activeSpot.lon.toFixed(3)}`,
-          "Open-Meteo forecast and marine",
-          "NOAA station + Open-Meteo tide fallback",
-        ];
-
-        chips.forEach((text) => {
-          const span = document.createElement("span");
-          span.className = "pill";
-          span.textContent = text;
-          chipRow.appendChild(span);
-        });
-      };
-
-      const updateSourceLink = () => {
-        const { marineUrl, forecastUrl, tideSources } = buildSourceUrls(
-          activeSpot,
-        );
-        const openSources = () => {
-          [
-            marineUrl,
-            forecastUrl,
-            ...tideSources.map((source) => source?.url),
-          ].forEach((url) => url && window.open(url, "_blank"));
-        };
-        sourceLink.onclick = openSources;
-        const duplicate = document.getElementById("source-link-duplicate");
-        if (duplicate) duplicate.onclick = openSources;
-        sourceLink.setAttribute(
-          "aria-label",
-          `Open data feeds for ${activeSpot.display}`,
-        );
-        renderSourceChips();
-      };
-
-      const updateSpotCopy = () => {
-        $("location-eyebrow").textContent =
-          `Daily Surf Report • ${activeSpot.display}`;
-        $("hero-lede").textContent =
-          `Conditions for ${activeSpot.display} powered by Open-Meteo marine + forecast data with NOAA tides as the anchor. Every stat flows directly from those feeds or a local fallback so the dashboard always shows a believable read.`;
-        $("hero-spot-name").textContent = activeSpot.display;
-        $("timeline-title").textContent =
-          `Next few hours in ${activeSpot.name}`;
-        updateSourceLink();
-      };
-
-      refreshButton.addEventListener("click", () => {
-        refreshButton.textContent = "Refreshing…";
-        loadData().finally(() => (refreshButton.textContent = "Refresh Data"));
-      });
-
-      const formatFeet = (meters) => {
-        if (typeof meters !== "number") return "—";
-        return `${(meters * 3.28084).toFixed(1)} ft`;
-      };
-
-      const formatDir = (deg) => {
-        if (typeof deg !== "number") return "—";
-        const dirs = [
-          "N",
-          "NNE",
-          "NE",
-          "ENE",
-          "E",
-          "ESE",
-          "SE",
-          "SSE",
-          "S",
-          "SSW",
-          "SW",
-          "WSW",
-          "W",
-          "WNW",
-          "NW",
-          "NNW",
-        ];
-        return `${dirs[Math.round(deg / 22.5) % 16]} ${Math.round(deg)}°`;
-      };
-
-      const toLocal = (iso, tz = activeSpot.timezone) =>
-        new Date(iso).toLocaleString("en-US", {
-          timeZone: tz,
+      function formatTime(value) {
+        if (!value) return "—";
+        const date = new Date(value);
+        return date.toLocaleTimeString([], {
           hour: "numeric",
           minute: "2-digit",
         });
+      }
 
-      const getCurrentIndex = (times, tz = activeSpot.timezone) => {
-        const now = new Date(
-          new Date().toLocaleString("en-US", { timeZone: tz }),
-        );
-        let best = 0;
-        let min = Infinity;
-        times.forEach((time, idx) => {
-          const diff = Math.abs(new Date(time) - now);
-          if (diff < min) {
-            best = idx;
-            min = diff;
-          }
+      function status(id, text, ok = true) {
+        dom(id).textContent = ok ? `✅ ${text}` : `❌ ${text}`;
+      }
+
+      async function fetchForecast() {
+        const params = new URLSearchParams({
+          latitude: spot.latitude,
+          longitude: spot.longitude,
+          current_weather: "true",
+          hourly: [
+            "temperature_2m",
+            "apparent_temperature",
+            "windspeed_10m",
+            "winddirection_10m",
+            "uv_index",
+          ].join(","),
+          daily: ["sunrise", "sunset", "uv_index_max"].join(","),
+          timezone: spot.timezone,
         });
-        return best;
-      };
 
-      const buildWaveStory = (waveFt, period, windText) => {
-        if (!waveFt || !period || !windText)
-          return "Waiting for complete observations.";
-        return `Sets are around ${waveFt.toFixed(1)} ft with a ${period.toFixed(0)}s period. Wind is ${windText.toLowerCase()}, all pulled directly from today's feeds.`;
-      };
+        const res = await fetch(`https://api.open-meteo.com/v1/forecast?${params}`);
+        if (!res.ok) throw new Error("Forecast API failed");
+        const data = await res.json();
+        return data;
+      }
 
-      const fetchJson = async (url, options = {}) => {
-        const res = await fetch(url, options);
-        if (!res.ok) {
-          throw new Error(`Request failed for ${url} (${res.status})`);
-        }
+      async function fetchMarine() {
+        const params = new URLSearchParams({
+          latitude: spot.latitude,
+          longitude: spot.longitude,
+          hourly: [
+            "wave_height",
+            "wave_direction",
+            "wave_period",
+            "wind_wave_height",
+            "wind_wave_direction",
+            "wind_wave_period",
+            "water_temperature",
+          ].join(","),
+          timezone: spot.timezone,
+        });
+
+        const res = await fetch(`https://marine-api.open-meteo.com/v1/marine?${params}`);
+        if (!res.ok) throw new Error("Marine API failed");
         return res.json();
-      };
+      }
 
-      const fetchJsonWithFallback = async (urls) => {
-        for (const source of urls) {
-          if (!source) continue;
-          const { url, options, label, data } =
-            typeof source === "string" ? { url: source } : source;
-
-          if (data) return data;
-          if (!url) continue;
-          try {
-            return await fetchJson(url, options);
-          } catch (err) {
-            console.warn(`Failed tide source ${label || url}`, err);
-          }
-        }
-        throw new Error("No tide source succeeded");
-      };
-
-      const toIsoFromLocalClock = (dateStr, timeStr, tz) => {
-        if (!dateStr || !timeStr) return undefined;
-        const [clock, meridiem] = timeStr.split(" ");
-        const [hourRaw, minute = 0] = clock.split(":");
-        let hour = Number(hourRaw);
-        if (meridiem?.toUpperCase() === "PM" && hour < 12) hour += 12;
-        if (meridiem?.toUpperCase() === "AM" && hour === 12) hour = 0;
-
-        const [year, month, day] = dateStr.split("-").map(Number);
-        const utcDate = new Date(Date.UTC(year, month - 1, day, hour, minute));
-        const tzDate = new Date(
-          utcDate.toLocaleString("en-US", { timeZone: tz || activeSpot.timezone }),
+      async function fetchTides() {
+        const params = new URLSearchParams({
+          station: spot.noaaStation,
+          product: "predictions",
+          datum: "MLLW",
+          time_zone: "lst_ldt",
+          units: "english",
+          interval: "hilo",
+          format: "json",
+          date: "today",
+        });
+        const res = await fetch(
+          `https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?${params}`
         );
-        const offset = utcDate.getTime() - tzDate.getTime();
-        return new Date(utcDate.getTime() + offset).toISOString();
-      };
+        if (!res.ok) throw new Error("NOAA tide API failed");
+        const data = await res.json();
+        if (!data.predictions) throw new Error("Unexpected tide response");
+        return data;
+      }
 
-      const normalizeWeatherApi = (data) => {
-        if (!data?.forecast?.forecastday?.length) return null;
-        const tz = data.location?.tz_id || activeSpot.timezone;
-        const today = data.forecast.forecastday[0];
-        const hours = today.hour || [];
+      function windText(current) {
+        const speed = current.windspeed;
+        const dir = Math.round(current.winddirection);
+        return `${Math.round(speed)} mph · ${dir}°`;
+      }
 
-        return {
-          hourly: {
-            time: hours.map((h) => toIsoFromLocalClock(h.date, h.time, tz)),
-            wind_speed_10m: hours.map((h) => h.wind_mph),
-            wind_direction_10m: hours.map((h) => h.wind_degree),
-            temperature_2m: hours.map((h) => h.temp_f),
-            apparent_temperature: hours.map((h) => h.feelslike_f),
-            relativehumidity_2m: hours.map((h) => h.humidity),
-            pressure_msl: hours.map((h) => h.pressure_mb),
-            uv_index: hours.map((h) => h.uv),
-          },
-          daily: {
-            uv_index_max: [today.day?.uv],
-          },
-        };
-      };
+      function waveSummary(marine, targetHour) {
+        const times = marine.hourly.time.map((t) => new Date(t));
+        const now = new Date();
+        const target = new Date(now);
+        target.setHours(targetHour, 0, 0, 0);
+        const idx = times.findIndex((t) => t >= target);
+        if (idx === -1) return "—";
+        const h = marine.hourly.wave_height[idx];
+        const p = marine.hourly.wave_period[idx];
+        return `${h.toFixed(1)} ft @ ${p.toFixed(0)} s`;
+      }
 
-      const buildWindText = (speed, dir) => {
-        if (typeof speed !== "number") return "";
-        const label = formatDir(dir);
-        return `${speed.toFixed(0)} mph ${label}`;
-      };
+      function nextTide(predictions) {
+        const now = new Date();
+        const next = predictions.find((p) => new Date(p.t) > now);
+        if (!next) return null;
+        return next;
+      }
 
-      const toCardTemp = (temp) =>
-        typeof temp === "number" ? `${temp.toFixed(0)}°F` : "—";
-
-      const buildTideMeta = (predictions) => {
-        const sorted = predictions
-          .map((entry) => ({
-            time: entry.time || entry.t || entry.date,
-            label: entry.type === "H" ? "High" : "Low",
-            height: entry.height,
-          }))
-          .filter((p) => p.time && typeof p.height === "number")
-          .slice(0, 2);
-
-        if (!sorted.length) return "Tide timing rotates through NOAA predictions, Open-Meteo heights, then the local fallback set.";
-
-        return sorted
-          .map(
-            (entry) => `${entry.label} @ ${toLocal(entry.time)} • ${entry.height.toFixed(1)} ft`,
-          )
-          .join("  •  ");
-      };
-
-      const buildConfidence = (marine, forecast) => {
-        const marineHours = marine?.hourly?.time?.length || 0;
-        const forecastHours = forecast?.hourly?.time?.length || 0;
-        const coverage = Math.min(1, (marineHours + forecastHours) / 48);
-        return Math.round(50 + coverage * 50);
-      };
-
-      const findNextWindWindow = (forecast) => {
-        if (!forecast?.hourly?.time?.length) return null;
-        const idx = getCurrentIndex(forecast.hourly.time);
-        const speeds = forecast.hourly.wind_speed_10m.slice(idx, idx + 4);
-        const dirs = forecast.hourly.wind_direction_10m.slice(idx, idx + 4);
-        const average =
-          speeds.reduce((sum, v) => sum + v, 0) / Math.max(speeds.length, 1);
-        const direction =
-          dirs.reduce((sum, v) => sum + v, 0) / Math.max(dirs.length, 1);
-        return `${average.toFixed(0)} mph ${formatDir(direction)}`;
-      };
-
-      const loadData = async () => {
+      async function load() {
         try {
-          const { marineUrl, forecastUrl, tideSources } = buildSourceUrls(
-            activeSpot,
-          );
-
-          const [marine, forecast, tideData] = await Promise.all([
-            fetchJsonWithFallback([marineUrl, { data: fallbackData.marine }]),
-            fetchJsonWithFallback([forecastUrl, { data: fallbackData.forecast }]).then(
-              (data) => data.forecast ? normalizeWeatherApi(data) || data : data,
-            ),
-            fetchJsonWithFallback(tideSources),
+          const [forecast, marine, tides] = await Promise.all([
+            fetchForecast(),
+            fetchMarine(),
+            fetchTides(),
           ]);
 
-          const currentIdx = getCurrentIndex(marine.hourly.time);
-          const waveMeters = marine.hourly.wave_height[currentIdx];
-          const waveFt = waveMeters * 3.28084;
-          const wavePeriod = marine.hourly.wave_period[currentIdx];
-          const waveDir = marine.hourly.wave_direction[currentIdx];
+          const current = forecast.current_weather;
+          dom("temperature").textContent = `${Math.round(current.temperature)}°`;
+          dom("condition").textContent = conditionMap[current.weathercode] || "Clear";
+          dom("wind").textContent = windText(current);
+          dom("sunrise").textContent = formatTime(forecast.daily.sunrise[0]);
+          dom("sunset").textContent = formatTime(forecast.daily.sunset[0]);
+          dom("uv").textContent = `${forecast.daily.uv_index_max[0].toFixed(1)}`;
+          status("forecast-status", "Open-Meteo forecast loaded");
 
-          const primaryHeight = marine?.daily?.swell_wave_height_max?.[0];
-          const primaryPeriod = marine?.daily?.swell_wave_period_max?.[0];
-          const primaryDir = marine?.daily?.swell_wave_direction_dominant?.[0];
+          const height = marine.hourly.wave_height[0];
+          const direction = marine.hourly.wave_direction[0];
+          const period = marine.hourly.wave_period[0];
+          dom("primary-wave").textContent = `${height.toFixed(1)} ft`;
+          dom(
+            "primary-period"
+          ).textContent = `${direction.toFixed(0)}° · ${period.toFixed(0)} s`;
+          dom("water-temp").textContent = `${marine.hourly.water_temperature[0].toFixed(1)}°F`;
+          dom("wave-morning").textContent = waveSummary(marine, 8);
+          dom("wave-mid").textContent = waveSummary(marine, 12);
+          dom("wave-eve").textContent = waveSummary(marine, 18);
+          dom("day-outlook").textContent = `${marine.hourly.wave_height[0].toFixed(
+            1
+          )}–${Math.max(
+            marine.hourly.wave_height[6] || marine.hourly.wave_height[0],
+            marine.hourly.wave_height[12] || marine.hourly.wave_height[0]
+          ).toFixed(1)} ft`;
+          status("marine-status", "Marine API loaded");
 
-          $("primary-swell").textContent = formatFeet(primaryHeight);
-          $("primary-swell-meta").textContent = `${formatDir(primaryDir)} • ${primaryPeriod || "—"} s period`;
-
-          const windSpeed = forecast.current_weather?.windspeed ??
-            forecast.hourly.wind_speed_10m[currentIdx];
-          const windDirection = forecast.current_weather?.winddirection ??
-            forecast.hourly.wind_direction_10m[currentIdx];
-
-          const windText = buildWindText(windSpeed, windDirection);
-
-          $("wind-now").textContent = windText || "—";
-          $("wind-meta").textContent = "Instant wind from Open-Meteo.";
-
-          $("wave-height").textContent = formatFeet(waveMeters);
-          $("wave-height-meta").textContent = `${formatDir(waveDir)} • ${wavePeriod?.toFixed(0) || "—"}s period`;
-
-          $("swell-mix").textContent = formatFeet(primaryHeight);
-          $("swell-mix-meta").textContent = `${formatDir(primaryDir)} • ${primaryPeriod || "—"}s peak`;
-
-          $("wind-card").textContent = windText || "—";
-          $("wind-card-meta").textContent = "Based on the latest hourly forecast.";
-
-          const waterTemp = marine.hourly.sea_surface_temperature[currentIdx];
-          $("water-temp").textContent =
-            typeof waterTemp === "number" ? `${waterTemp.toFixed(1)}°C` : "—";
-          $("water-temp-meta").textContent = "Marine model temperature reading.";
-
-          const uvMax = forecast?.daily?.uv_index_max?.[0];
-          $("uv-index").textContent = uvMax ?? "—";
-          $("uv-meta").textContent = "Daily max UV from forecast grid.";
-
-          const feelsLike = forecast.hourly.apparent_temperature[currentIdx];
-          const airTemp = forecast.hourly.temperature_2m[currentIdx];
-          $("feels-like").textContent = toCardTemp(feelsLike);
-          $("feels-like-meta").textContent = `Air temp ${toCardTemp(airTemp)} at the surface.`;
-
-          const humidity = forecast.hourly.relativehumidity_2m[currentIdx];
-          const pressure = forecast.hourly.pressure_msl[currentIdx];
-          $("humidity").textContent =
-            typeof humidity === "number"
-              ? `${humidity.toFixed(0)}% • ${pressure?.toFixed(0) || "—"} hPa`
-              : "—";
-          $("humidity-meta").textContent = "Pulled straight from Open-Meteo forecast.";
-
-          const sunrise = forecast.daily.sunrise?.[0];
-          const sunset = forecast.daily.sunset?.[0];
-          $("sunrise").textContent = `Sunrise ${toLocal(sunrise)}`;
-          $("sunset").textContent = `Sunset ${toLocal(sunset)}`;
-          $("water-air").textContent = `${waterTemp?.toFixed(1) || "—"}°C water • ${airTemp?.toFixed(0) || "—"}°F air`;
-
-          const confidenceScore = buildConfidence(marine, forecast);
-          $("confidence-bar").style.width = `${confidenceScore}%`;
-          $("confidence-copy").textContent =
-            `Data freshness based on nearest model hour; confidence ${confidenceScore}% from today's feeds.`;
-
-          const nextWindWindow = findNextWindWindow(forecast);
-          $("wind-window").textContent = nextWindWindow || "—";
-          $("wind-window-meta").textContent = "Averaged from the next few forecast hours.";
-
-          $("temp-card").textContent =
-            typeof waterTemp === "number" ? `${waterTemp.toFixed(1)}°C` : "—";
-
-          const tidePredictions =
-            tideData?.predictions ||
-            tideData?.tide ||
-            tideData?.tides ||
-            tideData?.data ||
-            [];
-
-          $("tide-meta").textContent = buildTideMeta(tidePredictions);
-
-          buildTimeline(marine, forecast);
-          buildTides(tideData);
-          buildStories(waveFt, wavePeriod, windText, tideData);
-        } catch (err) {
-          console.error(err);
-          $("confidence-copy").textContent =
-            "Something went wrong loading the open APIs. Please retry.";
-        }
-      };
-
-      const buildTimeline = (marine, forecast) => {
-        const now = new Date(
-          new Date().toLocaleString("en-US", { timeZone: activeSpot.timezone }),
-        );
-        const timeline = $("timeline");
-        timeline.innerHTML = "";
-
-        let added = 0;
-        marine.hourly.time.forEach((time, idx) => {
-          if (added >= 4) return;
-          const tDate = new Date(time);
-          if (tDate < now) return;
-
-          const waveMeters = marine.hourly.wave_height[idx];
-          const waveFt = waveMeters * 3.28084;
-          const period = marine.hourly.wave_period[idx];
-          const windSpeed = forecast.hourly.wind_speed_10m[idx];
-          const windDir = forecast.hourly.wind_direction_10m[idx];
-
-          const item = document.createElement("div");
-          item.className = "timeline-item";
-          item.innerHTML = `
-          <div>
-            <p class="label">${toLocal(time)}</p>
-            <h4>${formatFeet(waveMeters)} • ${period?.toFixed(0) || "—"}s swell</h4>
-            <p class="muted">Wind ${windSpeed?.toFixed(0) || "—"} mph ${formatDir(windDir)}</p>
-          </div>
-          <span class="badge badge-blue">Forecast</span>
-        `;
-          timeline.appendChild(item);
-          added += 1;
-        });
-      };
-
-      const buildTides = (tides) => {
-        const tideTimezone = tides?.timezone || activeSpot.timezone;
-        const series =
-          tides?.tide ||
-          tides?.hourly ||
-          tides?.data ||
-          tides?.predictions ||
-          tides?.tides ||
-          tides;
-        const entries = Array.isArray(series)
-          ? series
-          : Array.isArray(series?.data)
-            ? series.data
-            : [];
-        const times =
-          series?.time ||
-          series?.timestamps ||
-          series?.time_local ||
-          entries.map((entry) =>
-            entry.timestamp ||
-            entry.time ||
-            entry.date ||
-            entry.datetime ||
-            entry.dt ||
-            entry.t,
-          ) ||
-          [];
-        const heights =
-          series?.height ||
-          series?.heights ||
-          series?.tide_height ||
-          entries.map((entry) =>
-            entry.height ??
-            entry.value ??
-            entry.tideHeight ??
-            entry.tide_height ??
-            entry.v,
-          ) ||
-          [];
-
-        if (
-          !Array.isArray(times) ||
-          !Array.isArray(heights) ||
-          times.length === 0 ||
-          heights.length === 0
-        )
-          return;
-
-        const toDate = (value) => {
-          if (!value) return undefined;
-          if (typeof value === "number") return new Date(value * 1000);
-
-          const strValue = String(value);
-          const hasOffset = /Z|[+-]\d{2}:?\d{2}$/.test(strValue);
-          if (hasOffset && !Number.isNaN(Date.parse(strValue))) {
-            return new Date(strValue);
+          const tide = nextTide(tides.predictions);
+          if (tide) {
+            const label = tide.type === "H" ? "High" : "Low";
+            dom("next-tide").textContent = `${label} ${tide.v} ft @ ${formatTime(
+              tide.t
+            )}`;
+            dom("tide-meta").textContent = `Next tides today: ${tides.predictions
+              .slice(0, 4)
+              .map((p) => `${p.type} ${formatTime(p.t)}`)
+              .join(" · ")}`;
+            status("tide-status", "NOAA tide data loaded");
+          } else {
+            status("tide-status", "No tide entries", false);
           }
-
-          // Tide timestamps are returned without an explicit offset. Treat them as
-          // local times in the requested spot timezone instead of assuming UTC.
-          const normalized = strValue.replace(" ", "T");
-          const [datePart, timePart = "00:00"] = normalized.split("T");
-          const [year, month, day] = datePart.split("-").map(Number);
-          const [hour, minute = 0] = timePart.split(":").map(Number);
-
-          const utcDate = new Date(Date.UTC(year, month - 1, day, hour, minute));
-          const tzDate = new Date(
-            utcDate.toLocaleString("en-US", { timeZone: tideTimezone }),
-          );
-          const offset = utcDate.getTime() - tzDate.getTime();
-          return new Date(utcDate.getTime() + offset);
-        };
-
-        const typedExtremes = entries
-          .map((entry) => ({
-            type: entry.type?.[0]?.toUpperCase(),
-            date: toDate(
-              entry.timestamp ||
-                entry.time ||
-                entry.date ||
-                entry.datetime ||
-                entry.dt ||
-                entry.t,
-            ),
-            height: parseFloat(
-              entry.height ??
-                entry.value ??
-                entry.tideHeight ??
-                entry.tide_height ??
-                entry.v,
-            ),
-            t: toDate(
-              entry.timestamp ||
-                entry.time ||
-                entry.date ||
-                entry.datetime ||
-                entry.dt ||
-                entry.t,
-            )?.toISOString(),
-          }))
-          .filter((entry) => entry.date && !Number.isNaN(entry.height));
-
-        const samples =
-          typedExtremes.length > 0
-            ? typedExtremes
-            : times.map((t, idx) => ({
-                t: toDate(t)?.toISOString(),
-                height: parseFloat(heights[idx]),
-                date: toDate(t),
-              }));
-
-        const extremes = [...typedExtremes];
-        if (!extremes.length) {
-          for (let i = 1; i < samples.length - 1; i += 1) {
-            const prev = samples[i - 1];
-            const curr = samples[i];
-            const next = samples[i + 1];
-
-            if (
-              [prev, curr, next].some(
-                (p) => !p || Number.isNaN(p.height) || !p.date,
-              )
-            )
-              continue;
-
-            if (curr.height > prev.height && curr.height >= next.height) {
-              extremes.push({ ...curr, type: "H" });
-            }
-
-            if (curr.height < prev.height && curr.height <= next.height) {
-              extremes.push({ ...curr, type: "L" });
-            }
-          }
+        } catch (error) {
+          console.error(error);
+          status("forecast-status", "Forecast error", false);
+          status("marine-status", "Marine error", false);
+          status("tide-status", "Tide error", false);
         }
+      }
 
-        const now = new Date(
-          new Date().toLocaleString("en-US", { timeZone: tideTimezone }),
-        );
-        const nextHigh = extremes.find((p) => p.type === "H" && p.date > now);
-        const nextLow = extremes.find((p) => p.type === "L" && p.date > now);
-
-        $("next-high").textContent = nextHigh
-          ? `${toLocal(nextHigh.t, tideTimezone)} • ${nextHigh.height.toFixed(1)} ft`
-          : "—";
-        $("next-low").textContent = nextLow
-          ? `${toLocal(nextLow.t, tideTimezone)} • ${nextLow.height.toFixed(1)} ft`
-          : "—";
-        $("tide-state").textContent =
-          nextHigh && nextLow
-            ? nextHigh.date < nextLow.date
-              ? "Rising"
-              : "Dropping"
-            : "—";
-        $("tide-meta").textContent =
-          "Tide timing rotates through NOAA predictions, Open-Meteo heights, then the local fallback set.";
-      };
-
-      const buildStories = (waveFt, period, windText, tides) => {
-        $("story-now").textContent = buildWaveStory(waveFt, period, windText);
-        $("story-now-meta").textContent =
-          "Values above come straight from the latest marine and wind feeds.";
-
-        const timelineWind = windText || "wind data pending";
-        $("story-next").textContent =
-          `Next hours at ${activeSpot.name} stay near ${waveFt?.toFixed(1) || "—"} ft with ${timelineWind}.`;
-        $("story-next-meta").textContent =
-          "Forecast numbers lean on Open-Meteo marine + forecast with built-in local resilience.";
-
-        const nextHigh = $("next-high").textContent;
-        const nextLow = $("next-low").textContent;
-        $("story-day").textContent =
-          `Sunrise and sunset are updated for ${activeSpot.display}. Next tide marks: ${nextHigh} high / ${nextLow} low.`;
-        $("story-day-meta").textContent =
-          `Daylight and tide cues flow from Open-Meteo marine + forecast with NOAA tides and a resilient local fallback.`;
-      };
-
-      const tabButtons = document.querySelectorAll("[data-tab]");
-      const tabPanels = document.querySelectorAll("[data-panel]");
-
-      const groupName = (node) => node.dataset.group || "default";
-
-      const activateTab = (tab) => {
-        const group = groupName(tab);
-
-        tabButtons.forEach((btn) => {
-          if (groupName(btn) !== group) return;
-          const isActive = btn.dataset.tab === tab.dataset.tab;
-          btn.classList.toggle("active", isActive);
-          btn.setAttribute("aria-selected", isActive ? "true" : "false");
-        });
-
-        tabPanels.forEach((panel) => {
-          if (groupName(panel) !== group) return;
-          const isActive = panel.dataset.panel === tab.dataset.tab;
-          panel.classList.toggle("hidden", !isActive);
-          panel.setAttribute("aria-hidden", isActive ? "false" : "true");
-        });
-      };
-
-      tabButtons.forEach((btn) => {
-        btn.addEventListener("click", () => activateTab(btn));
-      });
-
-      const initializedGroups = new Set();
-      tabButtons.forEach((btn) => {
-        const group = groupName(btn);
-        if (initializedGroups.has(group)) return;
-        activateTab(btn);
-        initializedGroups.add(group);
-      });
-
-      updateSpotCopy();
-      loadData();
+      dom("refresh").addEventListener("click", load);
+      load();
     </script>
   </body>
 </html>
