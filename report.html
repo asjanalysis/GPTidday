@@ -62,7 +62,7 @@
             </div>
             <div class="data-row">
               <div class="data-pill">
-                <small>Buoy 46042 (NDBC)</small>
+                <small id="buoy-label">Buoy (NDBC)</small>
                 <strong id="ndbc-wave">—</strong>
               </div>
               <div class="data-pill">
@@ -131,10 +131,25 @@
     </div>
 
     <script>
-      const capitola = { lat: 36.9741, lon: -121.953, tideStation: '9413745' };
+      const capitola = {
+        lat: 36.9741,
+        lon: -121.953,
+        tideStation: '9413745',
+        primaryBuoy: '46236',
+        secondaryBuoy: '46042',
+      };
 
-      const toFeet = (meters) => (meters ? (meters * 3.28084).toFixed(1) : null);
-      const toKnots = (mps) => (mps ? (mps * 1.94384).toFixed(1) : null);
+      const isNil = (val) => val === undefined || val === null || Number.isNaN(val);
+
+      const toFeet = (meters) => {
+        if (isNil(meters)) return null;
+        return (meters * 3.28084).toFixed(1);
+      };
+
+      const toKnots = (mps) => {
+        if (isNil(mps)) return null;
+        return (mps * 1.94384).toFixed(1);
+      };
 
       const cardinal = (degrees) => {
         if (degrees === undefined || degrees === null) return '—';
@@ -171,19 +186,21 @@
         return res.json();
       }
 
-      async function fetchNdbc() {
-        const res = await fetch('https://www.ndbc.noaa.gov/data/realtime2/46042.txt');
-        if (!res.ok) throw new Error('NDBC buoy unavailable');
-        const text = await res.text();
-        const rows = text
-          .split('\n')
-          .filter((line) => line && !line.startsWith('#'));
-        if (!rows.length) throw new Error('No NDBC rows found');
-        const cols = rows[0].trim().split(/\s+/);
-        const wvhtMeters = parseFloat(cols[8]);
-        const swp = parseFloat(cols[10]);
-        const mwdir = parseFloat(cols[9]);
-        return { waveHeight: toFeet(wvhtMeters), swellPeriod: swp, meanDirection: cardinal(mwdir) };
+      async function fetchBuoyFromErddap(stationId) {
+        const url = `https://erddap.cencoos.org/erddap/tabledap/wmo_${stationId}.json?time,WVHT,DPD,MWD&time>=now-6hours&orderByMax("time")`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`Buoy ${stationId} unavailable`);
+        const json = await res.json();
+        const rows = json?.table?.rows || [];
+        if (!rows.length) throw new Error(`No buoy rows for ${stationId}`);
+        const [time, wvht, dpd, mwd] = rows[0];
+        return {
+          station: stationId,
+          waveHeight: toFeet(parseFloat(wvht)),
+          swellPeriod: isNil(dpd) ? null : Number(dpd).toFixed(0),
+          meanDirection: cardinal(parseFloat(mwd)),
+          time,
+        };
       }
 
       async function fetchNoaaTides() {
@@ -205,6 +222,25 @@
         return next ? `${next.type === 'H' ? 'High' : 'Low'} ${next.v} ft @ ${next.t}` : null;
       }
 
+      async function fetchNoaaWaterLevel() {
+        const params = new URLSearchParams({
+          product: 'water_level',
+          application: 'capitola-companion',
+          datum: 'MLLW',
+          station: capitola.tideStation,
+          time_zone: 'lst_ldt',
+          units: 'english',
+          format: 'json',
+          date: 'latest',
+        });
+        const res = await fetch(`https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?${params.toString()}`);
+        if (!res.ok) throw new Error('NOAA water level unavailable');
+        const json = await res.json();
+        const wl = json?.data?.[0];
+        if (!wl?.v) throw new Error('No observed water level found');
+        return `${wl.v} ft @ ${wl.t}`;
+      }
+
       function describeSurf(heightFt, periodSec) {
         if (!heightFt || !periodSec) return 'Awaiting marine data';
         const fair = heightFt <= 4 ? 'Clean' : heightFt <= 8 ? 'Fair' : 'Challenging';
@@ -214,10 +250,12 @@
       async function populate() {
         updateTime();
         try {
-          const [marine, buoy, tide] = await Promise.all([
-            fetchOpenMeteoMarine(),
-            fetchNdbc().catch((err) => ({ error: err.message })),
+          const [marine, tidePrediction, tideObserved, primaryBuoy, secondaryBuoy] = await Promise.all([
+            fetchOpenMeteoMarine().catch((err) => ({ error: err.message })),
             fetchNoaaTides().catch(() => null),
+            fetchNoaaWaterLevel().catch(() => null),
+            fetchBuoyFromErddap(capitola.primaryBuoy).catch(() => null),
+            fetchBuoyFromErddap(capitola.secondaryBuoy).catch(() => null),
           ]);
 
           const heightMeters = marine?.hourly?.wave_height?.[0];
@@ -227,28 +265,41 @@
           const windMps = marine?.hourly?.wind_speed_10m?.[0];
           const windDir = cardinal(marine?.hourly?.wind_direction_10m?.[0]);
 
-          setText('surf-range', waveHeightFt ? `${waveHeightFt} ft` : '—');
-          setText('wave-height', waveHeightFt ? `${waveHeightFt} ft` : '—');
-          setText('wave-period', wavePeriod ? `${wavePeriod}s` : '—');
-          setText('wave-direction', waveDir);
-          setText('wind', windMps ? `${toKnots(windMps)} kt` : '—');
-          setText('wind-inline', windDir !== '—' && windMps ? `${windDir} ${toKnots(windMps)} kt` : '—');
-
-          if (!buoy?.error) {
-            setText('ndbc-wave', `${buoy.waveHeight || '—'} ft @ ${buoy.swellPeriod || '?'}s ${buoy.meanDirection}`);
+          const buoyData = primaryBuoy || secondaryBuoy;
+          if (buoyData) {
+            setText('buoy-label', `Buoy ${buoyData.station} (NDBC)`);
+            setText(
+              'ndbc-wave',
+              `${buoyData.waveHeight || '—'} ft @ ${buoyData.swellPeriod || '?'}s ${buoyData.meanDirection || ''}`.trim()
+            );
           } else {
             setText('ndbc-wave', 'Buoy offline');
           }
 
-          const summary = describeSurf(waveHeightFt, wavePeriod);
+          const displayWaveHeight = waveHeightFt || buoyData?.waveHeight;
+          const displayPeriod = wavePeriod || buoyData?.swellPeriod;
+          const displayDirection = waveDir !== '—' ? waveDir : buoyData?.meanDirection;
+
+          setText('surf-range', displayWaveHeight ? `${displayWaveHeight} ft` : '—');
+          setText('wave-height', displayWaveHeight ? `${displayWaveHeight} ft` : '—');
+          setText('wave-period', displayPeriod ? `${displayPeriod}s` : '—');
+          setText('wave-direction', displayDirection || '—');
+          setText('wind', windMps ? `${toKnots(windMps)} kt` : '—');
+          setText('wind-inline', windDir !== '—' && windMps ? `${windDir} ${toKnots(windMps)} kt` : '—');
+
+          const summary = describeSurf(displayWaveHeight, displayPeriod);
           setText('surf-summary', summary);
 
-          const tideHeight = marine?.hourly?.tide_height?.[0];
-          setText('openmeteo-tide', tideHeight ? `${tideHeight.toFixed(1)} ft` : '—');
-          setText('next-tide', tide || 'Tide predictions unavailable');
+          const tideHeightMeters = marine?.hourly?.tide_height?.[0];
+          const tideHeightFt = toFeet(tideHeightMeters);
+          setText('openmeteo-tide', tideHeightFt ? `${tideHeightFt} ft` : '—');
+
+          const tideDisplay = tidePrediction || tideObserved || (tideHeightFt ? `${tideHeightFt} ft (Open‑Meteo)` : null);
+          setText('next-tide', tideDisplay || 'Tide predictions unavailable');
 
           const updated = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
-          setText('data-updated', `Updated ${updated} · Sources: Open-Meteo + NOAA`);
+          const usedBuoy = buoyData ? ` + Buoy ${buoyData.station}` : '';
+          setText('data-updated', `Updated ${updated} · Sources: NOAA tides${usedBuoy} + Open-Meteo`);
         } catch (err) {
           setText('surf-summary', 'Unable to load live data');
           setText('data-updated', err.message);
