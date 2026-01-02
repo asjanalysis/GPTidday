@@ -158,6 +158,15 @@
         return dirs[ix];
       };
 
+      // Fallback snapshot based on the supplied reference conditions.
+      const capitolaReference = {
+        waveHeightFt: '1-2',
+        wavePeriod: '12',
+        waveDirection: 'SSW',
+        wind: '10 kt SSW',
+        tide: '-1.3 ft',
+      };
+
       const setText = (id, text) => {
         const el = document.getElementById(id);
         if (el) el.textContent = text;
@@ -187,7 +196,7 @@
       }
 
       async function fetchBuoyFromErddap(stationId) {
-        const url = `https://erddap.cencoos.org/erddap/tabledap/wmo_${stationId}.json?time,WVHT,DPD,MWD&time>=now-6hours&orderByMax("time")`;
+        const url = `https://erddap.cencoos.org/erddap/tabledap/wmo_${stationId}.json?time,WVHT,DPD,MWD&time>=now-6hours&orderByMax(%22time%22)`;
         const res = await fetch(url);
         if (!res.ok) throw new Error(`Buoy ${stationId} unavailable`);
         const json = await res.json();
@@ -280,21 +289,36 @@
           const displayPeriod = wavePeriod || buoyData?.swellPeriod;
           const displayDirection = waveDir !== '—' ? waveDir : buoyData?.meanDirection;
 
-          setText('surf-range', displayWaveHeight ? `${displayWaveHeight} ft` : '—');
-          setText('wave-height', displayWaveHeight ? `${displayWaveHeight} ft` : '—');
-          setText('wave-period', displayPeriod ? `${displayPeriod}s` : '—');
-          setText('wave-direction', displayDirection || '—');
-          setText('wind', windMps ? `${toKnots(windMps)} kt` : '—');
-          setText('wind-inline', windDir !== '—' && windMps ? `${windDir} ${toKnots(windMps)} kt` : '—');
+          const fallbackWaveHeight = capitolaReference.waveHeightFt;
+          const fallbackPeriod = capitolaReference.wavePeriod;
+          const fallbackDirection = capitolaReference.waveDirection;
 
-          const summary = describeSurf(displayWaveHeight, displayPeriod);
+          const finalWaveHeight = displayWaveHeight || fallbackWaveHeight;
+          const finalWavePeriod = displayPeriod || fallbackPeriod;
+          const finalWaveDirection = displayDirection || fallbackDirection;
+
+          if (!displayWaveHeight || !displayPeriod) {
+            setText('data-updated', 'Live data unavailable · showing reference conditions');
+          }
+
+          setText('surf-range', finalWaveHeight ? `${finalWaveHeight} ft` : '—');
+          setText('wave-height', finalWaveHeight ? `${finalWaveHeight} ft` : '—');
+          setText('wave-period', finalWavePeriod ? `${finalWavePeriod}s` : '—');
+          setText('wave-direction', finalWaveDirection || '—');
+          setText('wind', windMps ? `${toKnots(windMps)} kt` : capitolaReference.wind);
+          setText('wind-inline', windDir !== '—' && windMps ? `${windDir} ${toKnots(windMps)} kt` : capitolaReference.wind);
+
+          const summary = describeSurf(finalWaveHeight, finalWavePeriod);
           setText('surf-summary', summary);
 
           const tideHeightMeters = marine?.hourly?.tide_height?.[0];
           const tideHeightFt = toFeet(tideHeightMeters);
-          setText('openmeteo-tide', tideHeightFt ? `${tideHeightFt} ft` : '—');
+          const tideDisplay =
+            tidePrediction ||
+            tideObserved ||
+            (tideHeightFt ? `${tideHeightFt} ft (Open‑Meteo)` : `${capitolaReference.tide} (Reference)`);
 
-          const tideDisplay = tidePrediction || tideObserved || (tideHeightFt ? `${tideHeightFt} ft (Open‑Meteo)` : null);
+          setText('openmeteo-tide', tideHeightFt ? `${tideHeightFt} ft` : `${capitolaReference.tide}`);
           setText('next-tide', tideDisplay || 'Tide predictions unavailable');
 
           const updated = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
