@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-01-05T06:03:32.025Z",
+  "tides": {
+    "meta": {
+      "station": "9413745",
+      "name": "Santa Cruz",
+      "datum": "MLLW",
+      "time_zone": "America/Los_Angeles"
+    },
+    "generated_at": "2026-01-05T06:03:28.014Z",
+    "predictions": [],
+    "observations": [],
+    "next_extrema": []
+  },
+  "waves": {
+    "meta": {
+      "source": "CDIP ERDDAP wave_agg",
+      "primary_station_id": "156",
+      "fallback_station_id": "158"
+    },
+    "generated_at": "2026-01-05T06:03:32.024Z",
+    "latest": null
+  },
+  "weather": {
+    "error": "fetch failed",
+    "generated_at": "2026-01-05T06:03:28.045Z"
+  }
+}
