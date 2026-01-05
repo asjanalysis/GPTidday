@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-05T23:45:49.519Z",
+  "generated_at": "2026-01-05T23:55:05.459Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-05T23:45:49.149Z",
+    "generated_at": "2026-01-05T23:55:04.540Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-05T23:45:48.192Z",
+    "generated_at": "2026-01-05T23:55:03.141Z",
     "latest": {
       "t": "2026-01-05T23:00:00.000Z",
       "station_id": "156",
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-05T23:45:49.518Z",
+    "generated_at": "2026-01-05T23:55:05.459Z",
     "current": null,
     "hourly": [
       {
@@ -238,10 +238,10 @@
     "daily": [
       {
         "name": "This Afternoon",
-        "t_start": "2026-01-05T15:00:00-08:00",
+        "t_start": "2026-01-05T12:00:00-08:00",
         "t_end": "2026-01-05T18:00:00-08:00",
         "temp_f": 57,
-        "text": "Rain showers. Cloudy, with a high near 57. South southeast wind 17 to 21 mph, with gusts as high as 29 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible."
+        "text": "Rain showers. Cloudy, with a high near 57. South southeast wind 17 to 21 mph, with gusts as high as 30 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible."
       },
       {
         "name": "Tonight",
