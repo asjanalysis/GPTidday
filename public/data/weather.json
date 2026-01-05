@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-05T08:42:33.037Z",
+  "generated_at": "2026-01-05T09:03:02.365Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-05T00:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 7,
-      "wind_dir": "SSW",
-      "shortForecast": "Chance Rain Showers",
-      "precip_prob": 38
-    },
     {
       "t": "2026-01-05T01:00:00-08:00",
       "temp_f": 53,
@@ -198,12 +190,20 @@
       "wind_dir": "E",
       "shortForecast": "Chance Rain Showers",
       "precip_prob": 56
+    },
+    {
+      "t": "2026-01-06T00:00:00-08:00",
+      "temp_f": 54,
+      "wind_mph": 7,
+      "wind_dir": "E",
+      "shortForecast": "Chance Rain Showers",
+      "precip_prob": 52
     }
   ],
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-01-05T00:00:00-08:00",
+      "t_start": "2026-01-05T01:00:00-08:00",
       "t_end": "2026-01-05T06:00:00-08:00",
       "temp_f": 51,
       "text": "A chance of rain showers. Mostly cloudy, with a low around 51. South southeast wind 7 to 10 mph. Chance of precipitation is 60%. New rainfall amounts less than a tenth of an inch possible."
