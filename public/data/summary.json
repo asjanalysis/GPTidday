@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-05T17:43:02.894Z",
+  "generated_at": "2026-01-05T17:55:37.239Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-05T17:43:02.620Z",
+    "generated_at": "2026-01-05T17:55:36.180Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-05T17:43:01.145Z",
+    "generated_at": "2026-01-05T17:55:34.833Z",
     "latest": {
       "t": "2026-01-05T17:00:00.000Z",
       "station_id": "156",
@@ -39,9 +39,17 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-05T17:43:02.797Z",
+    "generated_at": "2026-01-05T17:55:37.238Z",
     "current": null,
     "hourly": [
+      {
+        "t": "2026-01-05T06:00:00-08:00",
+        "temp_f": 52,
+        "wind_mph": 12,
+        "wind_dir": "SE",
+        "shortForecast": "Chance Rain Showers",
+        "precip_prob": 47
+      },
       {
         "t": "2026-01-05T07:00:00-08:00",
         "temp_f": 51,
@@ -225,20 +233,12 @@
         "wind_dir": "ENE",
         "shortForecast": "Mostly Cloudy",
         "precip_prob": 12
-      },
-      {
-        "t": "2026-01-06T06:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 5,
-        "wind_dir": "ENE",
-        "shortForecast": "Mostly Sunny",
-        "precip_prob": 12
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-01-05T07:00:00-08:00",
+        "t_start": "2026-01-05T06:00:00-08:00",
         "t_end": "2026-01-05T18:00:00-08:00",
         "temp_f": 57,
         "text": "Rain showers. Mostly cloudy, with a high near 57. South southeast wind 12 to 23 mph, with gusts as high as 32 mph. Chance of precipitation is 60%. New rainfall amounts between a tenth and quarter of an inch possible."
