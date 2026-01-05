@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-05T07:27:34.629Z",
+  "generated_at": "2026-01-05T07:49:21.597Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-05T07:27:33.297Z",
+    "generated_at": "2026-01-05T07:49:20.930Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-05T07:27:31.966Z",
+    "generated_at": "2026-01-05T07:49:19.900Z",
     "latest": {
-      "t": "2026-01-05T06:30:00.000Z",
+      "t": "2026-01-05T07:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.09,
-      "hs_ft": 6.856955599999999,
-      "tp_s": 11.764706,
-      "ta_s": 7.4382596,
-      "tz_s": 6.557377,
-      "dp_deg_true": 301.28125,
+      "hs_m": 1.95,
+      "hs_ft": 6.397638,
+      "tp_s": 11.111111,
+      "ta_s": 7.244056,
+      "tz_s": 6.3492064,
+      "dp_deg_true": 291.4375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,200 +39,200 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-05T07:27:34.628Z",
+    "generated_at": "2026-01-05T07:49:21.596Z",
     "current": null,
     "hourly": [
       {
         "t": "2026-01-04T23:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 5,
-        "wind_dir": "SW",
+        "temp_f": 54,
+        "wind_mph": 6,
+        "wind_dir": "SSW",
         "shortForecast": "Chance Rain Showers",
-        "precip_prob": 49
+        "precip_prob": 39
       },
       {
         "t": "2026-01-05T00:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 5,
+        "temp_f": 53,
+        "wind_mph": 7,
         "wind_dir": "SSW",
-        "shortForecast": "Chance Rain Showers",
-        "precip_prob": 52
-      },
-      {
-        "t": "2026-01-05T01:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 5,
-        "wind_dir": "SSW",
-        "shortForecast": "Chance Rain Showers",
-        "precip_prob": 37
-      },
-      {
-        "t": "2026-01-05T02:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 6,
-        "wind_dir": "S",
-        "shortForecast": "Chance Rain Showers",
-        "precip_prob": 37
-      },
-      {
-        "t": "2026-01-05T03:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 6,
-        "wind_dir": "S",
         "shortForecast": "Chance Rain Showers",
         "precip_prob": 38
       },
       {
-        "t": "2026-01-05T04:00:00-08:00",
+        "t": "2026-01-05T01:00:00-08:00",
+        "temp_f": 53,
+        "wind_mph": 7,
+        "wind_dir": "S",
+        "shortForecast": "Chance Rain Showers",
+        "precip_prob": 36
+      },
+      {
+        "t": "2026-01-05T02:00:00-08:00",
+        "temp_f": 52,
+        "wind_mph": 7,
+        "wind_dir": "S",
+        "shortForecast": "Chance Rain Showers",
+        "precip_prob": 28
+      },
+      {
+        "t": "2026-01-05T03:00:00-08:00",
         "temp_f": 52,
         "wind_mph": 7,
         "wind_dir": "SSE",
-        "shortForecast": "Rain Showers Likely",
-        "precip_prob": 48
+        "shortForecast": "Chance Rain Showers",
+        "precip_prob": 27
+      },
+      {
+        "t": "2026-01-05T04:00:00-08:00",
+        "temp_f": 51,
+        "wind_mph": 8,
+        "wind_dir": "SSE",
+        "shortForecast": "Chance Rain Showers",
+        "precip_prob": 55
       },
       {
         "t": "2026-01-05T05:00:00-08:00",
-        "temp_f": 50,
-        "wind_mph": 9,
-        "wind_dir": "SSE",
-        "shortForecast": "Rain Showers Likely",
-        "precip_prob": 50
+        "temp_f": 51,
+        "wind_mph": 10,
+        "wind_dir": "SE",
+        "shortForecast": "Chance Rain Showers",
+        "precip_prob": 56
       },
       {
         "t": "2026-01-05T06:00:00-08:00",
-        "temp_f": 51,
-        "wind_mph": 10,
-        "wind_dir": "SSE",
-        "shortForecast": "Rain Showers Likely",
-        "precip_prob": 49
+        "temp_f": 52,
+        "wind_mph": 12,
+        "wind_dir": "SE",
+        "shortForecast": "Chance Rain Showers",
+        "precip_prob": 47
       },
       {
         "t": "2026-01-05T07:00:00-08:00",
         "temp_f": 51,
         "wind_mph": 12,
-        "wind_dir": "SSE",
-        "shortForecast": "Rain Showers Likely",
-        "precip_prob": 49
+        "wind_dir": "SE",
+        "shortForecast": "Chance Rain Showers",
+        "precip_prob": 47
       },
       {
         "t": "2026-01-05T08:00:00-08:00",
         "temp_f": 51,
-        "wind_mph": 12,
-        "wind_dir": "SSE",
-        "shortForecast": "Rain Showers Likely",
-        "precip_prob": 50
+        "wind_mph": 13,
+        "wind_dir": "SE",
+        "shortForecast": "Chance Rain Showers",
+        "precip_prob": 49
       },
       {
         "t": "2026-01-05T09:00:00-08:00",
         "temp_f": 51,
-        "wind_mph": 12,
+        "wind_mph": 14,
         "wind_dir": "SE",
-        "shortForecast": "Rain Showers Likely",
-        "precip_prob": 49
+        "shortForecast": "Chance Rain Showers",
+        "precip_prob": 51
       },
       {
         "t": "2026-01-05T10:00:00-08:00",
         "temp_f": 52,
-        "wind_mph": 14,
+        "wind_mph": 15,
         "wind_dir": "SE",
         "shortForecast": "Rain Showers",
-        "precip_prob": 77
+        "precip_prob": 45
       },
       {
         "t": "2026-01-05T11:00:00-08:00",
-        "temp_f": 53,
-        "wind_mph": 14,
-        "wind_dir": "SE",
+        "temp_f": 54,
+        "wind_mph": 20,
+        "wind_dir": "SSE",
         "shortForecast": "Rain Showers",
-        "precip_prob": 77
+        "precip_prob": 49
       },
       {
         "t": "2026-01-05T12:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 14,
-        "wind_dir": "SE",
+        "temp_f": 55,
+        "wind_mph": 22,
+        "wind_dir": "SSE",
         "shortForecast": "Rain Showers",
-        "precip_prob": 77
+        "precip_prob": 50
       },
       {
         "t": "2026-01-05T13:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 21,
-        "wind_dir": "S",
+        "temp_f": 56,
+        "wind_mph": 23,
+        "wind_dir": "SSE",
         "shortForecast": "Rain Showers",
-        "precip_prob": 77
+        "precip_prob": 48
       },
       {
         "t": "2026-01-05T14:00:00-08:00",
         "temp_f": 55,
-        "wind_mph": 21,
-        "wind_dir": "S",
+        "wind_mph": 23,
+        "wind_dir": "SSE",
         "shortForecast": "Rain Showers",
-        "precip_prob": 77
+        "precip_prob": 55
       },
       {
         "t": "2026-01-05T15:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 21,
-        "wind_dir": "S",
+        "temp_f": 56,
+        "wind_mph": 23,
+        "wind_dir": "SSE",
         "shortForecast": "Rain Showers",
-        "precip_prob": 77
+        "precip_prob": 57
       },
       {
         "t": "2026-01-05T16:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 16,
-        "wind_dir": "S",
-        "shortForecast": "Rain Showers Likely",
-        "precip_prob": 63
+        "temp_f": 56,
+        "wind_mph": 20,
+        "wind_dir": "SSE",
+        "shortForecast": "Rain Showers",
+        "precip_prob": 58
       },
       {
         "t": "2026-01-05T17:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 16,
-        "wind_dir": "S",
-        "shortForecast": "Rain Showers Likely",
-        "precip_prob": 63
+        "temp_f": 56,
+        "wind_mph": 18,
+        "wind_dir": "SSE",
+        "shortForecast": "Rain Showers",
+        "precip_prob": 60
       },
       {
         "t": "2026-01-05T18:00:00-08:00",
         "temp_f": 55,
-        "wind_mph": 16,
-        "wind_dir": "S",
-        "shortForecast": "Rain Showers Likely",
-        "precip_prob": 63
+        "wind_mph": 17,
+        "wind_dir": "SE",
+        "shortForecast": "Rain Showers",
+        "precip_prob": 64
       },
       {
         "t": "2026-01-05T19:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 12,
-        "wind_dir": "SE",
-        "shortForecast": "Rain Showers Likely",
-        "precip_prob": 63
+        "temp_f": 55,
+        "wind_mph": 14,
+        "wind_dir": "ESE",
+        "shortForecast": "Rain Showers",
+        "precip_prob": 69
       },
       {
         "t": "2026-01-05T20:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 12,
-        "wind_dir": "SE",
-        "shortForecast": "Rain Showers Likely",
-        "precip_prob": 63
+        "temp_f": 55,
+        "wind_mph": 13,
+        "wind_dir": "ESE",
+        "shortForecast": "Rain Showers",
+        "precip_prob": 68
       },
       {
         "t": "2026-01-05T21:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 12,
-        "wind_dir": "SE",
-        "shortForecast": "Rain Showers Likely",
-        "precip_prob": 63
+        "temp_f": 55,
+        "wind_mph": 10,
+        "wind_dir": "ESE",
+        "shortForecast": "Rain Showers",
+        "precip_prob": 65
       },
       {
         "t": "2026-01-05T22:00:00-08:00",
         "temp_f": 54,
-        "wind_mph": 7,
-        "wind_dir": "SE",
+        "wind_mph": 9,
+        "wind_dir": "ESE",
         "shortForecast": "Chance Rain Showers",
-        "precip_prob": 33
+        "precip_prob": 58
       }
     ],
     "daily": [
@@ -240,50 +240,50 @@
         "name": "Tonight",
         "t_start": "2026-01-04T23:00:00-08:00",
         "t_end": "2026-01-05T06:00:00-08:00",
-        "temp_f": 50,
-        "text": "Rain showers likely. Mostly cloudy, with a low around 50. South southwest wind 5 to 9 mph. Chance of precipitation is 50%. New rainfall amounts between a tenth and quarter of an inch possible."
+        "temp_f": 51,
+        "text": "A chance of rain showers. Mostly cloudy, with a low around 51. South southeast wind 6 to 10 mph. Chance of precipitation is 60%. New rainfall amounts less than a tenth of an inch possible."
       },
       {
         "name": "Monday",
         "t_start": "2026-01-05T06:00:00-08:00",
         "t_end": "2026-01-05T18:00:00-08:00",
-        "temp_f": 56,
-        "text": "Rain showers. Mostly cloudy, with a high near 56. South southeast wind 10 to 21 mph, with gusts as high as 29 mph. Chance of precipitation is 80%. New rainfall amounts between a half and three quarters of an inch possible."
+        "temp_f": 57,
+        "text": "Rain showers. Mostly cloudy, with a high near 57. South southeast wind 12 to 23 mph, with gusts as high as 32 mph. Chance of precipitation is 60%. New rainfall amounts between a tenth and quarter of an inch possible."
       },
       {
         "name": "Monday Night",
         "t_start": "2026-01-05T18:00:00-08:00",
         "t_end": "2026-01-06T06:00:00-08:00",
-        "temp_f": 50,
-        "text": "Rain showers likely. Mostly cloudy. Low around 50, with temperatures rising to around 52 overnight. Southeast wind 5 to 16 mph, with gusts as high as 24 mph. Chance of precipitation is 60%. New rainfall amounts between a quarter and half of an inch possible."
+        "temp_f": 52,
+        "text": "Rain showers before 4am. Mostly cloudy, with a low around 52. East wind 5 to 17 mph, with gusts as high as 24 mph. Chance of precipitation is 70%. New rainfall amounts less than a tenth of an inch possible."
       },
       {
         "name": "Tuesday",
         "t_start": "2026-01-06T06:00:00-08:00",
         "t_end": "2026-01-06T18:00:00-08:00",
-        "temp_f": 58,
-        "text": "A slight chance of rain showers before 10am. Mostly sunny, with a high near 58. Northeast wind around 5 mph. Chance of precipitation is 20%."
+        "temp_f": 59,
+        "text": "Mostly sunny, with a high near 59. East northeast wind around 5 mph."
       },
       {
         "name": "Tuesday Night",
         "t_start": "2026-01-06T18:00:00-08:00",
         "t_end": "2026-01-07T06:00:00-08:00",
-        "temp_f": 48,
-        "text": "A slight chance of rain showers after 4am. Partly cloudy, with a low around 48. North northwest wind around 5 mph. Chance of precipitation is 20%."
+        "temp_f": 49,
+        "text": "Partly cloudy, with a low around 49. North northwest wind around 5 mph."
       },
       {
         "name": "Wednesday",
         "t_start": "2026-01-07T06:00:00-08:00",
         "t_end": "2026-01-07T18:00:00-08:00",
         "temp_f": 57,
-        "text": "A slight chance of rain showers. Partly sunny, with a high near 57. Chance of precipitation is 20%."
+        "text": "Mostly sunny, with a high near 57."
       },
       {
         "name": "Wednesday Night",
         "t_start": "2026-01-07T18:00:00-08:00",
         "t_end": "2026-01-08T06:00:00-08:00",
-        "temp_f": 45,
-        "text": "A slight chance of rain showers before 4am. Partly cloudy, with a low around 45."
+        "temp_f": 46,
+        "text": "Mostly clear, with a low around 46."
       },
       {
         "name": "Thursday",
@@ -310,8 +310,8 @@
         "name": "Friday Night",
         "t_start": "2026-01-09T18:00:00-08:00",
         "t_end": "2026-01-10T06:00:00-08:00",
-        "temp_f": 44,
-        "text": "Mostly clear, with a low around 44."
+        "temp_f": 45,
+        "text": "Mostly clear, with a low around 45."
       },
       {
         "name": "Saturday",
@@ -325,14 +325,14 @@
         "t_start": "2026-01-10T18:00:00-08:00",
         "t_end": "2026-01-11T06:00:00-08:00",
         "temp_f": 46,
-        "text": "Partly cloudy, with a low around 46."
+        "text": "Mostly clear, with a low around 46."
       },
       {
         "name": "Sunday",
         "t_start": "2026-01-11T06:00:00-08:00",
         "t_end": "2026-01-11T18:00:00-08:00",
-        "temp_f": 59,
-        "text": "Partly sunny, with a high near 59."
+        "temp_f": 60,
+        "text": "Sunny, with a high near 60."
       }
     ]
   }
