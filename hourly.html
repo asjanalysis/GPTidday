@@ -38,49 +38,35 @@
         <div class="phone">
           <div class="topline">
             <div class="badge">Capitola Jetty</div>
-            <span class="small-pill">Live cameras & saves</span>
+            <span class="small-pill" id="hourly-updated">Live updates</span>
           </div>
-          <h2>Forecast: 4-6 ft · Fair</h2>
+          <h2 id="current-summary">Forecast: loading…</h2>
           <div class="data-row">
-            <div class="data-pill"><small>Surf</small><strong>4-6 ft</strong></div>
-            <div class="data-pill"><small>Feels like</small><strong>62ºF</strong></div>
-            <div class="data-pill"><small>Humidity</small><strong>75%</strong></div>
+            <div class="data-pill"><small>Surf</small><strong id="current-surf">—</strong></div>
+            <div class="data-pill"><small>Feels like</small><strong id="current-temp">—</strong></div>
+            <div class="data-pill"><small>Wind</small><strong id="current-wind">—</strong></div>
           </div>
           <div class="section-card">
-            <h3>Hourly forecast</h3>
-            <div class="timeline">
-              <div><div class="bar" style="height: 68px">6am</div><small>57º</small></div>
-              <div><div class="bar" style="height: 88px">7am</div><small>58º</small></div>
-              <div><div class="bar" style="height: 102px">8am</div><small>59º</small></div>
-              <div><div class="bar" style="height: 120px">9am</div><small>61º</small></div>
-              <div><div class="bar" style="height: 134px">10am</div><small>63º</small></div>
-              <div><div class="bar" style="height: 144px">11am</div><small>65º</small></div>
-            </div>
+            <h3>Hourly forecast (next 12 hrs)</h3>
+            <div class="timeline" id="hourly-forecast"></div>
           </div>
         </div>
 
         <div class="phone">
           <div class="topline">
             <div class="badge">Tide forecast</div>
-            <span class="small-pill">Next 6 points</span>
+            <span class="small-pill">NOAA predictions</span>
           </div>
           <div class="section-card">
-            <h3>New Brighton State Beach <span class="small-pill">6:30 AM</span></h3>
-            <div class="timeline">
-              <div><div class="bar" style="height: 60px; background: linear-gradient(180deg, rgba(109,227,192,0.18), #6de3c0);">1</div><small>Low</small></div>
-              <div><div class="bar" style="height: 120px; background: linear-gradient(180deg, rgba(79,178,255,0.18), #4fb2ff);">2</div><small>Rising</small></div>
-              <div><div class="bar" style="height: 160px; background: linear-gradient(180deg, rgba(255,156,122,0.2), #ff9c7a);">3</div><small>High</small></div>
-              <div><div class="bar" style="height: 120px; background: linear-gradient(180deg, rgba(79,178,255,0.18), #4fb2ff);">4</div><small>Falling</small></div>
-              <div><div class="bar" style="height: 80px; background: linear-gradient(180deg, rgba(109,227,192,0.18), #6de3c0);">5</div><small>Low</small></div>
-              <div><div class="bar" style="height: 60px; background: linear-gradient(180deg, rgba(109,227,192,0.18), #6de3c0);">6</div><small>Evening</small></div>
-            </div>
+            <h3>New Brighton State Beach <span class="small-pill" id="tide-updated">—</span></h3>
+            <div class="timeline" id="tide-forecast"></div>
           </div>
           <div class="section-card">
             <h3>Feels like</h3>
             <div class="data-row">
-              <div class="data-pill"><small>Temperature</small><strong>62º</strong></div>
-              <div class="data-pill"><small>Humidity</small><strong>75%</strong></div>
-              <div class="data-pill"><small>Wind</small><strong>NE 5 mph</strong></div>
+              <div class="data-pill"><small>Temperature</small><strong id="temp-now">—</strong></div>
+              <div class="data-pill"><small>Precip</small><strong id="precip-now">—</strong></div>
+              <div class="data-pill"><small>Wind</small><strong id="wind-now">—</strong></div>
             </div>
           </div>
         </div>
@@ -88,5 +74,125 @@
 
       <p class="footer-note">Hour-by-hour surf and tide cues designed after the mockup panels.</p>
     </div>
+
+    <script type="module">
+      import { getTides, getWaves, getWeather } from './src/lib/getLocalData.js';
+
+      const cardinal = (degrees) => {
+        if (degrees === undefined || degrees === null) return '—';
+        const dirs = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
+        const ix = Math.round(((degrees % 360) / 22.5)) % 16;
+        return dirs[ix];
+      };
+
+      const fmtHour = (iso) =>
+        new Date(iso).toLocaleString('en-US', {
+          hour: 'numeric',
+          hour12: true,
+          timeZone: 'America/Los_Angeles',
+        });
+
+      const fmtTemp = (value) => (value !== undefined && value !== null ? `${Number(value).toFixed(0)}ºF` : '—');
+
+      function renderHourly(hourly = []) {
+        const container = document.getElementById('hourly-forecast');
+        if (!container) return;
+        container.innerHTML = '';
+        const maxTemp = Math.max(...hourly.map((h) => h.temp_f || 0), 60);
+        hourly.slice(0, 12).forEach((period) => {
+          const bar = document.createElement('div');
+          const height = Math.max(40, ((period.temp_f || maxTemp) / maxTemp) * 140);
+          bar.className = 'bar';
+          bar.style.height = `${height}px`;
+          bar.textContent = fmtHour(period.t);
+
+          const wrapper = document.createElement('div');
+          wrapper.appendChild(bar);
+          const temp = document.createElement('small');
+          temp.textContent = `${fmtTemp(period.temp_f)} · ${period.shortForecast || '—'}`;
+          wrapper.appendChild(temp);
+          container.appendChild(wrapper);
+        });
+      }
+
+      function renderTides(predictions = [], nextExtrema = []) {
+        const container = document.getElementById('tide-forecast');
+        if (!container) return;
+        container.innerHTML = '';
+        const now = Date.now();
+        const upcoming = predictions.filter((p) => new Date(p.t).getTime() > now).slice(0, 6);
+        if (!upcoming.length) {
+          container.textContent = 'Tide predictions unavailable';
+          return;
+        }
+        const values = upcoming.map((p) => p.ft);
+        const max = Math.max(...values);
+        const min = Math.min(...values);
+        const span = Math.max(1, max - min);
+
+        upcoming.forEach((p) => {
+          const bar = document.createElement('div');
+          const normalized = (p.ft - min) / span;
+          const height = 60 + normalized * 120;
+          bar.className = 'bar';
+          bar.style.height = `${height}px`;
+          bar.style.background = 'linear-gradient(180deg, rgba(79,178,255,0.18), #4fb2ff)';
+          bar.textContent = p.ft.toFixed(2);
+
+          const wrapper = document.createElement('div');
+          wrapper.appendChild(bar);
+          const label = document.createElement('small');
+          const match = nextExtrema.find((e) => e.t === p.t);
+          label.textContent = match ? `${fmtHour(p.t)} ${match.type}` : fmtHour(p.t);
+          wrapper.appendChild(label);
+          container.appendChild(wrapper);
+        });
+      }
+
+      async function populate() {
+        try {
+          const [tides, waves, weather] = await Promise.all([getTides(), getWaves(), getWeather()]);
+          const buoy = waves?.latest;
+          const waveHeight = buoy?.hs_ft ? `${buoy.hs_ft.toFixed(1)} ft` : '—';
+          const wavePeriod = buoy?.tp_s ? `${buoy.tp_s.toFixed(0)}s` : buoy?.tz_s ? `${buoy.tz_s.toFixed(0)}s` : '—';
+          const waveDir = buoy?.dp_deg_true ? cardinal(buoy.dp_deg_true) : '—';
+          document.getElementById('current-surf').textContent = `${waveHeight} @ ${wavePeriod} ${waveDir}`;
+
+          const currentTemp = weather?.current?.temp_f || weather?.hourly?.[0]?.temp_f;
+          document.getElementById('current-temp').textContent = fmtTemp(currentTemp);
+          const windMph = weather?.current?.wind_mph || weather?.hourly?.[0]?.wind_mph;
+          const windDir = weather?.current?.wind_dir_deg || weather?.hourly?.[0]?.wind_dir;
+          document.getElementById('current-wind').textContent = windMph ? `${windMph.toFixed(1)} mph` : 'Calm';
+          document.getElementById('wind-now').textContent = windDir ? `${cardinal(windDir)} ${windMph?.toFixed(1) || ''} mph` : '—';
+
+          renderHourly(weather?.hourly);
+          renderTides(tides?.predictions, tides?.next_extrema || []);
+
+          const precip = weather?.hourly?.[0]?.precip_prob;
+          document.getElementById('precip-now').textContent =
+            precip !== null && precip !== undefined ? `${precip.toFixed(0)}%` : '—';
+          document.getElementById('temp-now').textContent = fmtTemp(currentTemp);
+
+          const updatedTime = weather?.generated_at
+            ? new Date(weather.generated_at).toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' })
+            : '—';
+          document.getElementById('hourly-updated').textContent = `Updated ${updatedTime}`;
+
+          const tideUpdated = tides?.generated_at
+            ? new Date(tides.generated_at).toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' })
+            : '—';
+          document.getElementById('tide-updated').textContent = tideUpdated;
+
+          document.getElementById('current-summary').textContent = `Forecast: ${waveHeight} · ${fmtTemp(currentTemp)}`;
+        } catch (err) {
+          document.getElementById('hourly-forecast').textContent = 'Unable to load hourly data';
+          document.getElementById('tide-forecast').textContent = 'Unable to load tide data';
+          document.getElementById('hourly-updated').textContent = err.message;
+        }
+      }
+
+      populate();
+      setInterval(populate, 15 * 60 * 1000);
+    </script>
   </body>
 </html>

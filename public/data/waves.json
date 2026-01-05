@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "source": "CDIP ERDDAP wave_agg",
+    "primary_station_id": "156",
+    "fallback_station_id": "158"
+  },
+  "generated_at": "2026-01-05T06:03:32.024Z",
+  "latest": null
+}

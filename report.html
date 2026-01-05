@@ -48,21 +48,21 @@
             </h3>
             <div class="data-row">
               <div class="data-pill">
-                <small>Surf (Open‑Meteo)</small>
-                <strong id="surf-range">—</strong>
-              </div>
-              <div class="data-pill">
-                <small>Wave height</small>
+                <small>Buoy Height</small>
                 <strong id="wave-height">—</strong>
               </div>
               <div class="data-pill">
-                <small>Period</small>
+                <small>Peak Period</small>
                 <strong id="wave-period">—</strong>
+              </div>
+              <div class="data-pill">
+                <small>Wave Direction</small>
+                <strong id="wave-direction">—</strong>
               </div>
             </div>
             <div class="data-row">
               <div class="data-pill">
-                <small id="buoy-label">Buoy (NDBC)</small>
+                <small id="buoy-label">Buoy Station</small>
                 <strong id="ndbc-wave">—</strong>
               </div>
               <div class="data-pill">
@@ -71,7 +71,7 @@
               </div>
               <div class="data-pill">
                 <small>Direction</small>
-                <strong id="wave-direction">—</strong>
+                <strong id="wind-direction">—</strong>
               </div>
             </div>
           </div>
@@ -81,16 +81,16 @@
             </h3>
             <div class="data-row">
               <div class="data-pill">
-                <small>Next tide (NOAA)</small>
-                <strong id="next-tide">—</strong>
+                <small>Current Tide</small>
+                <strong id="current-tide">—</strong>
               </div>
               <div class="data-pill">
-                <small>Tide (Open‑Meteo)</small>
-                <strong id="openmeteo-tide">—</strong>
+                <small>Next High</small>
+                <strong id="next-high">—</strong>
               </div>
               <div class="data-pill">
-                <small>Wind</small>
-                <strong id="wind-inline">—</strong>
+                <small>Next Low</small>
+                <strong id="next-low">—</strong>
               </div>
             </div>
             <p class="footer-note" id="data-updated">Gathering live surf + tide intel…</p>
@@ -107,20 +107,16 @@
             <h3>Data sources (free & open)</h3>
             <div class="list">
               <div class="list-item">
-                <span>Open‑Meteo Marine forecast</span>
-                <span class="small-pill">Surf + tide</span>
-              </div>
-              <div class="list-item">
-                <span>NOAA NDBC Buoy 46042</span>
-                <span class="small-pill">Wave obs</span>
-              </div>
-              <div class="list-item">
                 <span>NOAA CO‑OPS 9413745</span>
                 <span class="small-pill">Tide predictions</span>
               </div>
               <div class="list-item">
-                <span>Open‑Meteo Tide</span>
-                <span class="small-pill">Secondary tide</span>
+                <span>CDIP ERDDAP stations 156 / 158</span>
+                <span class="small-pill">Wave obs</span>
+              </div>
+              <div class="list-item">
+                <span>NWS api.weather.gov</span>
+                <span class="small-pill">Weather</span>
               </div>
             </div>
           </div>
@@ -130,47 +126,33 @@
       <p class="footer-note">Detailed surf snapshot aligned with the Capitola mockup.</p>
     </div>
 
-    <script>
-      const capitola = {
-        lat: 36.9741,
-        lon: -121.953,
-        tideStation: '9413745',
-        primaryBuoy: '46236',
-        secondaryBuoy: '46042',
-      };
+    <script type="module">
+      import { getTides, getWaves, getWeather } from './src/lib/getLocalData.js';
 
       const isNil = (val) => val === undefined || val === null || Number.isNaN(val);
-
-      const toFeet = (meters) => {
-        if (isNil(meters)) return null;
-        return (meters * 3.28084).toFixed(1);
-      };
-
       const toKnots = (mps) => {
         if (isNil(mps)) return null;
         return (mps * 1.94384).toFixed(1);
       };
-
       const cardinal = (degrees) => {
         if (degrees === undefined || degrees === null) return '—';
         const dirs = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
         const ix = Math.round(((degrees % 360) / 22.5)) % 16;
         return dirs[ix];
       };
-
-      // Fallback snapshot based on the supplied reference conditions.
-      const capitolaReference = {
-        waveHeightFt: '1-2',
-        wavePeriod: '12',
-        waveDirection: 'SSW',
-        wind: '10 kt SSW',
-        tide: '-1.3 ft',
-      };
-
       const setText = (id, text) => {
         const el = document.getElementById(id);
         if (el) el.textContent = text;
       };
+      const fmtLocal = (iso) =>
+        iso
+          ? new Date(iso).toLocaleString('en-US', {
+              timeZone: 'America/Los_Angeles',
+              hour: 'numeric',
+              minute: '2-digit',
+              weekday: 'short',
+            })
+          : '—';
 
       const updateTime = () => {
         const formatter = new Intl.DateTimeFormat('en-US', {
@@ -182,148 +164,50 @@
         setText('local-time', formatter.format(new Date()));
       };
 
-      async function fetchOpenMeteoMarine() {
-        const params = new URLSearchParams({
-          latitude: capitola.lat,
-          longitude: capitola.lon,
-          hourly: 'wave_height,wave_direction,wave_period,wind_speed_10m,wind_direction_10m,tide_height',
-          current_weather: 'true',
-          timezone: 'America/Los_Angeles',
-        });
-        const res = await fetch(`https://marine-api.open-meteo.com/v1/marine?${params.toString()}`);
-        if (!res.ok) throw new Error('Open-Meteo marine unavailable');
-        return res.json();
-      }
-
-      async function fetchBuoyFromErddap(stationId) {
-        const url = `https://erddap.cencoos.org/erddap/tabledap/wmo_${stationId}.json?time,WVHT,DPD,MWD&time>=now-6hours&orderByMax(%22time%22)`;
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`Buoy ${stationId} unavailable`);
-        const json = await res.json();
-        const rows = json?.table?.rows || [];
-        if (!rows.length) throw new Error(`No buoy rows for ${stationId}`);
-        const [time, wvht, dpd, mwd] = rows[0];
-        return {
-          station: stationId,
-          waveHeight: toFeet(parseFloat(wvht)),
-          swellPeriod: isNil(dpd) ? null : Number(dpd).toFixed(0),
-          meanDirection: cardinal(parseFloat(mwd)),
-          time,
-        };
-      }
-
-      async function fetchNoaaTides() {
-        const params = new URLSearchParams({
-          product: 'predictions',
-          application: 'capitola-companion',
-          datum: 'MLLW',
-          station: capitola.tideStation,
-          time_zone: 'lst_ldt',
-          units: 'english',
-          interval: 'hilo',
-          format: 'json',
-          date: 'today',
-        });
-        const res = await fetch(`https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?${params.toString()}`);
-        if (!res.ok) throw new Error('NOAA tides unavailable');
-        const json = await res.json();
-        const next = json?.predictions?.find((p) => new Date(`${p.t} PDT`) > new Date());
-        return next ? `${next.type === 'H' ? 'High' : 'Low'} ${next.v} ft @ ${next.t}` : null;
-      }
-
-      async function fetchNoaaWaterLevel() {
-        const params = new URLSearchParams({
-          product: 'water_level',
-          application: 'capitola-companion',
-          datum: 'MLLW',
-          station: capitola.tideStation,
-          time_zone: 'lst_ldt',
-          units: 'english',
-          format: 'json',
-          date: 'latest',
-        });
-        const res = await fetch(`https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?${params.toString()}`);
-        if (!res.ok) throw new Error('NOAA water level unavailable');
-        const json = await res.json();
-        const wl = json?.data?.[0];
-        if (!wl?.v) throw new Error('No observed water level found');
-        return `${wl.v} ft @ ${wl.t}`;
-      }
-
-      function describeSurf(heightFt, periodSec) {
-        if (!heightFt || !periodSec) return 'Awaiting marine data';
-        const fair = heightFt <= 4 ? 'Clean' : heightFt <= 8 ? 'Fair' : 'Challenging';
-        return `${heightFt} ft @ ${periodSec}s · ${fair}`;
-      }
+      const describeSurf = (height, period) => {
+        if (!height || !period) return 'Awaiting buoy data';
+        const fair = height <= 4 ? 'Clean' : height <= 8 ? 'Fair' : 'Challenging';
+        return `${height} ft @ ${period}s · ${fair}`;
+      };
 
       async function populate() {
         updateTime();
         try {
-          const [marine, tidePrediction, tideObserved, primaryBuoy, secondaryBuoy] = await Promise.all([
-            fetchOpenMeteoMarine().catch((err) => ({ error: err.message })),
-            fetchNoaaTides().catch(() => null),
-            fetchNoaaWaterLevel().catch(() => null),
-            fetchBuoyFromErddap(capitola.primaryBuoy).catch(() => null),
-            fetchBuoyFromErddap(capitola.secondaryBuoy).catch(() => null),
+          const [tides, waves, weather] = await Promise.all([
+            getTides().catch(() => null),
+            getWaves().catch(() => null),
+            getWeather().catch(() => null),
           ]);
 
-          const heightMeters = marine?.hourly?.wave_height?.[0];
-          const waveHeightFt = toFeet(heightMeters);
-          const wavePeriod = marine?.hourly?.wave_period?.[0];
-          const waveDir = cardinal(marine?.hourly?.wave_direction?.[0]);
-          const windMps = marine?.hourly?.wind_speed_10m?.[0];
-          const windDir = cardinal(marine?.hourly?.wind_direction_10m?.[0]);
+          const buoy = waves?.latest;
+          const waveHeight = buoy?.hs_ft ? buoy.hs_ft.toFixed(1) : null;
+          const wavePeriod = buoy?.tp_s ? buoy.tp_s.toFixed(0) : buoy?.tz_s?.toFixed(0) || null;
+          const waveDir = buoy?.dp_deg_true ? cardinal(buoy.dp_deg_true) : '—';
+          setText('wave-height', waveHeight ? `${waveHeight} ft` : '—');
+          setText('wave-period', wavePeriod ? `${wavePeriod}s` : '—');
+          setText('wave-direction', waveDir);
+          setText('ndbc-wave', buoy?.station_name ? `${buoy.station_name} (${buoy.station_id})` : '—');
+          setText('buoy-label', 'Buoy Station');
 
-          const buoyData = primaryBuoy || secondaryBuoy;
-          if (buoyData) {
-            setText('buoy-label', `Buoy ${buoyData.station} (NDBC)`);
-            setText(
-              'ndbc-wave',
-              `${buoyData.waveHeight || '—'} ft @ ${buoyData.swellPeriod || '?'}s ${buoyData.meanDirection || ''}`.trim()
-            );
-          } else {
-            setText('ndbc-wave', 'Buoy offline');
-          }
+          const windMph = weather?.current?.wind_mph || weather?.hourly?.[0]?.wind_mph;
+          const windDir = weather?.current?.wind_dir_deg || weather?.hourly?.[0]?.wind_dir;
+          setText('wind', windMph ? `${windMph.toFixed(1)} mph` : 'Calm');
+          setText('wind-direction', windDir ? cardinal(windDir) : '—');
+          setText('surf-summary', describeSurf(waveHeight, wavePeriod));
 
-          const displayWaveHeight = waveHeightFt || buoyData?.waveHeight;
-          const displayPeriod = wavePeriod || buoyData?.swellPeriod;
-          const displayDirection = waveDir !== '—' ? waveDir : buoyData?.meanDirection;
+          const observations = tides?.observations || [];
+          const currentTide = observations[observations.length - 1];
+          setText('current-tide', currentTide ? `${currentTide.ft.toFixed(2)} ft @ ${fmtLocal(currentTide.t)}` : '—');
+          const nextHigh = tides?.next_extrema?.find((e) => e.type === 'HIGH');
+          const nextLow = tides?.next_extrema?.find((e) => e.type === 'LOW');
+          setText('next-high', nextHigh ? `${nextHigh.ft.toFixed(2)} ft @ ${fmtLocal(nextHigh.t)}` : '—');
+          setText('next-low', nextLow ? `${nextLow.ft.toFixed(2)} ft @ ${fmtLocal(nextLow.t)}` : '—');
 
-          const fallbackWaveHeight = capitolaReference.waveHeightFt;
-          const fallbackPeriod = capitolaReference.wavePeriod;
-          const fallbackDirection = capitolaReference.waveDirection;
-
-          const finalWaveHeight = displayWaveHeight || fallbackWaveHeight;
-          const finalWavePeriod = displayPeriod || fallbackPeriod;
-          const finalWaveDirection = displayDirection || fallbackDirection;
-
-          if (!displayWaveHeight || !displayPeriod) {
-            setText('data-updated', 'Live data unavailable · showing reference conditions');
-          }
-
-          setText('surf-range', finalWaveHeight ? `${finalWaveHeight} ft` : '—');
-          setText('wave-height', finalWaveHeight ? `${finalWaveHeight} ft` : '—');
-          setText('wave-period', finalWavePeriod ? `${finalWavePeriod}s` : '—');
-          setText('wave-direction', finalWaveDirection || '—');
-          setText('wind', windMps ? `${toKnots(windMps)} kt` : capitolaReference.wind);
-          setText('wind-inline', windDir !== '—' && windMps ? `${windDir} ${toKnots(windMps)} kt` : capitolaReference.wind);
-
-          const summary = describeSurf(finalWaveHeight, finalWavePeriod);
-          setText('surf-summary', summary);
-
-          const tideHeightMeters = marine?.hourly?.tide_height?.[0];
-          const tideHeightFt = toFeet(tideHeightMeters);
-          const tideDisplay =
-            tidePrediction ||
-            tideObserved ||
-            (tideHeightFt ? `${tideHeightFt} ft (Open‑Meteo)` : `${capitolaReference.tide} (Reference)`);
-
-          setText('openmeteo-tide', tideHeightFt ? `${tideHeightFt} ft` : `${capitolaReference.tide}`);
-          setText('next-tide', tideDisplay || 'Tide predictions unavailable');
-
-          const updated = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
-          const usedBuoy = buoyData ? ` + Buoy ${buoyData.station}` : '';
-          setText('data-updated', `Updated ${updated} · Sources: NOAA tides${usedBuoy} + Open-Meteo`);
+          const updatedPieces = [];
+          if (tides?.generated_at) updatedPieces.push(`Tides ${fmtLocal(tides.generated_at)}`);
+          if (waves?.generated_at) updatedPieces.push(`Waves ${fmtLocal(waves.generated_at)}`);
+          if (weather?.generated_at) updatedPieces.push(`Weather ${fmtLocal(weather.generated_at)}`);
+          setText('data-updated', updatedPieces.length ? `Updated ${updatedPieces.join(' · ')}` : 'Waiting for updates');
         } catch (err) {
           setText('surf-summary', 'Unable to load live data');
           setText('data-updated', err.message);
