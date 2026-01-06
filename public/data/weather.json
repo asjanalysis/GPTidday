@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-06T12:39:12.056Z",
+  "generated_at": "2026-01-06T13:24:29.183Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-06T03:00:00-08:00",
-      "temp_f": 54,
-      "wind_mph": 6,
-      "wind_dir": "ESE",
-      "shortForecast": "Light Rain Likely",
-      "precip_prob": 64
-    },
-    {
-      "t": "2026-01-06T04:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 6,
-      "wind_dir": "ESE",
-      "shortForecast": "Chance Light Rain",
-      "precip_prob": 35
-    },
     {
       "t": "2026-01-06T05:00:00-08:00",
       "temp_f": 53,
@@ -198,15 +182,31 @@
       "wind_dir": "N",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 4
+    },
+    {
+      "t": "2026-01-07T03:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 1,
+      "wind_dir": "N",
+      "shortForecast": "Partly Cloudy",
+      "precip_prob": 4
+    },
+    {
+      "t": "2026-01-07T04:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 1,
+      "wind_dir": "N",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 6
     }
   ],
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-01-06T03:00:00-08:00",
+      "t_start": "2026-01-06T05:00:00-08:00",
       "t_end": "2026-01-06T06:00:00-08:00",
       "temp_f": 52,
-      "text": "Rain likely. Mostly cloudy, with a low around 52. East southeast wind around 6 mph. Chance of precipitation is 60%. New rainfall amounts less than a tenth of an inch possible."
+      "text": "A chance of rain. Mostly cloudy, with a low around 52. East southeast wind around 6 mph. Chance of precipitation is 40%."
     },
     {
       "name": "Tuesday",
