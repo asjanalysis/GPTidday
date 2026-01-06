@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-06T21:12:46.183Z",
+  "generated_at": "2026-01-06T21:33:58.554Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-06T21:12:43.648Z",
+    "generated_at": "2026-01-06T21:33:54.019Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-06T21:12:41.958Z",
+    "generated_at": "2026-01-06T21:33:52.559Z",
     "latest": {
-      "t": "2026-01-06T20:30:00.000Z",
+      "t": "2026-01-06T21:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.22,
-      "hs_ft": 7.283464800000001,
-      "tp_s": 11.111111,
-      "ta_s": 8.3459425,
-      "tz_s": 7.54717,
-      "dp_deg_true": 285.8125,
+      "hs_m": 2.27,
+      "hs_ft": 7.4475068,
+      "tp_s": 11.764706,
+      "ta_s": 8.615342,
+      "tz_s": 7.8431373,
+      "dp_deg_true": 287.21875,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-06T21:12:46.182Z",
+    "generated_at": "2026-01-06T21:33:58.553Z",
     "current": null,
     "hourly": [
       {
@@ -237,102 +237,102 @@
     ],
     "daily": [
       {
-        "name": "Today",
-        "t_start": "2026-01-06T09:00:00-08:00",
+        "name": "This Afternoon",
+        "t_start": "2026-01-06T13:00:00-08:00",
         "t_end": "2026-01-06T18:00:00-08:00",
         "temp_f": 59,
-        "text": "A chance of rain before 10am. Mostly sunny, with a high near 59. North northeast wind around 6 mph. Chance of precipitation is 40%."
+        "text": "Sunny, with a high near 59. West northwest wind around 6 mph."
       },
       {
         "name": "Tonight",
         "t_start": "2026-01-06T18:00:00-08:00",
         "t_end": "2026-01-07T06:00:00-08:00",
         "temp_f": 50,
-        "text": "Partly cloudy, with a low around 50. North northwest wind around 2 mph."
+        "text": "Partly cloudy, with a low around 50. North wind around 2 mph."
       },
       {
         "name": "Wednesday",
         "t_start": "2026-01-07T06:00:00-08:00",
         "t_end": "2026-01-07T18:00:00-08:00",
-        "temp_f": 57,
-        "text": "Patchy fog between 8am and 10am. Mostly sunny, with a high near 57. North northwest wind 2 to 13 mph, with gusts as high as 20 mph."
+        "temp_f": 58,
+        "text": "Mostly sunny. High near 58, with temperatures falling to around 55 in the afternoon. Northwest wind 2 to 15 mph, with gusts as high as 21 mph."
       },
       {
         "name": "Wednesday Night",
         "t_start": "2026-01-07T18:00:00-08:00",
         "t_end": "2026-01-08T06:00:00-08:00",
-        "temp_f": 47,
-        "text": "Mostly clear, with a low around 47. Northwest wind 7 to 13 mph, with gusts as high as 20 mph."
+        "temp_f": 46,
+        "text": "Mostly clear, with a low around 46. Northwest wind around 12 mph."
       },
       {
         "name": "Thursday",
         "t_start": "2026-01-08T06:00:00-08:00",
         "t_end": "2026-01-08T18:00:00-08:00",
-        "temp_f": 55,
-        "text": "Sunny, with a high near 55. North northwest wind 7 to 15 mph, with gusts as high as 23 mph."
+        "temp_f": 54,
+        "text": "Sunny, with a high near 54. North northwest wind 9 to 16 mph, with gusts as high as 24 mph."
       },
       {
         "name": "Thursday Night",
         "t_start": "2026-01-08T18:00:00-08:00",
         "t_end": "2026-01-09T06:00:00-08:00",
-        "temp_f": 43,
-        "text": "Partly cloudy, with a low around 43."
+        "temp_f": 41,
+        "text": "Mostly clear, with a low around 41."
       },
       {
         "name": "Friday",
         "t_start": "2026-01-09T06:00:00-08:00",
         "t_end": "2026-01-09T18:00:00-08:00",
-        "temp_f": 56,
-        "text": "Sunny, with a high near 56."
+        "temp_f": 55,
+        "text": "Sunny, with a high near 55."
       },
       {
         "name": "Friday Night",
         "t_start": "2026-01-09T18:00:00-08:00",
         "t_end": "2026-01-10T06:00:00-08:00",
-        "temp_f": 46,
-        "text": "Mostly clear, with a low around 46."
+        "temp_f": 44,
+        "text": "Partly cloudy, with a low around 44."
       },
       {
         "name": "Saturday",
         "t_start": "2026-01-10T06:00:00-08:00",
         "t_end": "2026-01-10T18:00:00-08:00",
-        "temp_f": 59,
-        "text": "Sunny, with a high near 59."
+        "temp_f": 58,
+        "text": "Mostly sunny, with a high near 58."
       },
       {
         "name": "Saturday Night",
         "t_start": "2026-01-10T18:00:00-08:00",
         "t_end": "2026-01-11T06:00:00-08:00",
-        "temp_f": 47,
-        "text": "Partly cloudy, with a low around 47."
+        "temp_f": 46,
+        "text": "Mostly cloudy, with a low around 46."
       },
       {
         "name": "Sunday",
         "t_start": "2026-01-11T06:00:00-08:00",
         "t_end": "2026-01-11T18:00:00-08:00",
-        "temp_f": 59,
-        "text": "Partly sunny, with a high near 59."
+        "temp_f": 58,
+        "text": "Partly sunny, with a high near 58."
       },
       {
         "name": "Sunday Night",
         "t_start": "2026-01-11T18:00:00-08:00",
         "t_end": "2026-01-12T06:00:00-08:00",
-        "temp_f": 47,
-        "text": "Partly cloudy, with a low around 47."
+        "temp_f": 46,
+        "text": "Partly cloudy, with a low around 46."
       },
       {
         "name": "Monday",
         "t_start": "2026-01-12T06:00:00-08:00",
         "t_end": "2026-01-12T18:00:00-08:00",
-        "temp_f": 60,
-        "text": "Sunny, with a high near 60."
+        "temp_f": 59,
+        "text": "Sunny, with a high near 59."
       },
       {
         "name": "Monday Night",
         "t_start": "2026-01-12T18:00:00-08:00",
         "t_end": "2026-01-13T06:00:00-08:00",
-        "temp_f": 47,
-        "text": "Mostly clear, with a low around 47."
+        "temp_f": 48,
+        "text": "Mostly clear, with a low around 48."
       }
     ]
   }
