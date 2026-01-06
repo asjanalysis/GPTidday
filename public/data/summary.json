@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-06T05:14:49.415Z",
+  "generated_at": "2026-01-06T05:43:43.706Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-06T05:14:49.133Z",
+    "generated_at": "2026-01-06T05:43:43.072Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-06T05:14:47.933Z",
+    "generated_at": "2026-01-06T05:43:41.901Z",
     "latest": {
-      "t": "2026-01-06T04:30:00.000Z",
+      "t": "2026-01-06T05:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.94,
-      "hs_ft": 6.3648296,
+      "hs_m": 2.09,
+      "hs_ft": 6.856955599999999,
       "tp_s": 7.142857,
-      "ta_s": 6.460435,
+      "ta_s": 6.4738426,
       "tz_s": 5.882353,
-      "dp_deg_true": 226.75,
+      "dp_deg_true": 229.5625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-06T05:14:49.415Z",
+    "generated_at": "2026-01-06T05:43:43.706Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-05T20:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 13,
-        "wind_dir": "SE",
-        "shortForecast": "Rain Showers",
-        "precip_prob": 84
-      },
       {
         "t": "2026-01-05T21:00:00-08:00",
         "temp_f": 55,
@@ -233,15 +225,23 @@
         "wind_dir": "NNW",
         "shortForecast": "Mostly Clear",
         "precip_prob": 9
+      },
+      {
+        "t": "2026-01-06T20:00:00-08:00",
+        "temp_f": 55,
+        "wind_mph": 2,
+        "wind_dir": "NNW",
+        "shortForecast": "Partly Cloudy",
+        "precip_prob": 9
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-01-05T20:00:00-08:00",
+        "t_start": "2026-01-05T21:00:00-08:00",
         "t_end": "2026-01-06T06:00:00-08:00",
         "temp_f": 52,
-        "text": "Rain showers. Cloudy, with a low around 52. East southeast wind 6 to 13 mph, with gusts as high as 18 mph. Chance of precipitation is 80%. New rainfall amounts between a half and three quarters of an inch possible."
+        "text": "Rain showers. Mostly cloudy, with a low around 52. East southeast wind 6 to 10 mph. Chance of precipitation is 80%. New rainfall amounts between a half and three quarters of an inch possible."
       },
       {
         "name": "Tuesday",
