@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-06T22:22:16.685Z",
+  "generated_at": "2026-01-06T22:43:07.539Z",
   "current": null,
   "hourly": [
     {
@@ -203,7 +203,7 @@
   "daily": [
     {
       "name": "This Afternoon",
-      "t_start": "2026-01-06T13:00:00-08:00",
+      "t_start": "2026-01-06T14:00:00-08:00",
       "t_end": "2026-01-06T18:00:00-08:00",
       "temp_f": 59,
       "text": "Sunny, with a high near 59. West northwest wind around 6 mph."
