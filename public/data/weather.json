@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-06T19:54:38.920Z",
+  "generated_at": "2026-01-06T20:18:40.031Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-06T11:00:00-08:00",
-      "temp_f": 55,
-      "wind_mph": 6,
-      "wind_dir": "ESE",
-      "shortForecast": "Mostly Sunny",
-      "precip_prob": 8
-    },
     {
       "t": "2026-01-06T12:00:00-08:00",
       "temp_f": 56,
@@ -198,15 +190,23 @@
       "wind_dir": "NW",
       "shortForecast": "Mostly Sunny",
       "precip_prob": 3
+    },
+    {
+      "t": "2026-01-07T11:00:00-08:00",
+      "temp_f": 54,
+      "wind_mph": 5,
+      "wind_dir": "NW",
+      "shortForecast": "Mostly Sunny",
+      "precip_prob": 3
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-06T10:00:00-08:00",
+      "t_start": "2026-01-06T09:00:00-08:00",
       "t_end": "2026-01-06T18:00:00-08:00",
       "temp_f": 59,
-      "text": "Sunny, with a high near 59. North northeast wind around 6 mph."
+      "text": "A chance of rain before 10am. Mostly sunny, with a high near 59. North northeast wind around 6 mph. Chance of precipitation is 40%."
     },
     {
       "name": "Tonight",
