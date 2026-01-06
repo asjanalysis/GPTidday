@@ -4,41 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-06T17:00:07.606Z",
+  "generated_at": "2026-01-06T17:31:18.366Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-06T05:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 6,
-      "wind_dir": "ESE",
-      "shortForecast": "Chance Light Rain",
-      "precip_prob": 35
-    },
-    {
-      "t": "2026-01-06T06:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 6,
-      "wind_dir": "ESE",
-      "shortForecast": "Chance Light Rain",
-      "precip_prob": 35
-    },
-    {
-      "t": "2026-01-06T07:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 6,
-      "wind_dir": "ESE",
-      "shortForecast": "Chance Light Rain",
-      "precip_prob": 35
-    },
-    {
-      "t": "2026-01-06T08:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 6,
-      "wind_dir": "E",
-      "shortForecast": "Chance Light Rain",
-      "precip_prob": 35
-    },
     {
       "t": "2026-01-06T09:00:00-08:00",
       "temp_f": 54,
@@ -198,25 +166,50 @@
       "wind_dir": "N",
       "shortForecast": "Mostly Cloudy",
       "precip_prob": 6
+    },
+    {
+      "t": "2026-01-07T05:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 2,
+      "wind_dir": "NW",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 6
+    },
+    {
+      "t": "2026-01-07T06:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 2,
+      "wind_dir": "NNW",
+      "shortForecast": "Partly Sunny",
+      "precip_prob": 6
+    },
+    {
+      "t": "2026-01-07T07:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 2,
+      "wind_dir": "N",
+      "shortForecast": "Partly Sunny",
+      "precip_prob": 6
+    },
+    {
+      "t": "2026-01-07T08:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 2,
+      "wind_dir": "NNW",
+      "shortForecast": "Patchy Fog",
+      "precip_prob": 6
     }
   ],
   "daily": [
     {
-      "name": "Overnight",
-      "t_start": "2026-01-06T05:00:00-08:00",
-      "t_end": "2026-01-06T06:00:00-08:00",
-      "temp_f": 52,
-      "text": "A chance of rain. Mostly cloudy, with a low around 52. East southeast wind around 6 mph. Chance of precipitation is 40%."
-    },
-    {
-      "name": "Tuesday",
-      "t_start": "2026-01-06T06:00:00-08:00",
+      "name": "Today",
+      "t_start": "2026-01-06T09:00:00-08:00",
       "t_end": "2026-01-06T18:00:00-08:00",
       "temp_f": 59,
-      "text": "A chance of rain before 10am. Mostly sunny, with a high near 59. East northeast wind around 6 mph. Chance of precipitation is 40%."
+      "text": "A chance of rain before 10am. Mostly sunny, with a high near 59. North northeast wind around 6 mph. Chance of precipitation is 40%."
     },
     {
-      "name": "Tuesday Night",
+      "name": "Tonight",
       "t_start": "2026-01-06T18:00:00-08:00",
       "t_end": "2026-01-07T06:00:00-08:00",
       "temp_f": 50,
@@ -241,7 +234,7 @@
       "t_start": "2026-01-08T06:00:00-08:00",
       "t_end": "2026-01-08T18:00:00-08:00",
       "temp_f": 55,
-      "text": "Sunny, with a high near 55."
+      "text": "Sunny, with a high near 55. North northwest wind 7 to 15 mph, with gusts as high as 23 mph."
     },
     {
       "name": "Thursday Night",
@@ -298,6 +291,13 @@
       "t_end": "2026-01-12T18:00:00-08:00",
       "temp_f": 60,
       "text": "Sunny, with a high near 60."
+    },
+    {
+      "name": "Monday Night",
+      "t_start": "2026-01-12T18:00:00-08:00",
+      "t_end": "2026-01-13T06:00:00-08:00",
+      "temp_f": 47,
+      "text": "Mostly clear, with a low around 47."
     }
   ]
 }
