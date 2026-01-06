@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-06T14:43:29.344Z",
+  "generated_at": "2026-01-06T14:58:16.642Z",
   "current": null,
   "hourly": [
     {
@@ -202,14 +202,21 @@
   ],
   "daily": [
     {
-      "name": "Today",
+      "name": "Overnight",
+      "t_start": "2026-01-06T05:00:00-08:00",
+      "t_end": "2026-01-06T06:00:00-08:00",
+      "temp_f": 52,
+      "text": "A chance of rain. Mostly cloudy, with a low around 52. East southeast wind around 6 mph. Chance of precipitation is 40%."
+    },
+    {
+      "name": "Tuesday",
       "t_start": "2026-01-06T06:00:00-08:00",
       "t_end": "2026-01-06T18:00:00-08:00",
       "temp_f": 59,
       "text": "A chance of rain before 10am. Mostly sunny, with a high near 59. East northeast wind around 6 mph. Chance of precipitation is 40%."
     },
     {
-      "name": "Tonight",
+      "name": "Tuesday Night",
       "t_start": "2026-01-06T18:00:00-08:00",
       "t_end": "2026-01-07T06:00:00-08:00",
       "temp_f": 50,
@@ -234,7 +241,7 @@
       "t_start": "2026-01-08T06:00:00-08:00",
       "t_end": "2026-01-08T18:00:00-08:00",
       "temp_f": 55,
-      "text": "Sunny, with a high near 55. North northwest wind 7 to 15 mph, with gusts as high as 23 mph."
+      "text": "Sunny, with a high near 55."
     },
     {
       "name": "Thursday Night",
@@ -291,13 +298,6 @@
       "t_end": "2026-01-12T18:00:00-08:00",
       "temp_f": 60,
       "text": "Sunny, with a high near 60."
-    },
-    {
-      "name": "Monday Night",
-      "t_start": "2026-01-12T18:00:00-08:00",
-      "t_end": "2026-01-13T06:00:00-08:00",
-      "temp_f": 47,
-      "text": "Mostly clear, with a low around 47."
     }
   ]
 }
