@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-07T17:53:13.747Z",
+  "generated_at": "2026-01-07T18:20:18.641Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-07T09:00:00-08:00",
-      "temp_f": 52,
-      "wind_mph": 5,
-      "wind_dir": "NW",
-      "shortForecast": "Mostly Sunny",
-      "precip_prob": 6
-    },
     {
       "t": "2026-01-07T10:00:00-08:00",
       "temp_f": 53,
@@ -198,15 +190,23 @@
       "wind_dir": "NNW",
       "shortForecast": "Sunny",
       "precip_prob": 2
+    },
+    {
+      "t": "2026-01-08T09:00:00-08:00",
+      "temp_f": 48,
+      "wind_mph": 9,
+      "wind_dir": "NNW",
+      "shortForecast": "Sunny",
+      "precip_prob": 2
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-07T09:00:00-08:00",
+      "t_start": "2026-01-07T10:00:00-08:00",
       "t_end": "2026-01-07T18:00:00-08:00",
       "temp_f": 58,
-      "text": "Sunny. High near 58, with temperatures falling to around 55 in the afternoon. Northwest wind 5 to 15 mph, with gusts as high as 21 mph."
+      "text": "Sunny. High near 58, with temperatures falling to around 55 in the afternoon. Northwest wind 6 to 15 mph, with gusts as high as 21 mph."
     },
     {
       "name": "Tonight",
