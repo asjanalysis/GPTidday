@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-07T01:25:00.233Z",
+  "generated_at": "2026-01-07T03:13:12.371Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-07T01:24:58.773Z",
+    "generated_at": "2026-01-07T03:13:09.958Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-07T01:24:57.803Z",
+    "generated_at": "2026-01-07T03:13:08.742Z",
     "latest": {
-      "t": "2026-01-07T00:30:00.000Z",
+      "t": "2026-01-07T02:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.75,
-      "hs_ft": 5.74147,
+      "hs_m": 1.68,
+      "hs_ft": 5.5118111999999995,
       "tp_s": 11.111111,
-      "ta_s": 8.019277,
-      "tz_s": 7.142857,
-      "dp_deg_true": 295.65625,
+      "ta_s": 8.680474,
+      "tz_s": 7.8431373,
+      "dp_deg_true": 291.4375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,25 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-07T01:25:00.232Z",
+    "generated_at": "2026-01-07T03:13:12.370Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-06T17:00:00-08:00",
-        "temp_f": 59,
-        "wind_mph": 3,
-        "wind_dir": "NW",
-        "shortForecast": "Mostly Sunny",
-        "precip_prob": 3
-      },
-      {
-        "t": "2026-01-06T18:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 2,
-        "wind_dir": "NNW",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 3
-      },
       {
         "t": "2026-01-06T19:00:00-08:00",
         "temp_f": 57,
@@ -233,19 +217,28 @@
         "wind_dir": "NW",
         "shortForecast": "Sunny",
         "precip_prob": 9
+      },
+      {
+        "t": "2026-01-07T17:00:00-08:00",
+        "temp_f": 55,
+        "wind_mph": 13,
+        "wind_dir": "NW",
+        "shortForecast": "Sunny",
+        "precip_prob": 9
+      },
+      {
+        "t": "2026-01-07T18:00:00-08:00",
+        "temp_f": 54,
+        "wind_mph": 12,
+        "wind_dir": "NW",
+        "shortForecast": "Mostly Clear",
+        "precip_prob": 9
       }
     ],
     "daily": [
       {
-        "name": "This Afternoon",
-        "t_start": "2026-01-06T13:00:00-08:00",
-        "t_end": "2026-01-06T18:00:00-08:00",
-        "temp_f": 59,
-        "text": "Sunny, with a high near 59. West northwest wind around 6 mph."
-      },
-      {
         "name": "Tonight",
-        "t_start": "2026-01-06T18:00:00-08:00",
+        "t_start": "2026-01-06T19:00:00-08:00",
         "t_end": "2026-01-07T06:00:00-08:00",
         "temp_f": 50,
         "text": "Partly cloudy, with a low around 50. North wind around 2 mph."
@@ -262,7 +255,7 @@
         "t_start": "2026-01-07T18:00:00-08:00",
         "t_end": "2026-01-08T06:00:00-08:00",
         "temp_f": 46,
-        "text": "Mostly clear, with a low around 46. Northwest wind around 12 mph."
+        "text": "Mostly clear. Low around 46, with temperatures rising to around 48 overnight. Northwest wind around 12 mph."
       },
       {
         "name": "Thursday",
@@ -276,7 +269,7 @@
         "t_start": "2026-01-08T18:00:00-08:00",
         "t_end": "2026-01-09T06:00:00-08:00",
         "temp_f": 41,
-        "text": "Mostly clear, with a low around 41."
+        "text": "Mostly clear, with a low around 41. North wind 5 to 14 mph, with gusts as high as 22 mph."
       },
       {
         "name": "Friday",
@@ -333,6 +326,13 @@
         "t_end": "2026-01-13T06:00:00-08:00",
         "temp_f": 48,
         "text": "Mostly clear, with a low around 48."
+      },
+      {
+        "name": "Tuesday",
+        "t_start": "2026-01-13T06:00:00-08:00",
+        "t_end": "2026-01-13T18:00:00-08:00",
+        "temp_f": 61,
+        "text": "Sunny, with a high near 61."
       }
     ]
   }
