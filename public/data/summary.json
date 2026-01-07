@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-07T05:56:55.526Z",
+  "generated_at": "2026-01-07T06:35:44.268Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-07T05:56:54.617Z",
+    "generated_at": "2026-01-07T06:35:43.511Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-07T05:56:52.819Z",
+    "generated_at": "2026-01-07T06:35:42.254Z",
     "latest": {
-      "t": "2026-01-07T05:00:00.000Z",
+      "t": "2026-01-07T06:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.05,
-      "hs_ft": 6.725721999999999,
-      "tp_s": 11.111111,
-      "ta_s": 9.035821,
-      "tz_s": 8.333334,
-      "dp_deg_true": 291.4375,
+      "hs_m": 1.79,
+      "hs_ft": 5.8727036,
+      "tp_s": 10.526316,
+      "ta_s": 8.671416,
+      "tz_s": 8,
+      "dp_deg_true": 294.25,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-07T05:56:55.525Z",
+    "generated_at": "2026-01-07T06:35:44.267Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-06T21:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 2,
-        "wind_dir": "NNE",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 3
-      },
       {
         "t": "2026-01-06T22:00:00-08:00",
         "temp_f": 54,
@@ -229,6 +221,14 @@
       {
         "t": "2026-01-07T20:00:00-08:00",
         "temp_f": 53,
+        "wind_mph": 12,
+        "wind_dir": "NW",
+        "shortForecast": "Mostly Clear",
+        "precip_prob": 9
+      },
+      {
+        "t": "2026-01-07T21:00:00-08:00",
+        "temp_f": 52,
         "wind_mph": 12,
         "wind_dir": "NW",
         "shortForecast": "Mostly Clear",
