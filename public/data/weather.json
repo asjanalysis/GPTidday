@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-07T15:21:29.031Z",
+  "generated_at": "2026-01-07T15:45:12.644Z",
   "current": null,
   "hourly": [
     {
@@ -203,7 +203,7 @@
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-07T06:00:00-08:00",
+      "t_start": "2026-01-07T07:00:00-08:00",
       "t_end": "2026-01-07T18:00:00-08:00",
       "temp_f": 58,
       "text": "Mostly sunny. High near 58, with temperatures falling to around 55 in the afternoon. Northwest wind 2 to 15 mph, with gusts as high as 21 mph."
