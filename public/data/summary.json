@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-08T06:44:47.192Z",
+  "generated_at": "2026-01-08T07:02:52.942Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-08T06:44:47.192Z",
+    "generated_at": "2026-01-08T07:02:52.509Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-08T06:44:45.608Z",
+    "generated_at": "2026-01-08T07:02:51.444Z",
     "latest": {
-      "t": "2026-01-08T06:00:00.000Z",
+      "t": "2026-01-08T06:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.56,
-      "hs_ft": 5.1181104,
+      "hs_m": 1.7,
+      "hs_ft": 5.577427999999999,
       "tp_s": 10.526316,
-      "ta_s": 5.80661,
-      "tz_s": 5.1282053,
-      "dp_deg_true": 292.84375,
+      "ta_s": 5.94263,
+      "tz_s": 5.263158,
+      "dp_deg_true": 288.625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,25 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-08T06:44:47.029Z",
+    "generated_at": "2026-01-08T07:02:52.942Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-07T21:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 12,
-        "wind_dir": "NW",
-        "shortForecast": "Mostly Clear",
-        "precip_prob": 1
-      },
-      {
-        "t": "2026-01-07T22:00:00-08:00",
-        "temp_f": 51,
-        "wind_mph": 10,
-        "wind_dir": "NW",
-        "shortForecast": "Mostly Clear",
-        "precip_prob": 10
-      },
       {
         "t": "2026-01-07T23:00:00-08:00",
         "temp_f": 51,
@@ -230,6 +214,22 @@
         "t": "2026-01-08T20:00:00-08:00",
         "temp_f": 50,
         "wind_mph": 8,
+        "wind_dir": "N",
+        "shortForecast": "Mostly Clear",
+        "precip_prob": 0
+      },
+      {
+        "t": "2026-01-08T21:00:00-08:00",
+        "temp_f": 49,
+        "wind_mph": 7,
+        "wind_dir": "N",
+        "shortForecast": "Mostly Clear",
+        "precip_prob": 0
+      },
+      {
+        "t": "2026-01-08T22:00:00-08:00",
+        "temp_f": 48,
+        "wind_mph": 5,
         "wind_dir": "N",
         "shortForecast": "Mostly Clear",
         "precip_prob": 0
