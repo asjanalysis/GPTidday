@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-08T21:51:23.029Z",
+  "generated_at": "2026-01-08T22:00:12.225Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-08T13:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 16,
-      "wind_dir": "NNW",
-      "shortForecast": "Sunny",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-08T14:00:00-08:00",
       "temp_f": 54,
@@ -198,12 +190,20 @@
       "wind_dir": "ENE",
       "shortForecast": "Sunny",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-09T13:00:00-08:00",
+      "temp_f": 53,
+      "wind_mph": 5,
+      "wind_dir": "E",
+      "shortForecast": "Sunny",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "This Afternoon",
-      "t_start": "2026-01-08T13:00:00-08:00",
+      "t_start": "2026-01-08T14:00:00-08:00",
       "t_end": "2026-01-08T18:00:00-08:00",
       "temp_f": 54,
       "text": "Sunny, with a high near 54. North northwest wind 13 to 16 mph, with gusts as high as 23 mph."
