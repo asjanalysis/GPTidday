@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-08T18:49:53.152Z",
+  "generated_at": "2026-01-08T19:10:11.778Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-08T18:49:52.622Z",
+    "generated_at": "2026-01-08T19:10:10.343Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-08T18:49:50.842Z",
+    "generated_at": "2026-01-08T19:10:09.342Z",
     "latest": {
-      "t": "2026-01-08T18:00:00.000Z",
+      "t": "2026-01-08T18:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.04,
-      "hs_ft": 6.6929136,
-      "tp_s": 9.090909,
-      "ta_s": 7.612442,
-      "tz_s": 6.779661,
-      "dp_deg_true": 295.65625,
+      "hs_m": 2.02,
+      "hs_ft": 6.6272968,
+      "tp_s": 10.526316,
+      "ta_s": 7.7011123,
+      "tz_s": 6.896552,
+      "dp_deg_true": 298.46875,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-08T18:49:53.151Z",
+    "generated_at": "2026-01-08T19:10:11.777Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-08T10:00:00-08:00",
-        "temp_f": 49,
-        "wind_mph": 10,
-        "wind_dir": "N",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-08T11:00:00-08:00",
         "temp_f": 51,
@@ -233,15 +225,23 @@
         "wind_dir": "ENE",
         "shortForecast": "Sunny",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-09T10:00:00-08:00",
+        "temp_f": 46,
+        "wind_mph": 5,
+        "wind_dir": "ENE",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-01-08T09:00:00-08:00",
+        "t_start": "2026-01-08T11:00:00-08:00",
         "t_end": "2026-01-08T18:00:00-08:00",
         "temp_f": 54,
-        "text": "Sunny, with a high near 54. North northwest wind 10 to 16 mph, with gusts as high as 23 mph."
+        "text": "Sunny, with a high near 54. North northwest wind 13 to 16 mph, with gusts as high as 23 mph."
       },
       {
         "name": "Tonight",
