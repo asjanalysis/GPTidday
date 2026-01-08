@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-08T11:43:28.528Z",
+  "generated_at": "2026-01-08T11:53:49.978Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-08T11:43:28.432Z",
+    "generated_at": "2026-01-08T11:53:49.238Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-08T11:43:27.404Z",
+    "generated_at": "2026-01-08T11:53:47.621Z",
     "latest": {
       "t": "2026-01-08T11:00:00.000Z",
       "station_id": "156",
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-08T11:43:28.527Z",
+    "generated_at": "2026-01-08T11:53:49.977Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-08T02:00:00-08:00",
-        "temp_f": 51,
-        "wind_mph": 10,
-        "wind_dir": "NW",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 10
-      },
       {
         "t": "2026-01-08T03:00:00-08:00",
         "temp_f": 50,
@@ -233,15 +225,23 @@
         "wind_dir": "NE",
         "shortForecast": "Partly Cloudy",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-09T02:00:00-08:00",
+        "temp_f": 44,
+        "wind_mph": 5,
+        "wind_dir": "NE",
+        "shortForecast": "Partly Cloudy",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-01-08T00:00:00-08:00",
+        "t_start": "2026-01-08T03:00:00-08:00",
         "t_end": "2026-01-08T06:00:00-08:00",
         "temp_f": 46,
-        "text": "Partly cloudy. Low around 46, with temperatures rising to around 48 overnight. Northwest wind around 12 mph, with gusts as high as 18 mph."
+        "text": "Mostly clear. Low around 46, with temperatures rising to around 48 overnight. North northwest wind around 12 mph, with gusts as high as 18 mph."
       },
       {
         "name": "Thursday",
