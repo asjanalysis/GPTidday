@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-09T19:32:43.868Z",
+  "generated_at": "2026-01-09T19:44:41.432Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-09T19:32:43.341Z",
+    "generated_at": "2026-01-09T19:44:41.426Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-09T19:32:42.048Z",
+    "generated_at": "2026-01-09T19:44:40.005Z",
     "latest": {
       "t": "2026-01-09T19:00:00.000Z",
       "station_id": "156",
@@ -39,9 +39,17 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-09T19:32:43.867Z",
+    "generated_at": "2026-01-09T19:44:41.432Z",
     "current": null,
     "hourly": [
+      {
+        "t": "2026-01-09T10:00:00-08:00",
+        "temp_f": 47,
+        "wind_mph": 5,
+        "wind_dir": "E",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
+      },
       {
         "t": "2026-01-09T11:00:00-08:00",
         "temp_f": 49,
@@ -225,23 +233,15 @@
         "wind_dir": "ENE",
         "shortForecast": "Sunny",
         "precip_prob": 0
-      },
-      {
-        "t": "2026-01-10T10:00:00-08:00",
-        "temp_f": 50,
-        "wind_mph": 6,
-        "wind_dir": "ENE",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-01-09T07:00:00-08:00",
+        "t_start": "2026-01-09T08:00:00-08:00",
         "t_end": "2026-01-09T18:00:00-08:00",
         "temp_f": 56,
-        "text": "Sunny. High near 56, with temperatures falling to around 54 in the afternoon. East wind 2 to 6 mph."
+        "text": "Sunny. High near 56, with temperatures falling to around 54 in the afternoon. East southeast wind 2 to 6 mph."
       },
       {
         "name": "Tonight",
