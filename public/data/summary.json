@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-09T09:53:21.480Z",
+  "generated_at": "2026-01-09T10:14:53.110Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-09T09:53:21.254Z",
+    "generated_at": "2026-01-09T10:14:52.370Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,15 +18,15 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-09T09:53:19.498Z",
+    "generated_at": "2026-01-09T10:14:51.100Z",
     "latest": {
-      "t": "2026-01-09T09:00:00.000Z",
+      "t": "2026-01-09T09:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.47,
-      "hs_ft": 8.1036748,
+      "hs_m": 2.44,
+      "hs_ft": 8.005249599999999,
       "tp_s": 13.333333,
-      "ta_s": 9.210274,
+      "ta_s": 9.210193,
       "tz_s": 8,
       "dp_deg_true": 292.84375,
       "lat": 36.759167,
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-09T09:53:21.479Z",
+    "generated_at": "2026-01-09T10:14:53.109Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-09T01:00:00-08:00",
-        "temp_f": 45,
-        "wind_mph": 6,
-        "wind_dir": "NE",
-        "shortForecast": "Mostly Clear",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-09T02:00:00-08:00",
         "temp_f": 44,
@@ -233,15 +225,23 @@
         "wind_dir": "NE",
         "shortForecast": "Clear",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-10T01:00:00-08:00",
+        "temp_f": 47,
+        "wind_mph": 5,
+        "wind_dir": "NE",
+        "shortForecast": "Mostly Clear",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-01-09T01:00:00-08:00",
+        "t_start": "2026-01-09T02:00:00-08:00",
         "t_end": "2026-01-09T06:00:00-08:00",
         "temp_f": 41,
-        "text": "Mostly clear. Low around 41, with temperatures rising to around 43 overnight. Northeast wind around 6 mph."
+        "text": "Mostly clear. Low around 41, with temperatures rising to around 43 overnight. Northeast wind around 5 mph."
       },
       {
         "name": "Friday",
