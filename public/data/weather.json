@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-09T04:12:04.951Z",
+  "generated_at": "2026-01-09T04:53:04.635Z",
   "current": null,
   "hourly": [
     {
@@ -203,10 +203,10 @@
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-08T20:00:00-08:00",
+      "t_start": "2026-01-08T19:00:00-08:00",
       "t_end": "2026-01-09T06:00:00-08:00",
       "temp_f": 41,
-      "text": "Mostly clear, with a low around 41. Northeast wind 5 to 8 mph."
+      "text": "Mostly clear, with a low around 41. Northeast wind 5 to 9 mph."
     },
     {
       "name": "Friday",
