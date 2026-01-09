@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-09T14:33:26.654Z",
+  "generated_at": "2026-01-09T14:53:41.756Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-09T14:33:25.885Z",
+    "generated_at": "2026-01-09T14:53:41.756Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-09T14:33:24.251Z",
+    "generated_at": "2026-01-09T14:53:39.977Z",
     "latest": {
       "t": "2026-01-09T14:00:00.000Z",
       "station_id": "156",
@@ -39,9 +39,17 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-09T14:33:26.653Z",
+    "generated_at": "2026-01-09T14:53:41.433Z",
     "current": null,
     "hourly": [
+      {
+        "t": "2026-01-09T05:00:00-08:00",
+        "temp_f": 43,
+        "wind_mph": 5,
+        "wind_dir": "NE",
+        "shortForecast": "Partly Cloudy",
+        "precip_prob": 0
+      },
       {
         "t": "2026-01-09T06:00:00-08:00",
         "temp_f": 43,
@@ -225,26 +233,25 @@
         "wind_dir": "ENE",
         "shortForecast": "Mostly Clear",
         "precip_prob": 0
-      },
-      {
-        "t": "2026-01-10T05:00:00-08:00",
-        "temp_f": 46,
-        "wind_mph": 5,
-        "wind_dir": "ENE",
-        "shortForecast": "Mostly Clear",
-        "precip_prob": 0
       }
     ],
     "daily": [
       {
-        "name": "Today",
+        "name": "Overnight",
+        "t_start": "2026-01-09T01:00:00-08:00",
+        "t_end": "2026-01-09T06:00:00-08:00",
+        "temp_f": 41,
+        "text": "Mostly clear. Low around 41, with temperatures rising to around 43 overnight. Northeast wind around 6 mph."
+      },
+      {
+        "name": "Friday",
         "t_start": "2026-01-09T06:00:00-08:00",
         "t_end": "2026-01-09T18:00:00-08:00",
         "temp_f": 56,
         "text": "Sunny. High near 56, with temperatures falling to around 54 in the afternoon. East wind 2 to 6 mph."
       },
       {
-        "name": "Tonight",
+        "name": "Friday Night",
         "t_start": "2026-01-09T18:00:00-08:00",
         "t_end": "2026-01-10T06:00:00-08:00",
         "temp_f": 44,
@@ -269,7 +276,7 @@
         "t_start": "2026-01-11T06:00:00-08:00",
         "t_end": "2026-01-11T18:00:00-08:00",
         "temp_f": 59,
-        "text": "Mostly sunny, with a high near 59. North northeast wind around 5 mph."
+        "text": "Mostly sunny, with a high near 59."
       },
       {
         "name": "Sunday Night",
@@ -326,13 +333,6 @@
         "t_end": "2026-01-15T18:00:00-08:00",
         "temp_f": 64,
         "text": "Sunny, with a high near 64."
-      },
-      {
-        "name": "Thursday Night",
-        "t_start": "2026-01-15T18:00:00-08:00",
-        "t_end": "2026-01-16T06:00:00-08:00",
-        "temp_f": 51,
-        "text": "Mostly clear, with a low around 51."
       }
     ]
   }
