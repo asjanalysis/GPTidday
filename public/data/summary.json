@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-10T15:56:04.951Z",
+  "generated_at": "2026-01-10T16:23:24.163Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-10T15:56:04.951Z",
+    "generated_at": "2026-01-10T16:23:23.251Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-10T15:56:03.509Z",
+    "generated_at": "2026-01-10T16:23:22.213Z",
     "latest": {
-      "t": "2026-01-10T14:30:00.000Z",
+      "t": "2026-01-10T15:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.28,
-      "hs_ft": 4.1994752,
-      "tp_s": 14.285714,
-      "ta_s": 7.2428794,
-      "tz_s": 5.633803,
-      "dp_deg_true": 287.21875,
+      "hs_m": 1.22,
+      "hs_ft": 4.0026247999999995,
+      "tp_s": 13.333333,
+      "ta_s": 6.529537,
+      "tz_s": 5.1282053,
+      "dp_deg_true": 290.03125,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-10T15:56:04.833Z",
+    "generated_at": "2026-01-10T16:23:24.163Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-10T07:00:00-08:00",
-        "temp_f": 47,
-        "wind_mph": 5,
-        "wind_dir": "ENE",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-10T08:00:00-08:00",
         "temp_f": 47,
@@ -233,12 +225,20 @@
         "wind_dir": "NE",
         "shortForecast": "Mostly Sunny",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-11T07:00:00-08:00",
+        "temp_f": 48,
+        "wind_mph": 5,
+        "wind_dir": "NE",
+        "shortForecast": "Mostly Sunny",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-01-10T06:00:00-08:00",
+        "t_start": "2026-01-10T08:00:00-08:00",
         "t_end": "2026-01-10T18:00:00-08:00",
         "temp_f": 60,
         "text": "Mostly sunny. High near 60, with temperatures falling to around 58 in the afternoon. East northeast wind around 5 mph."
