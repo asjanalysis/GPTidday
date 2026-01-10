@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-10T09:37:34.790Z",
+  "generated_at": "2026-01-10T09:48:15.613Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-10T09:37:34.789Z",
+    "generated_at": "2026-01-10T09:48:15.102Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-10T09:37:33.236Z",
+    "generated_at": "2026-01-10T09:48:13.945Z",
     "latest": {
       "t": "2026-01-10T09:00:00.000Z",
       "station_id": "156",
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-10T09:37:34.625Z",
+    "generated_at": "2026-01-10T09:48:15.612Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-10T00:00:00-08:00",
-        "temp_f": 49,
-        "wind_mph": 5,
-        "wind_dir": "NE",
-        "shortForecast": "Mostly Clear",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-10T01:00:00-08:00",
         "temp_f": 48,
@@ -233,12 +225,20 @@
         "wind_dir": "NE",
         "shortForecast": "Mostly Cloudy",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-11T00:00:00-08:00",
+        "temp_f": 51,
+        "wind_mph": 6,
+        "wind_dir": "NE",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-01-10T00:00:00-08:00",
+        "t_start": "2026-01-10T01:00:00-08:00",
         "t_end": "2026-01-10T06:00:00-08:00",
         "temp_f": 45,
         "text": "Mostly clear, with a low around 45. Northeast wind around 5 mph."
