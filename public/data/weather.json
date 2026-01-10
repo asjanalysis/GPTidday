@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-10T14:11:55.458Z",
+  "generated_at": "2026-01-10T14:33:51.599Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-10T05:00:00-08:00",
-      "temp_f": 46,
-      "wind_mph": 5,
-      "wind_dir": "NE",
-      "shortForecast": "Mostly Clear",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-10T06:00:00-08:00",
       "temp_f": 46,
@@ -198,25 +190,26 @@
       "wind_dir": "NE",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-11T05:00:00-08:00",
+      "temp_f": 48,
+      "wind_mph": 5,
+      "wind_dir": "NE",
+      "shortForecast": "Partly Cloudy",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
-      "name": "Overnight",
-      "t_start": "2026-01-10T00:00:00-08:00",
-      "t_end": "2026-01-10T06:00:00-08:00",
-      "temp_f": 45,
-      "text": "Mostly clear, with a low around 45. Northeast wind around 5 mph."
-    },
-    {
-      "name": "Saturday",
+      "name": "Today",
       "t_start": "2026-01-10T06:00:00-08:00",
       "t_end": "2026-01-10T18:00:00-08:00",
       "temp_f": 60,
       "text": "Mostly sunny. High near 60, with temperatures falling to around 58 in the afternoon. East northeast wind around 5 mph."
     },
     {
-      "name": "Saturday Night",
+      "name": "Tonight",
       "t_start": "2026-01-10T18:00:00-08:00",
       "t_end": "2026-01-11T06:00:00-08:00",
       "temp_f": 47,
@@ -241,7 +234,7 @@
       "t_start": "2026-01-12T06:00:00-08:00",
       "t_end": "2026-01-12T18:00:00-08:00",
       "temp_f": 60,
-      "text": "Sunny, with a high near 60."
+      "text": "Sunny, with a high near 60. North wind around 5 mph."
     },
     {
       "name": "Monday Night",
@@ -298,6 +291,13 @@
       "t_end": "2026-01-16T18:00:00-08:00",
       "temp_f": 64,
       "text": "Sunny, with a high near 64."
+    },
+    {
+      "name": "Friday Night",
+      "t_start": "2026-01-16T18:00:00-08:00",
+      "t_end": "2026-01-17T06:00:00-08:00",
+      "temp_f": 53,
+      "text": "Clear, with a low around 53."
     }
   ]
 }
