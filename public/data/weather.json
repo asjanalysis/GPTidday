@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-10T17:36:55.061Z",
+  "generated_at": "2026-01-10T17:47:05.448Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-10T08:00:00-08:00",
-      "temp_f": 47,
-      "wind_mph": 5,
-      "wind_dir": "ENE",
-      "shortForecast": "Mostly Sunny",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-10T09:00:00-08:00",
       "temp_f": 49,
@@ -198,12 +190,20 @@
       "wind_dir": "NE",
       "shortForecast": "Mostly Sunny",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-11T08:00:00-08:00",
+      "temp_f": 48,
+      "wind_mph": 5,
+      "wind_dir": "NE",
+      "shortForecast": "Mostly Sunny",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-10T08:00:00-08:00",
+      "t_start": "2026-01-10T06:00:00-08:00",
       "t_end": "2026-01-10T18:00:00-08:00",
       "temp_f": 60,
       "text": "Mostly sunny. High near 60, with temperatures falling to around 58 in the afternoon. East northeast wind around 5 mph."
