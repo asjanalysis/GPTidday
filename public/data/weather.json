@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-10T05:55:41.196Z",
+  "generated_at": "2026-01-10T06:27:39.362Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-09T21:00:00-08:00",
-      "temp_f": 50,
-      "wind_mph": 3,
-      "wind_dir": "NE",
-      "shortForecast": "Clear",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-09T22:00:00-08:00",
       "temp_f": 49,
@@ -198,12 +190,20 @@
       "wind_dir": "NNE",
       "shortForecast": "Mostly Cloudy",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-10T21:00:00-08:00",
+      "temp_f": 53,
+      "wind_mph": 5,
+      "wind_dir": "NE",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-09T20:00:00-08:00",
+      "t_start": "2026-01-09T22:00:00-08:00",
       "t_end": "2026-01-10T06:00:00-08:00",
       "temp_f": 45,
       "text": "Mostly clear, with a low around 45. Northeast wind around 5 mph."
