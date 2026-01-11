@@ -3,33 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Capitola Surf – Hourly</title>
+    <title>Wave Pocket – Progression</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="page">
       <nav>
-        <div class="logo">Capitola Companion</div>
+        <div class="logo">Wave Pocket</div>
         <div class="links">
-          <a class="nav-pill nav-welcome" href="index.html" aria-label="Welcome">
-            <span class="icon-bubble">🏄‍♀️</span>
-            <span class="label">Welcome</span>
+          <a class="nav-pill nav-welcome" href="index.html" aria-label="Overview">
+            <span class="icon-bubble">🏄‍♂️</span>
+            <span class="label">Overview</span>
           </a>
-          <a class="nav-pill nav-report" href="report.html" aria-label="Surf Report">
-            <span class="icon-bubble">📡</span>
-            <span class="label">Surf Report</span>
+          <a class="nav-pill nav-report" href="report.html" aria-label="Mechanics">
+            <span class="icon-bubble">🎯</span>
+            <span class="label">Mechanics</span>
           </a>
-          <a class="nav-pill nav-hourly active" href="hourly.html" aria-label="Hourly &amp; Tides" aria-current="page">
-            <span class="icon-bubble">🌊</span>
-            <span class="label">Hourly &amp; Tides</span>
+          <a class="nav-pill nav-hourly active" href="hourly.html" aria-label="Progression" aria-current="page">
+            <span class="icon-bubble">⏱️</span>
+            <span class="label">Progression</span>
           </a>
-          <a class="nav-pill nav-explore" href="explore.html" aria-label="Explore">
-            <span class="icon-bubble">🧭</span>
-            <span class="label">Explore</span>
+          <a class="nav-pill nav-explore" href="explore.html" aria-label="Scoring">
+            <span class="icon-bubble">✨</span>
+            <span class="label">Scoring</span>
           </a>
-          <a class="nav-pill nav-events" href="events.html" aria-label="Events">
-            <span class="icon-bubble">🎉</span>
-            <span class="label">Events</span>
+          <a class="nav-pill nav-events" href="events.html" aria-label="Art Style">
+            <span class="icon-bubble">🎨</span>
+            <span class="label">Art Style</span>
           </a>
         </div>
       </nav>
@@ -37,162 +37,56 @@
       <div class="phone-grid">
         <div class="phone">
           <div class="topline">
-            <div class="badge">Capitola Jetty</div>
-            <span class="small-pill" id="hourly-updated">Live updates</span>
+            <div class="badge">Level recipe</div>
+            <span class="small-pill">Repeatable</span>
           </div>
-          <h2 id="current-summary">Forecast: loading…</h2>
-          <div class="data-row">
-            <div class="data-pill"><small>Surf</small><strong id="current-surf">—</strong></div>
-            <div class="data-pill"><small>Feels like</small><strong id="current-temp">—</strong></div>
-            <div class="data-pill"><small>Wind</small><strong id="current-wind">—</strong></div>
+          <h2>Each level stacks duration, amplitude, and tighter pockets.</h2>
+          <div class="section-card">
+            <h3>Level ingredients</h3>
+            <div class="list">
+              <div class="list-item"><span>Ride duration</span><span class="small-pill">12s → 18s → 25s</span></div>
+              <div class="list-item"><span>Wave amplitude</span><span class="small-pill">Bigger vertical motion</span></div>
+              <div class="list-item"><span>Pocket thickness</span><span class="small-pill">Shrinks over time</span></div>
+              <div class="list-item"><span>Events</span><span class="small-pill">Barrel + chop bursts</span></div>
+            </div>
           </div>
           <div class="section-card">
-            <h3>Hourly forecast (next 12 hrs)</h3>
-            <div class="timeline" id="hourly-forecast"></div>
+            <h3>Win flow</h3>
+            <p class="subtle">
+              When the timer ends the wave slows, the surfer auto-angles up, rides off-screen, and a celebration
+              animation plays before loading the next level.
+            </p>
           </div>
         </div>
 
         <div class="phone">
           <div class="topline">
-            <div class="badge">Tide forecast</div>
-            <span class="small-pill">NOAA predictions</span>
+            <div class="badge">Difficulty curve</div>
+            <span class="small-pill">Tighter pocket</span>
           </div>
           <div class="section-card">
-            <h3>Capitola Beach &amp; Jetty <span class="small-pill" id="tide-updated">—</span></h3>
-            <div class="timeline" id="tide-forecast"></div>
+            <h3>Sample wave set</h3>
+            <div class="timeline">
+              <div><div class="bar" style="height: 70px">L1</div><small>12s · Wide</small></div>
+              <div><div class="bar" style="height: 90px">L2</div><small>15s · Chop</small></div>
+              <div><div class="bar" style="height: 110px">L3</div><small>18s · Barrel</small></div>
+              <div><div class="bar" style="height: 130px">L4</div><small>22s · Tight</small></div>
+              <div><div class="bar" style="height: 150px">L5</div><small>25s · Fast</small></div>
+              <div><div class="bar" style="height: 170px">L6</div><small>Endless</small></div>
+            </div>
           </div>
           <div class="section-card">
-            <h3>Feels like</h3>
-            <div class="data-row">
-              <div class="data-pill"><small>Temperature</small><strong id="temp-now">—</strong></div>
-              <div class="data-pill"><small>Precip</small><strong id="precip-now">—</strong></div>
-              <div class="data-pill"><small>Wind</small><strong id="wind-now">—</strong></div>
+            <h3>Moment events</h3>
+            <div class="list">
+              <div class="list-item"><span>Barrel drop</span><span class="small-pill">Upper line dips</span></div>
+              <div class="list-item"><span>Chop burst</span><span class="small-pill">Jitter pocket</span></div>
+              <div class="list-item"><span>Spray gust</span><span class="small-pill">Force upward drift</span></div>
             </div>
           </div>
         </div>
       </div>
 
-      <p class="footer-note">Hour-by-hour surf and tide cues designed after the mockup panels.</p>
+      <p class="footer-note">Progression loops endlessly with increasingly tight pockets.</p>
     </div>
-
-    <script type="module">
-      import { getTides, getWaves, getWeather } from './src/lib/getLocalData.js';
-
-      const cardinal = (degrees) => {
-        if (degrees === undefined || degrees === null) return '—';
-        const dirs = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
-        const ix = Math.round(((degrees % 360) / 22.5)) % 16;
-        return dirs[ix];
-      };
-
-      const fmtHour = (iso) =>
-        new Date(iso).toLocaleString('en-US', {
-          hour: 'numeric',
-          hour12: true,
-          timeZone: 'America/Los_Angeles',
-        });
-
-      const fmtTemp = (value) => (value !== undefined && value !== null ? `${Number(value).toFixed(0)}ºF` : '—');
-
-      function renderHourly(hourly = []) {
-        const container = document.getElementById('hourly-forecast');
-        if (!container) return;
-        container.innerHTML = '';
-        const maxTemp = Math.max(...hourly.map((h) => h.temp_f || 0), 60);
-        hourly.slice(0, 12).forEach((period) => {
-          const bar = document.createElement('div');
-          const height = Math.max(40, ((period.temp_f || maxTemp) / maxTemp) * 140);
-          bar.className = 'bar';
-          bar.style.height = `${height}px`;
-          bar.textContent = fmtHour(period.t);
-
-          const wrapper = document.createElement('div');
-          wrapper.appendChild(bar);
-          const temp = document.createElement('small');
-          temp.textContent = `${fmtTemp(period.temp_f)} · ${period.shortForecast || '—'}`;
-          wrapper.appendChild(temp);
-          container.appendChild(wrapper);
-        });
-      }
-
-      function renderTides(predictions = [], nextExtrema = []) {
-        const container = document.getElementById('tide-forecast');
-        if (!container) return;
-        container.innerHTML = '';
-        const now = Date.now();
-        const upcoming = predictions.filter((p) => new Date(p.t).getTime() > now).slice(0, 6);
-        if (!upcoming.length) {
-          container.textContent = 'Tide predictions unavailable';
-          return;
-        }
-        const values = upcoming.map((p) => p.ft);
-        const max = Math.max(...values);
-        const min = Math.min(...values);
-        const span = Math.max(1, max - min);
-
-        upcoming.forEach((p) => {
-          const bar = document.createElement('div');
-          const normalized = (p.ft - min) / span;
-          const height = 60 + normalized * 120;
-          bar.className = 'bar';
-          bar.style.height = `${height}px`;
-          bar.style.background = 'linear-gradient(180deg, rgba(79,178,255,0.18), #4fb2ff)';
-          bar.textContent = p.ft.toFixed(2);
-
-          const wrapper = document.createElement('div');
-          wrapper.appendChild(bar);
-          const label = document.createElement('small');
-          const match = nextExtrema.find((e) => e.t === p.t);
-          label.textContent = match ? `${fmtHour(p.t)} ${match.type}` : fmtHour(p.t);
-          wrapper.appendChild(label);
-          container.appendChild(wrapper);
-        });
-      }
-
-      async function populate() {
-        try {
-          const [tides, waves, weather] = await Promise.all([getTides(), getWaves(), getWeather()]);
-          const buoy = waves?.latest;
-          const waveHeight = buoy?.hs_ft ? `${buoy.hs_ft.toFixed(1)} ft` : '—';
-          const wavePeriod = buoy?.tp_s ? `${buoy.tp_s.toFixed(0)}s` : buoy?.tz_s ? `${buoy.tz_s.toFixed(0)}s` : '—';
-          const waveDir = buoy?.dp_deg_true ? cardinal(buoy.dp_deg_true) : '—';
-          document.getElementById('current-surf').textContent = `${waveHeight} @ ${wavePeriod} ${waveDir}`;
-
-          const currentTemp = weather?.current?.temp_f || weather?.hourly?.[0]?.temp_f;
-          document.getElementById('current-temp').textContent = fmtTemp(currentTemp);
-          const windMph = weather?.current?.wind_mph || weather?.hourly?.[0]?.wind_mph;
-          const windDir = weather?.current?.wind_dir_deg || weather?.hourly?.[0]?.wind_dir;
-          document.getElementById('current-wind').textContent = windMph ? `${windMph.toFixed(1)} mph` : 'Calm';
-          document.getElementById('wind-now').textContent = windDir ? `${cardinal(windDir)} ${windMph?.toFixed(1) || ''} mph` : '—';
-
-          renderHourly(weather?.hourly);
-          renderTides(tides?.predictions, tides?.next_extrema || []);
-
-          const precip = weather?.hourly?.[0]?.precip_prob;
-          document.getElementById('precip-now').textContent =
-            precip !== null && precip !== undefined ? `${precip.toFixed(0)}%` : '—';
-          document.getElementById('temp-now').textContent = fmtTemp(currentTemp);
-
-          const updatedTime = weather?.generated_at
-            ? new Date(weather.generated_at).toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' })
-            : '—';
-          document.getElementById('hourly-updated').textContent = `Updated ${updatedTime}`;
-
-          const tideUpdated = tides?.generated_at
-            ? new Date(tides.generated_at).toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' })
-            : '—';
-          document.getElementById('tide-updated').textContent = tideUpdated;
-
-          document.getElementById('current-summary').textContent = `Forecast: ${waveHeight} · ${fmtTemp(currentTemp)}`;
-        } catch (err) {
-          document.getElementById('hourly-forecast').textContent = 'Unable to load hourly data';
-          document.getElementById('tide-forecast').textContent = 'Unable to load tide data';
-          document.getElementById('hourly-updated').textContent = err.message;
-        }
-      }
-
-      populate();
-      setInterval(populate, 15 * 60 * 1000);
-    </script>
   </body>
 </html>

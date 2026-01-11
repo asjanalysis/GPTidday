@@ -10,6 +10,9 @@
   --text: #0c1a2e;
   --muted: #4c5a6f;
   --card: #ffffff;
+  --pixel-bg: #0b1f35;
+  --pixel-border: rgba(255, 255, 255, 0.25);
+  --pixel-accent: #4fb2ff;
   --shadow: 0 18px 40px rgba(12, 26, 46, 0.18);
   --radius-lg: 22px;
   --radius-md: 16px;
@@ -452,8 +455,211 @@ nav .links {
   font-weight: 600;
 }
 
+.subtle {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.pixel-stage {
+  background: var(--pixel-bg);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.illustration.pixel-stage::before,
+.illustration.pixel-stage::after {
+  content: none;
+}
+
+.pixel-hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  color: #e6f5ff;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+}
+
+.pixel-viewport {
+  position: relative;
+  background: linear-gradient(180deg, #67c8ff 0%, #1c84ff 55%, #0b1f35 100%);
+  border-radius: 16px;
+  border: 2px solid var(--pixel-border);
+  height: 200px;
+  overflow: hidden;
+  image-rendering: pixelated;
+}
+
+.pixel-boundary {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+.pixel-boundary.upper {
+  top: 58px;
+  transform: rotate(-2deg);
+}
+
+.pixel-boundary.lower {
+  top: 130px;
+  transform: rotate(2deg);
+}
+
+.pixel-pocket {
+  position: absolute;
+  inset: 70px 14% 55px 12%;
+  border: 2px dashed rgba(255, 255, 255, 0.35);
+  border-radius: 24px;
+}
+
+.pixel-surfer {
+  position: absolute;
+  left: 18%;
+  top: 86px;
+}
+
+.pixel-caption {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  text-align: center;
+}
+
+.sprite {
+  width: 64px;
+  height: 64px;
+  background-image: url('public/assets/surfer-sprite.svg');
+  background-repeat: no-repeat;
+  background-size: 512px 64px;
+  image-rendering: pixelated;
+  animation: sprite-run 1s steps(8) infinite;
+}
+
+.wipeout-preview {
+  margin-top: 12px;
+  background: rgba(15, 43, 70, 0.12);
+  border-radius: 12px;
+  padding: 8px;
+  display: inline-flex;
+}
+
+.sprite-showcase {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.sprite-strip {
+  width: 256px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(15, 43, 70, 0.08);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sprite-strip::after {
+  content: '';
+  width: 64px;
+  height: 64px;
+  background-image: url('public/assets/surfer-sprite.svg');
+  background-repeat: no-repeat;
+  background-size: 512px 64px;
+  image-rendering: pixelated;
+  animation: sprite-run 1s steps(8) infinite;
+}
+
+.sprite-card h3 {
+  margin: 0 0 6px;
+}
+
+.score-hud {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background: rgba(15, 43, 70, 0.08);
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+}
+
+.score-hud small {
+  color: var(--muted);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.score-hud strong {
+  font-size: 18px;
+}
+
+.crt-panel {
+  position: relative;
+  background: #0b1f35;
+  border-radius: 16px;
+  padding: 20px;
+  overflow: hidden;
+  color: #e6f5ff;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.crt-panel .sprite {
+  transform: scale(1.1);
+}
+
+.crt-lines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0,
+    rgba(0, 0, 0, 0.2) 2px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0) 4px
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+@keyframes sprite-run {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -512px 0;
+  }
+}
+
 @media (max-width: 900px) {
   .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .sprite-showcase {
     grid-template-columns: 1fr;
   }
 }
