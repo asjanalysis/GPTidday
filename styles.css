@@ -274,6 +274,12 @@ nav .links {
   box-shadow: none;
 }
 
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
 .illustration {
   background: linear-gradient(135deg, #79d4ff, #c2f0ff);
   border-radius: var(--radius-lg);
@@ -563,6 +569,178 @@ nav .links {
   align-items: center;
 }
 
+.game-panel {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.game-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+  gap: 28px;
+  align-items: center;
+}
+
+.game-copy h2 {
+  margin-top: 0;
+}
+
+.game-instructions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.game-instructions ul {
+  padding-left: 18px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.game-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.game-stage {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid rgba(12, 26, 46, 0.2);
+  background: #0b1f35;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-items: center;
+}
+
+.game-stage canvas {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  position: relative;
+  z-index: 3;
+}
+
+.parallax {
+  position: absolute;
+  inset: 0;
+  background-image: url('public/assets/wave-backdrop.svg');
+  background-size: 100% 300%;
+  image-rendering: pixelated;
+  animation: drift 18s linear infinite;
+  z-index: 0;
+}
+
+.parallax.layer.sky {
+  background-position: 0 0;
+  opacity: 0.9;
+  animation-duration: 36s;
+}
+
+.parallax.layer.coast {
+  background-position: 0 50%;
+  opacity: 0.8;
+  animation-duration: 28s;
+  mix-blend-mode: screen;
+}
+
+.parallax.layer.mist {
+  background-position: 0 100%;
+  opacity: 0.65;
+  animation-duration: 16s;
+}
+
+.game-hud {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  z-index: 4;
+  font-size: 12px;
+  color: #eaf6ff;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.game-hud div {
+  background: rgba(10, 24, 38, 0.55);
+  border-radius: 10px;
+  padding: 6px 8px;
+  display: grid;
+  gap: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.game-hud strong {
+  font-size: 14px;
+}
+
+.game-message {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 20px;
+  color: #f2fbff;
+  background: linear-gradient(180deg, rgba(6, 17, 28, 0.75), rgba(6, 17, 28, 0.45));
+  backdrop-filter: blur(4px);
+}
+
+.game-message.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.game-message h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.game-status {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status-pill {
+  background: rgba(12, 26, 46, 0.08);
+  border-radius: 999px;
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-pill .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #6de3c0;
+  box-shadow: 0 0 8px rgba(109, 227, 192, 0.8);
+}
+
+@keyframes drift {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -100%;
+  }
+}
+
 .sprite-strip {
   width: 256px;
   height: 64px;
@@ -656,6 +834,10 @@ nav .links {
 
 @media (max-width: 900px) {
   .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .game-card {
     grid-template-columns: 1fr;
   }
 

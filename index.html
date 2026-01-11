@@ -78,6 +78,78 @@
         </div>
       </section>
 
+      <section class="game-panel">
+        <div class="game-card">
+          <div class="game-copy">
+            <p class="badge">Playable prototype</p>
+            <h2>Ride the pocket. Tap to pump. Survive the timer.</h2>
+            <p class="subtle">
+              The wave face scrolls right-to-left and creates a moving pocket. Keep your surfer between the lip and the
+              whitewater line. Tight barrels and chop bursts narrow the safe lane as levels scale up.
+            </p>
+            <div class="game-instructions">
+              <div>
+                <h3>Controls</h3>
+                <ul>
+                  <li>Tap / click / space = pump upward.</li>
+                  <li>Release = gravity + suction pull you down.</li>
+                  <li>Ride the full timer to level up.</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Scoring</h3>
+                <ul>
+                  <li>Base score climbs with time survived.</li>
+                  <li>Sweet-spot bonus for staying centered.</li>
+                  <li>Barrel bonus for surviving tight sections.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="game-shell">
+            <div class="game-stage" role="img" aria-label="Pixel-art wave pocket gameplay">
+              <div class="parallax layer sky"></div>
+              <div class="parallax layer coast"></div>
+              <div class="parallax layer mist"></div>
+              <canvas id="gameCanvas" width="320" height="180"></canvas>
+              <div class="game-hud">
+                <div>
+                  <small>Level</small>
+                  <strong id="levelDisplay">1</strong>
+                </div>
+                <div>
+                  <small>Timer</small>
+                  <strong id="timerDisplay">0.0s</strong>
+                </div>
+                <div>
+                  <small>Score</small>
+                  <strong id="scoreDisplay">0</strong>
+                </div>
+              </div>
+              <div class="game-message" id="gameMessage">
+                <h3>Tap to start the ride</h3>
+                <p>Stay between the lip and the whitewater.</p>
+                <button class="button" type="button" id="startButton">Start ride</button>
+              </div>
+            </div>
+            <div class="game-status">
+              <div class="status-pill">
+                <span class="dot"></span>
+                <span id="stateLabel">Ready</span>
+              </div>
+              <div class="status-pill">
+                <span>Pocket</span>
+                <strong id="pocketLabel">Wide</strong>
+              </div>
+              <div class="status-pill">
+                <span>Wave Speed</span>
+                <strong id="speedLabel">Cruise</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div class="phone-grid">
         <div class="phone">
           <div class="topline">
@@ -135,5 +207,6 @@
 
       <p class="footer-note">Wave Pocket: a tiny, endless surf loop with an SNES/Genesis glow.</p>
     </div>
+    <script src="scripts/game.js"></script>
   </body>
 </html>

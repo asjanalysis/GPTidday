@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b6bff" />
+      <stop offset="45%" stop-color="#5cc0ff" />
+      <stop offset="75%" stop-color="#f6b9a4" />
+      <stop offset="100%" stop-color="#f0e6ff" />
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3aa6ff" />
+      <stop offset="55%" stop-color="#0b5cc5" />
+      <stop offset="100%" stop-color="#073058" />
+    </linearGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8ed4ff" />
+      <stop offset="100%" stop-color="#eaf7ff" />
+    </linearGradient>
+  </defs>
+
+  <g>
+    <rect width="960" height="180" fill="url(#sky)" />
+    <circle cx="520" cy="120" r="48" fill="#ffe8a8" opacity="0.9" />
+    <rect y="110" width="960" height="70" fill="#74a7dd" opacity="0.4" />
+    <rect x="40" y="40" width="80" height="10" fill="#ffffff" opacity="0.55" />
+    <rect x="160" y="60" width="120" height="12" fill="#ffffff" opacity="0.45" />
+    <rect x="700" y="50" width="160" height="14" fill="#ffffff" opacity="0.4" />
+    <rect x="580" y="70" width="90" height="10" fill="#ffffff" opacity="0.5" />
+  </g>
+
+  <g transform="translate(0 180)">
+    <rect width="960" height="180" fill="url(#sea)" />
+    <path d="M0 120 C140 90 220 80 360 90 C520 100 620 85 760 70 C860 60 910 60 960 64 L960 180 L0 180 Z" fill="#073e74" />
+    <path d="M0 112 C140 80 220 75 360 84 C520 92 620 70 760 52 C860 40 910 40 960 44 L960 180 L0 180 Z" fill="#0a4c8a" opacity="0.8" />
+    <path d="M0 140 C120 128 220 110 320 112 C460 115 600 100 740 90 C820 84 900 82 960 84 L960 180 L0 180 Z" fill="#1f6fb0" opacity="0.7" />
+    <path d="M0 64 C120 20 240 20 360 40 C520 65 600 45 720 30 C840 15 910 12 960 16 L960 120 L0 120 Z" fill="#3b7c4f" />
+    <path d="M0 78 C150 40 260 48 360 58 C520 74 640 62 720 50 C820 36 900 36 960 40 L960 130 L0 130 Z" fill="#4b8f62" opacity="0.9" />
+    <path d="M0 100 C140 70 260 86 360 96 C520 110 640 102 720 92 C820 80 900 76 960 78 L960 150 L0 150 Z" fill="#6fa77c" opacity="0.85" />
+    <rect y="150" width="960" height="30" fill="#dbe9ff" opacity="0.3" />
+  </g>
+
+  <g transform="translate(0 360)">
+    <rect width="960" height="180" fill="url(#mist)" />
+    <rect y="90" width="960" height="90" fill="#7cbfe3" opacity="0.3" />
+    <rect x="40" y="110" width="120" height="10" fill="#ffffff" opacity="0.6" />
+    <rect x="240" y="120" width="140" height="12" fill="#ffffff" opacity="0.5" />
+    <rect x="520" y="116" width="180" height="12" fill="#ffffff" opacity="0.45" />
+    <rect x="760" y="124" width="120" height="10" fill="#ffffff" opacity="0.5" />
+    <rect y="140" width="960" height="40" fill="#a8d9f5" opacity="0.35" />
+  </g>
+</svg>
