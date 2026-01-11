@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-11T03:56:28.855Z",
+  "generated_at": "2026-01-11T04:47:46.921Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-11T03:56:28.476Z",
+    "generated_at": "2026-01-11T04:47:46.345Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-11T03:56:27.274Z",
+    "generated_at": "2026-01-11T04:47:45.038Z",
     "latest": {
-      "t": "2026-01-11T03:00:00.000Z",
+      "t": "2026-01-11T04:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 0.79,
-      "hs_ft": 2.5918636,
+      "hs_m": 0.71,
+      "hs_ft": 2.3293964,
       "tp_s": 13.333333,
-      "ta_s": 9.668204,
-      "tz_s": 8.695652,
-      "dp_deg_true": 292.84375,
+      "ta_s": 7.0207167,
+      "tz_s": 5.263158,
+      "dp_deg_true": 275.96875,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-11T03:56:28.854Z",
+    "generated_at": "2026-01-11T04:47:46.921Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-10T19:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 3,
-        "wind_dir": "NNE",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-10T20:00:00-08:00",
         "temp_f": 53,
@@ -233,12 +225,20 @@
         "wind_dir": "N",
         "shortForecast": "Partly Cloudy",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-11T19:00:00-08:00",
+        "temp_f": 57,
+        "wind_mph": 5,
+        "wind_dir": "NNE",
+        "shortForecast": "Partly Cloudy",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-01-10T19:00:00-08:00",
+        "t_start": "2026-01-10T20:00:00-08:00",
         "t_end": "2026-01-11T06:00:00-08:00",
         "temp_f": 47,
         "text": "Partly cloudy, with a low around 47. North northeast wind around 5 mph."
