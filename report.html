@@ -3,33 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Capitola Surf – Report</title>
+    <title>Wave Pocket – Mechanics</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="page">
       <nav>
-        <div class="logo">Capitola Companion</div>
+        <div class="logo">Wave Pocket</div>
         <div class="links">
-          <a class="nav-pill nav-welcome" href="index.html" aria-label="Welcome">
-            <span class="icon-bubble">🏄‍♀️</span>
-            <span class="label">Welcome</span>
+          <a class="nav-pill nav-welcome" href="index.html" aria-label="Overview">
+            <span class="icon-bubble">🏄‍♂️</span>
+            <span class="label">Overview</span>
           </a>
-          <a class="nav-pill nav-report active" href="report.html" aria-label="Surf Report" aria-current="page">
-            <span class="icon-bubble">📡</span>
-            <span class="label">Surf Report</span>
+          <a class="nav-pill nav-report active" href="report.html" aria-label="Mechanics" aria-current="page">
+            <span class="icon-bubble">🎯</span>
+            <span class="label">Mechanics</span>
           </a>
-          <a class="nav-pill nav-hourly" href="hourly.html" aria-label="Hourly &amp; Tides">
-            <span class="icon-bubble">🌊</span>
-            <span class="label">Hourly &amp; Tides</span>
+          <a class="nav-pill nav-hourly" href="hourly.html" aria-label="Progression">
+            <span class="icon-bubble">⏱️</span>
+            <span class="label">Progression</span>
           </a>
-          <a class="nav-pill nav-explore" href="explore.html" aria-label="Explore">
-            <span class="icon-bubble">🧭</span>
-            <span class="label">Explore</span>
+          <a class="nav-pill nav-explore" href="explore.html" aria-label="Scoring">
+            <span class="icon-bubble">✨</span>
+            <span class="label">Scoring</span>
           </a>
-          <a class="nav-pill nav-events" href="events.html" aria-label="Events">
-            <span class="icon-bubble">🎉</span>
-            <span class="label">Events</span>
+          <a class="nav-pill nav-events" href="events.html" aria-label="Art Style">
+            <span class="icon-bubble">🎨</span>
+            <span class="label">Art Style</span>
           </a>
         </div>
       </nav>
@@ -37,185 +37,57 @@
       <div class="phone-grid">
         <div class="phone">
           <div class="topline">
-            <div class="badge">Capitola, CA</div>
-            <span class="small-pill" id="local-time">Loading…</span>
+            <div class="badge">Wave pocket physics</div>
+            <span class="small-pill">Tap = pump</span>
           </div>
-          <h2>Surf report and forecast →</h2>
-          <div class="card">
-            <h3>
-              Surf Report
-              <span id="surf-summary">Live conditions loading…</span>
-            </h3>
+          <h2>Keep the surfer between the lip and the foam.</h2>
+          <div class="section-card">
+            <h3>Safe lane boundaries</h3>
             <div class="data-row">
-              <div class="data-pill">
-                <small>Buoy Height</small>
-                <strong id="wave-height">—</strong>
-              </div>
-              <div class="data-pill">
-                <small>Peak Period</small>
-                <strong id="wave-period">—</strong>
-              </div>
-              <div class="data-pill">
-                <small>Wave Direction</small>
-                <strong id="wave-direction">—</strong>
-              </div>
+              <div class="data-pill"><small>Upper</small><strong>Wave lip / face</strong></div>
+              <div class="data-pill"><small>Lower</small><strong>Whitewater line</strong></div>
+              <div class="data-pill"><small>Margin</small><strong>Small buffer</strong></div>
             </div>
-            <div class="data-row">
-              <div class="data-pill">
-                <small id="buoy-label">Buoy Station</small>
-                <strong id="ndbc-wave">—</strong>
-              </div>
-              <div class="data-pill">
-                <small>Wind</small>
-                <strong id="wind">—</strong>
-              </div>
-              <div class="data-pill">
-                <small>Direction</small>
-                <strong id="wind-direction">—</strong>
-              </div>
-            </div>
+            <p class="subtle">
+              The surfer stays locked near the left third of the screen while the wave scrolls. Both boundaries move
+              to create a curved pocket that shifts every second.
+            </p>
           </div>
           <div class="section-card">
-            <h3>
-              Today <span class="small-pill" id="tide-station">NOAA 9413745</span>
-            </h3>
-            <div class="data-row">
-              <div class="data-pill">
-                <small>Current Tide</small>
-                <strong id="current-tide">—</strong>
-              </div>
-              <div class="data-pill">
-                <small>Next High</small>
-                <strong id="next-high">—</strong>
-              </div>
-              <div class="data-pill">
-                <small>Next Low</small>
-                <strong id="next-low">—</strong>
-              </div>
+            <h3>Input response</h3>
+            <div class="list">
+              <div class="list-item"><span>Tap</span><span class="small-pill">Instant upward velocity</span></div>
+              <div class="list-item"><span>Release</span><span class="small-pill">Gravity + suction</span></div>
+              <div class="list-item"><span>Trim</span><span class="small-pill">Tiny forward boost</span></div>
             </div>
-            <p class="footer-note" id="data-updated">Gathering live surf + tide intel…</p>
           </div>
         </div>
 
         <div class="phone">
           <div class="topline">
-            <div class="badge">Cam preview</div>
-            <span class="small-pill">Beach cams</span>
+            <div class="badge">Difficulty dial</div>
+            <span class="small-pill">Beyond speed</span>
           </div>
-          <div class="illustration" aria-hidden="true" style="border-radius: 18px; min-height: 220px;"></div>
           <div class="section-card">
-            <h3>Data sources (free & open)</h3>
+            <h3>Scaling factors</h3>
             <div class="list">
-              <div class="list-item">
-                <span>NOAA CO‑OPS 9413745</span>
-                <span class="small-pill">Tide predictions</span>
-              </div>
-              <div class="list-item">
-                <span>CDIP ERDDAP stations 156 / 158</span>
-                <span class="small-pill">Wave obs</span>
-              </div>
-              <div class="list-item">
-                <span>NWS api.weather.gov</span>
-                <span class="small-pill">Weather</span>
-              </div>
+              <div class="list-item"><span>Wave speed</span><span class="small-pill">Faster scroll</span></div>
+              <div class="list-item"><span>Pocket thickness</span><span class="small-pill">Narrower lane</span></div>
+              <div class="list-item"><span>Turbulence</span><span class="small-pill">Chop jitter</span></div>
+              <div class="list-item"><span>Barrel dips</span><span class="small-pill">Short tight arcs</span></div>
             </div>
+          </div>
+          <div class="section-card">
+            <h3>Wipeout state</h3>
+            <p class="subtle">
+              Crossing either boundary triggers a ragdoll-ish tumble, a big splash overlay, and a quick retry prompt.
+            </p>
+            <div class="wipeout-preview sprite"></div>
           </div>
         </div>
       </div>
 
-      <p class="footer-note">Detailed surf snapshot aligned with the Capitola mockup.</p>
+      <p class="footer-note">Mechanics designed around a single, satisfying pump button.</p>
     </div>
-
-    <script type="module">
-      import { getTides, getWaves, getWeather } from './src/lib/getLocalData.js';
-
-      const isNil = (val) => val === undefined || val === null || Number.isNaN(val);
-      const toKnots = (mps) => {
-        if (isNil(mps)) return null;
-        return (mps * 1.94384).toFixed(1);
-      };
-      const cardinal = (degrees) => {
-        if (degrees === undefined || degrees === null) return '—';
-        const dirs = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
-        const ix = Math.round(((degrees % 360) / 22.5)) % 16;
-        return dirs[ix];
-      };
-      const setText = (id, text) => {
-        const el = document.getElementById(id);
-        if (el) el.textContent = text;
-      };
-      const fmtLocal = (iso) =>
-        iso
-          ? new Date(iso).toLocaleString('en-US', {
-              timeZone: 'America/Los_Angeles',
-              hour: 'numeric',
-              minute: '2-digit',
-              weekday: 'short',
-            })
-          : '—';
-
-      const updateTime = () => {
-        const formatter = new Intl.DateTimeFormat('en-US', {
-          timeZone: 'America/Los_Angeles',
-          weekday: 'short',
-          hour: 'numeric',
-          minute: '2-digit',
-        });
-        setText('local-time', formatter.format(new Date()));
-      };
-
-      const describeSurf = (height, period) => {
-        if (!height || !period) return 'Awaiting buoy data';
-        const fair = height <= 4 ? 'Clean' : height <= 8 ? 'Fair' : 'Challenging';
-        return `${height} ft @ ${period}s · ${fair}`;
-      };
-
-      async function populate() {
-        updateTime();
-        try {
-          const [tides, waves, weather] = await Promise.all([
-            getTides().catch(() => null),
-            getWaves().catch(() => null),
-            getWeather().catch(() => null),
-          ]);
-
-          const buoy = waves?.latest;
-          const waveHeight = buoy?.hs_ft ? buoy.hs_ft.toFixed(1) : null;
-          const wavePeriod = buoy?.tp_s ? buoy.tp_s.toFixed(0) : buoy?.tz_s?.toFixed(0) || null;
-          const waveDir = buoy?.dp_deg_true ? cardinal(buoy.dp_deg_true) : '—';
-          setText('wave-height', waveHeight ? `${waveHeight} ft` : '—');
-          setText('wave-period', wavePeriod ? `${wavePeriod}s` : '—');
-          setText('wave-direction', waveDir);
-          setText('ndbc-wave', buoy?.station_name ? `${buoy.station_name} (${buoy.station_id})` : '—');
-          setText('buoy-label', 'Buoy Station');
-
-          const windMph = weather?.current?.wind_mph || weather?.hourly?.[0]?.wind_mph;
-          const windDir = weather?.current?.wind_dir_deg || weather?.hourly?.[0]?.wind_dir;
-          setText('wind', windMph ? `${windMph.toFixed(1)} mph` : 'Calm');
-          setText('wind-direction', windDir ? cardinal(windDir) : '—');
-          setText('surf-summary', describeSurf(waveHeight, wavePeriod));
-
-          const observations = tides?.observations || [];
-          const currentTide = observations[observations.length - 1];
-          setText('current-tide', currentTide ? `${currentTide.ft.toFixed(2)} ft @ ${fmtLocal(currentTide.t)}` : '—');
-          const nextHigh = tides?.next_extrema?.find((e) => e.type === 'HIGH');
-          const nextLow = tides?.next_extrema?.find((e) => e.type === 'LOW');
-          setText('next-high', nextHigh ? `${nextHigh.ft.toFixed(2)} ft @ ${fmtLocal(nextHigh.t)}` : '—');
-          setText('next-low', nextLow ? `${nextLow.ft.toFixed(2)} ft @ ${fmtLocal(nextLow.t)}` : '—');
-
-          const updatedPieces = [];
-          if (tides?.generated_at) updatedPieces.push(`Tides ${fmtLocal(tides.generated_at)}`);
-          if (waves?.generated_at) updatedPieces.push(`Waves ${fmtLocal(waves.generated_at)}`);
-          if (weather?.generated_at) updatedPieces.push(`Weather ${fmtLocal(weather.generated_at)}`);
-          setText('data-updated', updatedPieces.length ? `Updated ${updatedPieces.join(' · ')}` : 'Waiting for updates');
-        } catch (err) {
-          setText('surf-summary', 'Unable to load live data');
-          setText('data-updated', err.message);
-        }
-      }
-
-      populate();
-      setInterval(populate, 15 * 60 * 1000);
-    </script>
   </body>
 </html>

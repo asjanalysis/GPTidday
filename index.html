@@ -3,135 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Capitola Surf – Welcome</title>
+    <title>Wave Pocket – Overview</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="page">
       <nav>
-        <div class="logo">Capitola Companion</div>
+        <div class="logo">Wave Pocket</div>
         <div class="links">
-          <a class="nav-pill nav-welcome active" href="index.html" aria-label="Welcome" aria-current="page">
-            <span class="icon-bubble">🏄‍♀️</span>
-            <span class="label">Welcome</span>
+          <a class="nav-pill nav-welcome active" href="index.html" aria-label="Overview" aria-current="page">
+            <span class="icon-bubble">🏄‍♂️</span>
+            <span class="label">Overview</span>
           </a>
-          <a class="nav-pill nav-report" href="report.html" aria-label="Surf Report">
-            <span class="icon-bubble">📡</span>
-            <span class="label">Surf Report</span>
+          <a class="nav-pill nav-report" href="report.html" aria-label="Mechanics">
+            <span class="icon-bubble">🎯</span>
+            <span class="label">Mechanics</span>
           </a>
-          <a class="nav-pill nav-hourly" href="hourly.html" aria-label="Hourly &amp; Tides">
-            <span class="icon-bubble">🌊</span>
-            <span class="label">Hourly &amp; Tides</span>
+          <a class="nav-pill nav-hourly" href="hourly.html" aria-label="Progression">
+            <span class="icon-bubble">⏱️</span>
+            <span class="label">Progression</span>
           </a>
-          <a class="nav-pill nav-explore" href="explore.html" aria-label="Explore">
-            <span class="icon-bubble">🧭</span>
-            <span class="label">Explore</span>
+          <a class="nav-pill nav-explore" href="explore.html" aria-label="Scoring">
+            <span class="icon-bubble">✨</span>
+            <span class="label">Scoring</span>
           </a>
-          <a class="nav-pill nav-events" href="events.html" aria-label="Events">
-            <span class="icon-bubble">🎉</span>
-            <span class="label">Events</span>
+          <a class="nav-pill nav-events" href="events.html" aria-label="Art Style">
+            <span class="icon-bubble">🎨</span>
+            <span class="label">Art Style</span>
           </a>
         </div>
       </nav>
 
       <section class="hero">
         <div class="hero-card">
-          <p class="badge">Welcome to Capitola</p>
-          <h1>Experience the best surf & stay on California's central coast.</h1>
+          <p class="badge">One-button surf loop</p>
+          <h1>Stay in the pocket, pump to survive, and ride the wave out in style.</h1>
           <p>
-            Plan a perfect day in Capitola with live beach cams, curated surf intel,
-            and a quick look at the latest events around town.
+            Wave Pocket is Flappy Bird pacing reimagined as a moving surf lane. Tap to pump/trim up, release to let
+            gravity and wave suction pull you toward the trough. Drift too high or low and it is a wipeout.
           </p>
           <div class="actions">
-            <a
-              class="button"
-              href="https://www.cityofcapitola.org/community/page/capitola-beach-cameras#capitola-beach-cam"
-              rel="noreferrer"
-            >
-              Capitola Beach cam
-            </a>
-            <a
-              class="button secondary"
-              href="https://www.cityofcapitola.org/community/page/capitola-beach-cameras#capitola-wharf-cam"
-              rel="noreferrer"
-            >
-              Capitola Wharf cam
-            </a>
-            <a
-              class="button secondary"
-              href="https://www.cityofcapitola.org/community/page/capitola-beach-cameras#capitola-jetty-cam"
-              rel="noreferrer"
-            >
-              Capitola Jetty cam
-            </a>
+            <a class="button" href="report.html">View mechanics</a>
+            <a class="button secondary" href="hourly.html">See level flow</a>
+            <a class="button secondary" href="events.html">Pixel art direction</a>
+          </div>
+          <div class="data-row">
+            <div class="data-pill">
+              <small>Safe Lane</small>
+              <strong>Wave Pocket</strong>
+            </div>
+            <div class="data-pill">
+              <small>Input</small>
+              <strong>Tap = Pump</strong>
+            </div>
+            <div class="data-pill">
+              <small>Failure</small>
+              <strong>Wipeout</strong>
+            </div>
           </div>
         </div>
-        <div class="illustration" aria-hidden="true"></div>
+        <div class="illustration pixel-stage" aria-hidden="true">
+          <div class="pixel-hud">
+            <span>Level 3</span>
+            <span>Pocket Tight</span>
+            <span>13.2s</span>
+          </div>
+          <div class="pixel-viewport">
+            <div class="pixel-boundary upper"></div>
+            <div class="pixel-boundary lower"></div>
+            <div class="pixel-pocket"></div>
+            <div class="pixel-surfer sprite"></div>
+          </div>
+          <div class="pixel-caption">Safe lane shifts with the wave face.</div>
+        </div>
       </section>
 
       <div class="phone-grid">
         <div class="phone">
           <div class="topline">
-            <div class="badge">Capitola, CA</div>
-            <span class="small-pill">Fri 6:10 AM</span>
+            <div class="badge">Core loop</div>
+            <span class="small-pill">One-button</span>
           </div>
-          <h2>Surf report and forecast →</h2>
-          <div class="card">
-            <h3>Surf Report <span>6-8 ft · Fair</span></h3>
-            <div class="data-row">
-              <div class="data-pill"><small>Surf</small><strong>6-8 ft</strong></div>
-              <div class="data-pill"><small>Wave</small><strong>9s · WNW</strong></div>
-              <div class="data-pill"><small>Wind</small><strong>5 mph NNE</strong></div>
-              <div class="data-pill"><small>Tide</small><strong>Rising</strong></div>
+          <h2>Tap, trim, survive → celebrate → bigger wave.</h2>
+          <div class="section-card">
+            <h3>Tap rhythm</h3>
+            <div class="list">
+              <div class="list-item"><span>Tap</span><span class="small-pill">Quick pump + lift</span></div>
+              <div class="list-item"><span>No tap</span><span class="small-pill">Gravity + suction</span></div>
+              <div class="list-item"><span>Exit pocket</span><span class="small-pill">Instant wipeout</span></div>
             </div>
           </div>
           <div class="section-card">
-            <h3>Beach cameras <span class="small-pill">3 live feeds</span></h3>
-            <div class="list">
-              <div class="list-item"><span>Capitola Pier</span><span class="small-pill">HD</span></div>
-              <div class="list-item"><span>Capitola Jetty</span><span class="small-pill">Live</span></div>
-              <div class="list-item"><span>Capitola Wharf</span><span class="small-pill">HD</span></div>
-            </div>
+            <h3>Win condition</h3>
+            <p class="subtle">
+              Survive the ride timer to auto-angle upward, ride off-screen, and trigger a shaka celebration before the
+              next level loads.
+            </p>
           </div>
         </div>
 
         <div class="phone">
           <div class="topline">
-            <div class="badge">Capitola Jetty</div>
-            <span class="small-pill">Live cams & saves</span>
-          </div>
-          <h2>Conditions snapshot</h2>
-          <div class="data-row">
-            <div class="data-pill"><small>Surf</small><strong>4-6 ft</strong></div>
-            <div class="data-pill"><small>Feels like</small><strong>62ºF</strong></div>
-            <div class="data-pill"><small>Humidity</small><strong>75%</strong></div>
+            <div class="badge">What makes it surfy</div>
+            <span class="small-pill">Not a reskin</span>
           </div>
           <div class="section-card">
-            <h3>Hourly Forecast</h3>
-            <div class="timeline">
-              <div><div class="bar" style="height: 70px">6am</div><small>57º</small></div>
-              <div><div class="bar" style="height: 80px">7am</div><small>58º</small></div>
-              <div><div class="bar" style="height: 92px">8am</div><small>59º</small></div>
-              <div><div class="bar" style="height: 110px">9am</div><small>61º</small></div>
-              <div><div class="bar" style="height: 120px">10am</div><small>63º</small></div>
-              <div><div class="bar" style="height: 130px">11am</div><small>65º</small></div>
-            </div>
+            <h3>The wave is the level</h3>
+            <p class="subtle">
+              Two moving boundaries define the safe zone: the lip above and whitewater below. The pocket breathes and
+              shifts with the scroll.
+            </p>
           </div>
           <div class="section-card">
-            <h3>Get tide forecast <span class="small-pill">Live map</span></h3>
-            <div class="timeline">
-              <div><div class="bar" style="height: 60px; background: linear-gradient(180deg, rgba(109,227,192,0.18), #6de3c0);">1</div><small>Low</small></div>
-              <div><div class="bar" style="height: 120px; background: linear-gradient(180deg, rgba(79,178,255,0.18), #4fb2ff);">2</div><small>Rising</small></div>
-              <div><div class="bar" style="height: 160px; background: linear-gradient(180deg, rgba(255,156,122,0.2), #ff9c7a);">3</div><small>High</small></div>
-              <div><div class="bar" style="height: 120px; background: linear-gradient(180deg, rgba(79,178,255,0.18), #4fb2ff);">4</div><small>Falling</small></div>
-              <div><div class="bar" style="height: 80px; background: linear-gradient(180deg, rgba(109,227,192,0.18), #6de3c0);">5</div><small>Low</small></div>
-              <div><div class="bar" style="height: 60px; background: linear-gradient(180deg, rgba(109,227,192,0.18), #6de3c0);">6</div><small>Evening</small></div>
+            <h3>Wave physics</h3>
+            <div class="list">
+              <div class="list-item"><span>Trim boost</span><span class="small-pill">Micro forward lift</span></div>
+              <div class="list-item"><span>Wave suction</span><span class="small-pill">Trough magnetism</span></div>
+              <div class="list-item"><span>Barrel dips</span><span class="small-pill">Short tight pockets</span></div>
             </div>
           </div>
         </div>
       </div>
 
-      <p class="footer-note">Built from the Capitola surf app mockup as a responsive multi-page web experience.</p>
+      <section class="sprite-showcase">
+        <div class="sprite-card">
+          <h3>Sprite sheet preview</h3>
+          <p class="subtle">Pixel-surfer frames used for pumping, wipeouts, and ride-off celebrations.</p>
+        </div>
+        <div class="sprite-strip" aria-hidden="true"></div>
+      </section>
+
+      <p class="footer-note">Wave Pocket: a tiny, endless surf loop with an SNES/Genesis glow.</p>
     </div>
   </body>
 </html>
