@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-12T20:34:32.695Z",
+  "generated_at": "2026-01-12T20:51:17.943Z",
   "current": null,
   "hourly": [
     {
@@ -227,28 +227,28 @@
       "t_start": "2026-01-13T18:00:00-08:00",
       "t_end": "2026-01-14T06:00:00-08:00",
       "temp_f": 50,
-      "text": "Clear, with a low around 50. North wind around 6 mph."
+      "text": "Clear, with a low around 50. North northeast wind around 6 mph."
     },
     {
       "name": "Wednesday",
       "t_start": "2026-01-14T06:00:00-08:00",
       "t_end": "2026-01-14T18:00:00-08:00",
-      "temp_f": 63,
-      "text": "Sunny, with a high near 63. North northeast wind around 6 mph."
+      "temp_f": 64,
+      "text": "Sunny, with a high near 64. North northeast wind 2 to 6 mph."
     },
     {
       "name": "Wednesday Night",
       "t_start": "2026-01-14T18:00:00-08:00",
       "t_end": "2026-01-15T06:00:00-08:00",
-      "temp_f": 51,
-      "text": "Clear, with a low around 51."
+      "temp_f": 52,
+      "text": "Clear, with a low around 52."
     },
     {
       "name": "Thursday",
       "t_start": "2026-01-15T06:00:00-08:00",
       "t_end": "2026-01-15T18:00:00-08:00",
-      "temp_f": 64,
-      "text": "Sunny, with a high near 64."
+      "temp_f": 65,
+      "text": "Sunny, with a high near 65."
     },
     {
       "name": "Thursday Night",
@@ -261,8 +261,8 @@
       "name": "Friday",
       "t_start": "2026-01-16T06:00:00-08:00",
       "t_end": "2026-01-16T18:00:00-08:00",
-      "temp_f": 66,
-      "text": "Sunny, with a high near 66."
+      "temp_f": 65,
+      "text": "Sunny, with a high near 65."
     },
     {
       "name": "Friday Night",
@@ -283,21 +283,21 @@
       "t_start": "2026-01-17T18:00:00-08:00",
       "t_end": "2026-01-18T06:00:00-08:00",
       "temp_f": 53,
-      "text": "Partly cloudy, with a low around 53."
+      "text": "Mostly clear, with a low around 53."
     },
     {
       "name": "Sunday",
       "t_start": "2026-01-18T06:00:00-08:00",
       "t_end": "2026-01-18T18:00:00-08:00",
       "temp_f": 64,
-      "text": "Mostly sunny, with a high near 64."
+      "text": "Sunny, with a high near 64."
     },
     {
       "name": "Sunday Night",
       "t_start": "2026-01-18T18:00:00-08:00",
       "t_end": "2026-01-19T06:00:00-08:00",
       "temp_f": 52,
-      "text": "Partly cloudy, with a low around 52."
+      "text": "Mostly clear, with a low around 52."
     }
   ]
 }
