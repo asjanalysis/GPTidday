@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-12T21:55:13.443Z",
+  "generated_at": "2026-01-12T22:16:16.597Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-12T21:55:13.186Z",
+    "generated_at": "2026-01-12T22:16:15.696Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-12T21:55:11.735Z",
+    "generated_at": "2026-01-12T22:16:14.520Z",
     "latest": {
-      "t": "2026-01-12T21:00:00.000Z",
+      "t": "2026-01-12T21:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.96,
-      "hs_ft": 6.4304464,
-      "tp_s": 13.333333,
-      "ta_s": 11.720767,
-      "tz_s": 10.256411,
-      "dp_deg_true": 290.03125,
+      "hs_m": 2.13,
+      "hs_ft": 6.9881892,
+      "tp_s": 15.384616,
+      "ta_s": 12.226709,
+      "tz_s": 11.111111,
+      "dp_deg_true": 284.40625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,25 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-12T21:55:13.442Z",
+    "generated_at": "2026-01-12T22:16:16.596Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-12T12:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 5,
-        "wind_dir": "NW",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
-      {
-        "t": "2026-01-12T13:00:00-08:00",
-        "temp_f": 59,
-        "wind_mph": 6,
-        "wind_dir": "W",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-12T14:00:00-08:00",
         "temp_f": 60,
@@ -231,6 +215,22 @@
         "temp_f": 58,
         "wind_mph": 5,
         "wind_dir": "ENE",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
+      },
+      {
+        "t": "2026-01-13T12:00:00-08:00",
+        "temp_f": 61,
+        "wind_mph": 5,
+        "wind_dir": "ENE",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
+      },
+      {
+        "t": "2026-01-13T13:00:00-08:00",
+        "temp_f": 62,
+        "wind_mph": 5,
+        "wind_dir": "WNW",
         "shortForecast": "Sunny",
         "precip_prob": 0
       }
