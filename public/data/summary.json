@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-12T17:51:30.530Z",
+  "generated_at": "2026-01-12T18:01:01.082Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-12T17:51:30.000Z",
+    "generated_at": "2026-01-12T18:00:59.859Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-12T17:51:28.314Z",
+    "generated_at": "2026-01-12T18:00:58.248Z",
     "latest": {
       "t": "2026-01-12T17:00:00.000Z",
       "station_id": "156",
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-12T17:51:30.529Z",
+    "generated_at": "2026-01-12T18:01:01.081Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-12T09:00:00-08:00",
-        "temp_f": 51,
-        "wind_mph": 3,
-        "wind_dir": "NNE",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-12T10:00:00-08:00",
         "temp_f": 53,
@@ -233,15 +225,23 @@
         "wind_dir": "NE",
         "shortForecast": "Sunny",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-13T09:00:00-08:00",
+        "temp_f": 53,
+        "wind_mph": 5,
+        "wind_dir": "NE",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-01-12T08:00:00-08:00",
+        "t_start": "2026-01-12T06:00:00-08:00",
         "t_end": "2026-01-12T18:00:00-08:00",
         "temp_f": 61,
-        "text": "Sunny, with a high near 61. Northwest wind around 5 mph."
+        "text": "Sunny, with a high near 61. North wind around 5 mph."
       },
       {
         "name": "Tonight",
