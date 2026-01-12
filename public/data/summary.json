@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-12T21:45:44.475Z",
+  "generated_at": "2026-01-12T21:55:13.443Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-12T21:45:44.105Z",
+    "generated_at": "2026-01-12T21:55:13.186Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-12T21:45:42.472Z",
+    "generated_at": "2026-01-12T21:55:11.735Z",
     "latest": {
       "t": "2026-01-12T21:00:00.000Z",
       "station_id": "156",
@@ -39,9 +39,17 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-12T21:45:44.475Z",
+    "generated_at": "2026-01-12T21:55:13.442Z",
     "current": null,
     "hourly": [
+      {
+        "t": "2026-01-12T12:00:00-08:00",
+        "temp_f": 58,
+        "wind_mph": 5,
+        "wind_dir": "NW",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
+      },
       {
         "t": "2026-01-12T13:00:00-08:00",
         "temp_f": 59,
@@ -225,20 +233,12 @@
         "wind_dir": "ENE",
         "shortForecast": "Sunny",
         "precip_prob": 0
-      },
-      {
-        "t": "2026-01-13T12:00:00-08:00",
-        "temp_f": 61,
-        "wind_mph": 5,
-        "wind_dir": "ENE",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "This Afternoon",
-        "t_start": "2026-01-12T13:00:00-08:00",
+        "t_start": "2026-01-12T12:00:00-08:00",
         "t_end": "2026-01-12T18:00:00-08:00",
         "temp_f": 62,
         "text": "Sunny. High near 62, with temperatures falling to around 60 in the afternoon. West northwest wind 3 to 7 mph."
