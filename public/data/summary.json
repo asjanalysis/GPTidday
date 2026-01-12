@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-12T20:00:10.267Z",
+  "generated_at": "2026-01-12T20:34:32.696Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-12T20:00:05.446Z",
+    "generated_at": "2026-01-12T20:34:30.799Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-12T20:00:02.985Z",
+    "generated_at": "2026-01-12T20:34:29.610Z",
     "latest": {
-      "t": "2026-01-12T19:00:00.000Z",
+      "t": "2026-01-12T20:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.25,
-      "hs_ft": 7.38189,
+      "hs_m": 2.04,
+      "hs_ft": 6.6929136,
       "tp_s": 15.384616,
-      "ta_s": 11.836986,
-      "tz_s": 9.756098,
-      "dp_deg_true": 283,
+      "ta_s": 11.869175,
+      "tz_s": 10,
+      "dp_deg_true": 280.1875,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,46 +39,46 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-12T20:00:10.266Z",
+    "generated_at": "2026-01-12T20:34:32.695Z",
     "current": null,
     "hourly": [
       {
         "t": "2026-01-12T12:00:00-08:00",
-        "temp_f": 57,
+        "temp_f": 58,
         "wind_mph": 5,
-        "wind_dir": "SW",
+        "wind_dir": "NW",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-01-12T13:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 5,
-        "wind_dir": "WSW",
+        "temp_f": 59,
+        "wind_mph": 6,
+        "wind_dir": "W",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-01-12T14:00:00-08:00",
-        "temp_f": 59,
-        "wind_mph": 5,
-        "wind_dir": "WSW",
+        "temp_f": 60,
+        "wind_mph": 6,
+        "wind_dir": "W",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-01-12T15:00:00-08:00",
         "temp_f": 60,
-        "wind_mph": 5,
+        "wind_mph": 7,
         "wind_dir": "W",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-01-12T16:00:00-08:00",
-        "temp_f": 60,
-        "wind_mph": 3,
-        "wind_dir": "NW",
+        "temp_f": 61,
+        "wind_mph": 5,
+        "wind_dir": "W",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
@@ -86,15 +86,15 @@
         "t": "2026-01-12T17:00:00-08:00",
         "temp_f": 60,
         "wind_mph": 3,
-        "wind_dir": "NNW",
+        "wind_dir": "N",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-01-12T18:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 3,
-        "wind_dir": "N",
+        "temp_f": 59,
+        "wind_mph": 5,
+        "wind_dir": "NNE",
         "shortForecast": "Clear",
         "precip_prob": 0
       },
@@ -102,7 +102,7 @@
         "t": "2026-01-12T19:00:00-08:00",
         "temp_f": 58,
         "wind_mph": 5,
-        "wind_dir": "NNE",
+        "wind_dir": "NE",
         "shortForecast": "Clear",
         "precip_prob": 0
       },
@@ -110,29 +110,29 @@
         "t": "2026-01-12T20:00:00-08:00",
         "temp_f": 56,
         "wind_mph": 5,
-        "wind_dir": "NNE",
-        "shortForecast": "Clear",
-        "precip_prob": 0
-      },
-      {
-        "t": "2026-01-12T21:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 5,
         "wind_dir": "NE",
         "shortForecast": "Clear",
         "precip_prob": 0
       },
       {
-        "t": "2026-01-12T22:00:00-08:00",
-        "temp_f": 54,
+        "t": "2026-01-12T21:00:00-08:00",
+        "temp_f": 56,
         "wind_mph": 6,
         "wind_dir": "NE",
         "shortForecast": "Clear",
         "precip_prob": 0
       },
       {
+        "t": "2026-01-12T22:00:00-08:00",
+        "temp_f": 55,
+        "wind_mph": 6,
+        "wind_dir": "NNE",
+        "shortForecast": "Clear",
+        "precip_prob": 0
+      },
+      {
         "t": "2026-01-12T23:00:00-08:00",
-        "temp_f": 53,
+        "temp_f": 54,
         "wind_mph": 6,
         "wind_dir": "NE",
         "shortForecast": "Clear",
@@ -148,7 +148,7 @@
       },
       {
         "t": "2026-01-13T01:00:00-08:00",
-        "temp_f": 53,
+        "temp_f": 52,
         "wind_mph": 5,
         "wind_dir": "NE",
         "shortForecast": "Clear",
@@ -157,7 +157,7 @@
       {
         "t": "2026-01-13T02:00:00-08:00",
         "temp_f": 52,
-        "wind_mph": 5,
+        "wind_mph": 6,
         "wind_dir": "NE",
         "shortForecast": "Clear",
         "precip_prob": 0
@@ -165,7 +165,7 @@
       {
         "t": "2026-01-13T03:00:00-08:00",
         "temp_f": 52,
-        "wind_mph": 5,
+        "wind_mph": 6,
         "wind_dir": "NE",
         "shortForecast": "Clear",
         "precip_prob": 0
@@ -173,22 +173,22 @@
       {
         "t": "2026-01-13T04:00:00-08:00",
         "temp_f": 51,
-        "wind_mph": 5,
-        "wind_dir": "NE",
+        "wind_mph": 6,
+        "wind_dir": "ENE",
         "shortForecast": "Clear",
         "precip_prob": 0
       },
       {
         "t": "2026-01-13T05:00:00-08:00",
         "temp_f": 51,
-        "wind_mph": 5,
+        "wind_mph": 6,
         "wind_dir": "NE",
         "shortForecast": "Clear",
         "precip_prob": 0
       },
       {
         "t": "2026-01-13T06:00:00-08:00",
-        "temp_f": 50,
+        "temp_f": 51,
         "wind_mph": 5,
         "wind_dir": "NE",
         "shortForecast": "Sunny",
@@ -198,20 +198,12 @@
         "t": "2026-01-13T07:00:00-08:00",
         "temp_f": 51,
         "wind_mph": 5,
-        "wind_dir": "NE",
+        "wind_dir": "ENE",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-01-13T08:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 5,
-        "wind_dir": "NE",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
-      {
-        "t": "2026-01-13T09:00:00-08:00",
         "temp_f": 53,
         "wind_mph": 5,
         "wind_dir": "NE",
@@ -219,64 +211,72 @@
         "precip_prob": 0
       },
       {
-        "t": "2026-01-13T10:00:00-08:00",
-        "temp_f": 55,
+        "t": "2026-01-13T09:00:00-08:00",
+        "temp_f": 54,
         "wind_mph": 5,
-        "wind_dir": "NE",
+        "wind_dir": "ENE",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
+      },
+      {
+        "t": "2026-01-13T10:00:00-08:00",
+        "temp_f": 56,
+        "wind_mph": 5,
+        "wind_dir": "ENE",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-01-13T11:00:00-08:00",
-        "temp_f": 57,
+        "temp_f": 58,
         "wind_mph": 5,
-        "wind_dir": "NE",
+        "wind_dir": "ENE",
         "shortForecast": "Sunny",
         "precip_prob": 0
       }
     ],
     "daily": [
       {
-        "name": "Today",
-        "t_start": "2026-01-12T08:00:00-08:00",
+        "name": "This Afternoon",
+        "t_start": "2026-01-12T12:00:00-08:00",
         "t_end": "2026-01-12T18:00:00-08:00",
-        "temp_f": 61,
-        "text": "Sunny, with a high near 61. Northwest wind around 5 mph."
+        "temp_f": 62,
+        "text": "Sunny. High near 62, with temperatures falling to around 60 in the afternoon. West northwest wind 3 to 7 mph."
       },
       {
         "name": "Tonight",
         "t_start": "2026-01-12T18:00:00-08:00",
         "t_end": "2026-01-13T06:00:00-08:00",
-        "temp_f": 50,
-        "text": "Clear, with a low around 50. North northeast wind around 6 mph."
+        "temp_f": 51,
+        "text": "Clear, with a low around 51. Northeast wind around 6 mph."
       },
       {
         "name": "Tuesday",
         "t_start": "2026-01-13T06:00:00-08:00",
         "t_end": "2026-01-13T18:00:00-08:00",
         "temp_f": 64,
-        "text": "Sunny. High near 64, with temperatures falling to around 61 in the afternoon. North northeast wind around 5 mph."
+        "text": "Sunny. High near 64, with temperatures falling to around 62 in the afternoon. Northeast wind around 5 mph."
       },
       {
         "name": "Tuesday Night",
         "t_start": "2026-01-13T18:00:00-08:00",
         "t_end": "2026-01-14T06:00:00-08:00",
         "temp_f": 50,
-        "text": "Clear, with a low around 50. North wind around 5 mph."
+        "text": "Clear, with a low around 50. North wind around 6 mph."
       },
       {
         "name": "Wednesday",
         "t_start": "2026-01-14T06:00:00-08:00",
         "t_end": "2026-01-14T18:00:00-08:00",
-        "temp_f": 62,
-        "text": "Sunny, with a high near 62. North wind around 5 mph."
+        "temp_f": 63,
+        "text": "Sunny, with a high near 63. North northeast wind around 6 mph."
       },
       {
         "name": "Wednesday Night",
         "t_start": "2026-01-14T18:00:00-08:00",
         "t_end": "2026-01-15T06:00:00-08:00",
         "temp_f": 51,
-        "text": "Mostly clear, with a low around 51."
+        "text": "Clear, with a low around 51."
       },
       {
         "name": "Thursday",
@@ -296,8 +296,8 @@
         "name": "Friday",
         "t_start": "2026-01-16T06:00:00-08:00",
         "t_end": "2026-01-16T18:00:00-08:00",
-        "temp_f": 65,
-        "text": "Sunny, with a high near 65."
+        "temp_f": 66,
+        "text": "Sunny, with a high near 66."
       },
       {
         "name": "Friday Night",
@@ -311,7 +311,7 @@
         "t_start": "2026-01-17T06:00:00-08:00",
         "t_end": "2026-01-17T18:00:00-08:00",
         "temp_f": 65,
-        "text": "Mostly sunny, with a high near 65."
+        "text": "Sunny, with a high near 65."
       },
       {
         "name": "Saturday Night",
@@ -324,15 +324,15 @@
         "name": "Sunday",
         "t_start": "2026-01-18T06:00:00-08:00",
         "t_end": "2026-01-18T18:00:00-08:00",
-        "temp_f": 63,
-        "text": "Mostly sunny, with a high near 63."
+        "temp_f": 64,
+        "text": "Mostly sunny, with a high near 64."
       },
       {
         "name": "Sunday Night",
         "t_start": "2026-01-18T18:00:00-08:00",
         "t_end": "2026-01-19T06:00:00-08:00",
-        "temp_f": null,
-        "text": "Partly cloudy, with {{missing_temperature_data}}."
+        "temp_f": 52,
+        "text": "Partly cloudy, with a low around 52."
       }
     ]
   }
