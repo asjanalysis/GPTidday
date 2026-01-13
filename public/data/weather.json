@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-13T06:34:58.052Z",
+  "generated_at": "2026-01-13T07:00:30.168Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-12T22:00:00-08:00",
-      "temp_f": 54,
-      "wind_mph": 7,
-      "wind_dir": "NNE",
-      "shortForecast": "Clear",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-12T23:00:00-08:00",
       "temp_f": 54,
@@ -198,15 +190,23 @@
       "wind_dir": "NNE",
       "shortForecast": "Clear",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-13T22:00:00-08:00",
+      "temp_f": 56,
+      "wind_mph": 6,
+      "wind_dir": "NNE",
+      "shortForecast": "Clear",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-12T22:00:00-08:00",
+      "t_start": "2026-01-12T23:00:00-08:00",
       "t_end": "2026-01-13T06:00:00-08:00",
       "temp_f": 50,
-      "text": "Clear. Low around 50, with temperatures rising to around 52 overnight. North northeast wind around 7 mph."
+      "text": "Clear. Low around 50, with temperatures rising to around 52 overnight. North northeast wind around 6 mph."
     },
     {
       "name": "Tuesday",
