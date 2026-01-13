@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-13T22:40:14.515Z",
+  "generated_at": "2026-01-13T22:54:57.662Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-13T13:00:00-08:00",
-      "temp_f": 62,
-      "wind_mph": 5,
-      "wind_dir": "SSE",
-      "shortForecast": "Sunny",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-13T14:00:00-08:00",
       "temp_f": 63,
@@ -196,6 +188,14 @@
       "temp_f": 60,
       "wind_mph": 5,
       "wind_dir": "N",
+      "shortForecast": "Sunny",
+      "precip_prob": 0
+    },
+    {
+      "t": "2026-01-14T13:00:00-08:00",
+      "temp_f": 62,
+      "wind_mph": 5,
+      "wind_dir": "WNW",
       "shortForecast": "Sunny",
       "precip_prob": 0
     }
