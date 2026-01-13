@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-13T05:18:25.088Z",
+  "generated_at": "2026-01-13T05:44:38.885Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-13T05:18:24.499Z",
+    "generated_at": "2026-01-13T05:44:38.885Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,16 +18,16 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-13T05:18:23.376Z",
+    "generated_at": "2026-01-13T05:44:37.378Z",
     "latest": {
-      "t": "2026-01-13T04:30:00.000Z",
+      "t": "2026-01-13T05:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.08,
-      "hs_ft": 6.8241472000000005,
+      "hs_m": 2.28,
+      "hs_ft": 7.4803152,
       "tp_s": 15.384616,
-      "ta_s": 10.397416,
-      "tz_s": 8.888889,
+      "ta_s": 10.026613,
+      "tz_s": 8.163265,
       "dp_deg_true": 284.40625,
       "lat": 36.759167,
       "lon": -121.95028
@@ -39,9 +39,17 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-13T05:18:25.087Z",
+    "generated_at": "2026-01-13T05:44:38.882Z",
     "current": null,
     "hourly": [
+      {
+        "t": "2026-01-12T20:00:00-08:00",
+        "temp_f": 57,
+        "wind_mph": 6,
+        "wind_dir": "N",
+        "shortForecast": "Clear",
+        "precip_prob": 0
+      },
       {
         "t": "2026-01-12T21:00:00-08:00",
         "temp_f": 56,
@@ -225,20 +233,12 @@
         "wind_dir": "NNE",
         "shortForecast": "Clear",
         "precip_prob": 0
-      },
-      {
-        "t": "2026-01-13T20:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 5,
-        "wind_dir": "NNE",
-        "shortForecast": "Clear",
-        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-01-12T21:00:00-08:00",
+        "t_start": "2026-01-12T20:00:00-08:00",
         "t_end": "2026-01-13T06:00:00-08:00",
         "temp_f": 50,
         "text": "Clear. Low around 50, with temperatures rising to around 52 overnight. North northeast wind around 7 mph."
