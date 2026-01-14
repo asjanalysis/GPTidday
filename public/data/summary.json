@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-14T05:34:13.782Z",
+  "generated_at": "2026-01-14T05:52:27.935Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-14T05:34:13.781Z",
+    "generated_at": "2026-01-14T05:52:27.488Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-14T05:34:12.402Z",
+    "generated_at": "2026-01-14T05:52:25.891Z",
     "latest": {
       "t": "2026-01-14T05:00:00.000Z",
       "station_id": "156",
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-14T05:34:13.758Z",
+    "generated_at": "2026-01-14T05:52:27.934Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-13T20:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 6,
-        "wind_dir": "NNE",
-        "shortForecast": "Clear",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-13T21:00:00-08:00",
         "temp_f": 58,
@@ -229,6 +221,14 @@
       {
         "t": "2026-01-14T19:00:00-08:00",
         "temp_f": 60,
+        "wind_mph": 5,
+        "wind_dir": "NE",
+        "shortForecast": "Clear",
+        "precip_prob": 0
+      },
+      {
+        "t": "2026-01-14T20:00:00-08:00",
+        "temp_f": 59,
         "wind_mph": 5,
         "wind_dir": "NE",
         "shortForecast": "Clear",
