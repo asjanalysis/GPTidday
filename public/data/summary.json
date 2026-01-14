@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-14T23:44:40.788Z",
+  "generated_at": "2026-01-14T23:53:43.734Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-14T23:44:23.155Z",
+    "generated_at": "2026-01-14T23:53:43.734Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-14T23:44:21.575Z",
+    "generated_at": "2026-01-14T23:53:42.372Z",
     "latest": {
       "t": "2026-01-14T23:00:00.000Z",
       "station_id": "156",
@@ -39,9 +39,17 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-14T23:44:40.787Z",
+    "generated_at": "2026-01-14T23:53:43.680Z",
     "current": null,
     "hourly": [
+      {
+        "t": "2026-01-14T14:00:00-08:00",
+        "temp_f": 63,
+        "wind_mph": 5,
+        "wind_dir": "WNW",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
+      },
       {
         "t": "2026-01-14T15:00:00-08:00",
         "temp_f": 62,
@@ -225,23 +233,15 @@
         "wind_dir": "ESE",
         "shortForecast": "Sunny",
         "precip_prob": 0
-      },
-      {
-        "t": "2026-01-15T14:00:00-08:00",
-        "temp_f": 67,
-        "wind_mph": 5,
-        "wind_dir": "ESE",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "This Afternoon",
-        "t_start": "2026-01-14T15:00:00-08:00",
+        "t_start": "2026-01-14T14:00:00-08:00",
         "t_end": "2026-01-14T18:00:00-08:00",
         "temp_f": 64,
-        "text": "Sunny. High near 64, with temperatures falling to around 62 in the afternoon. North northwest wind around 5 mph."
+        "text": "Sunny. High near 64, with temperatures falling to around 62 in the afternoon. Northwest wind around 5 mph."
       },
       {
         "name": "Tonight",
