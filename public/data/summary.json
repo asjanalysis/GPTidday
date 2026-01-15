@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-15T17:18:09.037Z",
+  "generated_at": "2026-01-15T17:52:58.378Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-15T17:18:08.211Z",
+    "generated_at": "2026-01-15T17:52:58.378Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-15T17:18:07.119Z",
+    "generated_at": "2026-01-15T17:52:56.590Z",
     "latest": {
-      "t": "2026-01-15T16:30:00.000Z",
+      "t": "2026-01-15T17:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
       "hs_m": 2.15,
       "hs_ft": 7.053806,
-      "tp_s": 13.333333,
-      "ta_s": 9.220188,
-      "tz_s": 7.438623,
-      "dp_deg_true": 281.59375,
+      "tp_s": 15.384616,
+      "ta_s": 9.408911,
+      "tz_s": 7.484704,
+      "dp_deg_true": 278.78125,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-15T17:18:09.036Z",
+    "generated_at": "2026-01-15T17:52:58.357Z",
     "current": null,
     "hourly": [
       {
@@ -238,10 +238,10 @@
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-01-15T09:00:00-08:00",
+        "t_start": "2026-01-15T06:00:00-08:00",
         "t_end": "2026-01-15T18:00:00-08:00",
         "temp_f": 68,
-        "text": "Sunny. High near 68, with temperatures falling to around 65 in the afternoon. East wind 1 to 5 mph."
+        "text": "Sunny. High near 68, with temperatures falling to around 65 in the afternoon. East northeast wind 1 to 5 mph."
       },
       {
         "name": "Tonight",
