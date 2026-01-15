@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-15T19:48:42.949Z",
+  "generated_at": "2026-01-15T19:58:05.400Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-15T19:48:42.213Z",
+    "generated_at": "2026-01-15T19:58:04.695Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-15T19:48:40.972Z",
+    "generated_at": "2026-01-15T19:58:03.539Z",
     "latest": {
       "t": "2026-01-15T19:00:00.000Z",
       "station_id": "156",
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-15T19:48:42.948Z",
+    "generated_at": "2026-01-15T19:58:05.399Z",
     "current": null,
     "hourly": [
       {
@@ -238,7 +238,7 @@
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-01-15T10:00:00-08:00",
+        "t_start": "2026-01-15T11:00:00-08:00",
         "t_end": "2026-01-15T18:00:00-08:00",
         "temp_f": 68,
         "text": "Sunny. High near 68, with temperatures falling to around 65 in the afternoon. East wind 1 to 5 mph."
