@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-15T05:44:49.700Z",
+  "generated_at": "2026-01-15T05:57:12.022Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-15T05:44:49.022Z",
+    "generated_at": "2026-01-15T05:57:11.569Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-15T05:44:47.415Z",
+    "generated_at": "2026-01-15T05:57:10.366Z",
     "latest": {
       "t": "2026-01-15T05:00:00.000Z",
       "station_id": "156",
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-15T05:44:49.699Z",
+    "generated_at": "2026-01-15T05:57:12.021Z",
     "current": null,
     "hourly": [
       {
@@ -238,7 +238,7 @@
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-01-14T21:00:00-08:00",
+        "t_start": "2026-01-14T20:00:00-08:00",
         "t_end": "2026-01-15T06:00:00-08:00",
         "temp_f": 50,
         "text": "Clear, with a low around 50. Northeast wind around 6 mph."
