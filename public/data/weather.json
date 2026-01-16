@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-16T11:43:04.754Z",
+  "generated_at": "2026-01-16T11:52:51.608Z",
   "current": null,
   "hourly": [
     {
@@ -203,10 +203,10 @@
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-01-16T00:00:00-08:00",
+      "t_start": "2026-01-16T03:00:00-08:00",
       "t_end": "2026-01-16T06:00:00-08:00",
       "temp_f": 53,
-      "text": "Clear, with a low around 53. North northwest wind 3 to 9 mph."
+      "text": "Clear, with a low around 53. West wind 6 to 9 mph."
     },
     {
       "name": "Friday",
