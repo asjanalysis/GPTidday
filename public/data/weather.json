@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-16T14:58:20.325Z",
+  "generated_at": "2026-01-16T15:29:17.782Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-16T06:00:00-08:00",
-      "temp_f": 54,
-      "wind_mph": 3,
-      "wind_dir": "NE",
-      "shortForecast": "Sunny",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-16T07:00:00-08:00",
       "temp_f": 54,
@@ -198,15 +190,23 @@
       "wind_dir": "NE",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-17T06:00:00-08:00",
+      "temp_f": 54,
+      "wind_mph": 5,
+      "wind_dir": "NE",
+      "shortForecast": "Mostly Sunny",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-16T06:00:00-08:00",
+      "t_start": "2026-01-16T07:00:00-08:00",
       "t_end": "2026-01-16T18:00:00-08:00",
       "temp_f": 66,
-      "text": "Sunny. High near 66, with temperatures falling to around 64 in the afternoon. West wind 3 to 9 mph."
+      "text": "Sunny. High near 66, with temperatures falling to around 64 in the afternoon. West southwest wind 3 to 9 mph."
     },
     {
       "name": "Tonight",
