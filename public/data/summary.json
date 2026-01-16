@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-16T21:56:36.198Z",
+  "generated_at": "2026-01-16T22:21:16.696Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-16T21:56:36.058Z",
+    "generated_at": "2026-01-16T22:21:16.311Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-16T21:56:34.985Z",
+    "generated_at": "2026-01-16T22:21:15.077Z",
     "latest": {
-      "t": "2026-01-16T21:00:00.000Z",
+      "t": "2026-01-16T21:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.21,
-      "hs_ft": 3.9698164,
+      "hs_m": 1.18,
+      "hs_ft": 3.8713911999999997,
       "tp_s": 13.333333,
-      "ta_s": 9.471193,
-      "tz_s": 8.158632,
-      "dp_deg_true": 277.375,
+      "ta_s": 9.579136,
+      "tz_s": 7.9330635,
+      "dp_deg_true": 275.96875,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-16T21:56:36.197Z",
+    "generated_at": "2026-01-16T22:21:16.696Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-16T13:00:00-08:00",
-        "temp_f": 62,
-        "wind_mph": 3,
-        "wind_dir": "WNW",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-16T14:00:00-08:00",
         "temp_f": 64,
@@ -233,12 +225,20 @@
         "wind_dir": "E",
         "shortForecast": "Mostly Sunny",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-17T13:00:00-08:00",
+        "temp_f": 63,
+        "wind_mph": 5,
+        "wind_dir": "E",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "This Afternoon",
-        "t_start": "2026-01-16T13:00:00-08:00",
+        "t_start": "2026-01-16T14:00:00-08:00",
         "t_end": "2026-01-16T18:00:00-08:00",
         "temp_f": 66,
         "text": "Areas of fog after 3pm. Sunny. High near 66, with temperatures falling to around 64 in the afternoon. Northwest wind around 5 mph."
