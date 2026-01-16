@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-16T14:42:17.306Z",
+  "generated_at": "2026-01-16T14:58:20.325Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-16T05:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 7,
-      "wind_dir": "WSW",
-      "shortForecast": "Clear",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-16T06:00:00-08:00",
       "temp_f": 54,
@@ -198,25 +190,26 @@
       "wind_dir": "NE",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-17T05:00:00-08:00",
+      "temp_f": 54,
+      "wind_mph": 5,
+      "wind_dir": "NE",
+      "shortForecast": "Partly Cloudy",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
-      "name": "Overnight",
-      "t_start": "2026-01-16T03:00:00-08:00",
-      "t_end": "2026-01-16T06:00:00-08:00",
-      "temp_f": 53,
-      "text": "Clear, with a low around 53. West wind 6 to 9 mph."
-    },
-    {
-      "name": "Friday",
+      "name": "Today",
       "t_start": "2026-01-16T06:00:00-08:00",
       "t_end": "2026-01-16T18:00:00-08:00",
       "temp_f": 66,
       "text": "Sunny. High near 66, with temperatures falling to around 64 in the afternoon. West wind 3 to 9 mph."
     },
     {
-      "name": "Friday Night",
+      "name": "Tonight",
       "t_start": "2026-01-16T18:00:00-08:00",
       "t_end": "2026-01-17T06:00:00-08:00",
       "temp_f": 54,
@@ -227,7 +220,7 @@
       "t_start": "2026-01-17T06:00:00-08:00",
       "t_end": "2026-01-17T18:00:00-08:00",
       "temp_f": 66,
-      "text": "Mostly sunny, with a high near 66. Northeast wind around 6 mph."
+      "text": "Mostly sunny. High near 66, with temperatures falling to around 63 in the afternoon. Northeast wind around 6 mph."
     },
     {
       "name": "Saturday Night",
@@ -241,7 +234,7 @@
       "t_start": "2026-01-18T06:00:00-08:00",
       "t_end": "2026-01-18T18:00:00-08:00",
       "temp_f": 65,
-      "text": "Mostly sunny, with a high near 65."
+      "text": "Mostly sunny, with a high near 65. North northeast wind around 3 mph."
     },
     {
       "name": "Sunday Night",
@@ -298,6 +291,13 @@
       "t_end": "2026-01-22T18:00:00-08:00",
       "temp_f": 58,
       "text": "Mostly sunny, with a high near 58."
+    },
+    {
+      "name": "Thursday Night",
+      "t_start": "2026-01-22T18:00:00-08:00",
+      "t_end": "2026-01-23T06:00:00-08:00",
+      "temp_f": 49,
+      "text": "Partly cloudy, with a low around 49."
     }
   ]
 }
