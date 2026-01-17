@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-17T06:47:58.983Z",
+  "generated_at": "2026-01-17T07:00:13.858Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-17T06:47:58.378Z",
+    "generated_at": "2026-01-17T07:00:11.409Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-17T06:47:56.620Z",
+    "generated_at": "2026-01-17T07:00:10.071Z",
     "latest": {
       "t": "2026-01-17T06:00:00.000Z",
       "station_id": "156",
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-17T06:47:58.982Z",
+    "generated_at": "2026-01-17T07:00:13.857Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-16T22:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 6,
-        "wind_dir": "NNE",
-        "shortForecast": "Clear",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-16T23:00:00-08:00",
         "temp_f": 54,
@@ -233,15 +225,23 @@
         "wind_dir": "NE",
         "shortForecast": "Partly Cloudy",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-17T22:00:00-08:00",
+        "temp_f": 58,
+        "wind_mph": 3,
+        "wind_dir": "ENE",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-01-16T22:00:00-08:00",
+        "t_start": "2026-01-16T23:00:00-08:00",
         "t_end": "2026-01-17T06:00:00-08:00",
         "temp_f": 46,
-        "text": "Mostly clear, with a low around 46. North northeast wind around 6 mph."
+        "text": "Mostly clear, with a low around 46. North northeast wind around 5 mph."
       },
       {
         "name": "Saturday",
