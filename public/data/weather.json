@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-17T18:51:06.391Z",
+  "generated_at": "2026-01-17T18:59:43.777Z",
   "current": null,
   "hourly": [
     {
@@ -203,7 +203,7 @@
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-17T10:00:00-08:00",
+      "t_start": "2026-01-17T06:00:00-08:00",
       "t_end": "2026-01-17T18:00:00-08:00",
       "temp_f": 67,
       "text": "Mostly sunny, with a high near 67. Northeast wind 1 to 5 mph."
