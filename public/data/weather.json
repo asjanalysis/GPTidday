@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-17T03:59:37.962Z",
+  "generated_at": "2026-01-17T04:37:37.681Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-16T19:00:00-08:00",
-      "temp_f": 60,
-      "wind_mph": 3,
-      "wind_dir": "NNE",
-      "shortForecast": "Areas Of Fog",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-16T20:00:00-08:00",
       "temp_f": 57,
@@ -198,12 +190,20 @@
       "wind_dir": "SE",
       "shortForecast": "Mostly Cloudy",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-17T19:00:00-08:00",
+      "temp_f": 61,
+      "wind_mph": 1,
+      "wind_dir": "NE",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-16T19:00:00-08:00",
+      "t_start": "2026-01-16T20:00:00-08:00",
       "t_end": "2026-01-17T06:00:00-08:00",
       "temp_f": 47,
       "text": "Areas of fog before midnight. Mostly clear, with a low around 47. North northeast wind around 6 mph."

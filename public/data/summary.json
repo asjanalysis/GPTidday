@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-17T03:59:37.963Z",
+  "generated_at": "2026-01-17T04:37:37.682Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-17T03:59:37.696Z",
+    "generated_at": "2026-01-17T04:37:37.021Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-17T03:59:36.290Z",
+    "generated_at": "2026-01-17T04:37:35.498Z",
     "latest": {
-      "t": "2026-01-17T03:00:00.000Z",
+      "t": "2026-01-17T04:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.28,
-      "hs_ft": 4.1994752,
-      "tp_s": 14.285714,
-      "ta_s": 9.809262,
-      "tz_s": 8.482656,
-      "dp_deg_true": 266.125,
+      "hs_m": 1.21,
+      "hs_ft": 3.9698164,
+      "tp_s": 11.764706,
+      "ta_s": 9.5857525,
+      "tz_s": 8.41472,
+      "dp_deg_true": 281.59375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-17T03:59:37.962Z",
+    "generated_at": "2026-01-17T04:37:37.681Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-16T19:00:00-08:00",
-        "temp_f": 60,
-        "wind_mph": 3,
-        "wind_dir": "NNE",
-        "shortForecast": "Areas Of Fog",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-16T20:00:00-08:00",
         "temp_f": 57,
@@ -233,12 +225,20 @@
         "wind_dir": "SE",
         "shortForecast": "Mostly Cloudy",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-17T19:00:00-08:00",
+        "temp_f": 61,
+        "wind_mph": 1,
+        "wind_dir": "NE",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-01-16T19:00:00-08:00",
+        "t_start": "2026-01-16T20:00:00-08:00",
         "t_end": "2026-01-17T06:00:00-08:00",
         "temp_f": 47,
         "text": "Areas of fog before midnight. Mostly clear, with a low around 47. North northeast wind around 6 mph."
