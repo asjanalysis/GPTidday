@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-17T13:57:46.505Z",
+  "generated_at": "2026-01-17T14:21:51.534Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-17T05:00:00-08:00",
-      "temp_f": 46,
-      "wind_mph": 5,
-      "wind_dir": "NE",
-      "shortForecast": "Mostly Clear",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-17T06:00:00-08:00",
       "temp_f": 48,
@@ -198,25 +190,26 @@
       "wind_dir": "NNE",
       "shortForecast": "Mostly Cloudy",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-18T05:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 2,
+      "wind_dir": "NNE",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
-      "name": "Overnight",
-      "t_start": "2026-01-17T05:00:00-08:00",
-      "t_end": "2026-01-17T06:00:00-08:00",
-      "temp_f": 46,
-      "text": "Mostly clear, with a low around 46. Northeast wind around 5 mph."
-    },
-    {
-      "name": "Saturday",
+      "name": "Today",
       "t_start": "2026-01-17T06:00:00-08:00",
       "t_end": "2026-01-17T18:00:00-08:00",
       "temp_f": 67,
       "text": "Mostly sunny, with a high near 67. Northeast wind 1 to 5 mph."
     },
     {
-      "name": "Saturday Night",
+      "name": "Tonight",
       "t_start": "2026-01-17T18:00:00-08:00",
       "t_end": "2026-01-18T06:00:00-08:00",
       "temp_f": 52,
@@ -227,7 +220,7 @@
       "t_start": "2026-01-18T06:00:00-08:00",
       "t_end": "2026-01-18T18:00:00-08:00",
       "temp_f": 65,
-      "text": "Mostly sunny, with a high near 65. North wind around 3 mph."
+      "text": "Mostly sunny. High near 65, with temperatures falling to around 63 in the afternoon. North wind around 3 mph."
     },
     {
       "name": "Sunday Night",
@@ -241,7 +234,7 @@
       "t_start": "2026-01-19T06:00:00-08:00",
       "t_end": "2026-01-19T18:00:00-08:00",
       "temp_f": 64,
-      "text": "Sunny, with a high near 64."
+      "text": "Sunny, with a high near 64. North wind around 3 mph."
     },
     {
       "name": "Monday Night",
@@ -298,6 +291,13 @@
       "t_end": "2026-01-23T18:00:00-08:00",
       "temp_f": 58,
       "text": "Patchy fog between 9am and noon. Mostly sunny, with a high near 58."
+    },
+    {
+      "name": "Friday Night",
+      "t_start": "2026-01-23T18:00:00-08:00",
+      "t_end": "2026-01-24T06:00:00-08:00",
+      "temp_f": 49,
+      "text": "Partly cloudy, with a low around 49."
     }
   ]
 }
