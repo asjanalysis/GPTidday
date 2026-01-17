@@ -4,9 +4,17 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-17T19:30:59.162Z",
+  "generated_at": "2026-01-17T19:41:14.230Z",
   "current": null,
   "hourly": [
+    {
+      "t": "2026-01-17T10:00:00-08:00",
+      "temp_f": 54,
+      "wind_mph": 5,
+      "wind_dir": "ENE",
+      "shortForecast": "Sunny",
+      "precip_prob": 0
+    },
     {
       "t": "2026-01-17T11:00:00-08:00",
       "temp_f": 56,
@@ -190,20 +198,12 @@
       "wind_dir": "NE",
       "shortForecast": "Mostly Sunny",
       "precip_prob": 0
-    },
-    {
-      "t": "2026-01-18T10:00:00-08:00",
-      "temp_f": 59,
-      "wind_mph": 3,
-      "wind_dir": "NE",
-      "shortForecast": "Sunny",
-      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-17T07:00:00-08:00",
+      "t_start": "2026-01-17T06:00:00-08:00",
       "t_end": "2026-01-17T18:00:00-08:00",
       "temp_f": 67,
       "text": "Mostly sunny, with a high near 67. Northeast wind 1 to 5 mph."
