@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-17T17:37:20.406Z",
+  "generated_at": "2026-01-17T17:47:18.351Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-17T17:37:19.141Z",
+    "generated_at": "2026-01-17T17:47:18.248Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-17T17:37:17.991Z",
+    "generated_at": "2026-01-17T17:47:17.027Z",
     "latest": {
       "t": "2026-01-17T17:00:00.000Z",
       "station_id": "156",
@@ -39,9 +39,17 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-17T17:37:20.405Z",
+    "generated_at": "2026-01-17T17:47:18.350Z",
     "current": null,
     "hourly": [
+      {
+        "t": "2026-01-17T08:00:00-08:00",
+        "temp_f": 49,
+        "wind_mph": 5,
+        "wind_dir": "NE",
+        "shortForecast": "Mostly Sunny",
+        "precip_prob": 0
+      },
       {
         "t": "2026-01-17T09:00:00-08:00",
         "temp_f": 52,
@@ -225,20 +233,12 @@
         "wind_dir": "NE",
         "shortForecast": "Mostly Sunny",
         "precip_prob": 0
-      },
-      {
-        "t": "2026-01-18T08:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 3,
-        "wind_dir": "NE",
-        "shortForecast": "Mostly Sunny",
-        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-01-17T09:00:00-08:00",
+        "t_start": "2026-01-17T07:00:00-08:00",
         "t_end": "2026-01-17T18:00:00-08:00",
         "temp_f": 67,
         "text": "Mostly sunny, with a high near 67. Northeast wind 1 to 5 mph."
