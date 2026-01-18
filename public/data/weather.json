@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-18T17:18:21.394Z",
+  "generated_at": "2026-01-18T17:36:15.906Z",
   "current": null,
   "hourly": [
     {
@@ -203,10 +203,10 @@
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-18T06:00:00-08:00",
+      "t_start": "2026-01-18T09:00:00-08:00",
       "t_end": "2026-01-18T18:00:00-08:00",
       "temp_f": 66,
-      "text": "Mostly sunny. High near 66, with temperatures falling to around 63 in the afternoon. North wind around 3 mph."
+      "text": "Mostly sunny. High near 66, with temperatures falling to around 63 in the afternoon. Northwest wind around 3 mph."
     },
     {
       "name": "Tonight",
