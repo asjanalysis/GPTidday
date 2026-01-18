@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-18T12:55:56.976Z",
+  "generated_at": "2026-01-18T13:27:38.386Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-18T12:55:56.348Z",
+    "generated_at": "2026-01-18T13:27:37.685Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-18T12:55:55.186Z",
+    "generated_at": "2026-01-18T13:27:36.226Z",
     "latest": {
-      "t": "2026-01-18T12:00:00.000Z",
+      "t": "2026-01-18T12:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
       "hs_m": 0.89,
       "hs_ft": 2.9199476,
       "tp_s": 16.666668,
-      "ta_s": 8.091117,
-      "tz_s": 5.8243537,
-      "dp_deg_true": 280.1875,
+      "ta_s": 6.8879366,
+      "tz_s": 5.0039396,
+      "dp_deg_true": 277.375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-18T12:55:56.975Z",
+    "generated_at": "2026-01-18T13:27:38.386Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-18T04:00:00-08:00",
-        "temp_f": 53,
-        "wind_mph": 2,
-        "wind_dir": "NNE",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-18T05:00:00-08:00",
         "temp_f": 52,
@@ -233,15 +225,23 @@
         "wind_dir": "NNE",
         "shortForecast": "Mostly Clear",
         "precip_prob": 1
+      },
+      {
+        "t": "2026-01-19T04:00:00-08:00",
+        "temp_f": 54,
+        "wind_mph": 2,
+        "wind_dir": "NNE",
+        "shortForecast": "Mostly Clear",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-01-18T01:00:00-08:00",
+        "t_start": "2026-01-18T03:00:00-08:00",
         "t_end": "2026-01-18T06:00:00-08:00",
         "temp_f": 52,
-        "text": "Mostly cloudy, with a low around 52. Northeast wind around 2 mph."
+        "text": "Mostly cloudy, with a low around 52. North northeast wind around 2 mph."
       },
       {
         "name": "Sunday",
