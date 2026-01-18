@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-18T04:58:08.737Z",
+  "generated_at": "2026-01-18T05:27:56.007Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-17T20:00:00-08:00",
-      "temp_f": 58,
-      "wind_mph": 2,
-      "wind_dir": "ENE",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-17T21:00:00-08:00",
       "temp_f": 57,
@@ -198,12 +190,20 @@
       "wind_dir": "NNE",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-18T20:00:00-08:00",
+      "temp_f": 58,
+      "wind_mph": 2,
+      "wind_dir": "NNE",
+      "shortForecast": "Partly Cloudy",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-17T20:00:00-08:00",
+      "t_start": "2026-01-17T21:00:00-08:00",
       "t_end": "2026-01-18T06:00:00-08:00",
       "temp_f": 50,
       "text": "Mostly cloudy, with a low around 50. Northeast wind around 3 mph."
