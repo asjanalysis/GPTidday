@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-19T13:34:32.973Z",
+  "generated_at": "2026-01-19T14:02:06.514Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-19T05:00:00-08:00",
-      "temp_f": 50,
-      "wind_mph": 2,
-      "wind_dir": "NNE",
-      "shortForecast": "Mostly Clear",
-      "precip_prob": 1
-    },
     {
       "t": "2026-01-19T06:00:00-08:00",
       "temp_f": 50,
@@ -198,16 +190,17 @@
       "wind_dir": "NE",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-20T05:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 3,
+      "wind_dir": "NE",
+      "shortForecast": "Partly Cloudy",
+      "precip_prob": 0
     }
   ],
   "daily": [
-    {
-      "name": "Overnight",
-      "t_start": "2026-01-19T05:00:00-08:00",
-      "t_end": "2026-01-19T06:00:00-08:00",
-      "temp_f": 49,
-      "text": "Mostly clear, with a low around 49. North northeast wind around 2 mph."
-    },
     {
       "name": "M.L. King Jr. Day",
       "t_start": "2026-01-19T06:00:00-08:00",
@@ -216,7 +209,7 @@
       "text": "Sunny, with a high near 63. Northwest wind around 3 mph."
     },
     {
-      "name": "Monday Night",
+      "name": "Tonight",
       "t_start": "2026-01-19T18:00:00-08:00",
       "t_end": "2026-01-20T06:00:00-08:00",
       "temp_f": 50,
@@ -227,7 +220,7 @@
       "t_start": "2026-01-20T06:00:00-08:00",
       "t_end": "2026-01-20T18:00:00-08:00",
       "temp_f": 64,
-      "text": "Mostly sunny, with a high near 64. North northeast wind around 3 mph."
+      "text": "Mostly sunny. High near 64, with temperatures falling to around 61 in the afternoon. North northeast wind around 3 mph."
     },
     {
       "name": "Tuesday Night",
@@ -241,7 +234,7 @@
       "t_start": "2026-01-21T06:00:00-08:00",
       "t_end": "2026-01-21T18:00:00-08:00",
       "temp_f": 62,
-      "text": "Partly sunny, with a high near 62."
+      "text": "Partly sunny, with a high near 62. North northeast wind around 3 mph."
     },
     {
       "name": "Wednesday Night",
@@ -298,6 +291,13 @@
       "t_end": "2026-01-25T18:00:00-08:00",
       "temp_f": 59,
       "text": "Mostly sunny, with a high near 59."
+    },
+    {
+      "name": "Sunday Night",
+      "t_start": "2026-01-25T18:00:00-08:00",
+      "t_end": "2026-01-26T06:00:00-08:00",
+      "temp_f": 50,
+      "text": "Partly cloudy, with a low around 50."
     }
   ]
 }
