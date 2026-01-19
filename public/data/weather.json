@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-19T15:33:49.039Z",
+  "generated_at": "2026-01-19T15:53:27.134Z",
   "current": null,
   "hourly": [
     {
@@ -203,7 +203,7 @@
   "daily": [
     {
       "name": "M.L. King Jr. Day",
-      "t_start": "2026-01-19T07:00:00-08:00",
+      "t_start": "2026-01-19T06:00:00-08:00",
       "t_end": "2026-01-19T18:00:00-08:00",
       "temp_f": 63,
       "text": "Sunny, with a high near 63. Northwest wind around 3 mph."
