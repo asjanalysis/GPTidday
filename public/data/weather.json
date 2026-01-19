@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-19T09:02:24.709Z",
+  "generated_at": "2026-01-19T09:46:30.730Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-19T00:00:00-08:00",
-      "temp_f": 54,
-      "wind_mph": 2,
-      "wind_dir": "N",
-      "shortForecast": "Partly Cloudy",
-      "precip_prob": 1
-    },
     {
       "t": "2026-01-19T01:00:00-08:00",
       "temp_f": 54,
@@ -198,12 +190,20 @@
       "wind_dir": "NE",
       "shortForecast": "Mostly Clear",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-20T00:00:00-08:00",
+      "temp_f": 55,
+      "wind_mph": 5,
+      "wind_dir": "NE",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-01-19T00:00:00-08:00",
+      "t_start": "2026-01-19T01:00:00-08:00",
       "t_end": "2026-01-19T06:00:00-08:00",
       "temp_f": 49,
       "text": "Mostly clear, with a low around 49. North wind around 2 mph."
