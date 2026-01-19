@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-19T20:17:59.747Z",
+  "generated_at": "2026-01-19T20:41:43.796Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-19T20:17:59.681Z",
+    "generated_at": "2026-01-19T20:41:42.965Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-19T20:17:58.283Z",
+    "generated_at": "2026-01-19T20:41:41.829Z",
     "latest": {
-      "t": "2026-01-19T19:30:00.000Z",
+      "t": "2026-01-19T20:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.07,
-      "hs_ft": 3.5104988,
-      "tp_s": 13.333333,
-      "ta_s": 9.168513,
-      "tz_s": 7.5090747,
-      "dp_deg_true": 271.75,
+      "hs_m": 0.96,
+      "hs_ft": 3.1496063999999997,
+      "tp_s": 11.764706,
+      "ta_s": 8.903397,
+      "tz_s": 7.3902116,
+      "dp_deg_true": 270.34375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-19T20:17:59.746Z",
+    "generated_at": "2026-01-19T20:41:43.795Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-19T11:00:00-08:00",
-        "temp_f": 56,
-        "wind_mph": 2,
-        "wind_dir": "N",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-19T12:00:00-08:00",
         "temp_f": 57,
@@ -233,15 +225,23 @@
         "wind_dir": "ENE",
         "shortForecast": "Partly Sunny",
         "precip_prob": 1
+      },
+      {
+        "t": "2026-01-20T11:00:00-08:00",
+        "temp_f": 55,
+        "wind_mph": 2,
+        "wind_dir": "E",
+        "shortForecast": "Partly Sunny",
+        "precip_prob": 1
       }
     ],
     "daily": [
       {
         "name": "M.L. King Jr. Day",
-        "t_start": "2026-01-19T11:00:00-08:00",
+        "t_start": "2026-01-19T12:00:00-08:00",
         "t_end": "2026-01-19T18:00:00-08:00",
         "temp_f": 62,
-        "text": "Sunny, with a high near 62. Northwest wind around 3 mph."
+        "text": "Sunny, with a high near 62. West northwest wind around 3 mph."
       },
       {
         "name": "Tonight",
