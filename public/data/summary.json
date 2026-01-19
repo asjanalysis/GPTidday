@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-19T22:22:33.349Z",
+  "generated_at": "2026-01-19T22:43:02.388Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-19T22:22:32.876Z",
+    "generated_at": "2026-01-19T22:43:01.960Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-19T22:22:31.540Z",
+    "generated_at": "2026-01-19T22:43:00.532Z",
     "latest": {
-      "t": "2026-01-19T21:30:00.000Z",
+      "t": "2026-01-19T22:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 0.97,
-      "hs_ft": 3.1824148,
-      "tp_s": 13.333333,
-      "ta_s": 9.16882,
-      "tz_s": 7.648352,
-      "dp_deg_true": 264.71875,
+      "hs_m": 1.1,
+      "hs_ft": 3.6089240000000005,
+      "tp_s": 12.5,
+      "ta_s": 9.459964,
+      "tz_s": 8.063419,
+      "dp_deg_true": 267.53125,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,9 +39,17 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-19T22:22:33.348Z",
+    "generated_at": "2026-01-19T22:43:02.387Z",
     "current": null,
     "hourly": [
+      {
+        "t": "2026-01-19T13:00:00-08:00",
+        "temp_f": 59,
+        "wind_mph": 3,
+        "wind_dir": "W",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
+      },
       {
         "t": "2026-01-19T14:00:00-08:00",
         "temp_f": 60,
@@ -224,14 +232,6 @@
         "wind_mph": 2,
         "wind_dir": "SSE",
         "shortForecast": "Mostly Sunny",
-        "precip_prob": 1
-      },
-      {
-        "t": "2026-01-20T13:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 2,
-        "wind_dir": "SSW",
-        "shortForecast": "Partly Sunny",
         "precip_prob": 1
       }
     ],
