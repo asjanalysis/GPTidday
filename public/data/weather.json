@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-19T06:42:29.412Z",
+  "generated_at": "2026-01-19T07:17:46.264Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-18T22:00:00-08:00",
-      "temp_f": 56,
-      "wind_mph": 2,
-      "wind_dir": "N",
-      "shortForecast": "Mostly Clear",
-      "precip_prob": 1
-    },
     {
       "t": "2026-01-18T23:00:00-08:00",
       "temp_f": 56,
@@ -198,15 +190,23 @@
       "wind_dir": "NNE",
       "shortForecast": "Mostly Clear",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-19T22:00:00-08:00",
+      "temp_f": 56,
+      "wind_mph": 5,
+      "wind_dir": "NE",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-18T22:00:00-08:00",
+      "t_start": "2026-01-18T23:00:00-08:00",
       "t_end": "2026-01-19T06:00:00-08:00",
       "temp_f": 49,
-      "text": "Mostly clear, with a low around 49. North wind around 2 mph."
+      "text": "Partly cloudy, with a low around 49. North wind around 2 mph."
     },
     {
       "name": "M.L. King Jr. Day",
