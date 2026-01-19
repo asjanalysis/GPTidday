@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-19T05:35:42.514Z",
+  "generated_at": "2026-01-19T05:57:31.429Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-19T05:35:42.011Z",
+    "generated_at": "2026-01-19T05:57:31.428Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-19T05:35:40.564Z",
+    "generated_at": "2026-01-19T05:57:29.358Z",
     "latest": {
       "t": "2026-01-19T05:00:00.000Z",
       "station_id": "156",
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-19T05:35:42.514Z",
+    "generated_at": "2026-01-19T05:57:31.364Z",
     "current": null,
     "hourly": [
       {
@@ -238,10 +238,10 @@
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-01-18T18:00:00-08:00",
+        "t_start": "2026-01-18T21:00:00-08:00",
         "t_end": "2026-01-19T06:00:00-08:00",
         "temp_f": 49,
-        "text": "Mostly clear, with a low around 49. North northeast wind around 2 mph."
+        "text": "Mostly clear, with a low around 49. North wind around 2 mph."
       },
       {
         "name": "M.L. King Jr. Day",
