@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-20T14:54:04.261Z",
+  "generated_at": "2026-01-20T15:24:13.867Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-20T06:00:00-08:00",
-      "temp_f": 48,
-      "wind_mph": 2,
-      "wind_dir": "NE",
-      "shortForecast": "Mostly Sunny",
-      "precip_prob": 1
-    },
     {
       "t": "2026-01-20T07:00:00-08:00",
       "temp_f": 48,
@@ -198,15 +190,23 @@
       "wind_dir": "",
       "shortForecast": "Mostly Cloudy",
       "precip_prob": 1
+    },
+    {
+      "t": "2026-01-21T06:00:00-08:00",
+      "temp_f": 54,
+      "wind_mph": 0,
+      "wind_dir": "",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 1
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-20T06:00:00-08:00",
+      "t_start": "2026-01-20T07:00:00-08:00",
       "t_end": "2026-01-20T18:00:00-08:00",
       "temp_f": 62,
-      "text": "Partly sunny, with a high near 62. South southeast wind around 3 mph."
+      "text": "Partly sunny, with a high near 62. South southwest wind around 3 mph."
     },
     {
       "name": "Tonight",
