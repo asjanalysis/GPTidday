@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-20T13:52:00.530Z",
+  "generated_at": "2026-01-20T14:19:52.710Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-20T05:00:00-08:00",
-      "temp_f": 48,
-      "wind_mph": 2,
-      "wind_dir": "NNE",
-      "shortForecast": "Partly Cloudy",
-      "precip_prob": 1
-    },
     {
       "t": "2026-01-20T06:00:00-08:00",
       "temp_f": 48,
@@ -198,25 +190,26 @@
       "wind_dir": "",
       "shortForecast": "Mostly Cloudy",
       "precip_prob": 1
+    },
+    {
+      "t": "2026-01-21T05:00:00-08:00",
+      "temp_f": 53,
+      "wind_mph": 0,
+      "wind_dir": "",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 1
     }
   ],
   "daily": [
     {
-      "name": "Overnight",
-      "t_start": "2026-01-20T01:00:00-08:00",
-      "t_end": "2026-01-20T06:00:00-08:00",
-      "temp_f": 47,
-      "text": "Mostly clear, with a low around 47. North northeast wind around 3 mph."
-    },
-    {
-      "name": "Tuesday",
+      "name": "Today",
       "t_start": "2026-01-20T06:00:00-08:00",
       "t_end": "2026-01-20T18:00:00-08:00",
       "temp_f": 62,
       "text": "Partly sunny, with a high near 62. South southeast wind around 3 mph."
     },
     {
-      "name": "Tuesday Night",
+      "name": "Tonight",
       "t_start": "2026-01-20T18:00:00-08:00",
       "t_end": "2026-01-21T06:00:00-08:00",
       "temp_f": 53,
@@ -227,7 +220,7 @@
       "t_start": "2026-01-21T06:00:00-08:00",
       "t_end": "2026-01-21T18:00:00-08:00",
       "temp_f": 60,
-      "text": "Mostly cloudy, with a high near 60. North northwest wind 0 to 3 mph."
+      "text": "Mostly cloudy. High near 60, with temperatures falling to around 58 in the afternoon. North northwest wind 0 to 3 mph."
     },
     {
       "name": "Wednesday Night",
@@ -241,7 +234,7 @@
       "t_start": "2026-01-22T06:00:00-08:00",
       "t_end": "2026-01-22T18:00:00-08:00",
       "temp_f": 60,
-      "text": "Patchy fog between 10am and 11am. Partly sunny, with a high near 60."
+      "text": "Patchy fog between 10am and 11am. Partly sunny, with a high near 60. North wind 1 to 7 mph."
     },
     {
       "name": "Thursday Night",
@@ -298,6 +291,13 @@
       "t_end": "2026-01-26T18:00:00-08:00",
       "temp_f": 62,
       "text": "Partly sunny, with a high near 62."
+    },
+    {
+      "name": "Monday Night",
+      "t_start": "2026-01-26T18:00:00-08:00",
+      "t_end": "2026-01-27T06:00:00-08:00",
+      "temp_f": 51,
+      "text": "Mostly cloudy, with a low around 51."
     }
   ]
 }
