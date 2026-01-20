@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-19T23:58:40.827Z",
+  "generated_at": "2026-01-20T02:09:11.128Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-19T23:58:40.733Z",
+    "generated_at": "2026-01-20T02:09:10.843Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-19T23:58:39.547Z",
+    "generated_at": "2026-01-20T02:09:09.063Z",
     "latest": {
-      "t": "2026-01-19T23:00:00.000Z",
+      "t": "2026-01-20T01:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 0.97,
-      "hs_ft": 3.1824148,
-      "tp_s": 11.764706,
-      "ta_s": 8.986428,
-      "tz_s": 7.464183,
-      "dp_deg_true": 280.1875,
+      "hs_m": 1.01,
+      "hs_ft": 3.3136484,
+      "tp_s": 12.5,
+      "ta_s": 8.283535,
+      "tz_s": 7.007258,
+      "dp_deg_true": 274.5625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,33 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-19T23:58:40.826Z",
+    "generated_at": "2026-01-20T02:09:11.127Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-19T15:00:00-08:00",
-        "temp_f": 61,
-        "wind_mph": 3,
-        "wind_dir": "WNW",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
-      {
-        "t": "2026-01-19T16:00:00-08:00",
-        "temp_f": 62,
-        "wind_mph": 3,
-        "wind_dir": "NW",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
-      {
-        "t": "2026-01-19T17:00:00-08:00",
-        "temp_f": 61,
-        "wind_mph": 2,
-        "wind_dir": "NNW",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-19T18:00:00-08:00",
         "temp_f": 59,
@@ -233,16 +209,33 @@
         "wind_dir": "SW",
         "shortForecast": "Partly Sunny",
         "precip_prob": 1
+      },
+      {
+        "t": "2026-01-20T15:00:00-08:00",
+        "temp_f": 60,
+        "wind_mph": 2,
+        "wind_dir": "WSW",
+        "shortForecast": "Partly Sunny",
+        "precip_prob": 1
+      },
+      {
+        "t": "2026-01-20T16:00:00-08:00",
+        "temp_f": 61,
+        "wind_mph": 2,
+        "wind_dir": "W",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 0
+      },
+      {
+        "t": "2026-01-20T17:00:00-08:00",
+        "temp_f": 62,
+        "wind_mph": 1,
+        "wind_dir": "W",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 0
       }
     ],
     "daily": [
-      {
-        "name": "M.L. King Jr. Day",
-        "t_start": "2026-01-19T15:00:00-08:00",
-        "t_end": "2026-01-19T18:00:00-08:00",
-        "temp_f": 62,
-        "text": "Sunny, with a high near 62. Northwest wind around 3 mph."
-      },
       {
         "name": "Tonight",
         "t_start": "2026-01-19T18:00:00-08:00",
@@ -276,7 +269,7 @@
         "t_start": "2026-01-21T18:00:00-08:00",
         "t_end": "2026-01-22T06:00:00-08:00",
         "temp_f": 52,
-        "text": "Mostly cloudy, with a low around 52."
+        "text": "Mostly cloudy, with a low around 52. Northwest wind around 3 mph."
       },
       {
         "name": "Thursday",
@@ -333,6 +326,13 @@
         "t_end": "2026-01-26T06:00:00-08:00",
         "temp_f": 50,
         "text": "Mostly cloudy, with a low around 50."
+      },
+      {
+        "name": "Monday",
+        "t_start": "2026-01-26T06:00:00-08:00",
+        "t_end": "2026-01-26T18:00:00-08:00",
+        "temp_f": 62,
+        "text": "Partly sunny, with a high near 62."
       }
     ]
   }

@@ -4,33 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-19T23:58:40.826Z",
+  "generated_at": "2026-01-20T02:09:11.127Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-19T15:00:00-08:00",
-      "temp_f": 61,
-      "wind_mph": 3,
-      "wind_dir": "WNW",
-      "shortForecast": "Sunny",
-      "precip_prob": 0
-    },
-    {
-      "t": "2026-01-19T16:00:00-08:00",
-      "temp_f": 62,
-      "wind_mph": 3,
-      "wind_dir": "NW",
-      "shortForecast": "Sunny",
-      "precip_prob": 0
-    },
-    {
-      "t": "2026-01-19T17:00:00-08:00",
-      "temp_f": 61,
-      "wind_mph": 2,
-      "wind_dir": "NNW",
-      "shortForecast": "Sunny",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-19T18:00:00-08:00",
       "temp_f": 59,
@@ -198,16 +174,33 @@
       "wind_dir": "SW",
       "shortForecast": "Partly Sunny",
       "precip_prob": 1
+    },
+    {
+      "t": "2026-01-20T15:00:00-08:00",
+      "temp_f": 60,
+      "wind_mph": 2,
+      "wind_dir": "WSW",
+      "shortForecast": "Partly Sunny",
+      "precip_prob": 1
+    },
+    {
+      "t": "2026-01-20T16:00:00-08:00",
+      "temp_f": 61,
+      "wind_mph": 2,
+      "wind_dir": "W",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 0
+    },
+    {
+      "t": "2026-01-20T17:00:00-08:00",
+      "temp_f": 62,
+      "wind_mph": 1,
+      "wind_dir": "W",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 0
     }
   ],
   "daily": [
-    {
-      "name": "M.L. King Jr. Day",
-      "t_start": "2026-01-19T15:00:00-08:00",
-      "t_end": "2026-01-19T18:00:00-08:00",
-      "temp_f": 62,
-      "text": "Sunny, with a high near 62. Northwest wind around 3 mph."
-    },
     {
       "name": "Tonight",
       "t_start": "2026-01-19T18:00:00-08:00",
@@ -241,7 +234,7 @@
       "t_start": "2026-01-21T18:00:00-08:00",
       "t_end": "2026-01-22T06:00:00-08:00",
       "temp_f": 52,
-      "text": "Mostly cloudy, with a low around 52."
+      "text": "Mostly cloudy, with a low around 52. Northwest wind around 3 mph."
     },
     {
       "name": "Thursday",
@@ -298,6 +291,13 @@
       "t_end": "2026-01-26T06:00:00-08:00",
       "temp_f": 50,
       "text": "Mostly cloudy, with a low around 50."
+    },
+    {
+      "name": "Monday",
+      "t_start": "2026-01-26T06:00:00-08:00",
+      "t_end": "2026-01-26T18:00:00-08:00",
+      "temp_f": 62,
+      "text": "Partly sunny, with a high near 62."
     }
   ]
 }
