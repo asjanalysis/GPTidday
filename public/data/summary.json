@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-21T03:04:18.587Z",
+  "generated_at": "2026-01-21T04:12:27.859Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-21T03:04:18.587Z",
+    "generated_at": "2026-01-21T04:12:27.711Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-21T03:04:14.476Z",
+    "generated_at": "2026-01-21T04:12:25.925Z",
     "latest": {
-      "t": "2026-01-21T02:30:00.000Z",
+      "t": "2026-01-21T03:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.53,
-      "hs_ft": 5.0196852,
-      "tp_s": 16.666668,
-      "ta_s": 10.907379,
-      "tz_s": 9.563738,
-      "dp_deg_true": 278.78125,
+      "hs_m": 1.35,
+      "hs_ft": 4.429134,
+      "tp_s": 11.764706,
+      "ta_s": 10.738311,
+      "tz_s": 9.589495,
+      "dp_deg_true": 261.90625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-21T03:04:16.933Z",
+    "generated_at": "2026-01-21T04:12:27.858Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-20T19:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 1,
-        "wind_dir": "NNE",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 4
-      },
       {
         "t": "2026-01-20T20:00:00-08:00",
         "temp_f": 58,
@@ -233,12 +225,20 @@
         "wind_dir": "WSW",
         "shortForecast": "Slight Chance Light Rain",
         "precip_prob": 27
+      },
+      {
+        "t": "2026-01-21T19:00:00-08:00",
+        "temp_f": 56,
+        "wind_mph": 0,
+        "wind_dir": "",
+        "shortForecast": "Slight Chance Light Rain",
+        "precip_prob": 27
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-01-20T19:00:00-08:00",
+        "t_start": "2026-01-20T20:00:00-08:00",
         "t_end": "2026-01-21T06:00:00-08:00",
         "temp_f": 53,
         "text": "Mostly cloudy, with a low around 53. North northeast wind around 1 mph."
