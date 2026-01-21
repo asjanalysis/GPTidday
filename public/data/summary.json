@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-21T01:01:50.843Z",
+  "generated_at": "2026-01-21T03:04:18.587Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-21T01:01:49.502Z",
+    "generated_at": "2026-01-21T03:04:18.587Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-21T01:01:48.358Z",
+    "generated_at": "2026-01-21T03:04:14.476Z",
     "latest": {
-      "t": "2026-01-21T00:30:00.000Z",
+      "t": "2026-01-21T02:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.44,
-      "hs_ft": 4.7244095999999995,
-      "tp_s": 15.384616,
-      "ta_s": 9.804901,
-      "tz_s": 8.581274,
-      "dp_deg_true": 280.1875,
+      "hs_m": 1.53,
+      "hs_ft": 5.0196852,
+      "tp_s": 16.666668,
+      "ta_s": 10.907379,
+      "tz_s": 9.563738,
+      "dp_deg_true": 278.78125,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,32 +39,16 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-21T01:01:50.842Z",
+    "generated_at": "2026-01-21T03:04:16.933Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-20T17:00:00-08:00",
-        "temp_f": 61,
-        "wind_mph": 1,
-        "wind_dir": "WNW",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 0
-      },
-      {
-        "t": "2026-01-20T18:00:00-08:00",
-        "temp_f": 59,
-        "wind_mph": 1,
-        "wind_dir": "NW",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-20T19:00:00-08:00",
         "temp_f": 58,
         "wind_mph": 1,
         "wind_dir": "NNE",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 0
+        "precip_prob": 4
       },
       {
         "t": "2026-01-20T20:00:00-08:00",
@@ -72,7 +56,7 @@
         "wind_mph": 1,
         "wind_dir": "NNE",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 0
+        "precip_prob": 4
       },
       {
         "t": "2026-01-20T21:00:00-08:00",
@@ -80,7 +64,7 @@
         "wind_mph": 1,
         "wind_dir": "N",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 0
+        "precip_prob": 4
       },
       {
         "t": "2026-01-20T22:00:00-08:00",
@@ -88,7 +72,7 @@
         "wind_mph": 1,
         "wind_dir": "N",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 2
+        "precip_prob": 3
       },
       {
         "t": "2026-01-20T23:00:00-08:00",
@@ -96,7 +80,7 @@
         "wind_mph": 1,
         "wind_dir": "N",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 2
+        "precip_prob": 3
       },
       {
         "t": "2026-01-21T00:00:00-08:00",
@@ -104,7 +88,7 @@
         "wind_mph": 1,
         "wind_dir": "NNE",
         "shortForecast": "Cloudy",
-        "precip_prob": 2
+        "precip_prob": 3
       },
       {
         "t": "2026-01-21T01:00:00-08:00",
@@ -112,7 +96,7 @@
         "wind_mph": 1,
         "wind_dir": "NNE",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 2
+        "precip_prob": 3
       },
       {
         "t": "2026-01-21T02:00:00-08:00",
@@ -120,7 +104,7 @@
         "wind_mph": 1,
         "wind_dir": "NE",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 2
+        "precip_prob": 3
       },
       {
         "t": "2026-01-21T03:00:00-08:00",
@@ -128,7 +112,7 @@
         "wind_mph": 1,
         "wind_dir": "ENE",
         "shortForecast": "Cloudy",
-        "precip_prob": 2
+        "precip_prob": 3
       },
       {
         "t": "2026-01-21T04:00:00-08:00",
@@ -136,7 +120,7 @@
         "wind_mph": 0,
         "wind_dir": "",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 3
+        "precip_prob": 12
       },
       {
         "t": "2026-01-21T05:00:00-08:00",
@@ -144,7 +128,7 @@
         "wind_mph": 1,
         "wind_dir": "NE",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 3
+        "precip_prob": 12
       },
       {
         "t": "2026-01-21T06:00:00-08:00",
@@ -152,7 +136,7 @@
         "wind_mph": 0,
         "wind_dir": "",
         "shortForecast": "Cloudy",
-        "precip_prob": 3
+        "precip_prob": 12
       },
       {
         "t": "2026-01-21T07:00:00-08:00",
@@ -160,7 +144,7 @@
         "wind_mph": 1,
         "wind_dir": "NE",
         "shortForecast": "Cloudy",
-        "precip_prob": 3
+        "precip_prob": 12
       },
       {
         "t": "2026-01-21T08:00:00-08:00",
@@ -168,7 +152,7 @@
         "wind_mph": 1,
         "wind_dir": "NNE",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 3
+        "precip_prob": 12
       },
       {
         "t": "2026-01-21T09:00:00-08:00",
@@ -176,7 +160,7 @@
         "wind_mph": 1,
         "wind_dir": "ENE",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 3
+        "precip_prob": 12
       },
       {
         "t": "2026-01-21T10:00:00-08:00",
@@ -184,7 +168,7 @@
         "wind_mph": 1,
         "wind_dir": "SSE",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 5
+        "precip_prob": 18
       },
       {
         "t": "2026-01-21T11:00:00-08:00",
@@ -192,7 +176,7 @@
         "wind_mph": 1,
         "wind_dir": "S",
         "shortForecast": "Cloudy",
-        "precip_prob": 5
+        "precip_prob": 18
       },
       {
         "t": "2026-01-21T12:00:00-08:00",
@@ -200,7 +184,7 @@
         "wind_mph": 2,
         "wind_dir": "SSW",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 5
+        "precip_prob": 18
       },
       {
         "t": "2026-01-21T13:00:00-08:00",
@@ -208,7 +192,7 @@
         "wind_mph": 3,
         "wind_dir": "SW",
         "shortForecast": "Cloudy",
-        "precip_prob": 5
+        "precip_prob": 18
       },
       {
         "t": "2026-01-21T14:00:00-08:00",
@@ -216,7 +200,7 @@
         "wind_mph": 5,
         "wind_dir": "SSW",
         "shortForecast": "Cloudy",
-        "precip_prob": 5
+        "precip_prob": 18
       },
       {
         "t": "2026-01-21T15:00:00-08:00",
@@ -224,7 +208,7 @@
         "wind_mph": 5,
         "wind_dir": "WSW",
         "shortForecast": "Cloudy",
-        "precip_prob": 5
+        "precip_prob": 18
       },
       {
         "t": "2026-01-21T16:00:00-08:00",
@@ -232,20 +216,29 @@
         "wind_mph": 3,
         "wind_dir": "SW",
         "shortForecast": "Slight Chance Light Rain",
-        "precip_prob": 17
+        "precip_prob": 27
+      },
+      {
+        "t": "2026-01-21T17:00:00-08:00",
+        "temp_f": 57,
+        "wind_mph": 2,
+        "wind_dir": "SW",
+        "shortForecast": "Slight Chance Light Rain",
+        "precip_prob": 27
+      },
+      {
+        "t": "2026-01-21T18:00:00-08:00",
+        "temp_f": 56,
+        "wind_mph": 1,
+        "wind_dir": "WSW",
+        "shortForecast": "Slight Chance Light Rain",
+        "precip_prob": 27
       }
     ],
     "daily": [
       {
-        "name": "This Afternoon",
-        "t_start": "2026-01-20T15:00:00-08:00",
-        "t_end": "2026-01-20T18:00:00-08:00",
-        "temp_f": 63,
-        "text": "Mostly cloudy. High near 63, with temperatures falling to around 61 in the afternoon. West northwest wind around 2 mph."
-      },
-      {
         "name": "Tonight",
-        "t_start": "2026-01-20T18:00:00-08:00",
+        "t_start": "2026-01-20T19:00:00-08:00",
         "t_end": "2026-01-21T06:00:00-08:00",
         "temp_f": 53,
         "text": "Mostly cloudy, with a low around 53. North northeast wind around 1 mph."
@@ -255,14 +248,14 @@
         "t_start": "2026-01-21T06:00:00-08:00",
         "t_end": "2026-01-21T18:00:00-08:00",
         "temp_f": 58,
-        "text": "A slight chance of rain after 4pm. Cloudy, with a high near 58. South wind 0 to 5 mph. Chance of precipitation is 20%."
+        "text": "A slight chance of rain after 4pm. Cloudy, with a high near 58. South wind 0 to 5 mph. Chance of precipitation is 30%."
       },
       {
         "name": "Wednesday Night",
         "t_start": "2026-01-21T18:00:00-08:00",
         "t_end": "2026-01-22T06:00:00-08:00",
         "temp_f": 51,
-        "text": "A slight chance of rain before 4am. Mostly cloudy, with a low around 51. Northwest wind around 1 mph. Chance of precipitation is 20%."
+        "text": "A slight chance of rain before 4am. Mostly cloudy, with a low around 51. Northwest wind around 1 mph. Chance of precipitation is 30%."
       },
       {
         "name": "Thursday",
@@ -276,7 +269,7 @@
         "t_start": "2026-01-22T18:00:00-08:00",
         "t_end": "2026-01-23T06:00:00-08:00",
         "temp_f": 50,
-        "text": "Mostly cloudy, with a low around 50."
+        "text": "Mostly cloudy, with a low around 50. Northwest wind 0 to 6 mph."
       },
       {
         "name": "Friday",
@@ -333,6 +326,13 @@
         "t_end": "2026-01-27T06:00:00-08:00",
         "temp_f": 48,
         "text": "Partly cloudy, with a low around 48."
+      },
+      {
+        "name": "Tuesday",
+        "t_start": "2026-01-27T06:00:00-08:00",
+        "t_end": "2026-01-27T18:00:00-08:00",
+        "temp_f": 60,
+        "text": "Partly sunny, with a high near 60."
       }
     ]
   }
