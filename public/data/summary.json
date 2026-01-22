@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-22T17:58:35.658Z",
+  "generated_at": "2026-01-22T18:41:20.669Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-22T17:58:35.658Z",
+    "generated_at": "2026-01-22T18:41:20.066Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-22T17:58:34.278Z",
+    "generated_at": "2026-01-22T18:41:19.047Z",
     "latest": {
-      "t": "2026-01-22T17:00:00.000Z",
+      "t": "2026-01-22T18:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.27,
-      "hs_ft": 4.1666668,
-      "tp_s": 12.5,
-      "ta_s": 9.464207,
-      "tz_s": 8.492937,
-      "dp_deg_true": 281.59375,
+      "hs_m": 1.38,
+      "hs_ft": 4.5275592,
+      "tp_s": 11.764706,
+      "ta_s": 9.656816,
+      "tz_s": 8.70479,
+      "dp_deg_true": 274.5625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-22T17:58:35.600Z",
+    "generated_at": "2026-01-22T18:41:20.668Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-22T09:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 1,
-        "wind_dir": "ENE",
-        "shortForecast": "Areas Of Fog",
-        "precip_prob": 3
-      },
       {
         "t": "2026-01-22T10:00:00-08:00",
         "temp_f": 53,
@@ -233,12 +225,20 @@
         "wind_dir": "",
         "shortForecast": "Areas Of Fog",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-23T09:00:00-08:00",
+        "temp_f": 49,
+        "wind_mph": 0,
+        "wind_dir": "",
+        "shortForecast": "Widespread Fog",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-01-22T09:00:00-08:00",
+        "t_start": "2026-01-22T10:00:00-08:00",
         "t_end": "2026-01-22T18:00:00-08:00",
         "temp_f": 59,
         "text": "Areas of fog before 1pm. Mostly sunny, with a high near 59. West southwest wind 1 to 6 mph."
