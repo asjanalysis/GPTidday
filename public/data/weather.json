@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-21T23:52:35.649Z",
+  "generated_at": "2026-01-22T00:56:29.276Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-21T15:00:00-08:00",
-      "temp_f": 56,
-      "wind_mph": 5,
-      "wind_dir": "SW",
-      "shortForecast": "Cloudy",
-      "precip_prob": 3
-    },
     {
       "t": "2026-01-21T16:00:00-08:00",
       "temp_f": 56,
@@ -198,15 +190,23 @@
       "wind_dir": "WSW",
       "shortForecast": "Partly Sunny",
       "precip_prob": 4
+    },
+    {
+      "t": "2026-01-22T15:00:00-08:00",
+      "temp_f": 57,
+      "wind_mph": 7,
+      "wind_dir": "WSW",
+      "shortForecast": "Mostly Sunny",
+      "precip_prob": 4
     }
   ],
   "daily": [
     {
       "name": "This Afternoon",
-      "t_start": "2026-01-21T15:00:00-08:00",
+      "t_start": "2026-01-21T16:00:00-08:00",
       "t_end": "2026-01-21T18:00:00-08:00",
       "temp_f": 59,
-      "text": "Scattered rain showers between 4pm and 5pm. Cloudy. High near 59, with temperatures falling to around 57 in the afternoon. West southwest wind around 5 mph."
+      "text": "Scattered rain showers before 5pm. Cloudy. High near 59, with temperatures falling to around 57 in the afternoon. West southwest wind around 3 mph."
     },
     {
       "name": "Tonight",
