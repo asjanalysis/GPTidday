@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-22T11:59:56.302Z",
+  "generated_at": "2026-01-22T13:09:03.339Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-22T03:00:00-08:00",
-      "temp_f": 52,
-      "wind_mph": 1,
-      "wind_dir": "NNW",
-      "shortForecast": "Patchy Fog",
-      "precip_prob": 7
-    },
-    {
-      "t": "2026-01-22T04:00:00-08:00",
-      "temp_f": 52,
-      "wind_mph": 1,
-      "wind_dir": "NNW",
-      "shortForecast": "Patchy Fog",
-      "precip_prob": 3
-    },
     {
       "t": "2026-01-22T05:00:00-08:00",
       "temp_f": 51,
@@ -198,6 +182,22 @@
       "wind_dir": "N",
       "shortForecast": "Areas Of Fog",
       "precip_prob": 3
+    },
+    {
+      "t": "2026-01-23T03:00:00-08:00",
+      "temp_f": 50,
+      "wind_mph": 1,
+      "wind_dir": "NE",
+      "shortForecast": "Areas Of Fog",
+      "precip_prob": 3
+    },
+    {
+      "t": "2026-01-23T04:00:00-08:00",
+      "temp_f": 49,
+      "wind_mph": 1,
+      "wind_dir": "NE",
+      "shortForecast": "Areas Of Fog",
+      "precip_prob": 0
     }
   ],
   "daily": [

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-22T11:59:56.303Z",
+  "generated_at": "2026-01-22T13:09:03.340Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-22T11:59:55.310Z",
+    "generated_at": "2026-01-22T13:09:02.329Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-22T11:59:54.113Z",
+    "generated_at": "2026-01-22T13:09:00.535Z",
     "latest": {
-      "t": "2026-01-22T11:00:00.000Z",
+      "t": "2026-01-22T12:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.47,
-      "hs_ft": 4.8228348,
+      "hs_m": 1.53,
+      "hs_ft": 5.0196852,
       "tp_s": 10.526316,
-      "ta_s": 9.716881,
-      "tz_s": 8.58114,
-      "dp_deg_true": 274.5625,
+      "ta_s": 9.100736,
+      "tz_s": 7.6602325,
+      "dp_deg_true": 275.96875,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,25 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-22T11:59:56.302Z",
+    "generated_at": "2026-01-22T13:09:03.339Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-22T03:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 1,
-        "wind_dir": "NNW",
-        "shortForecast": "Patchy Fog",
-        "precip_prob": 7
-      },
-      {
-        "t": "2026-01-22T04:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 1,
-        "wind_dir": "NNW",
-        "shortForecast": "Patchy Fog",
-        "precip_prob": 3
-      },
       {
         "t": "2026-01-22T05:00:00-08:00",
         "temp_f": 51,
@@ -233,6 +217,22 @@
         "wind_dir": "N",
         "shortForecast": "Areas Of Fog",
         "precip_prob": 3
+      },
+      {
+        "t": "2026-01-23T03:00:00-08:00",
+        "temp_f": 50,
+        "wind_mph": 1,
+        "wind_dir": "NE",
+        "shortForecast": "Areas Of Fog",
+        "precip_prob": 3
+      },
+      {
+        "t": "2026-01-23T04:00:00-08:00",
+        "temp_f": 49,
+        "wind_mph": 1,
+        "wind_dir": "NE",
+        "shortForecast": "Areas Of Fog",
+        "precip_prob": 0
       }
     ],
     "daily": [
