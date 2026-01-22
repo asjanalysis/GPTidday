@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-22T20:55:09.373Z",
+  "generated_at": "2026-01-22T21:19:31.450Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-22T11:00:00-08:00",
-      "temp_f": 55,
-      "wind_mph": 1,
-      "wind_dir": "SW",
-      "shortForecast": "Patchy Fog",
-      "precip_prob": 4
-    },
-    {
-      "t": "2026-01-22T12:00:00-08:00",
-      "temp_f": 56,
-      "wind_mph": 3,
-      "wind_dir": "SSW",
-      "shortForecast": "Patchy Fog",
-      "precip_prob": 4
-    },
     {
       "t": "2026-01-22T13:00:00-08:00",
       "temp_f": 57,
@@ -198,15 +182,31 @@
       "wind_dir": "E",
       "shortForecast": "Areas Of Fog",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-23T11:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 1,
+      "wind_dir": "E",
+      "shortForecast": "Areas Of Fog",
+      "precip_prob": 0
+    },
+    {
+      "t": "2026-01-23T12:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 1,
+      "wind_dir": "E",
+      "shortForecast": "Areas Of Fog",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
-      "name": "Today",
-      "t_start": "2026-01-22T09:00:00-08:00",
+      "name": "This Afternoon",
+      "t_start": "2026-01-22T13:00:00-08:00",
       "t_end": "2026-01-22T18:00:00-08:00",
       "temp_f": 59,
-      "text": "Areas of fog before 1pm. Mostly sunny, with a high near 59. West southwest wind 1 to 6 mph."
+      "text": "Mostly sunny, with a high near 59. West wind around 6 mph."
     },
     {
       "name": "Tonight",
