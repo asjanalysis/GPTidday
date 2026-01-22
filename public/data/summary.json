@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-22T03:03:56.473Z",
+  "generated_at": "2026-01-22T04:15:20.721Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-22T03:03:56.036Z",
+    "generated_at": "2026-01-22T04:15:20.107Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-22T03:03:54.661Z",
+    "generated_at": "2026-01-22T04:15:18.314Z",
     "latest": {
-      "t": "2026-01-22T02:30:00.000Z",
+      "t": "2026-01-22T03:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.65,
-      "hs_ft": 5.413386,
-      "tp_s": 11.764706,
-      "ta_s": 10.486264,
-      "tz_s": 9.599061,
-      "dp_deg_true": 277.375,
+      "hs_m": 1.89,
+      "hs_ft": 6.2007876,
+      "tp_s": 12.5,
+      "ta_s": 10.665797,
+      "tz_s": 9.732194,
+      "dp_deg_true": 273.15625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-22T03:03:56.472Z",
+    "generated_at": "2026-01-22T04:15:20.721Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-21T19:00:00-08:00",
-        "temp_f": 56,
-        "wind_mph": 0,
-        "wind_dir": "",
-        "shortForecast": "Scattered Rain Showers",
-        "precip_prob": 11
-      },
       {
         "t": "2026-01-21T20:00:00-08:00",
         "temp_f": 55,
@@ -233,15 +225,23 @@
         "wind_dir": "W",
         "shortForecast": "Partly Cloudy",
         "precip_prob": 2
+      },
+      {
+        "t": "2026-01-22T19:00:00-08:00",
+        "temp_f": 56,
+        "wind_mph": 3,
+        "wind_dir": "NNW",
+        "shortForecast": "Partly Cloudy",
+        "precip_prob": 2
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-01-21T19:00:00-08:00",
+        "t_start": "2026-01-21T20:00:00-08:00",
         "t_end": "2026-01-22T06:00:00-08:00",
         "temp_f": 50,
-        "text": "Scattered rain showers before 9pm, then a slight chance of rain between 10pm and 4am. Mostly cloudy. Low around 50, with temperatures rising to around 52 overnight. Northwest wind around 1 mph."
+        "text": "Scattered rain showers before 9pm, then a slight chance of rain between 10pm and 4am. Mostly cloudy. Low around 50, with temperatures rising to around 52 overnight. North northwest wind around 1 mph."
       },
       {
         "name": "Thursday",
