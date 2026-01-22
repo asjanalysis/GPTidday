@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-22T04:59:31.630Z",
+  "generated_at": "2026-01-22T05:36:30.924Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-21T20:00:00-08:00",
-      "temp_f": 55,
-      "wind_mph": 1,
-      "wind_dir": "N",
-      "shortForecast": "Scattered Rain Showers",
-      "precip_prob": 12
-    },
     {
       "t": "2026-01-21T21:00:00-08:00",
       "temp_f": 55,
@@ -198,15 +190,23 @@
       "wind_dir": "NNW",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 2
+    },
+    {
+      "t": "2026-01-22T20:00:00-08:00",
+      "temp_f": 55,
+      "wind_mph": 2,
+      "wind_dir": "NNW",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 2
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-21T20:00:00-08:00",
+      "t_start": "2026-01-21T21:00:00-08:00",
       "t_end": "2026-01-22T06:00:00-08:00",
       "temp_f": 50,
-      "text": "Scattered rain showers before 9pm, then a slight chance of rain between 10pm and 4am. Mostly cloudy. Low around 50, with temperatures rising to around 52 overnight. North northwest wind around 1 mph."
+      "text": "A slight chance of rain between 10pm and 4am. Mostly cloudy. Low around 50, with temperatures rising to around 52 overnight. North northwest wind around 1 mph."
     },
     {
       "name": "Thursday",
