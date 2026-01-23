@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-23T06:48:33.509Z",
+  "generated_at": "2026-01-23T07:14:44.693Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-22T22:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 1,
-      "wind_dir": "NE",
-      "shortForecast": "Patchy Fog",
-      "precip_prob": 1
-    },
     {
       "t": "2026-01-22T23:00:00-08:00",
       "temp_f": 53,
@@ -198,15 +190,23 @@
       "wind_dir": "N",
       "shortForecast": "Patchy Fog",
       "precip_prob": 2
+    },
+    {
+      "t": "2026-01-23T22:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 1,
+      "wind_dir": "NNE",
+      "shortForecast": "Patchy Fog",
+      "precip_prob": 2
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-22T19:00:00-08:00",
+      "t_start": "2026-01-22T23:00:00-08:00",
       "t_end": "2026-01-23T06:00:00-08:00",
       "temp_f": 48,
-      "text": "Patchy fog after 10pm. Partly cloudy, with a low around 48. North northeast wind around 1 mph."
+      "text": "Patchy fog after 2am. Mostly cloudy, with a low around 48. North wind around 1 mph."
     },
     {
       "name": "Friday",
