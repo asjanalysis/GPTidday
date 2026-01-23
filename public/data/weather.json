@@ -4,9 +4,17 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-23T19:00:24.922Z",
+  "generated_at": "2026-01-23T19:30:39.291Z",
   "current": null,
   "hourly": [
+    {
+      "t": "2026-01-23T10:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 2,
+      "wind_dir": "SE",
+      "shortForecast": "Widespread Fog",
+      "precip_prob": 0
+    },
     {
       "t": "2026-01-23T11:00:00-08:00",
       "temp_f": 51,
@@ -190,23 +198,15 @@
       "wind_dir": "E",
       "shortForecast": "Patchy Fog",
       "precip_prob": 0
-    },
-    {
-      "t": "2026-01-24T10:00:00-08:00",
-      "temp_f": 50,
-      "wind_mph": 2,
-      "wind_dir": "SSE",
-      "shortForecast": "Sunny",
-      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-23T11:00:00-08:00",
+      "t_start": "2026-01-23T06:00:00-08:00",
       "t_end": "2026-01-23T18:00:00-08:00",
       "temp_f": 56,
-      "text": "Areas of fog before 4pm. Mostly sunny, with a high near 56. South southwest wind 2 to 6 mph."
+      "text": "Widespread fog before 4pm. Partly sunny, with a high near 56. Southeast wind 2 to 6 mph."
     },
     {
       "name": "Tonight",
