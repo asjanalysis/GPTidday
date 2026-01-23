@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-23T18:31:44.336Z",
+  "generated_at": "2026-01-23T19:00:24.923Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-23T18:31:42.938Z",
+    "generated_at": "2026-01-23T19:00:16.350Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-23T18:31:41.440Z",
+    "generated_at": "2026-01-23T19:00:14.807Z",
     "latest": {
       "t": "2026-01-23T18:00:00.000Z",
       "station_id": "156",
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-23T18:31:44.336Z",
+    "generated_at": "2026-01-23T19:00:24.922Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-23T10:00:00-08:00",
-        "temp_f": 51,
-        "wind_mph": 2,
-        "wind_dir": "SE",
-        "shortForecast": "Widespread Fog",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-23T11:00:00-08:00",
         "temp_f": 51,
@@ -233,15 +225,23 @@
         "wind_dir": "E",
         "shortForecast": "Patchy Fog",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-24T10:00:00-08:00",
+        "temp_f": 50,
+        "wind_mph": 2,
+        "wind_dir": "SSE",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-01-23T06:00:00-08:00",
+        "t_start": "2026-01-23T11:00:00-08:00",
         "t_end": "2026-01-23T18:00:00-08:00",
         "temp_f": 56,
-        "text": "Widespread fog before 4pm. Partly sunny, with a high near 56. Southeast wind 2 to 6 mph."
+        "text": "Areas of fog before 4pm. Mostly sunny, with a high near 56. South southwest wind 2 to 6 mph."
       },
       {
         "name": "Tonight",
