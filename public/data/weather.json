@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-23T08:49:50.172Z",
+  "generated_at": "2026-01-23T09:16:42.464Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-23T00:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 2,
-      "wind_dir": "NE",
-      "shortForecast": "Partly Cloudy",
-      "precip_prob": 1
-    },
     {
       "t": "2026-01-23T01:00:00-08:00",
       "temp_f": 53,
@@ -198,12 +190,20 @@
       "wind_dir": "E",
       "shortForecast": "Patchy Fog",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-24T00:00:00-08:00",
+      "temp_f": 50,
+      "wind_mph": 2,
+      "wind_dir": "E",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-01-23T00:00:00-08:00",
+      "t_start": "2026-01-23T01:00:00-08:00",
       "t_end": "2026-01-23T06:00:00-08:00",
       "temp_f": 48,
       "text": "Patchy fog after 2am. Mostly cloudy, with a low around 48. East wind around 2 mph."

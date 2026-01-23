@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-23T08:49:50.173Z",
+  "generated_at": "2026-01-23T09:16:42.465Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-23T08:49:49.106Z",
+    "generated_at": "2026-01-23T09:16:42.053Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-23T08:49:47.908Z",
+    "generated_at": "2026-01-23T09:16:40.467Z",
     "latest": {
-      "t": "2026-01-23T08:00:00.000Z",
+      "t": "2026-01-23T08:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.39,
-      "hs_ft": 4.560367599999999,
+      "hs_m": 1.36,
+      "hs_ft": 4.4619424,
       "tp_s": 11.111111,
-      "ta_s": 6.9798145,
-      "tz_s": 6.046947,
-      "dp_deg_true": 273.15625,
+      "ta_s": 6.766662,
+      "tz_s": 5.906027,
+      "dp_deg_true": 283,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-23T08:49:50.172Z",
+    "generated_at": "2026-01-23T09:16:42.464Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-23T00:00:00-08:00",
-        "temp_f": 53,
-        "wind_mph": 2,
-        "wind_dir": "NE",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 1
-      },
       {
         "t": "2026-01-23T01:00:00-08:00",
         "temp_f": 53,
@@ -233,12 +225,20 @@
         "wind_dir": "E",
         "shortForecast": "Patchy Fog",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-24T00:00:00-08:00",
+        "temp_f": 50,
+        "wind_mph": 2,
+        "wind_dir": "E",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-01-23T00:00:00-08:00",
+        "t_start": "2026-01-23T01:00:00-08:00",
         "t_end": "2026-01-23T06:00:00-08:00",
         "temp_f": 48,
         "text": "Patchy fog after 2am. Mostly cloudy, with a low around 48. East wind around 2 mph."
