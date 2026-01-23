@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-23T17:43:43.084Z",
+  "generated_at": "2026-01-23T17:56:00.817Z",
   "current": null,
   "hourly": [
     {
@@ -203,10 +203,10 @@
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-23T06:00:00-08:00",
+      "t_start": "2026-01-23T09:00:00-08:00",
       "t_end": "2026-01-23T18:00:00-08:00",
       "temp_f": 56,
-      "text": "Widespread fog before 4pm. Partly sunny, with a high near 56. Southeast wind 2 to 6 mph."
+      "text": "Widespread fog before 4pm. Partly sunny, with a high near 56. South wind 2 to 6 mph."
     },
     {
       "name": "Tonight",
