@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-24T05:41:00.832Z",
+  "generated_at": "2026-01-24T05:52:29.007Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-24T05:40:59.709Z",
+    "generated_at": "2026-01-24T05:52:29.006Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-24T05:40:58.421Z",
+    "generated_at": "2026-01-24T05:52:27.209Z",
     "latest": {
       "t": "2026-01-24T05:00:00.000Z",
       "station_id": "156",
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-24T05:41:00.831Z",
+    "generated_at": "2026-01-24T05:52:28.672Z",
     "current": null,
     "hourly": [
       {
@@ -238,10 +238,10 @@
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-01-23T21:00:00-08:00",
+        "t_start": "2026-01-23T19:00:00-08:00",
         "t_end": "2026-01-24T06:00:00-08:00",
         "temp_f": 46,
-        "text": "Partly cloudy, with a low around 46. Northeast wind around 5 mph."
+        "text": "Partly cloudy, with a low around 46. North northeast wind around 5 mph."
       },
       {
         "name": "Saturday",
