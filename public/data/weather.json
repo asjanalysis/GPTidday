@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-24T03:52:50.416Z",
+  "generated_at": "2026-01-24T04:27:57.740Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-23T19:00:00-08:00",
-      "temp_f": 54,
-      "wind_mph": 3,
-      "wind_dir": "W",
-      "shortForecast": "Mostly Clear",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-23T20:00:00-08:00",
       "temp_f": 53,
@@ -198,15 +190,23 @@
       "wind_dir": "NNE",
       "shortForecast": "Clear",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-24T19:00:00-08:00",
+      "temp_f": 56,
+      "wind_mph": 7,
+      "wind_dir": "NNE",
+      "shortForecast": "Clear",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-23T19:00:00-08:00",
+      "t_start": "2026-01-23T20:00:00-08:00",
       "t_end": "2026-01-24T06:00:00-08:00",
       "temp_f": 46,
-      "text": "Partly cloudy, with a low around 46. North northeast wind around 5 mph."
+      "text": "Partly cloudy, with a low around 46. Northeast wind around 5 mph."
     },
     {
       "name": "Saturday",
