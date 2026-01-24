@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-24T16:20:49.769Z",
+  "generated_at": "2026-01-24T16:44:30.313Z",
   "current": null,
   "hourly": [
     {
@@ -203,10 +203,10 @@
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-24T08:00:00-08:00",
+      "t_start": "2026-01-24T06:00:00-08:00",
       "t_end": "2026-01-24T18:00:00-08:00",
       "temp_f": 59,
-      "text": "Sunny, with a high near 59. Southwest wind 2 to 9 mph."
+      "text": "Patchy fog between 7am and 8am. Sunny, with a high near 59. Southwest wind 2 to 9 mph."
     },
     {
       "name": "Tonight",
