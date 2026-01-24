@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-24T19:58:52.908Z",
+  "generated_at": "2026-01-24T20:28:43.928Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-24T19:58:52.424Z",
+    "generated_at": "2026-01-24T20:28:43.846Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,16 +18,16 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-24T19:58:50.912Z",
+    "generated_at": "2026-01-24T20:28:42.055Z",
     "latest": {
-      "t": "2026-01-24T19:00:00.000Z",
+      "t": "2026-01-24T19:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.52,
-      "hs_ft": 4.9868768,
+      "hs_m": 1.49,
+      "hs_ft": 4.8884516,
       "tp_s": 14.285714,
-      "ta_s": 7.8939724,
-      "tz_s": 6.8960757,
+      "ta_s": 8.139568,
+      "tz_s": 7.173163,
       "dp_deg_true": 275.96875,
       "lat": 36.759167,
       "lon": -121.95028
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-24T19:58:52.907Z",
+    "generated_at": "2026-01-24T20:28:43.927Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-24T11:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 3,
-        "wind_dir": "S",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-24T12:00:00-08:00",
         "temp_f": 54,
@@ -233,12 +225,20 @@
         "wind_dir": "E",
         "shortForecast": "Partly Sunny",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-25T11:00:00-08:00",
+        "temp_f": 55,
+        "wind_mph": 5,
+        "wind_dir": "E",
+        "shortForecast": "Partly Sunny",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
-        "name": "Today",
-        "t_start": "2026-01-24T11:00:00-08:00",
+        "name": "This Afternoon",
+        "t_start": "2026-01-24T12:00:00-08:00",
         "t_end": "2026-01-24T18:00:00-08:00",
         "temp_f": 59,
         "text": "Sunny, with a high near 59. West southwest wind 2 to 8 mph."
