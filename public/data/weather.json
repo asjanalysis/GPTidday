@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-25T18:38:21.499Z",
+  "generated_at": "2026-01-25T18:56:53.653Z",
   "current": null,
   "hourly": [
     {
@@ -203,7 +203,7 @@
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-25T10:00:00-08:00",
+      "t_start": "2026-01-25T08:00:00-08:00",
       "t_end": "2026-01-25T18:00:00-08:00",
       "temp_f": 59,
       "text": "Mostly cloudy, with a high near 59. South wind 1 to 6 mph."
