@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-25T17:49:54.016Z",
+  "generated_at": "2026-01-25T17:58:59.204Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-25T17:49:54.015Z",
+    "generated_at": "2026-01-25T17:58:58.238Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-25T17:49:52.280Z",
+    "generated_at": "2026-01-25T17:58:56.951Z",
     "latest": {
       "t": "2026-01-25T17:00:00.000Z",
       "station_id": "156",
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-25T17:49:53.748Z",
+    "generated_at": "2026-01-25T17:58:59.203Z",
     "current": null,
     "hourly": [
       {
@@ -238,10 +238,10 @@
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-01-25T09:00:00-08:00",
+        "t_start": "2026-01-25T06:00:00-08:00",
         "t_end": "2026-01-25T18:00:00-08:00",
         "temp_f": 59,
-        "text": "Mostly cloudy, with a high near 59. South wind 1 to 6 mph."
+        "text": "Partly sunny, with a high near 59. South southeast wind 1 to 6 mph."
       },
       {
         "name": "Tonight",
