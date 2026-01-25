@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-25T20:37:57.566Z",
+  "generated_at": "2026-01-25T20:52:23.241Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-25T11:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 7,
-      "wind_dir": "ESE",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-25T12:00:00-08:00",
       "temp_f": 55,
@@ -198,15 +190,23 @@
       "wind_dir": "S",
       "shortForecast": "Sunny",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-26T11:00:00-08:00",
+      "temp_f": 55,
+      "wind_mph": 5,
+      "wind_dir": "SW",
+      "shortForecast": "Sunny",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
-      "name": "Today",
-      "t_start": "2026-01-25T11:00:00-08:00",
+      "name": "This Afternoon",
+      "t_start": "2026-01-25T12:00:00-08:00",
       "t_end": "2026-01-25T18:00:00-08:00",
       "temp_f": 59,
-      "text": "Mostly cloudy, with a high near 59. South wind 1 to 7 mph."
+      "text": "Mostly cloudy, with a high near 59. South southwest wind 1 to 5 mph."
     },
     {
       "name": "Tonight",
