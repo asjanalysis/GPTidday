@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-25T08:15:23.593Z",
+  "generated_at": "2026-01-25T08:44:19.018Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-25T08:15:22.624Z",
+    "generated_at": "2026-01-25T08:44:18.083Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-25T08:15:21.444Z",
+    "generated_at": "2026-01-25T08:44:16.735Z",
     "latest": {
-      "t": "2026-01-25T07:30:00.000Z",
+      "t": "2026-01-25T08:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.48,
-      "hs_ft": 4.8556432,
+      "hs_m": 1.55,
+      "hs_ft": 5.085302,
       "tp_s": 14.285714,
-      "ta_s": 8.048101,
-      "tz_s": 6.624979,
-      "dp_deg_true": 271.75,
+      "ta_s": 8.060421,
+      "tz_s": 6.5939827,
+      "dp_deg_true": 274.5625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-25T08:15:23.592Z",
+    "generated_at": "2026-01-25T08:44:19.017Z",
     "current": null,
     "hourly": [
       {
@@ -237,11 +237,11 @@
     ],
     "daily": [
       {
-        "name": "Tonight",
-        "t_start": "2026-01-24T18:00:00-08:00",
+        "name": "Overnight",
+        "t_start": "2026-01-25T00:00:00-08:00",
         "t_end": "2026-01-25T06:00:00-08:00",
         "temp_f": 46,
-        "text": "Mostly clear, with a low around 46. North northeast wind 2 to 9 mph."
+        "text": "Mostly clear, with a low around 46. Northeast wind around 6 mph."
       },
       {
         "name": "Sunday",
