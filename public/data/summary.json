@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-25T21:53:32.975Z",
+  "generated_at": "2026-01-25T22:13:15.632Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-25T21:53:32.975Z",
+    "generated_at": "2026-01-25T22:13:14.993Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-25T21:53:31.406Z",
+    "generated_at": "2026-01-25T22:13:13.121Z",
     "latest": {
-      "t": "2026-01-25T21:00:00.000Z",
+      "t": "2026-01-25T21:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.07,
-      "hs_ft": 3.5104988,
-      "tp_s": 11.764706,
-      "ta_s": 7.93432,
-      "tz_s": 6.421947,
-      "dp_deg_true": 278.78125,
+      "hs_m": 1.13,
+      "hs_ft": 3.7073491999999995,
+      "tp_s": 13.333333,
+      "ta_s": 9.034694,
+      "tz_s": 7.5338535,
+      "dp_deg_true": 275.96875,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-25T21:53:32.662Z",
+    "generated_at": "2026-01-25T22:13:15.631Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-25T13:00:00-08:00",
-        "temp_f": 56,
-        "wind_mph": 3,
-        "wind_dir": "S",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-25T14:00:00-08:00",
         "temp_f": 57,
@@ -233,15 +225,23 @@
         "wind_dir": "SW",
         "shortForecast": "Sunny",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-26T13:00:00-08:00",
+        "temp_f": 57,
+        "wind_mph": 9,
+        "wind_dir": "WSW",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "This Afternoon",
-        "t_start": "2026-01-25T13:00:00-08:00",
+        "t_start": "2026-01-25T14:00:00-08:00",
         "t_end": "2026-01-25T18:00:00-08:00",
         "temp_f": 59,
-        "text": "Mostly cloudy, with a high near 59. South southwest wind 1 to 5 mph."
+        "text": "Mostly cloudy, with a high near 59. Southwest wind 1 to 5 mph."
       },
       {
         "name": "Tonight",
