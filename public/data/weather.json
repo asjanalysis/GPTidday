@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-26T06:57:46.911Z",
+  "generated_at": "2026-01-26T07:31:01.679Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-25T22:00:00-08:00",
-      "temp_f": 54,
-      "wind_mph": 2,
-      "wind_dir": "ENE",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 1
-    },
     {
       "t": "2026-01-25T23:00:00-08:00",
       "temp_f": 53,
@@ -198,12 +190,20 @@
       "wind_dir": "NE",
       "shortForecast": "Mostly Clear",
       "precip_prob": 1
+    },
+    {
+      "t": "2026-01-26T22:00:00-08:00",
+      "temp_f": 53,
+      "wind_mph": 2,
+      "wind_dir": "E",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 1
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-25T22:00:00-08:00",
+      "t_start": "2026-01-25T21:00:00-08:00",
       "t_end": "2026-01-26T06:00:00-08:00",
       "temp_f": 49,
       "text": "Mostly cloudy. Low around 49, with temperatures rising to around 51 overnight. East northeast wind around 5 mph."
