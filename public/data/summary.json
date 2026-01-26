@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-26T11:40:55.810Z",
+  "generated_at": "2026-01-26T11:52:28.749Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-26T11:40:53.621Z",
+    "generated_at": "2026-01-26T11:52:28.735Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-26T11:40:52.473Z",
+    "generated_at": "2026-01-26T11:52:27.464Z",
     "latest": {
       "t": "2026-01-26T11:00:00.000Z",
       "station_id": "156",
@@ -39,9 +39,17 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-26T11:40:55.809Z",
+    "generated_at": "2026-01-26T11:52:28.748Z",
     "current": null,
     "hourly": [
+      {
+        "t": "2026-01-26T02:00:00-08:00",
+        "temp_f": 51,
+        "wind_mph": 3,
+        "wind_dir": "ENE",
+        "shortForecast": "Partly Cloudy",
+        "precip_prob": 1
+      },
       {
         "t": "2026-01-26T03:00:00-08:00",
         "temp_f": 51,
@@ -225,23 +233,15 @@
         "wind_dir": "E",
         "shortForecast": "Partly Cloudy",
         "precip_prob": 1
-      },
-      {
-        "t": "2026-01-27T02:00:00-08:00",
-        "temp_f": 49,
-        "wind_mph": 2,
-        "wind_dir": "E",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 1
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-01-26T03:00:00-08:00",
+        "t_start": "2026-01-26T02:00:00-08:00",
         "t_end": "2026-01-26T06:00:00-08:00",
         "temp_f": 49,
-        "text": "Partly cloudy. Low around 49, with temperatures rising to around 51 overnight. Northeast wind around 5 mph."
+        "text": "Partly cloudy. Low around 49, with temperatures rising to around 51 overnight. East northeast wind around 5 mph."
       },
       {
         "name": "Monday",
