@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-27T15:05:02.552Z",
+  "generated_at": "2026-01-27T15:41:10.930Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-27T15:05:02.551Z",
+    "generated_at": "2026-01-27T15:41:09.109Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-27T15:05:01.520Z",
+    "generated_at": "2026-01-27T15:41:07.268Z",
     "latest": {
-      "t": "2026-01-27T14:30:00.000Z",
+      "t": "2026-01-27T15:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 0.84,
-      "hs_ft": 2.7559055999999997,
-      "tp_s": 14.285714,
-      "ta_s": 5.872182,
-      "tz_s": 4.5421534,
-      "dp_deg_true": 277.375,
+      "hs_m": 0.94,
+      "hs_ft": 3.0839895999999998,
+      "tp_s": 13.333333,
+      "ta_s": 6.633908,
+      "tz_s": 5.1184487,
+      "dp_deg_true": 270.34375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-27T15:05:02.510Z",
+    "generated_at": "2026-01-27T15:41:10.930Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-27T06:00:00-08:00",
-        "temp_f": 49,
-        "wind_mph": 9,
-        "wind_dir": "E",
-        "shortForecast": "Mostly Sunny",
-        "precip_prob": 2
-      },
       {
         "t": "2026-01-27T07:00:00-08:00",
         "temp_f": 49,
@@ -233,12 +225,20 @@
         "wind_dir": "NNW",
         "shortForecast": "Patchy Fog",
         "precip_prob": 2
+      },
+      {
+        "t": "2026-01-28T06:00:00-08:00",
+        "temp_f": 53,
+        "wind_mph": 6,
+        "wind_dir": "N",
+        "shortForecast": "Patchy Fog",
+        "precip_prob": 2
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-01-27T06:00:00-08:00",
+        "t_start": "2026-01-27T07:00:00-08:00",
         "t_end": "2026-01-27T18:00:00-08:00",
         "temp_f": 59,
         "text": "A slight chance of rain after 4pm. Partly sunny, with a high near 59. South southeast wind 6 to 14 mph. Chance of precipitation is 20%."
