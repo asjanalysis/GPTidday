@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-27T13:26:27.303Z",
+  "generated_at": "2026-01-27T14:02:18.570Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-27T13:26:26.105Z",
+    "generated_at": "2026-01-27T14:02:15.182Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-27T13:26:24.456Z",
+    "generated_at": "2026-01-27T14:02:14.483Z",
     "latest": {
-      "t": "2026-01-27T12:30:00.000Z",
+      "t": "2026-01-27T13:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
       "hs_m": 0.84,
       "hs_ft": 2.7559055999999997,
-      "tp_s": 15.384616,
-      "ta_s": 6.9260736,
-      "tz_s": 5.1949143,
-      "dp_deg_true": 281.59375,
+      "tp_s": 14.285714,
+      "ta_s": 6.513956,
+      "tz_s": 4.9215355,
+      "dp_deg_true": 277.375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-27T13:26:27.302Z",
+    "generated_at": "2026-01-27T14:02:18.569Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-27T05:00:00-08:00",
-        "temp_f": 50,
-        "wind_mph": 8,
-        "wind_dir": "E",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 2
-      },
       {
         "t": "2026-01-27T06:00:00-08:00",
         "temp_f": 49,
@@ -233,25 +225,26 @@
         "wind_dir": "N",
         "shortForecast": "Patchy Fog",
         "precip_prob": 2
+      },
+      {
+        "t": "2026-01-28T05:00:00-08:00",
+        "temp_f": 53,
+        "wind_mph": 6,
+        "wind_dir": "NNW",
+        "shortForecast": "Patchy Fog",
+        "precip_prob": 2
       }
     ],
     "daily": [
       {
-        "name": "Overnight",
-        "t_start": "2026-01-27T05:00:00-08:00",
-        "t_end": "2026-01-27T06:00:00-08:00",
-        "temp_f": 48,
-        "text": "Mostly cloudy. Low around 48, with temperatures rising to around 50 overnight. East wind around 8 mph."
-      },
-      {
-        "name": "Tuesday",
+        "name": "Today",
         "t_start": "2026-01-27T06:00:00-08:00",
         "t_end": "2026-01-27T18:00:00-08:00",
         "temp_f": 59,
         "text": "A slight chance of rain after 4pm. Partly sunny, with a high near 59. South southeast wind 6 to 14 mph. Chance of precipitation is 20%."
       },
       {
-        "name": "Tuesday Night",
+        "name": "Tonight",
         "t_start": "2026-01-27T18:00:00-08:00",
         "t_end": "2026-01-28T06:00:00-08:00",
         "temp_f": 52,
@@ -262,7 +255,7 @@
         "t_start": "2026-01-28T06:00:00-08:00",
         "t_end": "2026-01-28T18:00:00-08:00",
         "temp_f": 61,
-        "text": "Patchy fog before 10am. Sunny, with a high near 61. North northwest wind 2 to 14 mph."
+        "text": "Patchy fog before 10am. Sunny. High near 61, with temperatures falling to around 59 in the afternoon. North northwest wind 2 to 14 mph."
       },
       {
         "name": "Wednesday Night",
@@ -276,7 +269,7 @@
         "t_start": "2026-01-29T06:00:00-08:00",
         "t_end": "2026-01-29T18:00:00-08:00",
         "temp_f": 63,
-        "text": "Sunny, with a high near 63."
+        "text": "Sunny, with a high near 63. North northeast wind around 5 mph."
       },
       {
         "name": "Thursday Night",
@@ -333,6 +326,13 @@
         "t_end": "2026-02-02T18:00:00-08:00",
         "temp_f": 61,
         "text": "Mostly sunny, with a high near 61."
+      },
+      {
+        "name": "Monday Night",
+        "t_start": "2026-02-02T18:00:00-08:00",
+        "t_end": "2026-02-03T06:00:00-08:00",
+        "temp_f": 50,
+        "text": "Mostly clear, with a low around 50."
       }
     ]
   }
