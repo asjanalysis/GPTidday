@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-27T16:35:35.400Z",
+  "generated_at": "2026-01-27T17:01:27.133Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-27T08:00:00-08:00",
-      "temp_f": 50,
-      "wind_mph": 9,
-      "wind_dir": "ESE",
-      "shortForecast": "Mostly Sunny",
-      "precip_prob": 2
-    },
     {
       "t": "2026-01-27T09:00:00-08:00",
       "temp_f": 51,
@@ -198,12 +190,20 @@
       "wind_dir": "NNE",
       "shortForecast": "Patchy Fog",
       "precip_prob": 2
+    },
+    {
+      "t": "2026-01-28T08:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 2,
+      "wind_dir": "NNE",
+      "shortForecast": "Patchy Fog",
+      "precip_prob": 2
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-27T08:00:00-08:00",
+      "t_start": "2026-01-27T09:00:00-08:00",
       "t_end": "2026-01-27T18:00:00-08:00",
       "temp_f": 59,
       "text": "A slight chance of rain after 4pm. Partly sunny, with a high near 59. South southeast wind 6 to 14 mph. Chance of precipitation is 20%."
