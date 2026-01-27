@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-27T07:02:06.733Z",
+  "generated_at": "2026-01-27T07:36:49.323Z",
   "current": null,
   "hourly": [
     {
@@ -203,10 +203,10 @@
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-26T23:00:00-08:00",
+      "t_start": "2026-01-26T20:00:00-08:00",
       "t_end": "2026-01-27T06:00:00-08:00",
       "temp_f": 48,
-      "text": "Partly cloudy, with a low around 48. East southeast wind around 2 mph."
+      "text": "Partly cloudy, with a low around 48. East wind around 2 mph."
     },
     {
       "name": "Tuesday",
