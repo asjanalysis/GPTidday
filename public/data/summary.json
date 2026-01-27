@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-26T23:55:25.746Z",
+  "generated_at": "2026-01-27T01:41:05.009Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-26T23:55:25.377Z",
+    "generated_at": "2026-01-27T01:41:04.339Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-26T23:55:23.570Z",
+    "generated_at": "2026-01-27T01:41:03.300Z",
     "latest": {
-      "t": "2026-01-26T23:00:00.000Z",
+      "t": "2026-01-27T00:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 0.94,
-      "hs_ft": 3.0839895999999998,
+      "hs_m": 1.01,
+      "hs_ft": 3.3136484,
       "tp_s": 16.666668,
-      "ta_s": 10.832365,
-      "tz_s": 9.746673,
-      "dp_deg_true": 283,
+      "ta_s": 11.287128,
+      "tz_s": 10.092854,
+      "dp_deg_true": 275.96875,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,25 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-26T23:55:25.745Z",
+    "generated_at": "2026-01-27T01:41:05.008Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-26T15:00:00-08:00",
-        "temp_f": 57,
-        "wind_mph": 5,
-        "wind_dir": "SSW",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
-      {
-        "t": "2026-01-26T16:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 3,
-        "wind_dir": "SSW",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-26T17:00:00-08:00",
         "temp_f": 58,
@@ -233,6 +217,22 @@
         "wind_dir": "SW",
         "shortForecast": "Partly Sunny",
         "precip_prob": 6
+      },
+      {
+        "t": "2026-01-27T15:00:00-08:00",
+        "temp_f": 57,
+        "wind_mph": 9,
+        "wind_dir": "SW",
+        "shortForecast": "Partly Sunny",
+        "precip_prob": 6
+      },
+      {
+        "t": "2026-01-27T16:00:00-08:00",
+        "temp_f": 57,
+        "wind_mph": 8,
+        "wind_dir": "SW",
+        "shortForecast": "Chance Light Rain",
+        "precip_prob": 36
       }
     ],
     "daily": [

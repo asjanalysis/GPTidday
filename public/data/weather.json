@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-26T23:55:25.745Z",
+  "generated_at": "2026-01-27T01:41:05.008Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-26T15:00:00-08:00",
-      "temp_f": 57,
-      "wind_mph": 5,
-      "wind_dir": "SSW",
-      "shortForecast": "Sunny",
-      "precip_prob": 0
-    },
-    {
-      "t": "2026-01-26T16:00:00-08:00",
-      "temp_f": 58,
-      "wind_mph": 3,
-      "wind_dir": "SSW",
-      "shortForecast": "Sunny",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-26T17:00:00-08:00",
       "temp_f": 58,
@@ -198,6 +182,22 @@
       "wind_dir": "SW",
       "shortForecast": "Partly Sunny",
       "precip_prob": 6
+    },
+    {
+      "t": "2026-01-27T15:00:00-08:00",
+      "temp_f": 57,
+      "wind_mph": 9,
+      "wind_dir": "SW",
+      "shortForecast": "Partly Sunny",
+      "precip_prob": 6
+    },
+    {
+      "t": "2026-01-27T16:00:00-08:00",
+      "temp_f": 57,
+      "wind_mph": 8,
+      "wind_dir": "SW",
+      "shortForecast": "Chance Light Rain",
+      "precip_prob": 36
     }
   ],
   "daily": [
