@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-27T04:32:33.840Z",
+  "generated_at": "2026-01-27T05:03:30.059Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-26T20:00:00-08:00",
-      "temp_f": 54,
-      "wind_mph": 1,
-      "wind_dir": "W",
-      "shortForecast": "Mostly Clear",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-26T21:00:00-08:00",
       "temp_f": 53,
@@ -198,12 +190,20 @@
       "wind_dir": "SSW",
       "shortForecast": "Chance Light Rain",
       "precip_prob": 36
+    },
+    {
+      "t": "2026-01-27T20:00:00-08:00",
+      "temp_f": 56,
+      "wind_mph": 3,
+      "wind_dir": "SSW",
+      "shortForecast": "Chance Light Rain",
+      "precip_prob": 36
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-26T20:00:00-08:00",
+      "t_start": "2026-01-26T21:00:00-08:00",
       "t_end": "2026-01-27T06:00:00-08:00",
       "temp_f": 48,
       "text": "Partly cloudy, with a low around 48. East wind around 2 mph."
