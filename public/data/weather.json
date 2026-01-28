@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-28T08:52:41.159Z",
+  "generated_at": "2026-01-28T09:24:47.664Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-28T00:00:00-08:00",
-      "temp_f": 55,
-      "wind_mph": 2,
-      "wind_dir": "W",
-      "shortForecast": "Chance Light Rain",
-      "precip_prob": 25
-    },
     {
       "t": "2026-01-28T01:00:00-08:00",
       "temp_f": 55,
@@ -198,15 +190,23 @@
       "wind_dir": "NNE",
       "shortForecast": "Mostly Clear",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-29T00:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 3,
+      "wind_dir": "NNE",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-01-28T00:00:00-08:00",
+      "t_start": "2026-01-28T01:00:00-08:00",
       "t_end": "2026-01-28T06:00:00-08:00",
       "temp_f": 52,
-      "text": "A chance of rain before 2am, then a chance of rain and patchy fog. Mostly cloudy, with a low around 52. Southwest wind 0 to 3 mph. Chance of precipitation is 30%."
+      "text": "A chance of rain before 2am, then a chance of rain and patchy fog. Mostly cloudy, with a low around 52. South southwest wind 0 to 3 mph. Chance of precipitation is 30%."
     },
     {
       "name": "Wednesday",
