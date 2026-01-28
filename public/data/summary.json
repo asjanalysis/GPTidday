@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-28T21:39:48.298Z",
+  "generated_at": "2026-01-28T21:58:25.301Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-28T21:39:48.233Z",
+    "generated_at": "2026-01-28T21:58:24.840Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-28T21:39:46.806Z",
+    "generated_at": "2026-01-28T21:58:23.437Z",
     "latest": {
       "t": "2026-01-28T20:30:00.000Z",
       "station_id": "156",
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-28T21:39:48.298Z",
+    "generated_at": "2026-01-28T21:58:25.300Z",
     "current": null,
     "hourly": [
       {
