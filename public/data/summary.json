@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-28T07:03:09.722Z",
+  "generated_at": "2026-01-28T07:36:17.316Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-28T07:03:09.189Z",
+    "generated_at": "2026-01-28T07:36:17.226Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-28T07:03:07.503Z",
+    "generated_at": "2026-01-28T07:36:15.939Z",
     "latest": {
-      "t": "2026-01-28T06:30:00.000Z",
+      "t": "2026-01-28T07:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 0.66,
-      "hs_ft": 2.1653544,
-      "tp_s": 13.333333,
-      "ta_s": 6.717297,
-      "tz_s": 5.2802415,
-      "dp_deg_true": 266.125,
+      "hs_m": 0.72,
+      "hs_ft": 2.3622047999999998,
+      "tp_s": 11.764706,
+      "ta_s": 7.400954,
+      "tz_s": 5.821846,
+      "dp_deg_true": 264.71875,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,9 +39,17 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-28T07:03:09.721Z",
+    "generated_at": "2026-01-28T07:36:17.315Z",
     "current": null,
     "hourly": [
+      {
+        "t": "2026-01-27T22:00:00-08:00",
+        "temp_f": 56,
+        "wind_mph": 2,
+        "wind_dir": "W",
+        "shortForecast": "Chance Light Rain",
+        "precip_prob": 25
+      },
       {
         "t": "2026-01-27T23:00:00-08:00",
         "temp_f": 56,
@@ -225,20 +233,12 @@
         "wind_dir": "N",
         "shortForecast": "Mostly Clear",
         "precip_prob": 0
-      },
-      {
-        "t": "2026-01-28T22:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 3,
-        "wind_dir": "NNE",
-        "shortForecast": "Mostly Clear",
-        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-01-27T19:00:00-08:00",
+        "t_start": "2026-01-27T21:00:00-08:00",
         "t_end": "2026-01-28T06:00:00-08:00",
         "temp_f": 52,
         "text": "A chance of rain before 11pm, then a chance of rain and patchy fog. Mostly cloudy, with a low around 52. Southwest wind 0 to 3 mph. Chance of precipitation is 30%."
