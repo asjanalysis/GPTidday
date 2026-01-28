@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-28T11:38:41.906Z",
+  "generated_at": "2026-01-28T11:52:48.764Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-28T11:38:41.119Z",
+    "generated_at": "2026-01-28T11:52:48.763Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-28T11:38:39.893Z",
+    "generated_at": "2026-01-28T11:52:47.363Z",
     "latest": {
       "t": "2026-01-28T11:00:00.000Z",
       "station_id": "156",
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-28T11:38:41.905Z",
+    "generated_at": "2026-01-28T11:52:48.653Z",
     "current": null,
     "hourly": [
       {
@@ -238,10 +238,10 @@
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-01-28T03:00:00-08:00",
+        "t_start": "2026-01-28T01:00:00-08:00",
         "t_end": "2026-01-28T06:00:00-08:00",
         "temp_f": 52,
-        "text": "A chance of rain before 4am, then patchy fog. Mostly cloudy, with a low around 52. Southeast wind 0 to 3 mph. Chance of precipitation is 30%."
+        "text": "A chance of rain before 2am, then a chance of rain and patchy fog. Mostly cloudy, with a low around 52. South southwest wind 0 to 3 mph. Chance of precipitation is 30%."
       },
       {
         "name": "Wednesday",
