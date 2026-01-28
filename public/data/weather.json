@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-28T14:43:52.390Z",
+  "generated_at": "2026-01-28T15:04:54.838Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-28T06:00:00-08:00",
-      "temp_f": 52,
-      "wind_mph": 1,
-      "wind_dir": "NNE",
-      "shortForecast": "Sunny",
-      "precip_prob": 1
-    },
     {
       "t": "2026-01-28T07:00:00-08:00",
       "temp_f": 52,
@@ -198,15 +190,23 @@
       "wind_dir": "ENE",
       "shortForecast": "Mostly Clear",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-29T06:00:00-08:00",
+      "temp_f": 49,
+      "wind_mph": 3,
+      "wind_dir": "NE",
+      "shortForecast": "Sunny",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-28T06:00:00-08:00",
+      "t_start": "2026-01-28T07:00:00-08:00",
       "t_end": "2026-01-28T18:00:00-08:00",
       "temp_f": 62,
-      "text": "Patchy fog between 7am and 9am. Sunny, with a high near 62. North wind 1 to 9 mph."
+      "text": "Patchy fog before 9am. Sunny, with a high near 62. North wind 1 to 9 mph."
     },
     {
       "name": "Tonight",
