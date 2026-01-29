@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-29T02:45:23.809Z",
+  "generated_at": "2026-01-29T04:20:31.426Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-28T18:00:00-08:00",
-      "temp_f": 58,
-      "wind_mph": 7,
-      "wind_dir": "NNW",
-      "shortForecast": "Mostly Clear",
-      "precip_prob": 0
-    },
-    {
-      "t": "2026-01-28T19:00:00-08:00",
-      "temp_f": 58,
-      "wind_mph": 6,
-      "wind_dir": "NNW",
-      "shortForecast": "Mostly Clear",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-28T20:00:00-08:00",
       "temp_f": 56,
@@ -198,15 +182,31 @@
       "wind_dir": "WNW",
       "shortForecast": "Sunny",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-29T18:00:00-08:00",
+      "temp_f": 61,
+      "wind_mph": 2,
+      "wind_dir": "NNW",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 0
+    },
+    {
+      "t": "2026-01-29T19:00:00-08:00",
+      "temp_f": 60,
+      "wind_mph": 3,
+      "wind_dir": "N",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-28T18:00:00-08:00",
+      "t_start": "2026-01-28T20:00:00-08:00",
       "t_end": "2026-01-29T06:00:00-08:00",
       "temp_f": 48,
-      "text": "Mostly clear, with a low around 48. North wind 3 to 7 mph."
+      "text": "Mostly clear, with a low around 48. North northeast wind around 6 mph."
     },
     {
       "name": "Thursday",
