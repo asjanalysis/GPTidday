@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-29T13:18:51.682Z",
+  "generated_at": "2026-01-29T14:07:55.598Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-29T05:00:00-08:00",
-      "temp_f": 49,
-      "wind_mph": 5,
-      "wind_dir": "NNE",
-      "shortForecast": "Mostly Clear",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-29T06:00:00-08:00",
       "temp_f": 50,
@@ -198,25 +190,26 @@
       "wind_dir": "NE",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-30T05:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 2,
+      "wind_dir": "NE",
+      "shortForecast": "Partly Cloudy",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
-      "name": "Overnight",
-      "t_start": "2026-01-29T05:00:00-08:00",
-      "t_end": "2026-01-29T06:00:00-08:00",
-      "temp_f": 48,
-      "text": "Mostly clear, with a low around 48. North northeast wind around 5 mph."
-    },
-    {
-      "name": "Thursday",
+      "name": "Today",
       "t_start": "2026-01-29T06:00:00-08:00",
       "t_end": "2026-01-29T18:00:00-08:00",
       "temp_f": 64,
       "text": "Sunny, with a high near 64. North northwest wind around 5 mph."
     },
     {
-      "name": "Thursday Night",
+      "name": "Tonight",
       "t_start": "2026-01-29T18:00:00-08:00",
       "t_end": "2026-01-30T06:00:00-08:00",
       "temp_f": 51,
@@ -241,7 +234,7 @@
       "t_start": "2026-01-31T06:00:00-08:00",
       "t_end": "2026-01-31T18:00:00-08:00",
       "temp_f": 66,
-      "text": "Mostly sunny, with a high near 66."
+      "text": "Mostly sunny, with a high near 66. East southeast wind around 5 mph."
     },
     {
       "name": "Saturday Night",
@@ -298,6 +291,13 @@
       "t_end": "2026-02-04T18:00:00-08:00",
       "temp_f": 66,
       "text": "Sunny, with a high near 66."
+    },
+    {
+      "name": "Wednesday Night",
+      "t_start": "2026-02-04T18:00:00-08:00",
+      "t_end": "2026-02-05T06:00:00-08:00",
+      "temp_f": 52,
+      "text": "Mostly clear, with a low around 52."
     }
   ]
 }
