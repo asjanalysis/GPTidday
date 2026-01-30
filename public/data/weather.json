@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-30T08:22:13.253Z",
+  "generated_at": "2026-01-30T09:01:53.104Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-29T23:00:00-08:00",
-      "temp_f": 56,
-      "wind_mph": 3,
-      "wind_dir": "NNE",
-      "shortForecast": "Mostly Clear",
-      "precip_prob": 0
-    },
-    {
-      "t": "2026-01-30T00:00:00-08:00",
-      "temp_f": 55,
-      "wind_mph": 3,
-      "wind_dir": "N",
-      "shortForecast": "Partly Cloudy",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-30T01:00:00-08:00",
       "temp_f": 54,
@@ -198,15 +182,31 @@
       "wind_dir": "NE",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-01-30T23:00:00-08:00",
+      "temp_f": 57,
+      "wind_mph": 5,
+      "wind_dir": "NE",
+      "shortForecast": "Partly Cloudy",
+      "precip_prob": 0
+    },
+    {
+      "t": "2026-01-31T00:00:00-08:00",
+      "temp_f": 57,
+      "wind_mph": 5,
+      "wind_dir": "NE",
+      "shortForecast": "Partly Cloudy",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
-      "name": "Tonight",
-      "t_start": "2026-01-29T20:00:00-08:00",
+      "name": "Overnight",
+      "t_start": "2026-01-30T01:00:00-08:00",
       "t_end": "2026-01-30T06:00:00-08:00",
       "temp_f": 51,
-      "text": "Partly cloudy, with a low around 51. North northeast wind around 5 mph."
+      "text": "Partly cloudy, with a low around 51. North northeast wind around 3 mph."
     },
     {
       "name": "Friday",
