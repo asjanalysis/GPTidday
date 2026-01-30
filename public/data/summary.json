@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-30T11:54:05.467Z",
+  "generated_at": "2026-01-30T12:38:01.634Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-30T11:54:05.195Z",
+    "generated_at": "2026-01-30T12:38:01.064Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,16 +18,16 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-30T11:54:03.594Z",
+    "generated_at": "2026-01-30T12:37:59.863Z",
     "latest": {
-      "t": "2026-01-30T11:00:00.000Z",
+      "t": "2026-01-30T12:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.8,
-      "hs_ft": 9.186352,
-      "tp_s": 14.285714,
-      "ta_s": 10.6936865,
-      "tz_s": 9.129118,
+      "hs_m": 2.95,
+      "hs_ft": 9.678478,
+      "tp_s": 13.333333,
+      "ta_s": 10.621679,
+      "tz_s": 9.124891,
       "dp_deg_true": 285.8125,
       "lat": 36.759167,
       "lon": -121.95028
@@ -39,25 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-30T11:54:05.467Z",
+    "generated_at": "2026-01-30T12:38:01.633Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-30T02:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 2,
-        "wind_dir": "N",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 0
-      },
-      {
-        "t": "2026-01-30T03:00:00-08:00",
-        "temp_f": 53,
-        "wind_mph": 2,
-        "wind_dir": "N",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-30T04:00:00-08:00",
         "temp_f": 52,
@@ -233,12 +217,28 @@
         "wind_dir": "ENE",
         "shortForecast": "Partly Cloudy",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-01-31T02:00:00-08:00",
+        "temp_f": 55,
+        "wind_mph": 3,
+        "wind_dir": "NE",
+        "shortForecast": "Partly Cloudy",
+        "precip_prob": 0
+      },
+      {
+        "t": "2026-01-31T03:00:00-08:00",
+        "temp_f": 55,
+        "wind_mph": 3,
+        "wind_dir": "NE",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-01-30T02:00:00-08:00",
+        "t_start": "2026-01-30T04:00:00-08:00",
         "t_end": "2026-01-30T06:00:00-08:00",
         "temp_f": 51,
         "text": "Partly cloudy. Low around 51, with temperatures rising to around 53 overnight. North wind around 2 mph."
