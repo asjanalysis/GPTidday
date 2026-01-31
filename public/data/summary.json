@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-31T09:15:17.370Z",
+  "generated_at": "2026-01-31T09:45:31.970Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-31T09:15:16.765Z",
+    "generated_at": "2026-01-31T09:45:31.353Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-31T09:15:15.024Z",
+    "generated_at": "2026-01-31T09:45:30.204Z",
     "latest": {
-      "t": "2026-01-31T08:30:00.000Z",
+      "t": "2026-01-31T09:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.83,
-      "hs_ft": 6.0039372,
+      "hs_m": 2.21,
+      "hs_ft": 7.2506564,
       "tp_s": 11.764706,
-      "ta_s": 9.058653,
-      "tz_s": 7.8306704,
-      "dp_deg_true": 288.625,
+      "ta_s": 9.692593,
+      "tz_s": 8.506197,
+      "dp_deg_true": 291.4375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-31T09:15:17.370Z",
+    "generated_at": "2026-01-31T09:45:31.969Z",
     "current": null,
     "hourly": [
       {
@@ -237,32 +237,32 @@
     ],
     "daily": [
       {
-        "name": "Tonight",
-        "t_start": "2026-01-30T20:00:00-08:00",
+        "name": "Overnight",
+        "t_start": "2026-01-31T01:00:00-08:00",
         "t_end": "2026-01-31T06:00:00-08:00",
         "temp_f": 53,
-        "text": "Partly cloudy, with a low around 53. North northeast wind around 3 mph."
+        "text": "Partly cloudy, with a low around 53. Northeast wind around 3 mph."
       },
       {
         "name": "Saturday",
         "t_start": "2026-01-31T06:00:00-08:00",
         "t_end": "2026-01-31T18:00:00-08:00",
         "temp_f": 67,
-        "text": "Mostly sunny. High near 67, with temperatures falling to around 64 in the afternoon. Southeast wind around 3 mph."
+        "text": "Mostly sunny. High near 67, with temperatures falling to around 63 in the afternoon. Northwest wind around 5 mph."
       },
       {
         "name": "Saturday Night",
         "t_start": "2026-01-31T18:00:00-08:00",
         "t_end": "2026-02-01T06:00:00-08:00",
         "temp_f": 51,
-        "text": "Partly cloudy, with a low around 51. Northeast wind 1 to 10 mph."
+        "text": "Mostly clear, with a low around 51. Northeast wind around 2 mph."
       },
       {
         "name": "Sunday",
         "t_start": "2026-02-01T06:00:00-08:00",
         "t_end": "2026-02-01T18:00:00-08:00",
-        "temp_f": 64,
-        "text": "Mostly sunny, with a high near 64. Northwest wind 1 to 9 mph."
+        "temp_f": 63,
+        "text": "Mostly sunny, with a high near 63. North wind 1 to 9 mph."
       },
       {
         "name": "Sunday Night",
@@ -289,15 +289,15 @@
         "name": "Tuesday",
         "t_start": "2026-02-03T06:00:00-08:00",
         "t_end": "2026-02-03T18:00:00-08:00",
-        "temp_f": 65,
-        "text": "Sunny, with a high near 65."
+        "temp_f": 66,
+        "text": "Sunny, with a high near 66."
       },
       {
         "name": "Tuesday Night",
         "t_start": "2026-02-03T18:00:00-08:00",
         "t_end": "2026-02-04T06:00:00-08:00",
         "temp_f": 52,
-        "text": "Mostly clear, with a low around 52."
+        "text": "Clear, with a low around 52."
       },
       {
         "name": "Wednesday",
