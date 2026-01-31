@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-31T20:44:05.574Z",
+  "generated_at": "2026-01-31T20:58:42.935Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-01-31T20:44:05.337Z",
+    "generated_at": "2026-01-31T20:58:42.904Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-01-31T20:44:04.131Z",
+    "generated_at": "2026-01-31T20:58:41.819Z",
     "latest": {
       "t": "2026-01-31T20:00:00.000Z",
       "station_id": "156",
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-01-31T20:44:05.574Z",
+    "generated_at": "2026-01-31T20:58:42.935Z",
     "current": null,
     "hourly": [
       {
@@ -237,8 +237,8 @@
     ],
     "daily": [
       {
-        "name": "Today",
-        "t_start": "2026-01-31T11:00:00-08:00",
+        "name": "This Afternoon",
+        "t_start": "2026-01-31T12:00:00-08:00",
         "t_end": "2026-01-31T18:00:00-08:00",
         "temp_f": 67,
         "text": "Mostly sunny. High near 67, with temperatures falling to around 64 in the afternoon. West southwest wind around 5 mph."
