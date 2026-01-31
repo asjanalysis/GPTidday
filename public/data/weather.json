@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-31T17:22:14.913Z",
+  "generated_at": "2026-01-31T17:45:29.608Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-01-31T08:00:00-08:00",
-      "temp_f": 54,
-      "wind_mph": 3,
-      "wind_dir": "NE",
-      "shortForecast": "Mostly Sunny",
-      "precip_prob": 0
-    },
     {
       "t": "2026-01-31T09:00:00-08:00",
       "temp_f": 56,
@@ -198,12 +190,20 @@
       "wind_dir": "NNE",
       "shortForecast": "Mostly Sunny",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-02-01T08:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 2,
+      "wind_dir": "NNE",
+      "shortForecast": "Sunny",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-01-31T08:00:00-08:00",
+      "t_start": "2026-01-31T09:00:00-08:00",
       "t_end": "2026-01-31T18:00:00-08:00",
       "temp_f": 67,
       "text": "Mostly sunny. High near 67, with temperatures falling to around 63 in the afternoon. Northwest wind around 5 mph."
