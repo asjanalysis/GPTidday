@@ -4,29 +4,29 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-01-31T08:23:04.846Z",
+  "generated_at": "2026-01-31T08:51:28.247Z",
   "current": null,
   "hourly": [
     {
       "t": "2026-01-31T00:00:00-08:00",
-      "temp_f": 57,
+      "temp_f": 56,
       "wind_mph": 3,
-      "wind_dir": "N",
-      "shortForecast": "Partly Cloudy",
+      "wind_dir": "NNE",
+      "shortForecast": "Mostly Cloudy",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T01:00:00-08:00",
       "temp_f": 56,
-      "wind_mph": 2,
+      "wind_mph": 3,
       "wind_dir": "NNE",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T02:00:00-08:00",
-      "temp_f": 56,
-      "wind_mph": 2,
+      "temp_f": 55,
+      "wind_mph": 3,
       "wind_dir": "NNE",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 0
@@ -34,15 +34,15 @@
     {
       "t": "2026-01-31T03:00:00-08:00",
       "temp_f": 55,
-      "wind_mph": 2,
-      "wind_dir": "NNE",
+      "wind_mph": 3,
+      "wind_dir": "NE",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T04:00:00-08:00",
       "temp_f": 54,
-      "wind_mph": 2,
+      "wind_mph": 3,
       "wind_dir": "NE",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 0
@@ -50,7 +50,7 @@
     {
       "t": "2026-01-31T05:00:00-08:00",
       "temp_f": 54,
-      "wind_mph": 2,
+      "wind_mph": 3,
       "wind_dir": "NE",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 0
@@ -89,121 +89,121 @@
     },
     {
       "t": "2026-01-31T10:00:00-08:00",
-      "temp_f": 59,
-      "wind_mph": 3,
-      "wind_dir": "E",
+      "temp_f": 60,
+      "wind_mph": 5,
+      "wind_dir": "ENE",
       "shortForecast": "Mostly Sunny",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T11:00:00-08:00",
-      "temp_f": 60,
+      "temp_f": 61,
       "wind_mph": 3,
-      "wind_dir": "E",
+      "wind_dir": "ENE",
       "shortForecast": "Mostly Sunny",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T12:00:00-08:00",
-      "temp_f": 64,
+      "temp_f": 63,
       "wind_mph": 3,
-      "wind_dir": "ESE",
+      "wind_dir": "ENE",
       "shortForecast": "Mostly Sunny",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T13:00:00-08:00",
-      "temp_f": 64,
+      "temp_f": 65,
       "wind_mph": 3,
-      "wind_dir": "SE",
+      "wind_dir": "SW",
       "shortForecast": "Mostly Sunny",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T14:00:00-08:00",
       "temp_f": 64,
-      "wind_mph": 3,
-      "wind_dir": "SW",
+      "wind_mph": 5,
+      "wind_dir": "WSW",
       "shortForecast": "Mostly Sunny",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T15:00:00-08:00",
-      "temp_f": 66,
-      "wind_mph": 3,
-      "wind_dir": "WSW",
-      "shortForecast": "Partly Sunny",
+      "temp_f": 64,
+      "wind_mph": 5,
+      "wind_dir": "W",
+      "shortForecast": "Mostly Sunny",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T16:00:00-08:00",
       "temp_f": 64,
-      "wind_mph": 3,
-      "wind_dir": "WSW",
+      "wind_mph": 5,
+      "wind_dir": "W",
       "shortForecast": "Mostly Sunny",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T17:00:00-08:00",
-      "temp_f": 64,
+      "temp_f": 63,
       "wind_mph": 2,
-      "wind_dir": "SW",
+      "wind_dir": "W",
       "shortForecast": "Mostly Sunny",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T18:00:00-08:00",
-      "temp_f": 62,
-      "wind_mph": 5,
-      "wind_dir": "ENE",
+      "temp_f": 61,
+      "wind_mph": 1,
+      "wind_dir": "WNW",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T19:00:00-08:00",
       "temp_f": 60,
-      "wind_mph": 9,
-      "wind_dir": "E",
-      "shortForecast": "Partly Cloudy",
+      "wind_mph": 1,
+      "wind_dir": "ENE",
+      "shortForecast": "Mostly Clear",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T20:00:00-08:00",
-      "temp_f": 59,
-      "wind_mph": 10,
+      "temp_f": 58,
+      "wind_mph": 1,
       "wind_dir": "E",
-      "shortForecast": "Partly Cloudy",
+      "shortForecast": "Mostly Clear",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T21:00:00-08:00",
       "temp_f": 58,
-      "wind_mph": 9,
+      "wind_mph": 1,
       "wind_dir": "E",
-      "shortForecast": "Partly Cloudy",
+      "shortForecast": "Mostly Clear",
       "precip_prob": 0
     },
     {
       "t": "2026-01-31T22:00:00-08:00",
-      "temp_f": 57,
+      "temp_f": 56,
       "wind_mph": 1,
       "wind_dir": "ENE",
-      "shortForecast": "Partly Cloudy",
-      "precip_prob": 1
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 0
     },
     {
       "t": "2026-01-31T23:00:00-08:00",
       "temp_f": 56,
       "wind_mph": 1,
-      "wind_dir": "ENE",
-      "shortForecast": "Partly Cloudy",
-      "precip_prob": 1
+      "wind_dir": "NE",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
-      "name": "Overnight",
-      "t_start": "2026-01-31T00:00:00-08:00",
+      "name": "Tonight",
+      "t_start": "2026-01-30T18:00:00-08:00",
       "t_end": "2026-01-31T06:00:00-08:00",
       "temp_f": 53,
       "text": "Partly cloudy, with a low around 53. North northeast wind around 3 mph."
