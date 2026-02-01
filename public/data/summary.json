@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-01T05:10:24.014Z",
+  "generated_at": "2026-02-01T06:07:25.948Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-01T05:10:23.632Z",
+    "generated_at": "2026-02-01T06:07:24.952Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-01T05:10:21.871Z",
+    "generated_at": "2026-02-01T06:07:23.436Z",
     "latest": {
-      "t": "2026-02-01T04:30:00.000Z",
+      "t": "2026-02-01T05:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.03,
-      "hs_ft": 6.660105199999999,
-      "tp_s": 11.111111,
-      "ta_s": 9.809687,
-      "tz_s": 9.33528,
-      "dp_deg_true": 275.96875,
+      "hs_m": 1.76,
+      "hs_ft": 5.7742784,
+      "tp_s": 9.876543,
+      "ta_s": 9.695664,
+      "tz_s": 9.151383,
+      "dp_deg_true": 274.5625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-01T05:10:24.013Z",
+    "generated_at": "2026-02-01T06:07:25.948Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-01-31T21:00:00-08:00",
-        "temp_f": 57,
-        "wind_mph": 1,
-        "wind_dir": "ENE",
-        "shortForecast": "Mostly Clear",
-        "precip_prob": 0
-      },
       {
         "t": "2026-01-31T22:00:00-08:00",
         "temp_f": 57,
@@ -233,12 +225,20 @@
         "wind_dir": "N",
         "shortForecast": "Mostly Cloudy",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-02-01T21:00:00-08:00",
+        "temp_f": 56,
+        "wind_mph": 5,
+        "wind_dir": "N",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-01-31T21:00:00-08:00",
+        "t_start": "2026-01-31T22:00:00-08:00",
         "t_end": "2026-02-01T06:00:00-08:00",
         "temp_f": 50,
         "text": "Mostly clear. Low around 50, with temperatures rising to around 52 overnight. North wind around 2 mph."
