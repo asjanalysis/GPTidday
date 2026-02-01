@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-01T14:56:17.593Z",
+  "generated_at": "2026-02-01T15:24:21.602Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-01T06:00:00-08:00",
-      "temp_f": 51,
-      "wind_mph": 2,
-      "wind_dir": "ENE",
-      "shortForecast": "Partly Sunny",
-      "precip_prob": 0
-    },
     {
       "t": "2026-02-01T07:00:00-08:00",
       "temp_f": 51,
@@ -198,12 +190,20 @@
       "wind_dir": "N",
       "shortForecast": "Patchy Fog",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-02-02T06:00:00-08:00",
+      "temp_f": 50,
+      "wind_mph": 2,
+      "wind_dir": "NNE",
+      "shortForecast": "Patchy Fog",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-02-01T06:00:00-08:00",
+      "t_start": "2026-02-01T07:00:00-08:00",
       "t_end": "2026-02-01T18:00:00-08:00",
       "temp_f": 64,
       "text": "Mostly sunny. High near 64, with temperatures falling to around 62 in the afternoon. Northwest wind 2 to 13 mph, with gusts as high as 20 mph."
