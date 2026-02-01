@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-01T07:44:57.197Z",
+  "generated_at": "2026-02-01T08:00:51.344Z",
   "current": null,
   "hourly": [
     {
@@ -203,7 +203,7 @@
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-01-31T22:00:00-08:00",
+      "t_start": "2026-01-31T23:00:00-08:00",
       "t_end": "2026-02-01T06:00:00-08:00",
       "temp_f": 50,
       "text": "Mostly clear. Low around 50, with temperatures rising to around 52 overnight. North wind around 2 mph."
