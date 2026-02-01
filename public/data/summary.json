@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-01T16:40:57.900Z",
+  "generated_at": "2026-02-01T17:01:19.085Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-01T16:40:57.899Z",
+    "generated_at": "2026-02-01T17:01:17.167Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,16 +18,16 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-01T16:40:56.143Z",
+    "generated_at": "2026-02-01T17:01:15.896Z",
     "latest": {
-      "t": "2026-02-01T16:00:00.000Z",
+      "t": "2026-02-01T16:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.05,
-      "hs_ft": 6.725721999999999,
-      "tp_s": 15.384616,
-      "ta_s": 9.64177,
-      "tz_s": 8.082589,
+      "hs_m": 1.73,
+      "hs_ft": 5.6758532,
+      "tp_s": 11.111111,
+      "ta_s": 9.095547,
+      "tz_s": 7.536419,
       "dp_deg_true": 278.78125,
       "lat": 36.759167,
       "lon": -121.95028
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-01T16:40:57.664Z",
+    "generated_at": "2026-02-01T17:01:19.084Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-01T08:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 5,
-        "wind_dir": "NNW",
-        "shortForecast": "Mostly Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-02-01T09:00:00-08:00",
         "temp_f": 53,
@@ -233,12 +225,20 @@
         "wind_dir": "N",
         "shortForecast": "Patchy Fog",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-02-02T08:00:00-08:00",
+        "temp_f": 50,
+        "wind_mph": 2,
+        "wind_dir": "N",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-02-01T08:00:00-08:00",
+        "t_start": "2026-02-01T09:00:00-08:00",
         "t_end": "2026-02-01T18:00:00-08:00",
         "temp_f": 64,
         "text": "Mostly sunny. High near 64, with temperatures falling to around 62 in the afternoon. Northwest wind 3 to 13 mph, with gusts as high as 20 mph."
