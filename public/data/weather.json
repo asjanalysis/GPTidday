@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-02T08:04:55.930Z",
+  "generated_at": "2026-02-02T08:59:53.890Z",
   "current": null,
   "hourly": [
     {
@@ -202,18 +202,18 @@
   ],
   "daily": [
     {
-      "name": "Tonight",
-      "t_start": "2026-02-01T21:00:00-08:00",
+      "name": "Overnight",
+      "t_start": "2026-02-02T00:00:00-08:00",
       "t_end": "2026-02-02T06:00:00-08:00",
       "temp_f": 48,
-      "text": "Mostly clear. Low around 48, with temperatures rising to around 50 overnight. North wind around 5 mph."
+      "text": "Mostly clear. Low around 48, with temperatures rising to around 50 overnight. North northeast wind around 2 mph."
     },
     {
       "name": "Monday",
       "t_start": "2026-02-02T06:00:00-08:00",
       "t_end": "2026-02-02T18:00:00-08:00",
       "temp_f": 62,
-      "text": "Sunny, with a high near 62. West southwest wind 1 to 6 mph."
+      "text": "Sunny, with a high near 62. West northwest wind 0 to 5 mph."
     },
     {
       "name": "Monday Night",

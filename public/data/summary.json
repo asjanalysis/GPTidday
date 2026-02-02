@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-02T08:04:55.931Z",
+  "generated_at": "2026-02-02T08:59:53.891Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-02T08:04:55.854Z",
+    "generated_at": "2026-02-02T08:59:53.353Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,16 +18,16 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-02T08:04:54.451Z",
+    "generated_at": "2026-02-02T08:59:52.108Z",
     "latest": {
-      "t": "2026-02-02T07:30:00.000Z",
+      "t": "2026-02-02T08:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.96,
-      "hs_ft": 9.7112864,
-      "tp_s": 14.285714,
-      "ta_s": 11.5770235,
-      "tz_s": 10.151774,
+      "hs_m": 2.81,
+      "hs_ft": 9.2191604,
+      "tp_s": 15.384616,
+      "ta_s": 11.199475,
+      "tz_s": 9.881245,
       "dp_deg_true": 273.15625,
       "lat": 36.759167,
       "lon": -121.95028
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-02T08:04:55.930Z",
+    "generated_at": "2026-02-02T08:59:53.890Z",
     "current": null,
     "hourly": [
       {
@@ -237,18 +237,18 @@
     ],
     "daily": [
       {
-        "name": "Tonight",
-        "t_start": "2026-02-01T21:00:00-08:00",
+        "name": "Overnight",
+        "t_start": "2026-02-02T00:00:00-08:00",
         "t_end": "2026-02-02T06:00:00-08:00",
         "temp_f": 48,
-        "text": "Mostly clear. Low around 48, with temperatures rising to around 50 overnight. North wind around 5 mph."
+        "text": "Mostly clear. Low around 48, with temperatures rising to around 50 overnight. North northeast wind around 2 mph."
       },
       {
         "name": "Monday",
         "t_start": "2026-02-02T06:00:00-08:00",
         "t_end": "2026-02-02T18:00:00-08:00",
         "temp_f": 62,
-        "text": "Sunny, with a high near 62. West southwest wind 1 to 6 mph."
+        "text": "Sunny, with a high near 62. West northwest wind 0 to 5 mph."
       },
       {
         "name": "Monday Night",
