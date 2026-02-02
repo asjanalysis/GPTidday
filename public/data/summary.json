@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-02T15:44:57.943Z",
+  "generated_at": "2026-02-02T16:16:44.659Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-02T15:44:57.647Z",
+    "generated_at": "2026-02-02T16:16:44.151Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-02T15:44:55.850Z",
+    "generated_at": "2026-02-02T16:16:42.552Z",
     "latest": {
-      "t": "2026-02-02T15:00:00.000Z",
+      "t": "2026-02-02T15:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.85,
-      "hs_ft": 9.350394,
+      "hs_m": 3.11,
+      "hs_ft": 10.2034124,
       "tp_s": 15.384616,
-      "ta_s": 11.026451,
-      "tz_s": 9.529328,
-      "dp_deg_true": 270.34375,
+      "ta_s": 11.513713,
+      "tz_s": 10.039119,
+      "dp_deg_true": 277.375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-02T15:44:57.942Z",
+    "generated_at": "2026-02-02T16:16:44.658Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-02T07:00:00-08:00",
-        "temp_f": 49,
-        "wind_mph": 3,
-        "wind_dir": "N",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-02-02T08:00:00-08:00",
         "temp_f": 50,
@@ -233,12 +225,20 @@
         "wind_dir": "NNE",
         "shortForecast": "Sunny",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-02-03T07:00:00-08:00",
+        "temp_f": 51,
+        "wind_mph": 3,
+        "wind_dir": "NE",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-02-02T07:00:00-08:00",
+        "t_start": "2026-02-02T06:00:00-08:00",
         "t_end": "2026-02-02T18:00:00-08:00",
         "temp_f": 62,
         "text": "Sunny, with a high near 62. West northwest wind 0 to 5 mph."

@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-02T15:44:57.942Z",
+  "generated_at": "2026-02-02T16:16:44.658Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-02T07:00:00-08:00",
-      "temp_f": 49,
-      "wind_mph": 3,
-      "wind_dir": "N",
-      "shortForecast": "Sunny",
-      "precip_prob": 0
-    },
     {
       "t": "2026-02-02T08:00:00-08:00",
       "temp_f": 50,
@@ -198,12 +190,20 @@
       "wind_dir": "NNE",
       "shortForecast": "Sunny",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-02-03T07:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 3,
+      "wind_dir": "NE",
+      "shortForecast": "Sunny",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-02-02T07:00:00-08:00",
+      "t_start": "2026-02-02T06:00:00-08:00",
       "t_end": "2026-02-02T18:00:00-08:00",
       "temp_f": 62,
       "text": "Sunny, with a high near 62. West northwest wind 0 to 5 mph."
