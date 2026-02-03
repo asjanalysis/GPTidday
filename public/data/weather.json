@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-03T02:52:37.777Z",
+  "generated_at": "2026-02-03T04:29:22.309Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-02T18:00:00-08:00",
-      "temp_f": 60,
-      "wind_mph": 3,
-      "wind_dir": "N",
-      "shortForecast": "Clear",
-      "precip_prob": 0
-    },
-    {
-      "t": "2026-02-02T19:00:00-08:00",
-      "temp_f": 60,
-      "wind_mph": 3,
-      "wind_dir": "N",
-      "shortForecast": "Clear",
-      "precip_prob": 0
-    },
     {
       "t": "2026-02-02T20:00:00-08:00",
       "temp_f": 58,
@@ -198,15 +182,31 @@
       "wind_dir": "NW",
       "shortForecast": "Sunny",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-02-03T18:00:00-08:00",
+      "temp_f": 64,
+      "wind_mph": 2,
+      "wind_dir": "N",
+      "shortForecast": "Clear",
+      "precip_prob": 0
+    },
+    {
+      "t": "2026-02-03T19:00:00-08:00",
+      "temp_f": 63,
+      "wind_mph": 3,
+      "wind_dir": "NE",
+      "shortForecast": "Clear",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-02T18:00:00-08:00",
+      "t_start": "2026-02-02T20:00:00-08:00",
       "t_end": "2026-02-03T06:00:00-08:00",
       "temp_f": 51,
-      "text": "Clear, with a low around 51. North wind around 3 mph."
+      "text": "Clear, with a low around 51. North northeast wind around 3 mph."
     },
     {
       "name": "Tuesday",
