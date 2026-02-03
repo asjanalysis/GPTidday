@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-03T15:03:50.017Z",
+  "generated_at": "2026-02-03T16:00:39.853Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-03T07:00:00-08:00",
-      "temp_f": 52,
-      "wind_mph": 3,
-      "wind_dir": "NNE",
-      "shortForecast": "Sunny",
-      "precip_prob": 0
-    },
     {
       "t": "2026-02-03T08:00:00-08:00",
       "temp_f": 53,
@@ -198,15 +190,23 @@
       "wind_dir": "NE",
       "shortForecast": "Sunny",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-02-04T07:00:00-08:00",
+      "temp_f": 54,
+      "wind_mph": 5,
+      "wind_dir": "NE",
+      "shortForecast": "Sunny",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-02-03T07:00:00-08:00",
+      "t_start": "2026-02-03T08:00:00-08:00",
       "t_end": "2026-02-03T18:00:00-08:00",
-      "temp_f": 67,
-      "text": "Sunny, with a high near 67. North northwest wind around 5 mph."
+      "temp_f": 66,
+      "text": "Sunny, with a high near 66. North northwest wind around 5 mph."
     },
     {
       "name": "Tonight",
@@ -220,7 +220,7 @@
       "t_start": "2026-02-04T06:00:00-08:00",
       "t_end": "2026-02-04T18:00:00-08:00",
       "temp_f": 69,
-      "text": "Sunny, with a high near 69. Northeast wind around 5 mph."
+      "text": "Sunny. High near 69, with temperatures falling to around 66 in the afternoon. Northeast wind around 5 mph."
     },
     {
       "name": "Wednesday Night",
