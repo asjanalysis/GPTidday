@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-04T21:57:25.877Z",
+  "generated_at": "2026-02-04T22:31:04.508Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-04T21:57:25.876Z",
+    "generated_at": "2026-02-04T22:31:03.848Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-04T21:57:24.063Z",
+    "generated_at": "2026-02-04T22:31:02.674Z",
     "latest": {
-      "t": "2026-02-04T21:00:00.000Z",
+      "t": "2026-02-04T22:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.58,
-      "hs_ft": 5.1837272,
-      "tp_s": 10.526316,
-      "ta_s": 10.114343,
-      "tz_s": 8.911893,
-      "dp_deg_true": 277.375,
+      "hs_m": 1.44,
+      "hs_ft": 4.7244095999999995,
+      "tp_s": 18.181818,
+      "ta_s": 10.139679,
+      "tz_s": 9.103449,
+      "dp_deg_true": 278.78125,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-04T21:57:25.586Z",
+    "generated_at": "2026-02-04T22:31:04.507Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-04T13:00:00-08:00",
-        "temp_f": 67,
-        "wind_mph": 5,
-        "wind_dir": "E",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-02-04T14:00:00-08:00",
         "temp_f": 67,
@@ -233,12 +225,20 @@
         "wind_dir": "ESE",
         "shortForecast": "Sunny",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-02-05T13:00:00-08:00",
+        "temp_f": 68,
+        "wind_mph": 5,
+        "wind_dir": "SSE",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "This Afternoon",
-        "t_start": "2026-02-04T13:00:00-08:00",
+        "t_start": "2026-02-04T14:00:00-08:00",
         "t_end": "2026-02-04T18:00:00-08:00",
         "temp_f": 70,
         "text": "Sunny. High near 70, with temperatures falling to around 67 in the afternoon. East northeast wind around 5 mph."
