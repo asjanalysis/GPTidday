@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-04T17:27:19.747Z",
+  "generated_at": "2026-02-04T18:08:19.483Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-04T09:00:00-08:00",
-      "temp_f": 57,
-      "wind_mph": 5,
-      "wind_dir": "ENE",
-      "shortForecast": "Sunny",
-      "precip_prob": 0
-    },
     {
       "t": "2026-02-04T10:00:00-08:00",
       "temp_f": 60,
@@ -198,12 +190,20 @@
       "wind_dir": "E",
       "shortForecast": "Sunny",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-02-05T09:00:00-08:00",
+      "temp_f": 60,
+      "wind_mph": 5,
+      "wind_dir": "E",
+      "shortForecast": "Sunny",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-02-04T09:00:00-08:00",
+      "t_start": "2026-02-04T06:00:00-08:00",
       "t_end": "2026-02-04T18:00:00-08:00",
       "temp_f": 70,
       "text": "Sunny. High near 70, with temperatures falling to around 68 in the afternoon. East wind around 5 mph."
