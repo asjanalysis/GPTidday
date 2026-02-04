@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-04T07:09:18.697Z",
+  "generated_at": "2026-02-04T07:54:31.615Z",
   "current": null,
   "hourly": [
     {
@@ -203,7 +203,7 @@
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-03T22:00:00-08:00",
+      "t_start": "2026-02-03T23:00:00-08:00",
       "t_end": "2026-02-04T06:00:00-08:00",
       "temp_f": 53,
       "text": "Clear, with a low around 53. Northeast wind around 5 mph."
