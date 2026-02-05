@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-05T14:35:49.778Z",
+  "generated_at": "2026-02-05T15:23:53.632Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-05T14:35:49.531Z",
+    "generated_at": "2026-02-05T15:23:53.358Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,16 +18,16 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-05T14:35:47.724Z",
+    "generated_at": "2026-02-05T15:23:52.366Z",
     "latest": {
-      "t": "2026-02-05T13:30:00.000Z",
+      "t": "2026-02-05T14:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.13,
-      "hs_ft": 6.9881892,
-      "tp_s": 14.285714,
-      "ta_s": 10.7245455,
-      "tz_s": 9.174422,
+      "hs_m": 2.43,
+      "hs_ft": 7.9724412000000004,
+      "tp_s": 13.333333,
+      "ta_s": 11.056049,
+      "tz_s": 9.522593,
       "dp_deg_true": 277.375,
       "lat": 36.759167,
       "lon": -121.95028
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-05T14:35:49.777Z",
+    "generated_at": "2026-02-05T15:23:53.631Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-05T06:00:00-08:00",
-        "temp_f": 57,
-        "wind_mph": 6,
-        "wind_dir": "E",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-02-05T07:00:00-08:00",
         "temp_f": 56,
@@ -233,12 +225,20 @@
         "wind_dir": "",
         "shortForecast": "Mostly Cloudy",
         "precip_prob": 6
+      },
+      {
+        "t": "2026-02-06T06:00:00-08:00",
+        "temp_f": 57,
+        "wind_mph": 0,
+        "wind_dir": "",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 6
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-02-05T06:00:00-08:00",
+        "t_start": "2026-02-05T07:00:00-08:00",
         "t_end": "2026-02-05T18:00:00-08:00",
         "temp_f": 70,
         "text": "Sunny. High near 70, with temperatures falling to around 64 in the afternoon. East southeast wind 2 to 6 mph."
