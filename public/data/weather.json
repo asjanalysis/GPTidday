@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-06T13:18:46.774Z",
+  "generated_at": "2026-02-06T14:09:51.168Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-06T05:00:00-08:00",
-      "temp_f": 56,
-      "wind_mph": 0,
-      "wind_dir": "",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 9
-    },
     {
       "t": "2026-02-06T06:00:00-08:00",
       "temp_f": 56,
@@ -198,25 +190,26 @@
       "wind_dir": "NE",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 1
+    },
+    {
+      "t": "2026-02-07T05:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 1,
+      "wind_dir": "ENE",
+      "shortForecast": "Patchy Fog",
+      "precip_prob": 1
     }
   ],
   "daily": [
     {
-      "name": "Overnight",
-      "t_start": "2026-02-06T05:00:00-08:00",
-      "t_end": "2026-02-06T06:00:00-08:00",
-      "temp_f": 55,
-      "text": "Mostly cloudy, with a low around 55. Wind around 0 mph."
-    },
-    {
-      "name": "Friday",
+      "name": "Today",
       "t_start": "2026-02-06T06:00:00-08:00",
       "t_end": "2026-02-06T18:00:00-08:00",
       "temp_f": 62,
       "text": "Mostly sunny, with a high near 62. South wind 1 to 6 mph."
     },
     {
-      "name": "Friday Night",
+      "name": "Tonight",
       "t_start": "2026-02-06T18:00:00-08:00",
       "t_end": "2026-02-07T06:00:00-08:00",
       "temp_f": 50,
@@ -241,7 +234,7 @@
       "t_start": "2026-02-08T06:00:00-08:00",
       "t_end": "2026-02-08T18:00:00-08:00",
       "temp_f": 62,
-      "text": "Mostly sunny, with a high near 62."
+      "text": "Mostly sunny, with a high near 62. Northwest wind 1 to 10 mph."
     },
     {
       "name": "Sunday Night",
@@ -298,6 +291,13 @@
       "t_end": "2026-02-12T18:00:00-08:00",
       "temp_f": 60,
       "text": "A slight chance of rain before 10am. Sunny, with a high near 60."
+    },
+    {
+      "name": "Thursday Night",
+      "t_start": "2026-02-12T18:00:00-08:00",
+      "t_end": "2026-02-13T06:00:00-08:00",
+      "temp_f": 48,
+      "text": "A slight chance of rain after 4am. Mostly clear, with a low around 48."
     }
   ]
 }
