@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-06T11:59:42.211Z",
+  "generated_at": "2026-02-06T13:18:46.774Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-06T03:00:00-08:00",
-      "temp_f": 56,
-      "wind_mph": 1,
-      "wind_dir": "E",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 5
-    },
-    {
-      "t": "2026-02-06T04:00:00-08:00",
-      "temp_f": 56,
-      "wind_mph": 0,
-      "wind_dir": "",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 9
-    },
     {
       "t": "2026-02-06T05:00:00-08:00",
       "temp_f": 56,
@@ -198,15 +182,31 @@
       "wind_dir": "NE",
       "shortForecast": "Mostly Clear",
       "precip_prob": 2
+    },
+    {
+      "t": "2026-02-07T03:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 1,
+      "wind_dir": "NE",
+      "shortForecast": "Patchy Fog",
+      "precip_prob": 2
+    },
+    {
+      "t": "2026-02-07T04:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 1,
+      "wind_dir": "NE",
+      "shortForecast": "Partly Cloudy",
+      "precip_prob": 1
     }
   ],
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-02-06T03:00:00-08:00",
+      "t_start": "2026-02-06T05:00:00-08:00",
       "t_end": "2026-02-06T06:00:00-08:00",
       "temp_f": 55,
-      "text": "Mostly cloudy, with a low around 55. East wind around 1 mph."
+      "text": "Mostly cloudy, with a low around 55. Wind around 0 mph."
     },
     {
       "name": "Friday",
