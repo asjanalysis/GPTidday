@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-06T19:01:46.936Z",
+  "generated_at": "2026-02-06T19:41:54.754Z",
   "current": null,
   "hourly": [
     {
@@ -203,10 +203,10 @@
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-02-06T11:00:00-08:00",
+      "t_start": "2026-02-06T09:00:00-08:00",
       "t_end": "2026-02-06T18:00:00-08:00",
       "temp_f": 62,
-      "text": "Sunny, with a high near 62. West southwest wind around 7 mph."
+      "text": "Sunny, with a high near 62. West wind 3 to 7 mph."
     },
     {
       "name": "Tonight",
