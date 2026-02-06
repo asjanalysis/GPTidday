@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-06T03:33:28.251Z",
+  "generated_at": "2026-02-06T05:05:06.873Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-05T19:00:00-08:00",
-      "temp_f": 60,
-      "wind_mph": 0,
-      "wind_dir": "",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 5
-    },
-    {
-      "t": "2026-02-05T20:00:00-08:00",
-      "temp_f": 60,
-      "wind_mph": 0,
-      "wind_dir": "",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 5
-    },
     {
       "t": "2026-02-05T21:00:00-08:00",
       "temp_f": 60,
@@ -198,15 +182,31 @@
       "wind_dir": "WNW",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 4
+    },
+    {
+      "t": "2026-02-06T19:00:00-08:00",
+      "temp_f": 60,
+      "wind_mph": 2,
+      "wind_dir": "NNW",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 4
+    },
+    {
+      "t": "2026-02-06T20:00:00-08:00",
+      "temp_f": 58,
+      "wind_mph": 1,
+      "wind_dir": "N",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 4
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-05T19:00:00-08:00",
+      "t_start": "2026-02-05T21:00:00-08:00",
       "t_end": "2026-02-06T06:00:00-08:00",
       "temp_f": 55,
-      "text": "Mostly cloudy, with a low around 55. East wind around 1 mph."
+      "text": "Mostly cloudy, with a low around 55. North northeast wind around 1 mph."
     },
     {
       "name": "Friday",
