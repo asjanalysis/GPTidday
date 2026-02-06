@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-06T08:36:13.891Z",
+  "generated_at": "2026-02-06T09:25:33.534Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-06T00:00:00-08:00",
-      "temp_f": 58,
-      "wind_mph": 1,
-      "wind_dir": "NNW",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 5
-    },
     {
       "t": "2026-02-06T01:00:00-08:00",
       "temp_f": 58,
@@ -198,15 +190,23 @@
       "wind_dir": "N",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 2
+    },
+    {
+      "t": "2026-02-07T00:00:00-08:00",
+      "temp_f": 54,
+      "wind_mph": 1,
+      "wind_dir": "NNW",
+      "shortForecast": "Partly Cloudy",
+      "precip_prob": 2
     }
   ],
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-02-06T00:00:00-08:00",
+      "t_start": "2026-02-06T01:00:00-08:00",
       "t_end": "2026-02-06T06:00:00-08:00",
       "temp_f": 55,
-      "text": "Mostly cloudy, with a low around 55. Northeast wind around 1 mph."
+      "text": "Mostly cloudy, with a low around 55. East northeast wind around 1 mph."
     },
     {
       "name": "Friday",
