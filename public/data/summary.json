@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-06T22:35:42.092Z",
+  "generated_at": "2026-02-06T22:54:35.364Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-06T22:35:42.030Z",
+    "generated_at": "2026-02-06T22:54:34.586Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-06T22:35:40.891Z",
+    "generated_at": "2026-02-06T22:54:33.325Z",
     "latest": {
       "t": "2026-02-06T22:00:00.000Z",
       "station_id": "156",
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-06T22:35:42.092Z",
+    "generated_at": "2026-02-06T22:54:35.363Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-06T13:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 6,
-        "wind_dir": "W",
-        "shortForecast": "Sunny",
-        "precip_prob": 5
-      },
       {
         "t": "2026-02-06T14:00:00-08:00",
         "temp_f": 59,
@@ -233,12 +225,20 @@
         "wind_dir": "SW",
         "shortForecast": "Mostly Sunny",
         "precip_prob": 1
+      },
+      {
+        "t": "2026-02-07T13:00:00-08:00",
+        "temp_f": 59,
+        "wind_mph": 7,
+        "wind_dir": "WSW",
+        "shortForecast": "Mostly Sunny",
+        "precip_prob": 1
       }
     ],
     "daily": [
       {
         "name": "This Afternoon",
-        "t_start": "2026-02-06T13:00:00-08:00",
+        "t_start": "2026-02-06T14:00:00-08:00",
         "t_end": "2026-02-06T18:00:00-08:00",
         "temp_f": 62,
         "text": "Sunny, with a high near 62. West wind around 7 mph."
