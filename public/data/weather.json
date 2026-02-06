@@ -4,33 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-06T00:58:37.396Z",
+  "generated_at": "2026-02-06T03:33:28.251Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-05T16:00:00-08:00",
-      "temp_f": 63,
-      "wind_mph": 5,
-      "wind_dir": "WSW",
-      "shortForecast": "Mostly Sunny",
-      "precip_prob": 5
-    },
-    {
-      "t": "2026-02-05T17:00:00-08:00",
-      "temp_f": 63,
-      "wind_mph": 2,
-      "wind_dir": "WSW",
-      "shortForecast": "Partly Sunny",
-      "precip_prob": 5
-    },
-    {
-      "t": "2026-02-05T18:00:00-08:00",
-      "temp_f": 61,
-      "wind_mph": 1,
-      "wind_dir": "ESE",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 5
-    },
     {
       "t": "2026-02-05T19:00:00-08:00",
       "temp_f": 60,
@@ -198,19 +174,36 @@
       "wind_dir": "WSW",
       "shortForecast": "Sunny",
       "precip_prob": 8
+    },
+    {
+      "t": "2026-02-06T16:00:00-08:00",
+      "temp_f": 60,
+      "wind_mph": 6,
+      "wind_dir": "WSW",
+      "shortForecast": "Mostly Sunny",
+      "precip_prob": 4
+    },
+    {
+      "t": "2026-02-06T17:00:00-08:00",
+      "temp_f": 62,
+      "wind_mph": 5,
+      "wind_dir": "WSW",
+      "shortForecast": "Sunny",
+      "precip_prob": 4
+    },
+    {
+      "t": "2026-02-06T18:00:00-08:00",
+      "temp_f": 60,
+      "wind_mph": 2,
+      "wind_dir": "WNW",
+      "shortForecast": "Partly Cloudy",
+      "precip_prob": 4
     }
   ],
   "daily": [
     {
-      "name": "This Afternoon",
-      "t_start": "2026-02-05T16:00:00-08:00",
-      "t_end": "2026-02-05T18:00:00-08:00",
-      "temp_f": 70,
-      "text": "Partly sunny. High near 70, with temperatures falling to around 63 in the afternoon. West southwest wind around 5 mph."
-    },
-    {
       "name": "Tonight",
-      "t_start": "2026-02-05T18:00:00-08:00",
+      "t_start": "2026-02-05T19:00:00-08:00",
       "t_end": "2026-02-06T06:00:00-08:00",
       "temp_f": 55,
       "text": "Mostly cloudy, with a low around 55. East wind around 1 mph."
@@ -227,7 +220,7 @@
       "t_start": "2026-02-06T18:00:00-08:00",
       "t_end": "2026-02-07T06:00:00-08:00",
       "temp_f": 51,
-      "text": "Mostly clear, with a low around 51. North wind around 2 mph."
+      "text": "Mostly clear. Low around 51, with temperatures rising to around 53 overnight. North wind around 2 mph."
     },
     {
       "name": "Saturday",
@@ -241,7 +234,7 @@
       "t_start": "2026-02-07T18:00:00-08:00",
       "t_end": "2026-02-08T06:00:00-08:00",
       "temp_f": 50,
-      "text": "Partly cloudy, with a low around 50."
+      "text": "Partly cloudy, with a low around 50. North wind 1 to 7 mph."
     },
     {
       "name": "Sunday",
@@ -298,6 +291,13 @@
       "t_end": "2026-02-12T06:00:00-08:00",
       "temp_f": 46,
       "text": "A chance of rain. Partly cloudy, with a low around 46."
+    },
+    {
+      "name": "Thursday",
+      "t_start": "2026-02-12T06:00:00-08:00",
+      "t_end": "2026-02-12T18:00:00-08:00",
+      "temp_f": 59,
+      "text": "A slight chance of rain before 10am. Sunny, with a high near 59."
     }
   ]
 }
