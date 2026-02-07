@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-07T07:48:39.956Z",
+  "generated_at": "2026-02-07T08:00:48.363Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-07T07:48:39.955Z",
+    "generated_at": "2026-02-07T08:00:46.672Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-07T07:48:38.171Z",
+    "generated_at": "2026-02-07T08:00:45.486Z",
     "latest": {
       "t": "2026-02-07T07:00:00.000Z",
       "station_id": "156",
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-07T07:48:39.625Z",
+    "generated_at": "2026-02-07T08:00:48.362Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-06T23:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 2,
-        "wind_dir": "ENE",
-        "shortForecast": "Mostly Clear",
-        "precip_prob": 0
-      },
       {
         "t": "2026-02-07T00:00:00-08:00",
         "temp_f": 54,
@@ -233,15 +225,23 @@
         "wind_dir": "NE",
         "shortForecast": "Mostly Clear",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-02-07T23:00:00-08:00",
+        "temp_f": 55,
+        "wind_mph": 2,
+        "wind_dir": "NNE",
+        "shortForecast": "Mostly Clear",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
-        "name": "Tonight",
-        "t_start": "2026-02-06T21:00:00-08:00",
+        "name": "Overnight",
+        "t_start": "2026-02-07T00:00:00-08:00",
         "t_end": "2026-02-07T06:00:00-08:00",
         "temp_f": 50,
-        "text": "Patchy fog after midnight. Partly cloudy, with a low around 50. North northeast wind around 3 mph."
+        "text": "Patchy fog. Partly cloudy, with a low around 50. North northeast wind around 3 mph."
       },
       {
         "name": "Saturday",
