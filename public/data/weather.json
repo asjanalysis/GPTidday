@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-07T13:27:15.312Z",
+  "generated_at": "2026-02-07T13:59:14.468Z",
   "current": null,
   "hourly": [
     {
@@ -203,10 +203,10 @@
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-02-07T03:00:00-08:00",
+      "t_start": "2026-02-07T05:00:00-08:00",
       "t_end": "2026-02-07T06:00:00-08:00",
       "temp_f": 50,
-      "text": "Patchy fog. Partly cloudy. Low around 50, with temperatures rising to around 52 overnight. East northeast wind around 2 mph."
+      "text": "Patchy fog. Partly cloudy. Low around 50, with temperatures rising to around 52 overnight. Northeast wind around 1 mph."
     },
     {
       "name": "Saturday",
