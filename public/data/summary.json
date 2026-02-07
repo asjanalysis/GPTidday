@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-07T08:43:35.738Z",
+  "generated_at": "2026-02-07T09:03:30.865Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-07T08:43:34.874Z",
+    "generated_at": "2026-02-07T09:03:29.949Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,16 +18,16 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-07T08:43:33.612Z",
+    "generated_at": "2026-02-07T09:03:28.652Z",
     "latest": {
-      "t": "2026-02-07T08:00:00.000Z",
+      "t": "2026-02-07T08:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.91,
-      "hs_ft": 9.5472444,
-      "tp_s": 15.384616,
-      "ta_s": 11.7902355,
-      "tz_s": 10.662311,
+      "hs_m": 3.49,
+      "hs_ft": 11.4501316,
+      "tp_s": 14.285714,
+      "ta_s": 12.284809,
+      "tz_s": 11.293489,
       "dp_deg_true": 271.75,
       "lat": 36.759167,
       "lon": -121.95028
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-07T08:43:35.737Z",
+    "generated_at": "2026-02-07T09:03:30.864Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-07T00:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 3,
-        "wind_dir": "ENE",
-        "shortForecast": "Patchy Fog",
-        "precip_prob": 0
-      },
       {
         "t": "2026-02-07T01:00:00-08:00",
         "temp_f": 53,
@@ -233,15 +225,23 @@
         "wind_dir": "NNE",
         "shortForecast": "Mostly Clear",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-02-08T00:00:00-08:00",
+        "temp_f": 54,
+        "wind_mph": 2,
+        "wind_dir": "N",
+        "shortForecast": "Mostly Clear",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-02-07T00:00:00-08:00",
+        "t_start": "2026-02-07T01:00:00-08:00",
         "t_end": "2026-02-07T06:00:00-08:00",
         "temp_f": 50,
-        "text": "Patchy fog. Partly cloudy, with a low around 50. North northeast wind around 3 mph."
+        "text": "Patchy fog after 2am. Partly cloudy, with a low around 50. North northeast wind around 3 mph."
       },
       {
         "name": "Saturday",
