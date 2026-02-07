@@ -4,24 +4,16 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-07T22:59:10.021Z",
+  "generated_at": "2026-02-07T23:37:37.715Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-07T14:00:00-08:00",
-      "temp_f": 60,
-      "wind_mph": 7,
-      "wind_dir": "W",
-      "shortForecast": "Sunny",
-      "precip_prob": 1
-    },
     {
       "t": "2026-02-07T15:00:00-08:00",
       "temp_f": 60,
       "wind_mph": 8,
       "wind_dir": "W",
       "shortForecast": "Sunny",
-      "precip_prob": 1
+      "precip_prob": 0
     },
     {
       "t": "2026-02-07T16:00:00-08:00",
@@ -29,7 +21,7 @@
       "wind_mph": 8,
       "wind_dir": "WNW",
       "shortForecast": "Sunny",
-      "precip_prob": 1
+      "precip_prob": 0
     },
     {
       "t": "2026-02-07T17:00:00-08:00",
@@ -37,7 +29,7 @@
       "wind_mph": 6,
       "wind_dir": "NNW",
       "shortForecast": "Sunny",
-      "precip_prob": 1
+      "precip_prob": 0
     },
     {
       "t": "2026-02-07T18:00:00-08:00",
@@ -45,7 +37,7 @@
       "wind_mph": 5,
       "wind_dir": "NNW",
       "shortForecast": "Mostly Clear",
-      "precip_prob": 1
+      "precip_prob": 0
     },
     {
       "t": "2026-02-07T19:00:00-08:00",
@@ -53,7 +45,7 @@
       "wind_mph": 5,
       "wind_dir": "N",
       "shortForecast": "Mostly Clear",
-      "precip_prob": 1
+      "precip_prob": 0
     },
     {
       "t": "2026-02-07T20:00:00-08:00",
@@ -61,7 +53,7 @@
       "wind_mph": 3,
       "wind_dir": "N",
       "shortForecast": "Mostly Clear",
-      "precip_prob": 1
+      "precip_prob": 0
     },
     {
       "t": "2026-02-07T21:00:00-08:00",
@@ -69,7 +61,7 @@
       "wind_mph": 2,
       "wind_dir": "NNE",
       "shortForecast": "Mostly Clear",
-      "precip_prob": 1
+      "precip_prob": 0
     },
     {
       "t": "2026-02-07T22:00:00-08:00",
@@ -77,7 +69,7 @@
       "wind_mph": 2,
       "wind_dir": "N",
       "shortForecast": "Mostly Clear",
-      "precip_prob": 1
+      "precip_prob": 0
     },
     {
       "t": "2026-02-07T23:00:00-08:00",
@@ -85,7 +77,7 @@
       "wind_mph": 2,
       "wind_dir": "N",
       "shortForecast": "Mostly Clear",
-      "precip_prob": 1
+      "precip_prob": 0
     },
     {
       "t": "2026-02-08T00:00:00-08:00",
@@ -93,7 +85,7 @@
       "wind_mph": 1,
       "wind_dir": "N",
       "shortForecast": "Mostly Clear",
-      "precip_prob": 1
+      "precip_prob": 0
     },
     {
       "t": "2026-02-08T01:00:00-08:00",
@@ -101,7 +93,7 @@
       "wind_mph": 1,
       "wind_dir": "N",
       "shortForecast": "Mostly Clear",
-      "precip_prob": 1
+      "precip_prob": 0
     },
     {
       "t": "2026-02-08T02:00:00-08:00",
@@ -109,7 +101,7 @@
       "wind_mph": 1,
       "wind_dir": "N",
       "shortForecast": "Mostly Clear",
-      "precip_prob": 1
+      "precip_prob": 0
     },
     {
       "t": "2026-02-08T03:00:00-08:00",
@@ -117,7 +109,7 @@
       "wind_mph": 1,
       "wind_dir": "NNE",
       "shortForecast": "Mostly Clear",
-      "precip_prob": 1
+      "precip_prob": 0
     },
     {
       "t": "2026-02-08T04:00:00-08:00",
@@ -173,7 +165,7 @@
       "wind_mph": 2,
       "wind_dir": "SSW",
       "shortForecast": "Sunny",
-      "precip_prob": 3
+      "precip_prob": 0
     },
     {
       "t": "2026-02-08T11:00:00-08:00",
@@ -181,7 +173,7 @@
       "wind_mph": 3,
       "wind_dir": "SW",
       "shortForecast": "Sunny",
-      "precip_prob": 3
+      "precip_prob": 0
     },
     {
       "t": "2026-02-08T12:00:00-08:00",
@@ -189,7 +181,7 @@
       "wind_mph": 6,
       "wind_dir": "WSW",
       "shortForecast": "Sunny",
-      "precip_prob": 3
+      "precip_prob": 0
     },
     {
       "t": "2026-02-08T13:00:00-08:00",
@@ -197,13 +189,21 @@
       "wind_mph": 7,
       "wind_dir": "WSW",
       "shortForecast": "Sunny",
-      "precip_prob": 3
+      "precip_prob": 0
+    },
+    {
+      "t": "2026-02-08T14:00:00-08:00",
+      "temp_f": 61,
+      "wind_mph": 9,
+      "wind_dir": "WSW",
+      "shortForecast": "Sunny",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
       "name": "This Afternoon",
-      "t_start": "2026-02-07T13:00:00-08:00",
+      "t_start": "2026-02-07T15:00:00-08:00",
       "t_end": "2026-02-07T18:00:00-08:00",
       "temp_f": 62,
       "text": "Sunny, with a high near 62. West northwest wind around 8 mph."
