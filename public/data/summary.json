@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-07T14:55:40.503Z",
+  "generated_at": "2026-02-07T15:22:15.012Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-07T14:55:40.502Z",
+    "generated_at": "2026-02-07T15:22:13.709Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-07T14:55:38.758Z",
+    "generated_at": "2026-02-07T15:22:12.533Z",
     "latest": {
-      "t": "2026-02-07T14:00:00.000Z",
+      "t": "2026-02-07T14:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.92,
-      "hs_ft": 9.580052799999999,
+      "hs_m": 3.41,
+      "hs_ft": 11.187664400000001,
       "tp_s": 15.384616,
-      "ta_s": 11.484189,
-      "tz_s": 10.440189,
-      "dp_deg_true": 270.34375,
+      "ta_s": 12.033601,
+      "tz_s": 10.903906,
+      "dp_deg_true": 271.75,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-07T14:55:40.091Z",
+    "generated_at": "2026-02-07T15:22:15.011Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-07T06:00:00-08:00",
-        "temp_f": 51,
-        "wind_mph": 0,
-        "wind_dir": "",
-        "shortForecast": "Patchy Fog",
-        "precip_prob": 0
-      },
       {
         "t": "2026-02-07T07:00:00-08:00",
         "temp_f": 51,
@@ -233,15 +225,23 @@
         "wind_dir": "NE",
         "shortForecast": "Partly Cloudy",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-02-08T06:00:00-08:00",
+        "temp_f": 51,
+        "wind_mph": 2,
+        "wind_dir": "E",
+        "shortForecast": "Mostly Sunny",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-02-07T06:00:00-08:00",
+        "t_start": "2026-02-07T07:00:00-08:00",
         "t_end": "2026-02-07T18:00:00-08:00",
         "temp_f": 62,
-        "text": "Patchy fog before 8am. Mostly sunny, with a high near 62. West southwest wind 0 to 8 mph."
+        "text": "Patchy fog before 8am. Mostly sunny, with a high near 62. Southwest wind 0 to 8 mph."
       },
       {
         "name": "Tonight",
