@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-08T09:15:52.907Z",
+  "generated_at": "2026-02-08T09:47:43.910Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-08T09:15:51.999Z",
+    "generated_at": "2026-02-08T09:47:42.991Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-08T09:15:50.672Z",
+    "generated_at": "2026-02-08T09:47:41.322Z",
     "latest": {
-      "t": "2026-02-08T08:30:00.000Z",
+      "t": "2026-02-08T09:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.36,
-      "hs_ft": 7.742782399999999,
+      "hs_m": 2.17,
+      "hs_ft": 7.1194228,
       "tp_s": 13.333333,
-      "ta_s": 10.31677,
-      "tz_s": 9.392628,
-      "dp_deg_true": 273.15625,
+      "ta_s": 9.828893,
+      "tz_s": 8.99764,
+      "dp_deg_true": 271.75,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-08T09:15:52.906Z",
+    "generated_at": "2026-02-08T09:47:43.909Z",
     "current": null,
     "hourly": [
       {
@@ -237,88 +237,88 @@
     ],
     "daily": [
       {
-        "name": "Tonight",
-        "t_start": "2026-02-07T19:00:00-08:00",
+        "name": "Overnight",
+        "t_start": "2026-02-08T01:00:00-08:00",
         "t_end": "2026-02-08T06:00:00-08:00",
         "temp_f": 50,
-        "text": "Mostly clear, with a low around 50. North wind 1 to 5 mph."
+        "text": "Partly cloudy, with a low around 50. North northeast wind around 3 mph."
       },
       {
         "name": "Sunday",
         "t_start": "2026-02-08T06:00:00-08:00",
         "t_end": "2026-02-08T18:00:00-08:00",
-        "temp_f": 62,
-        "text": "Sunny, with a high near 62. West wind 1 to 10 mph."
+        "temp_f": 63,
+        "text": "Sunny, with a high near 63. West northwest wind 0 to 12 mph."
       },
       {
         "name": "Sunday Night",
         "t_start": "2026-02-08T18:00:00-08:00",
         "t_end": "2026-02-09T06:00:00-08:00",
-        "temp_f": 52,
-        "text": "Areas of fog after 10pm. Partly cloudy, with a low around 52. North northwest wind 2 to 7 mph."
+        "temp_f": 51,
+        "text": "Areas of fog after 9pm. Partly cloudy, with a low around 51. North wind 2 to 6 mph."
       },
       {
         "name": "Monday",
         "t_start": "2026-02-09T06:00:00-08:00",
         "t_end": "2026-02-09T18:00:00-08:00",
-        "temp_f": 61,
-        "text": "Areas of fog before noon. Mostly cloudy, with a high near 61. North northwest wind 2 to 8 mph."
+        "temp_f": 62,
+        "text": "Areas of fog before 11am. Mostly cloudy, with a high near 62. North northwest wind 1 to 6 mph."
       },
       {
         "name": "Monday Night",
         "t_start": "2026-02-09T18:00:00-08:00",
         "t_end": "2026-02-10T06:00:00-08:00",
-        "temp_f": 51,
-        "text": "A chance of rain after 10pm. Mostly cloudy, with a low around 51. West northwest wind 2 to 8 mph. Chance of precipitation is 50%. New rainfall amounts less than a tenth of an inch possible."
+        "temp_f": 52,
+        "text": "A chance of rain after 4am. Cloudy, with a low around 52. North northeast wind 1 to 6 mph. Chance of precipitation is 50%. New rainfall amounts less than a tenth of an inch possible."
       },
       {
         "name": "Tuesday",
         "t_start": "2026-02-10T06:00:00-08:00",
         "t_end": "2026-02-10T18:00:00-08:00",
-        "temp_f": 55,
-        "text": "Rain likely before 11am, then rain likely and patchy fog. Mostly cloudy, with a high near 55. Chance of precipitation is 60%. New rainfall amounts between a tenth and quarter of an inch possible."
+        "temp_f": 57,
+        "text": "Rain likely before 11am, then rain likely and patchy fog. Mostly cloudy, with a high near 57. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible."
       },
       {
         "name": "Tuesday Night",
         "t_start": "2026-02-10T18:00:00-08:00",
         "t_end": "2026-02-11T06:00:00-08:00",
-        "temp_f": 48,
-        "text": "A chance of rain. Mostly cloudy, with a low around 48."
+        "temp_f": 51,
+        "text": "Rain likely. Mostly cloudy, with a low around 51."
       },
       {
         "name": "Wednesday",
         "t_start": "2026-02-11T06:00:00-08:00",
         "t_end": "2026-02-11T18:00:00-08:00",
-        "temp_f": 58,
-        "text": "A chance of rain. Partly sunny, with a high near 58."
+        "temp_f": 56,
+        "text": "A chance of rain. Partly sunny, with a high near 56."
       },
       {
         "name": "Wednesday Night",
         "t_start": "2026-02-11T18:00:00-08:00",
         "t_end": "2026-02-12T06:00:00-08:00",
-        "temp_f": 46,
-        "text": "A slight chance of rain before 4am. Partly cloudy, with a low around 46."
+        "temp_f": 47,
+        "text": "A chance of rain. Partly cloudy, with a low around 47."
       },
       {
         "name": "Thursday",
         "t_start": "2026-02-12T06:00:00-08:00",
         "t_end": "2026-02-12T18:00:00-08:00",
-        "temp_f": 59,
-        "text": "Sunny, with a high near 59."
+        "temp_f": 58,
+        "text": "A slight chance of rain before 10am. Mostly sunny, with a high near 58."
       },
       {
         "name": "Thursday Night",
         "t_start": "2026-02-12T18:00:00-08:00",
         "t_end": "2026-02-13T06:00:00-08:00",
-        "temp_f": 46,
-        "text": "Mostly clear, with a low around 46."
+        "temp_f": 47,
+        "text": "Partly cloudy, with a low around 47."
       },
       {
         "name": "Friday",
         "t_start": "2026-02-13T06:00:00-08:00",
         "t_end": "2026-02-13T18:00:00-08:00",
-        "temp_f": 57,
-        "text": "A slight chance of rain after 10am. Partly sunny, with a high near 57."
+        "temp_f": 58,
+        "text": "A slight chance of rain after 10am. Mostly sunny, with a high near 58."
       },
       {
         "name": "Friday Night",
@@ -331,8 +331,8 @@
         "name": "Saturday",
         "t_start": "2026-02-14T06:00:00-08:00",
         "t_end": "2026-02-14T18:00:00-08:00",
-        "temp_f": 54,
-        "text": "Rain likely before 5pm. Mostly cloudy, with a high near 54."
+        "temp_f": 56,
+        "text": "Rain likely. Mostly cloudy, with a high near 56."
       }
     ]
   }
