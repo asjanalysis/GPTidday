@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-08T15:42:40.196Z",
+  "generated_at": "2026-02-08T15:59:19.893Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-08T15:42:40.106Z",
+    "generated_at": "2026-02-08T15:59:19.033Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-08T15:42:38.887Z",
+    "generated_at": "2026-02-08T15:59:17.730Z",
     "latest": {
       "t": "2026-02-08T15:00:00.000Z",
       "station_id": "156",
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-08T15:42:40.195Z",
+    "generated_at": "2026-02-08T15:59:19.892Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-08T06:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 3,
-        "wind_dir": "NNW",
-        "shortForecast": "Mostly Sunny",
-        "precip_prob": 2
-      },
       {
         "t": "2026-02-08T07:00:00-08:00",
         "temp_f": 51,
@@ -233,15 +225,23 @@
         "wind_dir": "NNE",
         "shortForecast": "Areas Of Fog",
         "precip_prob": 1
+      },
+      {
+        "t": "2026-02-09T06:00:00-08:00",
+        "temp_f": 52,
+        "wind_mph": 3,
+        "wind_dir": "NNE",
+        "shortForecast": "Areas Of Fog",
+        "precip_prob": 1
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-02-08T06:00:00-08:00",
+        "t_start": "2026-02-08T07:00:00-08:00",
         "t_end": "2026-02-08T18:00:00-08:00",
         "temp_f": 63,
-        "text": "Sunny, with a high near 63. West northwest wind 0 to 12 mph."
+        "text": "Sunny, with a high near 63. West wind 0 to 12 mph."
       },
       {
         "name": "Tonight",
