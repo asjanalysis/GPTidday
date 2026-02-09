@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-09T11:29:23.545Z",
+  "generated_at": "2026-02-09T12:04:58.711Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-09T11:29:23.545Z",
+    "generated_at": "2026-02-09T12:04:58.342Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-09T11:29:21.776Z",
+    "generated_at": "2026-02-09T12:04:56.511Z",
     "latest": {
-      "t": "2026-02-09T10:30:00.000Z",
+      "t": "2026-02-09T11:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.94,
-      "hs_ft": 6.3648296,
-      "tp_s": 12.5,
-      "ta_s": 8.953524,
-      "tz_s": 7.8415246,
-      "dp_deg_true": 283,
+      "hs_m": 2.13,
+      "hs_ft": 6.9881892,
+      "tp_s": 13.333333,
+      "ta_s": 8.58336,
+      "tz_s": 7.41742,
+      "dp_deg_true": 278.78125,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,25 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-09T11:29:23.344Z",
+    "generated_at": "2026-02-09T12:04:58.710Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-09T02:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 3,
-        "wind_dir": "N",
-        "shortForecast": "Patchy Fog",
-        "precip_prob": 2
-      },
-      {
-        "t": "2026-02-09T03:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 2,
-        "wind_dir": "NNE",
-        "shortForecast": "Patchy Fog",
-        "precip_prob": 2
-      },
       {
         "t": "2026-02-09T04:00:00-08:00",
         "temp_f": 53,
@@ -233,6 +217,22 @@
         "wind_dir": "ESE",
         "shortForecast": "Mostly Cloudy",
         "precip_prob": 7
+      },
+      {
+        "t": "2026-02-10T02:00:00-08:00",
+        "temp_f": 54,
+        "wind_mph": 2,
+        "wind_dir": "ESE",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 4
+      },
+      {
+        "t": "2026-02-10T03:00:00-08:00",
+        "temp_f": 53,
+        "wind_mph": 2,
+        "wind_dir": "ESE",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 6
       }
     ],
     "daily": [
