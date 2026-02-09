@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-09T03:44:06.214Z",
+  "generated_at": "2026-02-09T05:21:01.997Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-08T19:00:00-08:00",
-      "temp_f": 58,
-      "wind_mph": 5,
-      "wind_dir": "NNW",
-      "shortForecast": "Partly Cloudy",
-      "precip_prob": 0
-    },
-    {
-      "t": "2026-02-08T20:00:00-08:00",
-      "temp_f": 57,
-      "wind_mph": 3,
-      "wind_dir": "NNW",
-      "shortForecast": "Patchy Fog",
-      "precip_prob": 0
-    },
     {
       "t": "2026-02-08T21:00:00-08:00",
       "temp_f": 56,
@@ -198,15 +182,31 @@
       "wind_dir": "N",
       "shortForecast": "Cloudy",
       "precip_prob": 2
+    },
+    {
+      "t": "2026-02-09T19:00:00-08:00",
+      "temp_f": 59,
+      "wind_mph": 2,
+      "wind_dir": "NNE",
+      "shortForecast": "Cloudy",
+      "precip_prob": 2
+    },
+    {
+      "t": "2026-02-09T20:00:00-08:00",
+      "temp_f": 59,
+      "wind_mph": 3,
+      "wind_dir": "NNE",
+      "shortForecast": "Cloudy",
+      "precip_prob": 2
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-08T19:00:00-08:00",
+      "t_start": "2026-02-08T21:00:00-08:00",
       "t_end": "2026-02-09T06:00:00-08:00",
       "temp_f": 52,
-      "text": "Areas of fog after 8pm. Mostly cloudy, with a low around 52. North wind 1 to 5 mph."
+      "text": "Areas of fog. Mostly cloudy, with a low around 52. North northeast wind 1 to 5 mph."
     },
     {
       "name": "Monday",
