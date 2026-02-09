@@ -4,41 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-09T14:40:58.039Z",
+  "generated_at": "2026-02-09T17:34:47.473Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-09T05:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 2,
-      "wind_dir": "NE",
-      "shortForecast": "Patchy Fog",
-      "precip_prob": 0
-    },
-    {
-      "t": "2026-02-09T06:00:00-08:00",
-      "temp_f": 52,
-      "wind_mph": 1,
-      "wind_dir": "NE",
-      "shortForecast": "Patchy Fog",
-      "precip_prob": 0
-    },
-    {
-      "t": "2026-02-09T07:00:00-08:00",
-      "temp_f": 52,
-      "wind_mph": 1,
-      "wind_dir": "NNE",
-      "shortForecast": "Patchy Fog",
-      "precip_prob": 0
-    },
-    {
-      "t": "2026-02-09T08:00:00-08:00",
-      "temp_f": 52,
-      "wind_mph": 1,
-      "wind_dir": "ENE",
-      "shortForecast": "Patchy Fog",
-      "precip_prob": 0
-    },
     {
       "t": "2026-02-09T09:00:00-08:00",
       "temp_f": 53,
@@ -198,25 +166,50 @@
       "wind_dir": "S",
       "shortForecast": "Chance Light Rain",
       "precip_prob": 30
+    },
+    {
+      "t": "2026-02-10T05:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 2,
+      "wind_dir": "SSW",
+      "shortForecast": "Chance Light Rain",
+      "precip_prob": 30
+    },
+    {
+      "t": "2026-02-10T06:00:00-08:00",
+      "temp_f": 53,
+      "wind_mph": 2,
+      "wind_dir": "S",
+      "shortForecast": "Chance Light Rain",
+      "precip_prob": 30
+    },
+    {
+      "t": "2026-02-10T07:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 3,
+      "wind_dir": "S",
+      "shortForecast": "Chance Light Rain",
+      "precip_prob": 30
+    },
+    {
+      "t": "2026-02-10T08:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 3,
+      "wind_dir": "S",
+      "shortForecast": "Chance Light Rain",
+      "precip_prob": 30
     }
   ],
   "daily": [
     {
-      "name": "Overnight",
-      "t_start": "2026-02-09T01:00:00-08:00",
-      "t_end": "2026-02-09T06:00:00-08:00",
-      "temp_f": 52,
-      "text": "Patchy fog. Mostly cloudy, with a low around 52. North northeast wind around 3 mph."
-    },
-    {
-      "name": "Monday",
-      "t_start": "2026-02-09T06:00:00-08:00",
+      "name": "Today",
+      "t_start": "2026-02-09T09:00:00-08:00",
       "t_end": "2026-02-09T18:00:00-08:00",
       "temp_f": 61,
-      "text": "Areas of fog before 11am. Mostly cloudy, with a high near 61. North wind 1 to 6 mph."
+      "text": "Areas of fog before 11am. Mostly cloudy, with a high near 61. North northwest wind 1 to 6 mph."
     },
     {
-      "name": "Monday Night",
+      "name": "Tonight",
       "t_start": "2026-02-09T18:00:00-08:00",
       "t_end": "2026-02-10T06:00:00-08:00",
       "temp_f": 52,
@@ -227,7 +220,7 @@
       "t_start": "2026-02-10T06:00:00-08:00",
       "t_end": "2026-02-10T18:00:00-08:00",
       "temp_f": 58,
-      "text": "Rain likely before 11am, then rain likely and patchy fog between 11am and 4pm, then showers and thunderstorms. Partly sunny, with a high near 58. South wind 2 to 14 mph, with gusts as high as 22 mph. Chance of precipitation is 90%. New rainfall amounts between a quarter and half of an inch possible."
+      "text": "Rain likely before 11am, then rain likely and patchy fog between 11am and 4pm, then showers and thunderstorms. Partly sunny. High near 58, with temperatures falling to around 56 in the afternoon. South wind 2 to 14 mph, with gusts as high as 22 mph. Chance of precipitation is 90%. New rainfall amounts between a quarter and half of an inch possible."
     },
     {
       "name": "Tuesday Night",
@@ -241,14 +234,14 @@
       "t_start": "2026-02-11T06:00:00-08:00",
       "t_end": "2026-02-11T18:00:00-08:00",
       "temp_f": 55,
-      "text": "Rain before 7am, then patchy fog and showers and thunderstorms between 7am and 1pm, then rain likely. Mostly cloudy, with a high near 55. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible."
+      "text": "Rain before 7am, then patchy fog and showers and thunderstorms between 7am and 1pm, then rain likely. Mostly cloudy, with a high near 55. Southwest wind 7 to 14 mph, with gusts as high as 21 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible."
     },
     {
       "name": "Wednesday Night",
       "t_start": "2026-02-11T18:00:00-08:00",
       "t_end": "2026-02-12T06:00:00-08:00",
       "temp_f": 48,
-      "text": "A chance of rain. Mostly cloudy, with a low around 48."
+      "text": "A chance of rain. Mostly cloudy, with a low around 48. Chance of precipitation is 50%. New rainfall amounts between a tenth and quarter of an inch possible."
     },
     {
       "name": "Thursday",
@@ -298,6 +291,13 @@
       "t_end": "2026-02-15T18:00:00-08:00",
       "temp_f": 54,
       "text": "Rain. Mostly cloudy, with a high near 54."
+    },
+    {
+      "name": "Sunday Night",
+      "t_start": "2026-02-15T18:00:00-08:00",
+      "t_end": "2026-02-16T06:00:00-08:00",
+      "temp_f": 46,
+      "text": "Rain. Mostly cloudy, with a low around 46."
     }
   ]
 }
