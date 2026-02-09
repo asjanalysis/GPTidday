@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-09T05:21:01.997Z",
+  "generated_at": "2026-02-09T06:38:44.613Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-08T21:00:00-08:00",
-      "temp_f": 56,
-      "wind_mph": 3,
-      "wind_dir": "N",
-      "shortForecast": "Areas Of Fog",
-      "precip_prob": 1
-    },
     {
       "t": "2026-02-08T22:00:00-08:00",
       "temp_f": 56,
@@ -198,12 +190,20 @@
       "wind_dir": "NNE",
       "shortForecast": "Cloudy",
       "precip_prob": 2
+    },
+    {
+      "t": "2026-02-09T21:00:00-08:00",
+      "temp_f": 59,
+      "wind_mph": 3,
+      "wind_dir": "NNE",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 4
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-08T21:00:00-08:00",
+      "t_start": "2026-02-08T22:00:00-08:00",
       "t_end": "2026-02-09T06:00:00-08:00",
       "temp_f": 52,
       "text": "Areas of fog. Mostly cloudy, with a low around 52. North northeast wind 1 to 5 mph."
