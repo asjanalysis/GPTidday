@@ -4,33 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-10T01:05:54.017Z",
+  "generated_at": "2026-02-10T04:04:58.905Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-09T17:00:00-08:00",
-      "temp_f": 61,
-      "wind_mph": 5,
-      "wind_dir": "NNW",
-      "shortForecast": "Cloudy",
-      "precip_prob": 2
-    },
-    {
-      "t": "2026-02-09T18:00:00-08:00",
-      "temp_f": 60,
-      "wind_mph": 3,
-      "wind_dir": "N",
-      "shortForecast": "Cloudy",
-      "precip_prob": 3
-    },
-    {
-      "t": "2026-02-09T19:00:00-08:00",
-      "temp_f": 59,
-      "wind_mph": 3,
-      "wind_dir": "N",
-      "shortForecast": "Cloudy",
-      "precip_prob": 4
-    },
     {
       "t": "2026-02-09T20:00:00-08:00",
       "temp_f": 58,
@@ -198,19 +174,36 @@
       "wind_dir": "SSW",
       "shortForecast": "Showers And Thunderstorms",
       "precip_prob": 94
+    },
+    {
+      "t": "2026-02-10T17:00:00-08:00",
+      "temp_f": 56,
+      "wind_mph": 8,
+      "wind_dir": "S",
+      "shortForecast": "Showers And Thunderstorms",
+      "precip_prob": 94
+    },
+    {
+      "t": "2026-02-10T18:00:00-08:00",
+      "temp_f": 56,
+      "wind_mph": 6,
+      "wind_dir": "SE",
+      "shortForecast": "Showers And Thunderstorms",
+      "precip_prob": 94
+    },
+    {
+      "t": "2026-02-10T19:00:00-08:00",
+      "temp_f": 55,
+      "wind_mph": 6,
+      "wind_dir": "ENE",
+      "shortForecast": "Showers And Thunderstorms",
+      "precip_prob": 94
     }
   ],
   "daily": [
     {
-      "name": "This Afternoon",
-      "t_start": "2026-02-09T17:00:00-08:00",
-      "t_end": "2026-02-09T18:00:00-08:00",
-      "temp_f": 61,
-      "text": "Cloudy, with a high near 61. North northwest wind around 5 mph."
-    },
-    {
       "name": "Tonight",
-      "t_start": "2026-02-09T18:00:00-08:00",
+      "t_start": "2026-02-09T20:00:00-08:00",
       "t_end": "2026-02-10T06:00:00-08:00",
       "temp_f": 51,
       "text": "Mostly cloudy. Low around 51, with temperatures rising to around 54 overnight. East northeast wind around 3 mph."
@@ -227,7 +220,7 @@
       "t_start": "2026-02-10T18:00:00-08:00",
       "t_end": "2026-02-11T06:00:00-08:00",
       "temp_f": 51,
-      "text": "Showers and thunderstorms before 10pm, then rain. Cloudy, with a low around 51. East southeast wind 6 to 13 mph, with gusts as high as 22 mph. Chance of precipitation is 100%. New rainfall amounts between three quarters and one inch possible."
+      "text": "Showers and thunderstorms before 10pm, then rain. Cloudy. Low around 51, with temperatures rising to around 54 overnight. East southeast wind 6 to 13 mph, with gusts as high as 22 mph. Chance of precipitation is 100%. New rainfall amounts between three quarters and one inch possible."
     },
     {
       "name": "Wednesday",
@@ -241,14 +234,14 @@
       "t_start": "2026-02-11T18:00:00-08:00",
       "t_end": "2026-02-12T06:00:00-08:00",
       "temp_f": 50,
-      "text": "Rain likely. Mostly cloudy, with a low around 50. Chance of precipitation is 70%. New rainfall amounts between a half and three quarters of an inch possible."
+      "text": "Rain likely. Mostly cloudy, with a low around 50. South wind 2 to 15 mph, with gusts as high as 21 mph. Chance of precipitation is 70%. New rainfall amounts between a half and three quarters of an inch possible."
     },
     {
       "name": "Thursday",
       "t_start": "2026-02-12T06:00:00-08:00",
       "t_end": "2026-02-12T18:00:00-08:00",
       "temp_f": 58,
-      "text": "A chance of rain before 7am, then a chance of rain and patchy fog between 7am and 9am, then areas of fog and a chance of rain between 9am and 1pm. Mostly sunny, with a high near 58."
+      "text": "A chance of rain before 7am, then a chance of rain and patchy fog between 7am and 9am, then areas of fog and a chance of rain between 9am and 1pm. Mostly sunny, with a high near 58. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible."
     },
     {
       "name": "Thursday Night",
@@ -298,6 +291,13 @@
       "t_end": "2026-02-16T06:00:00-08:00",
       "temp_f": 46,
       "text": "Rain. Mostly cloudy, with a low around 46."
+    },
+    {
+      "name": "Washington's Birthday",
+      "t_start": "2026-02-16T06:00:00-08:00",
+      "t_end": "2026-02-16T18:00:00-08:00",
+      "temp_f": 53,
+      "text": "Rain before 5pm. Cloudy, with a high near 53."
     }
   ]
 }
