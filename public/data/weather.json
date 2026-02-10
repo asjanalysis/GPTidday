@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-10T16:54:04.221Z",
+  "generated_at": "2026-02-10T17:56:23.637Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-10T08:00:00-08:00",
-      "temp_f": 52,
-      "wind_mph": 8,
-      "wind_dir": "SSE",
-      "shortForecast": "Mostly Sunny",
-      "precip_prob": 7
-    },
     {
       "t": "2026-02-10T09:00:00-08:00",
       "temp_f": 53,
@@ -198,15 +190,23 @@
       "wind_dir": "S",
       "shortForecast": "Light Rain",
       "precip_prob": 76
+    },
+    {
+      "t": "2026-02-11T08:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 18,
+      "wind_dir": "S",
+      "shortForecast": "Light Rain",
+      "precip_prob": 88
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-02-10T08:00:00-08:00",
+      "t_start": "2026-02-10T09:00:00-08:00",
       "t_end": "2026-02-10T18:00:00-08:00",
       "temp_f": 58,
-      "text": "Rain after 1pm. Partly sunny. High near 58, with temperatures falling to around 56 in the afternoon. South wind 8 to 21 mph, with gusts as high as 26 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible."
+      "text": "Rain after 1pm. Mostly cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South wind 12 to 21 mph, with gusts as high as 26 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible."
     },
     {
       "name": "Tonight",
