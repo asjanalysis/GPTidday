@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-10T12:08:17.437Z",
+  "generated_at": "2026-02-10T13:52:09.485Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-10T12:08:17.171Z",
+    "generated_at": "2026-02-10T13:52:08.763Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-10T12:08:15.879Z",
+    "generated_at": "2026-02-10T13:52:07.724Z",
     "latest": {
-      "t": "2026-02-10T11:30:00.000Z",
+      "t": "2026-02-10T13:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.38,
-      "hs_ft": 7.808399199999999,
+      "hs_m": 2.27,
+      "hs_ft": 7.4475068,
       "tp_s": 14.285714,
-      "ta_s": 10.267575,
-      "tz_s": 8.717316,
-      "dp_deg_true": 280.1875,
+      "ta_s": 10.927972,
+      "tz_s": 9.600287,
+      "dp_deg_true": 281.59375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-10T12:08:17.436Z",
+    "generated_at": "2026-02-10T13:52:09.484Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-10T04:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 7,
-        "wind_dir": "E",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 5
-      },
       {
         "t": "2026-02-10T05:00:00-08:00",
         "temp_f": 52,
@@ -233,15 +225,23 @@
         "wind_dir": "S",
         "shortForecast": "Chance Light Rain",
         "precip_prob": 48
+      },
+      {
+        "t": "2026-02-11T04:00:00-08:00",
+        "temp_f": 54,
+        "wind_mph": 21,
+        "wind_dir": "S",
+        "shortForecast": "Light Rain Likely",
+        "precip_prob": 58
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-02-10T04:00:00-08:00",
+        "t_start": "2026-02-10T05:00:00-08:00",
         "t_end": "2026-02-10T06:00:00-08:00",
         "temp_f": 51,
-        "text": "Partly cloudy, with a low around 51. East wind around 7 mph."
+        "text": "Partly cloudy, with a low around 51. East wind around 6 mph."
       },
       {
         "name": "Tuesday",
