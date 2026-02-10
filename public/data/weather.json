@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-10T23:05:27.565Z",
+  "generated_at": "2026-02-10T23:52:00.241Z",
   "current": null,
   "hourly": [
     {
@@ -203,10 +203,10 @@
   "daily": [
     {
       "name": "This Afternoon",
-      "t_start": "2026-02-10T14:00:00-08:00",
+      "t_start": "2026-02-10T15:00:00-08:00",
       "t_end": "2026-02-10T18:00:00-08:00",
       "temp_f": 58,
-      "text": "Rain before 4pm, then rain and a slight chance of thunderstorms. Cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South southeast wind 12 to 15 mph, with gusts as high as 21 mph. Chance of precipitation is 100%. New rainfall amounts between a quarter and half of an inch possible."
+      "text": "Rain before 4pm, then rain and a slight chance of thunderstorms. Cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South southeast wind around 14 mph, with gusts as high as 21 mph. Chance of precipitation is 100%. New rainfall amounts between a quarter and half of an inch possible."
     },
     {
       "name": "Tonight",
