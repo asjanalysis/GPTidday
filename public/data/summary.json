@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-10T08:32:35.243Z",
+  "generated_at": "2026-02-10T09:36:59.698Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-10T08:32:34.359Z",
+    "generated_at": "2026-02-10T09:36:59.052Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-10T08:32:33.473Z",
+    "generated_at": "2026-02-10T09:36:57.343Z",
     "latest": {
-      "t": "2026-02-10T08:00:00.000Z",
+      "t": "2026-02-10T09:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.26,
-      "hs_ft": 7.414698399999999,
+      "hs_m": 2.23,
+      "hs_ft": 7.3162731999999995,
       "tp_s": 13.333333,
-      "ta_s": 10.432239,
-      "tz_s": 9.27687,
-      "dp_deg_true": 280.1875,
+      "ta_s": 10.198226,
+      "tz_s": 8.641769,
+      "dp_deg_true": 281.59375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,258 +39,258 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-10T08:32:35.242Z",
+    "generated_at": "2026-02-10T09:36:59.697Z",
     "current": null,
     "hourly": [
       {
-        "t": "2026-02-10T00:00:00-08:00",
-        "temp_f": 56,
-        "wind_mph": 2,
-        "wind_dir": "E",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 2
-      },
-      {
         "t": "2026-02-10T01:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 2,
-        "wind_dir": "E",
+        "temp_f": 54,
+        "wind_mph": 5,
+        "wind_dir": "ENE",
         "shortForecast": "Mostly Cloudy",
-        "precip_prob": 2
+        "precip_prob": 0
       },
       {
         "t": "2026-02-10T02:00:00-08:00",
         "temp_f": 54,
-        "wind_mph": 2,
-        "wind_dir": "ESE",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 2
+        "wind_mph": 6,
+        "wind_dir": "ENE",
+        "shortForecast": "Partly Cloudy",
+        "precip_prob": 0
       },
       {
         "t": "2026-02-10T03:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 2,
-        "wind_dir": "ESE",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 2
+        "temp_f": 53,
+        "wind_mph": 6,
+        "wind_dir": "E",
+        "shortForecast": "Partly Cloudy",
+        "precip_prob": 1
       },
       {
         "t": "2026-02-10T04:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 2,
-        "wind_dir": "SSE",
+        "temp_f": 52,
+        "wind_mph": 7,
+        "wind_dir": "E",
         "shortForecast": "Partly Cloudy",
-        "precip_prob": 4
+        "precip_prob": 5
       },
       {
         "t": "2026-02-10T05:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 2,
-        "wind_dir": "S",
-        "shortForecast": "Mostly Cloudy",
+        "temp_f": 52,
+        "wind_mph": 6,
+        "wind_dir": "E",
+        "shortForecast": "Partly Cloudy",
         "precip_prob": 5
       },
       {
         "t": "2026-02-10T06:00:00-08:00",
-        "temp_f": 53,
-        "wind_mph": 2,
-        "wind_dir": "SSW",
-        "shortForecast": "Partly Sunny",
-        "precip_prob": 6
+        "temp_f": 52,
+        "wind_mph": 6,
+        "wind_dir": "ESE",
+        "shortForecast": "Mostly Sunny",
+        "precip_prob": 5
       },
       {
         "t": "2026-02-10T07:00:00-08:00",
-        "temp_f": 53,
-        "wind_mph": 3,
-        "wind_dir": "S",
-        "shortForecast": "Partly Sunny",
-        "precip_prob": 10
+        "temp_f": 52,
+        "wind_mph": 7,
+        "wind_dir": "SE",
+        "shortForecast": "Mostly Sunny",
+        "precip_prob": 6
       },
       {
         "t": "2026-02-10T08:00:00-08:00",
-        "temp_f": 53,
-        "wind_mph": 5,
-        "wind_dir": "S",
-        "shortForecast": "Partly Sunny",
-        "precip_prob": 14
+        "temp_f": 52,
+        "wind_mph": 8,
+        "wind_dir": "SSE",
+        "shortForecast": "Mostly Sunny",
+        "precip_prob": 7
       },
       {
         "t": "2026-02-10T09:00:00-08:00",
         "temp_f": 53,
-        "wind_mph": 10,
-        "wind_dir": "SSW",
-        "shortForecast": "Slight Chance Light Rain",
-        "precip_prob": 16
+        "wind_mph": 13,
+        "wind_dir": "S",
+        "shortForecast": "Partly Sunny",
+        "precip_prob": 6
       },
       {
         "t": "2026-02-10T10:00:00-08:00",
         "temp_f": 54,
-        "wind_mph": 12,
-        "wind_dir": "SSW",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 11
+        "wind_mph": 16,
+        "wind_dir": "S",
+        "shortForecast": "Partly Sunny",
+        "precip_prob": 5
       },
       {
         "t": "2026-02-10T11:00:00-08:00",
         "temp_f": 55,
-        "wind_mph": 12,
+        "wind_mph": 17,
         "wind_dir": "SSW",
-        "shortForecast": "Slight Chance Light Rain",
-        "precip_prob": 18
+        "shortForecast": "Partly Sunny",
+        "precip_prob": 7
       },
       {
         "t": "2026-02-10T12:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 14,
+        "temp_f": 56,
+        "wind_mph": 21,
         "wind_dir": "SSW",
-        "shortForecast": "Chance Light Rain",
-        "precip_prob": 26
+        "shortForecast": "Partly Sunny",
+        "precip_prob": 11
       },
       {
         "t": "2026-02-10T13:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 15,
+        "temp_f": 57,
+        "wind_mph": 21,
         "wind_dir": "SSW",
-        "shortForecast": "Rain Likely",
-        "precip_prob": 55
+        "shortForecast": "Chance Light Rain",
+        "precip_prob": 42
       },
       {
         "t": "2026-02-10T14:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 16,
+        "temp_f": 56,
+        "wind_mph": 21,
         "wind_dir": "SSW",
         "shortForecast": "Rain Likely",
-        "precip_prob": 66
+        "precip_prob": 70
       },
       {
         "t": "2026-02-10T15:00:00-08:00",
         "temp_f": 55,
         "wind_mph": 15,
-        "wind_dir": "SSW",
+        "wind_dir": "S",
         "shortForecast": "Rain Likely",
-        "precip_prob": 71
+        "precip_prob": 69
       },
       {
         "t": "2026-02-10T16:00:00-08:00",
         "temp_f": 55,
         "wind_mph": 13,
-        "wind_dir": "SSW",
-        "shortForecast": "Showers And Thunderstorms",
-        "precip_prob": 94
+        "wind_dir": "SE",
+        "shortForecast": "Rain",
+        "precip_prob": 76
       },
       {
         "t": "2026-02-10T17:00:00-08:00",
         "temp_f": 56,
-        "wind_mph": 8,
-        "wind_dir": "S",
-        "shortForecast": "Showers And Thunderstorms",
-        "precip_prob": 94
+        "wind_mph": 12,
+        "wind_dir": "SSE",
+        "shortForecast": "Chance Light Rain",
+        "precip_prob": 49
       },
       {
         "t": "2026-02-10T18:00:00-08:00",
         "temp_f": 56,
-        "wind_mph": 6,
-        "wind_dir": "SE",
-        "shortForecast": "Showers And Thunderstorms",
-        "precip_prob": 94
+        "wind_mph": 12,
+        "wind_dir": "SSE",
+        "shortForecast": "Rain Likely",
+        "precip_prob": 55
       },
       {
         "t": "2026-02-10T19:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 6,
-        "wind_dir": "ENE",
+        "temp_f": 56,
+        "wind_mph": 10,
+        "wind_dir": "ESE",
         "shortForecast": "Showers And Thunderstorms",
-        "precip_prob": 94
+        "precip_prob": 76
       },
       {
         "t": "2026-02-10T20:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 13,
+        "temp_f": 56,
+        "wind_mph": 14,
         "wind_dir": "ESE",
-        "shortForecast": "Showers And Thunderstorms",
-        "precip_prob": 94
+        "shortForecast": "Showers And Thunderstorms Likely",
+        "precip_prob": 70
       },
       {
         "t": "2026-02-10T21:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 12,
-        "wind_dir": "ESE",
+        "temp_f": 56,
+        "wind_mph": 20,
+        "wind_dir": "SSE",
         "shortForecast": "Showers And Thunderstorms",
-        "precip_prob": 94
+        "precip_prob": 76
       },
       {
         "t": "2026-02-10T22:00:00-08:00",
         "temp_f": 55,
-        "wind_mph": 8,
-        "wind_dir": "ESE",
-        "shortForecast": "Rain",
-        "precip_prob": 96
+        "wind_mph": 17,
+        "wind_dir": "SSE",
+        "shortForecast": "Showers And Thunderstorms",
+        "precip_prob": 82
       },
       {
         "t": "2026-02-10T23:00:00-08:00",
         "temp_f": 55,
-        "wind_mph": 8,
-        "wind_dir": "ESE",
-        "shortForecast": "Rain",
-        "precip_prob": 96
+        "wind_mph": 18,
+        "wind_dir": "SSE",
+        "shortForecast": "Showers And Thunderstorms",
+        "precip_prob": 93
+      },
+      {
+        "t": "2026-02-11T00:00:00-08:00",
+        "temp_f": 54,
+        "wind_mph": 23,
+        "wind_dir": "SSE",
+        "shortForecast": "Showers And Thunderstorms",
+        "precip_prob": 91
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-02-10T00:00:00-08:00",
+        "t_start": "2026-02-10T01:00:00-08:00",
         "t_end": "2026-02-10T06:00:00-08:00",
         "temp_f": 51,
-        "text": "Mostly cloudy. Low around 51, with temperatures rising to around 54 overnight. East southeast wind around 2 mph."
+        "text": "Partly cloudy, with a low around 51. East wind around 7 mph."
       },
       {
         "name": "Tuesday",
         "t_start": "2026-02-10T06:00:00-08:00",
         "t_end": "2026-02-10T18:00:00-08:00",
         "temp_f": 58,
-        "text": "Rain likely between 9am and 4pm, then showers and thunderstorms. Mostly cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South southwest wind 2 to 16 mph, with gusts as high as 21 mph. Chance of precipitation is 90%. New rainfall amounts between a quarter and half of an inch possible."
+        "text": "Rain after 1pm. Partly sunny. High near 58, with temperatures falling to around 56 in the afternoon. South southeast wind 6 to 21 mph, with gusts as high as 26 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible."
       },
       {
         "name": "Tuesday Night",
         "t_start": "2026-02-10T18:00:00-08:00",
         "t_end": "2026-02-11T06:00:00-08:00",
-        "temp_f": 51,
-        "text": "Showers and thunderstorms before 10pm, then rain. Cloudy. Low around 51, with temperatures rising to around 54 overnight. East southeast wind 6 to 13 mph, with gusts as high as 22 mph. Chance of precipitation is 100%. New rainfall amounts between three quarters and one inch possible."
+        "temp_f": 52,
+        "text": "Rain likely before 7pm, then showers and thunderstorms between 7pm and 1am, then rain. Mostly cloudy, with a low around 52. South southeast wind 10 to 23 mph, with gusts as high as 36 mph. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible."
       },
       {
         "name": "Wednesday",
         "t_start": "2026-02-11T06:00:00-08:00",
         "t_end": "2026-02-11T18:00:00-08:00",
-        "temp_f": 55,
-        "text": "Rain before 7am, then showers and thunderstorms between 7am and 1pm, then rain. Cloudy, with a high near 55. South wind 10 to 16 mph, with gusts as high as 24 mph. Chance of precipitation is 90%. New rainfall amounts between three quarters and one inch possible."
+        "temp_f": 56,
+        "text": "Rain. Cloudy, with a high near 56. South wind 16 to 21 mph, with gusts as high as 28 mph. Chance of precipitation is 90%. New rainfall amounts between a quarter and half of an inch possible."
       },
       {
         "name": "Wednesday Night",
         "t_start": "2026-02-11T18:00:00-08:00",
         "t_end": "2026-02-12T06:00:00-08:00",
         "temp_f": 50,
-        "text": "Rain likely. Mostly cloudy, with a low around 50. South wind 2 to 15 mph, with gusts as high as 21 mph. Chance of precipitation is 70%. New rainfall amounts between a half and three quarters of an inch possible."
+        "text": "Rain likely. Mostly cloudy, with a low around 50. Southeast wind 6 to 16 mph, with gusts as high as 23 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible."
       },
       {
         "name": "Thursday",
         "t_start": "2026-02-12T06:00:00-08:00",
         "t_end": "2026-02-12T18:00:00-08:00",
         "temp_f": 58,
-        "text": "A chance of rain before 7am, then a chance of rain and patchy fog between 7am and 9am, then areas of fog and a chance of rain between 9am and 1pm. Mostly sunny, with a high near 58. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible."
+        "text": "A chance of rain before 10am, then patchy fog between 10am and 11am. Mostly sunny, with a high near 58. Chance of precipitation is 30%."
       },
       {
         "name": "Thursday Night",
         "t_start": "2026-02-12T18:00:00-08:00",
         "t_end": "2026-02-13T06:00:00-08:00",
-        "temp_f": 48,
-        "text": "Mostly clear, with a low around 48."
+        "temp_f": 49,
+        "text": "Mostly clear, with a low around 49."
       },
       {
         "name": "Friday",
         "t_start": "2026-02-13T06:00:00-08:00",
         "t_end": "2026-02-13T18:00:00-08:00",
-        "temp_f": 60,
-        "text": "Patchy fog between 7am and 9am. Sunny, with a high near 60."
+        "temp_f": 59,
+        "text": "Patchy fog before 10am. Mostly sunny, with a high near 59."
       },
       {
         "name": "Friday Night",
@@ -303,36 +303,36 @@
         "name": "Saturday",
         "t_start": "2026-02-14T06:00:00-08:00",
         "t_end": "2026-02-14T18:00:00-08:00",
-        "temp_f": 58,
-        "text": "A chance of rain after 10am. Mostly cloudy, with a high near 58."
+        "temp_f": 57,
+        "text": "Patchy fog between 8am and 10am, then a chance of rain and patchy fog. Mostly cloudy, with a high near 57."
       },
       {
         "name": "Saturday Night",
         "t_start": "2026-02-14T18:00:00-08:00",
         "t_end": "2026-02-15T06:00:00-08:00",
-        "temp_f": 48,
-        "text": "Rain likely. Mostly cloudy, with a low around 48."
+        "temp_f": 49,
+        "text": "Rain likely. Cloudy, with a low around 49."
       },
       {
         "name": "Sunday",
         "t_start": "2026-02-15T06:00:00-08:00",
         "t_end": "2026-02-15T18:00:00-08:00",
-        "temp_f": 55,
-        "text": "Rain likely. Mostly cloudy, with a high near 55."
+        "temp_f": 54,
+        "text": "Rain. Cloudy, with a high near 54."
       },
       {
         "name": "Sunday Night",
         "t_start": "2026-02-15T18:00:00-08:00",
         "t_end": "2026-02-16T06:00:00-08:00",
-        "temp_f": 46,
-        "text": "Rain. Mostly cloudy, with a low around 46."
+        "temp_f": 47,
+        "text": "Rain. Cloudy, with a low around 47."
       },
       {
         "name": "Washington's Birthday",
         "t_start": "2026-02-16T06:00:00-08:00",
         "t_end": "2026-02-16T18:00:00-08:00",
-        "temp_f": 53,
-        "text": "Rain before 5pm. Cloudy, with a high near 53."
+        "temp_f": 52,
+        "text": "Rain. Cloudy, with a high near 52."
       }
     ]
   }
