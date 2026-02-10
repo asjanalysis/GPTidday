@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-10T21:43:14.911Z",
+  "generated_at": "2026-02-10T22:24:04.570Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-10T21:43:13.857Z",
+    "generated_at": "2026-02-10T22:24:03.943Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-10T21:43:12.368Z",
+    "generated_at": "2026-02-10T22:24:02.242Z",
     "latest": {
-      "t": "2026-02-10T21:00:00.000Z",
+      "t": "2026-02-10T21:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.36,
-      "hs_ft": 7.742782399999999,
-      "tp_s": 14.285714,
-      "ta_s": 7.3926497,
-      "tz_s": 6.3266053,
-      "dp_deg_true": 277.375,
+      "hs_m": 2.31,
+      "hs_ft": 7.5787404,
+      "tp_s": 12.5,
+      "ta_s": 7.9516196,
+      "tz_s": 6.7440944,
+      "dp_deg_true": 288.625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-10T21:43:14.910Z",
+    "generated_at": "2026-02-10T22:24:04.570Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-10T13:00:00-08:00",
-        "temp_f": 57,
-        "wind_mph": 15,
-        "wind_dir": "S",
-        "shortForecast": "Chance Rain",
-        "precip_prob": 36
-      },
       {
         "t": "2026-02-10T14:00:00-08:00",
         "temp_f": 56,
@@ -233,12 +225,20 @@
         "wind_dir": "S",
         "shortForecast": "Rain",
         "precip_prob": 88
+      },
+      {
+        "t": "2026-02-11T13:00:00-08:00",
+        "temp_f": 54,
+        "wind_mph": 21,
+        "wind_dir": "SSW",
+        "shortForecast": "Rain",
+        "precip_prob": 90
       }
     ],
     "daily": [
       {
         "name": "This Afternoon",
-        "t_start": "2026-02-10T13:00:00-08:00",
+        "t_start": "2026-02-10T14:00:00-08:00",
         "t_end": "2026-02-10T18:00:00-08:00",
         "temp_f": 58,
         "text": "Rain before 4pm, then rain and a slight chance of thunderstorms. Cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South southeast wind 12 to 15 mph, with gusts as high as 21 mph. Chance of precipitation is 100%. New rainfall amounts between a quarter and half of an inch possible."
