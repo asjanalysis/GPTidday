@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-10T23:52:00.241Z",
+  "generated_at": "2026-02-11T01:09:15.288Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-10T15:00:00-08:00",
-      "temp_f": 56,
-      "wind_mph": 14,
-      "wind_dir": "S",
-      "shortForecast": "Rain",
-      "precip_prob": 84
-    },
-    {
-      "t": "2026-02-10T16:00:00-08:00",
-      "temp_f": 56,
-      "wind_mph": 12,
-      "wind_dir": "SE",
-      "shortForecast": "Rain",
-      "precip_prob": 98
-    },
     {
       "t": "2026-02-10T17:00:00-08:00",
       "temp_f": 56,
@@ -198,15 +182,31 @@
       "wind_dir": "SSW",
       "shortForecast": "Rain",
       "precip_prob": 88
+    },
+    {
+      "t": "2026-02-11T15:00:00-08:00",
+      "temp_f": 54,
+      "wind_mph": 20,
+      "wind_dir": "SSW",
+      "shortForecast": "Rain",
+      "precip_prob": 90
+    },
+    {
+      "t": "2026-02-11T16:00:00-08:00",
+      "temp_f": 54,
+      "wind_mph": 17,
+      "wind_dir": "SSW",
+      "shortForecast": "Rain",
+      "precip_prob": 76
     }
   ],
   "daily": [
     {
       "name": "This Afternoon",
-      "t_start": "2026-02-10T15:00:00-08:00",
+      "t_start": "2026-02-10T17:00:00-08:00",
       "t_end": "2026-02-10T18:00:00-08:00",
       "temp_f": 58,
-      "text": "Rain before 4pm, then rain and a slight chance of thunderstorms. Cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South southeast wind around 14 mph, with gusts as high as 21 mph. Chance of precipitation is 100%. New rainfall amounts between a quarter and half of an inch possible."
+      "text": "Rain and a slight chance of thunderstorms. Cloudy. High near 58, with temperatures falling to around 56 in the afternoon. Southeast wind around 13 mph, with gusts as high as 18 mph. Chance of precipitation is 90%. New rainfall amounts between a tenth and quarter of an inch possible."
     },
     {
       "name": "Tonight",
