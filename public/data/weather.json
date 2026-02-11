@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-11T12:02:45.103Z",
+  "generated_at": "2026-02-11T13:43:18.468Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-11T04:00:00-08:00",
-      "temp_f": 54,
-      "wind_mph": 15,
-      "wind_dir": "S",
-      "shortForecast": "Light Rain Likely",
-      "precip_prob": 70
-    },
     {
       "t": "2026-02-11T05:00:00-08:00",
       "temp_f": 54,
@@ -198,12 +190,20 @@
       "wind_dir": "ESE",
       "shortForecast": "Slight Chance Light Rain",
       "precip_prob": 16
+    },
+    {
+      "t": "2026-02-12T04:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 2,
+      "wind_dir": "ESE",
+      "shortForecast": "Slight Chance Light Rain",
+      "precip_prob": 18
     }
   ],
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-02-11T04:00:00-08:00",
+      "t_start": "2026-02-11T05:00:00-08:00",
       "t_end": "2026-02-11T06:00:00-08:00",
       "temp_f": 52,
       "text": "Rain. Mostly cloudy. Low around 52, with temperatures rising to around 54 overnight. South wind around 16 mph, with gusts as high as 21 mph. Chance of precipitation is 80%. New rainfall amounts between a tenth and quarter of an inch possible."
