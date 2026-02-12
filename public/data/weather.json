@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-12T02:50:37.600Z",
+  "generated_at": "2026-02-12T04:50:33.397Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-11T18:00:00-08:00",
-      "temp_f": 55,
-      "wind_mph": 12,
-      "wind_dir": "SSW",
-      "shortForecast": "Showers And Thunderstorms Likely",
-      "precip_prob": 69
-    },
-    {
-      "t": "2026-02-11T19:00:00-08:00",
-      "temp_f": 55,
-      "wind_mph": 12,
-      "wind_dir": "SSW",
-      "shortForecast": "Rain Likely",
-      "precip_prob": 68
-    },
     {
       "t": "2026-02-11T20:00:00-08:00",
       "temp_f": 55,
@@ -198,15 +182,31 @@
       "wind_dir": "NNW",
       "shortForecast": "Sunny",
       "precip_prob": 2
+    },
+    {
+      "t": "2026-02-12T18:00:00-08:00",
+      "temp_f": 57,
+      "wind_mph": 6,
+      "wind_dir": "NNW",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 1
+    },
+    {
+      "t": "2026-02-12T19:00:00-08:00",
+      "temp_f": 56,
+      "wind_mph": 6,
+      "wind_dir": "N",
+      "shortForecast": "Clear",
+      "precip_prob": 1
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-11T18:00:00-08:00",
+      "t_start": "2026-02-11T20:00:00-08:00",
       "t_end": "2026-02-12T06:00:00-08:00",
       "temp_f": 49,
-      "text": "Showers and thunderstorms likely before 7pm, then rain likely. Mostly cloudy, with a low around 49. South southeast wind 6 to 12 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible."
+      "text": "Rain likely. Mostly cloudy, with a low around 49. South southeast wind 6 to 12 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible."
     },
     {
       "name": "Thursday",
