@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-12T15:08:38.132Z",
+  "generated_at": "2026-02-12T16:06:59.131Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-12T15:08:38.131Z",
+    "generated_at": "2026-02-12T16:06:56.487Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,16 +18,16 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-12T15:08:36.335Z",
+    "generated_at": "2026-02-12T16:06:55.475Z",
     "latest": {
-      "t": "2026-02-12T14:30:00.000Z",
+      "t": "2026-02-12T15:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.74,
-      "hs_ft": 5.7086616,
-      "tp_s": 10.526316,
-      "ta_s": 7.451569,
-      "tz_s": 6.4976273,
+      "hs_m": 1.77,
+      "hs_ft": 5.8070868,
+      "tp_s": 11.111111,
+      "ta_s": 7.4620967,
+      "tz_s": 6.4775987,
       "dp_deg_true": 284.40625,
       "lat": 36.759167,
       "lon": -121.95028
@@ -39,25 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-12T15:08:37.859Z",
+    "generated_at": "2026-02-12T16:06:59.130Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-12T06:00:00-08:00",
-        "temp_f": 50,
-        "wind_mph": 6,
-        "wind_dir": "ESE",
-        "shortForecast": "Mostly Sunny",
-        "precip_prob": 7
-      },
-      {
-        "t": "2026-02-12T07:00:00-08:00",
-        "temp_f": 50,
-        "wind_mph": 2,
-        "wind_dir": "E",
-        "shortForecast": "Mostly Sunny",
-        "precip_prob": 5
-      },
       {
         "t": "2026-02-12T08:00:00-08:00",
         "temp_f": 50,
@@ -233,15 +217,31 @@
         "wind_dir": "NE",
         "shortForecast": "Patchy Fog",
         "precip_prob": 1
+      },
+      {
+        "t": "2026-02-13T06:00:00-08:00",
+        "temp_f": 48,
+        "wind_mph": 1,
+        "wind_dir": "NNE",
+        "shortForecast": "Areas Of Fog",
+        "precip_prob": 1
+      },
+      {
+        "t": "2026-02-13T07:00:00-08:00",
+        "temp_f": 48,
+        "wind_mph": 1,
+        "wind_dir": "N",
+        "shortForecast": "Areas Of Fog",
+        "precip_prob": 1
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-02-12T06:00:00-08:00",
+        "t_start": "2026-02-12T08:00:00-08:00",
         "t_end": "2026-02-12T18:00:00-08:00",
         "temp_f": 59,
-        "text": "Sunny, with a high near 59. Southeast wind 2 to 8 mph."
+        "text": "Sunny, with a high near 59. South wind 2 to 8 mph."
       },
       {
         "name": "Tonight",

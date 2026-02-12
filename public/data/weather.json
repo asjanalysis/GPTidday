@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-12T15:08:37.859Z",
+  "generated_at": "2026-02-12T16:06:59.130Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-12T06:00:00-08:00",
-      "temp_f": 50,
-      "wind_mph": 6,
-      "wind_dir": "ESE",
-      "shortForecast": "Mostly Sunny",
-      "precip_prob": 7
-    },
-    {
-      "t": "2026-02-12T07:00:00-08:00",
-      "temp_f": 50,
-      "wind_mph": 2,
-      "wind_dir": "E",
-      "shortForecast": "Mostly Sunny",
-      "precip_prob": 5
-    },
     {
       "t": "2026-02-12T08:00:00-08:00",
       "temp_f": 50,
@@ -198,15 +182,31 @@
       "wind_dir": "NE",
       "shortForecast": "Patchy Fog",
       "precip_prob": 1
+    },
+    {
+      "t": "2026-02-13T06:00:00-08:00",
+      "temp_f": 48,
+      "wind_mph": 1,
+      "wind_dir": "NNE",
+      "shortForecast": "Areas Of Fog",
+      "precip_prob": 1
+    },
+    {
+      "t": "2026-02-13T07:00:00-08:00",
+      "temp_f": 48,
+      "wind_mph": 1,
+      "wind_dir": "N",
+      "shortForecast": "Areas Of Fog",
+      "precip_prob": 1
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-02-12T06:00:00-08:00",
+      "t_start": "2026-02-12T08:00:00-08:00",
       "t_end": "2026-02-12T18:00:00-08:00",
       "temp_f": 59,
-      "text": "Sunny, with a high near 59. Southeast wind 2 to 8 mph."
+      "text": "Sunny, with a high near 59. South wind 2 to 8 mph."
     },
     {
       "name": "Tonight",
