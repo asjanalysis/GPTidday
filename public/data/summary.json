@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-12T05:55:35.909Z",
+  "generated_at": "2026-02-12T06:58:48.714Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-12T05:55:35.102Z",
+    "generated_at": "2026-02-12T06:58:46.974Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-12T05:55:33.264Z",
+    "generated_at": "2026-02-12T06:58:45.562Z",
     "latest": {
-      "t": "2026-02-12T05:00:00.000Z",
+      "t": "2026-02-12T06:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.24,
-      "hs_ft": 7.349081600000001,
+      "hs_m": 2.14,
+      "hs_ft": 7.0209976,
       "tp_s": 11.111111,
-      "ta_s": 7.4592443,
-      "tz_s": 6.671085,
-      "dp_deg_true": 285.8125,
+      "ta_s": 7.27441,
+      "tz_s": 6.4455767,
+      "dp_deg_true": 283,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-12T05:55:35.908Z",
+    "generated_at": "2026-02-12T06:58:48.714Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-11T21:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 12,
-        "wind_dir": "S",
-        "shortForecast": "Rain Likely",
-        "precip_prob": 67
-      },
       {
         "t": "2026-02-11T22:00:00-08:00",
         "temp_f": 55,
@@ -233,15 +225,23 @@
         "wind_dir": "N",
         "shortForecast": "Clear",
         "precip_prob": 1
+      },
+      {
+        "t": "2026-02-12T21:00:00-08:00",
+        "temp_f": 54,
+        "wind_mph": 6,
+        "wind_dir": "N",
+        "shortForecast": "Clear",
+        "precip_prob": 1
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-02-11T21:00:00-08:00",
+        "t_start": "2026-02-11T22:00:00-08:00",
         "t_end": "2026-02-12T06:00:00-08:00",
         "temp_f": 49,
-        "text": "Rain likely. Mostly cloudy, with a low around 49. Southeast wind 6 to 12 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible."
+        "text": "Rain likely. Mostly cloudy, with a low around 49. Southeast wind 6 to 12 mph. Chance of precipitation is 70%. New rainfall amounts between a tenth and quarter of an inch possible."
       },
       {
         "name": "Thursday",
