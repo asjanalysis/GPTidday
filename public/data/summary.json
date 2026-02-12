@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-12T09:33:25.523Z",
+  "generated_at": "2026-02-12T10:26:37.645Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-12T09:33:23.979Z",
+    "generated_at": "2026-02-12T10:26:36.713Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-12T09:33:22.476Z",
+    "generated_at": "2026-02-12T10:26:35.243Z",
     "latest": {
-      "t": "2026-02-12T09:00:00.000Z",
+      "t": "2026-02-12T09:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.03,
-      "hs_ft": 6.660105199999999,
-      "tp_s": 11.111111,
-      "ta_s": 7.50666,
-      "tz_s": 6.6872797,
-      "dp_deg_true": 284.40625,
+      "hs_m": 2.04,
+      "hs_ft": 6.6929136,
+      "tp_s": 9.876543,
+      "ta_s": 7.4412346,
+      "tz_s": 6.665444,
+      "dp_deg_true": 275.96875,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-12T09:33:25.522Z",
+    "generated_at": "2026-02-12T10:26:37.644Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-12T01:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 7,
-        "wind_dir": "ESE",
-        "shortForecast": "Rain Likely",
-        "precip_prob": 55
-      },
       {
         "t": "2026-02-12T02:00:00-08:00",
         "temp_f": 52,
@@ -233,15 +225,23 @@
         "wind_dir": "NNW",
         "shortForecast": "Mostly Clear",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-02-13T01:00:00-08:00",
+        "temp_f": 50,
+        "wind_mph": 2,
+        "wind_dir": "N",
+        "shortForecast": "Patchy Fog",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-02-12T01:00:00-08:00",
+        "t_start": "2026-02-12T02:00:00-08:00",
         "t_end": "2026-02-12T06:00:00-08:00",
         "temp_f": 49,
-        "text": "Rain likely before 4am. Mostly cloudy, with a low around 49. East southeast wind around 7 mph. Chance of precipitation is 60%. New rainfall amounts between a tenth and quarter of an inch possible."
+        "text": "A chance of rain before 4am. Mostly cloudy, with a low around 49. East southeast wind around 7 mph. Chance of precipitation is 50%. New rainfall amounts between a tenth and quarter of an inch possible."
       },
       {
         "name": "Thursday",
