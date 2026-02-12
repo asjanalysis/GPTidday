@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-12T08:45:14.652Z",
+  "generated_at": "2026-02-12T09:33:25.522Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-11T23:00:00-08:00",
-      "temp_f": 55,
-      "wind_mph": 6,
-      "wind_dir": "S",
-      "shortForecast": "Chance Light Rain",
-      "precip_prob": 49
-    },
-    {
-      "t": "2026-02-12T00:00:00-08:00",
-      "temp_f": 54,
-      "wind_mph": 6,
-      "wind_dir": "SE",
-      "shortForecast": "Chance Rain",
-      "precip_prob": 54
-    },
     {
       "t": "2026-02-12T01:00:00-08:00",
       "temp_f": 54,
@@ -198,15 +182,31 @@
       "wind_dir": "NNW",
       "shortForecast": "Clear",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-02-12T23:00:00-08:00",
+      "temp_f": 53,
+      "wind_mph": 3,
+      "wind_dir": "NNW",
+      "shortForecast": "Clear",
+      "precip_prob": 0
+    },
+    {
+      "t": "2026-02-13T00:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 2,
+      "wind_dir": "NNW",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
-      "name": "Tonight",
-      "t_start": "2026-02-11T23:00:00-08:00",
+      "name": "Overnight",
+      "t_start": "2026-02-12T01:00:00-08:00",
       "t_end": "2026-02-12T06:00:00-08:00",
       "temp_f": 49,
-      "text": "Rain likely before 4am. Mostly cloudy, with a low around 49. Southeast wind around 7 mph. Chance of precipitation is 60%. New rainfall amounts between a tenth and quarter of an inch possible."
+      "text": "Rain likely before 4am. Mostly cloudy, with a low around 49. East southeast wind around 7 mph. Chance of precipitation is 60%. New rainfall amounts between a tenth and quarter of an inch possible."
     },
     {
       "name": "Thursday",
