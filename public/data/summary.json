@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-13T20:21:32.337Z",
+  "generated_at": "2026-02-13T21:00:21.293Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-13T20:21:30.982Z",
+    "generated_at": "2026-02-13T21:00:16.347Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-13T20:21:29.815Z",
+    "generated_at": "2026-02-13T21:00:14.767Z",
     "latest": {
-      "t": "2026-02-13T19:30:00.000Z",
+      "t": "2026-02-13T20:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.77,
-      "hs_ft": 5.8070868,
-      "tp_s": 10.526316,
-      "ta_s": 7.963307,
-      "tz_s": 7.2185826,
-      "dp_deg_true": 292.84375,
+      "hs_m": 1.72,
+      "hs_ft": 5.6430448,
+      "tp_s": 9.876543,
+      "ta_s": 7.845276,
+      "tz_s": 7.093889,
+      "dp_deg_true": 295.65625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-13T20:21:32.337Z",
+    "generated_at": "2026-02-13T21:00:21.292Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-13T12:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 6,
-        "wind_dir": "W",
-        "shortForecast": "Mostly Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-02-13T13:00:00-08:00",
         "temp_f": 56,
@@ -233,15 +225,23 @@
         "wind_dir": "SSE",
         "shortForecast": "Partly Sunny",
         "precip_prob": 1
+      },
+      {
+        "t": "2026-02-14T12:00:00-08:00",
+        "temp_f": 53,
+        "wind_mph": 2,
+        "wind_dir": "SSE",
+        "shortForecast": "Partly Sunny",
+        "precip_prob": 1
       }
     ],
     "daily": [
       {
-        "name": "Today",
-        "t_start": "2026-02-13T06:00:00-08:00",
+        "name": "This Afternoon",
+        "t_start": "2026-02-13T13:00:00-08:00",
         "t_end": "2026-02-13T18:00:00-08:00",
         "temp_f": 59,
-        "text": "Patchy fog before 10am. Mostly sunny, with a high near 59. Northwest wind 1 to 10 mph."
+        "text": "Mostly sunny, with a high near 59. West northwest wind 7 to 10 mph."
       },
       {
         "name": "Tonight",
