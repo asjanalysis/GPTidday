@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-14T04:59:53.903Z",
+  "generated_at": "2026-02-14T05:53:37.602Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-14T04:59:52.952Z",
+    "generated_at": "2026-02-14T05:53:33.008Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-14T04:59:51.484Z",
+    "generated_at": "2026-02-14T05:53:31.731Z",
     "latest": {
-      "t": "2026-02-14T04:00:00.000Z",
+      "t": "2026-02-14T05:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.86,
-      "hs_ft": 6.1023624000000005,
-      "tp_s": 13.333333,
-      "ta_s": 7.5179706,
-      "tz_s": 6.2426786,
-      "dp_deg_true": 291.4375,
+      "hs_m": 1.8,
+      "hs_ft": 5.905512,
+      "tp_s": 14.285714,
+      "ta_s": 8.493924,
+      "tz_s": 7.101678,
+      "dp_deg_true": 292.84375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-14T04:59:53.902Z",
+    "generated_at": "2026-02-14T05:53:37.601Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-13T20:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 3,
-        "wind_dir": "N",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 0
-      },
       {
         "t": "2026-02-13T21:00:00-08:00",
         "temp_f": 54,
@@ -233,15 +225,23 @@
         "wind_dir": "SSW",
         "shortForecast": "Mostly Cloudy",
         "precip_prob": 13
+      },
+      {
+        "t": "2026-02-14T20:00:00-08:00",
+        "temp_f": 56,
+        "wind_mph": 12,
+        "wind_dir": "SSW",
+        "shortForecast": "Slight Chance Rain Showers",
+        "precip_prob": 15
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-02-13T20:00:00-08:00",
+        "t_start": "2026-02-13T21:00:00-08:00",
         "t_end": "2026-02-14T06:00:00-08:00",
         "temp_f": 48,
-        "text": "Patchy fog between 2am and 3am. Mostly cloudy. Low around 48, with temperatures rising to around 50 overnight. North northeast wind around 3 mph."
+        "text": "Patchy fog between 2am and 3am. Mostly cloudy. Low around 48, with temperatures rising to around 50 overnight. North northeast wind around 2 mph."
       },
       {
         "name": "Saturday",
