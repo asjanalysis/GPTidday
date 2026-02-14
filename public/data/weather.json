@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-13T23:52:46.450Z",
+  "generated_at": "2026-02-14T01:07:06.065Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-13T15:00:00-08:00",
-      "temp_f": 57,
-      "wind_mph": 10,
-      "wind_dir": "W",
-      "shortForecast": "Mostly Sunny",
-      "precip_prob": 0
-    },
-    {
-      "t": "2026-02-13T16:00:00-08:00",
-      "temp_f": 57,
-      "wind_mph": 10,
-      "wind_dir": "WNW",
-      "shortForecast": "Mostly Sunny",
-      "precip_prob": 0
-    },
     {
       "t": "2026-02-13T17:00:00-08:00",
       "temp_f": 58,
@@ -198,15 +182,31 @@
       "wind_dir": "SW",
       "shortForecast": "Mostly Cloudy",
       "precip_prob": 7
+    },
+    {
+      "t": "2026-02-14T15:00:00-08:00",
+      "temp_f": 54,
+      "wind_mph": 10,
+      "wind_dir": "SSW",
+      "shortForecast": "Cloudy",
+      "precip_prob": 6
+    },
+    {
+      "t": "2026-02-14T16:00:00-08:00",
+      "temp_f": 55,
+      "wind_mph": 10,
+      "wind_dir": "SSW",
+      "shortForecast": "Cloudy",
+      "precip_prob": 8
     }
   ],
   "daily": [
     {
       "name": "This Afternoon",
-      "t_start": "2026-02-13T15:00:00-08:00",
+      "t_start": "2026-02-13T17:00:00-08:00",
       "t_end": "2026-02-13T18:00:00-08:00",
       "temp_f": 59,
-      "text": "Mostly sunny, with a high near 59. West northwest wind around 10 mph."
+      "text": "Mostly sunny, with a high near 59. Northwest wind around 8 mph."
     },
     {
       "name": "Tonight",
