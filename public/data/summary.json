@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-14T15:02:18.626Z",
+  "generated_at": "2026-02-14T15:36:09.011Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-14T15:02:17.199Z",
+    "generated_at": "2026-02-14T15:36:07.922Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-14T15:02:16.092Z",
+    "generated_at": "2026-02-14T15:36:06.219Z",
     "latest": {
       "t": "2026-02-14T14:30:00.000Z",
       "station_id": "156",
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-14T15:02:18.625Z",
+    "generated_at": "2026-02-14T15:36:09.010Z",
     "current": null,
     "hourly": [
       {
@@ -238,10 +238,10 @@
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-02-14T07:00:00-08:00",
+        "t_start": "2026-02-14T06:00:00-08:00",
         "t_end": "2026-02-14T18:00:00-08:00",
         "temp_f": 56,
-        "text": "Patchy fog before 10am. Mostly cloudy, with a high near 56. South southeast wind 1 to 12 mph."
+        "text": "Patchy fog between 7am and 10am. Mostly cloudy, with a high near 56. South southeast wind 1 to 12 mph."
       },
       {
         "name": "Tonight",
