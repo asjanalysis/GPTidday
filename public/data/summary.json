@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-14T18:44:58.364Z",
+  "generated_at": "2026-02-14T19:12:44.153Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-14T18:44:56.011Z",
+    "generated_at": "2026-02-14T19:12:42.956Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-14T18:44:54.756Z",
+    "generated_at": "2026-02-14T19:12:41.459Z",
     "latest": {
       "t": "2026-02-14T18:00:00.000Z",
       "station_id": "156",
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-14T18:44:58.363Z",
+    "generated_at": "2026-02-14T19:12:44.152Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-14T10:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 2,
-        "wind_dir": "SSE",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 0
-      },
       {
         "t": "2026-02-14T11:00:00-08:00",
         "temp_f": 53,
@@ -233,15 +225,23 @@
         "wind_dir": "SSE",
         "shortForecast": "Slight Chance Light Rain",
         "precip_prob": 15
+      },
+      {
+        "t": "2026-02-15T10:00:00-08:00",
+        "temp_f": 54,
+        "wind_mph": 12,
+        "wind_dir": "SSE",
+        "shortForecast": "Slight Chance Rain",
+        "precip_prob": 22
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-02-14T10:00:00-08:00",
+        "t_start": "2026-02-14T11:00:00-08:00",
         "t_end": "2026-02-14T18:00:00-08:00",
         "temp_f": 56,
-        "text": "Mostly cloudy, with a high near 56. South wind 2 to 12 mph."
+        "text": "Mostly cloudy, with a high near 56. South southwest wind 5 to 12 mph."
       },
       {
         "name": "Tonight",
