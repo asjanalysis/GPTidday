@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-14T05:53:37.601Z",
+  "generated_at": "2026-02-14T06:34:18.256Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-13T21:00:00-08:00",
-      "temp_f": 54,
-      "wind_mph": 2,
-      "wind_dir": "NNE",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 0
-    },
     {
       "t": "2026-02-13T22:00:00-08:00",
       "temp_f": 53,
@@ -198,15 +190,23 @@
       "wind_dir": "SSW",
       "shortForecast": "Slight Chance Rain Showers",
       "precip_prob": 15
+    },
+    {
+      "t": "2026-02-14T21:00:00-08:00",
+      "temp_f": 55,
+      "wind_mph": 12,
+      "wind_dir": "S",
+      "shortForecast": "Slight Chance Rain Showers",
+      "precip_prob": 16
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-13T21:00:00-08:00",
+      "t_start": "2026-02-13T22:00:00-08:00",
       "t_end": "2026-02-14T06:00:00-08:00",
       "temp_f": 48,
-      "text": "Patchy fog between 2am and 3am. Mostly cloudy. Low around 48, with temperatures rising to around 50 overnight. North northeast wind around 2 mph."
+      "text": "Patchy fog between 2am and 3am. Mostly cloudy. Low around 48, with temperatures rising to around 50 overnight. North northeast wind around 1 mph."
     },
     {
       "name": "Saturday",
