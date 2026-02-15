@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-15T13:32:41.318Z",
+  "generated_at": "2026-02-15T14:02:32.967Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-15T05:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 12,
-      "wind_dir": "ESE",
-      "shortForecast": "Chance Light Rain",
-      "precip_prob": 31
-    },
     {
       "t": "2026-02-15T06:00:00-08:00",
       "temp_f": 53,
@@ -198,25 +190,26 @@
       "wind_dir": "NE",
       "shortForecast": "Rain",
       "precip_prob": 99
+    },
+    {
+      "t": "2026-02-16T05:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 8,
+      "wind_dir": "E",
+      "shortForecast": "Rain",
+      "precip_prob": 90
     }
   ],
   "daily": [
     {
-      "name": "Overnight",
-      "t_start": "2026-02-15T03:00:00-08:00",
-      "t_end": "2026-02-15T06:00:00-08:00",
-      "temp_f": 52,
-      "text": "A chance of rain. Mostly cloudy, with a low around 52. Southeast wind around 12 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible."
-    },
-    {
-      "name": "Sunday",
+      "name": "Today",
       "t_start": "2026-02-15T06:00:00-08:00",
       "t_end": "2026-02-15T18:00:00-08:00",
       "temp_f": 58,
       "text": "Rain. Mostly cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South southeast wind 13 to 20 mph, with gusts as high as 29 mph. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible."
     },
     {
-      "name": "Sunday Night",
+      "name": "Tonight",
       "t_start": "2026-02-15T18:00:00-08:00",
       "t_end": "2026-02-16T06:00:00-08:00",
       "temp_f": 50,
@@ -227,7 +220,7 @@
       "t_start": "2026-02-16T06:00:00-08:00",
       "t_end": "2026-02-16T18:00:00-08:00",
       "temp_f": 54,
-      "text": "Rain before 1pm, then showers and thunderstorms between 1pm and 4pm, then rain. Cloudy, with a high near 54. South wind 8 to 21 mph, with gusts as high as 28 mph. Chance of precipitation is 100%. New rainfall amounts between 1 and 2 inches possible."
+      "text": "Rain before 1pm, then showers and thunderstorms between 1pm and 4pm, then rain. Cloudy. High near 54, with temperatures falling to around 51 in the afternoon. South wind 8 to 21 mph, with gusts as high as 28 mph. Chance of precipitation is 100%. New rainfall amounts between 1 and 2 inches possible."
     },
     {
       "name": "Monday Night",
@@ -241,14 +234,14 @@
       "t_start": "2026-02-17T06:00:00-08:00",
       "t_end": "2026-02-17T18:00:00-08:00",
       "temp_f": 50,
-      "text": "Rain before 10am, then showers and thunderstorms. Cloudy, with a high near 50. Chance of precipitation is 100%. New rainfall amounts between 1 and 2 inches possible."
+      "text": "Rain before 10am, then showers and thunderstorms. Cloudy, with a high near 50. West southwest wind 9 to 26 mph, with gusts as high as 38 mph. Chance of precipitation is 100%. New rainfall amounts between 1 and 2 inches possible."
     },
     {
       "name": "Tuesday Night",
       "t_start": "2026-02-17T18:00:00-08:00",
       "t_end": "2026-02-18T06:00:00-08:00",
       "temp_f": 44,
-      "text": "Showers and thunderstorms before 10pm, then rain. Cloudy, with a low around 44."
+      "text": "Showers and thunderstorms before 10pm, then rain. Cloudy, with a low around 44. Chance of precipitation is 100%. New rainfall amounts between a half and three quarters of an inch possible."
     },
     {
       "name": "Wednesday",
@@ -298,6 +291,13 @@
       "t_end": "2026-02-21T18:00:00-08:00",
       "temp_f": 56,
       "text": "A chance of rain. Partly sunny, with a high near 56."
+    },
+    {
+      "name": "Saturday Night",
+      "t_start": "2026-02-21T18:00:00-08:00",
+      "t_end": "2026-02-22T06:00:00-08:00",
+      "temp_f": 49,
+      "text": "A chance of rain. Mostly cloudy, with a low around 49."
     }
   ]
 }
