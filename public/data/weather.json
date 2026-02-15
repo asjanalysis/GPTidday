@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-15T11:55:06.087Z",
+  "generated_at": "2026-02-15T12:40:58.084Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-15T03:00:00-08:00",
-      "temp_f": 53,
-      "wind_mph": 10,
-      "wind_dir": "SE",
-      "shortForecast": "Chance Light Rain",
-      "precip_prob": 31
-    },
     {
       "t": "2026-02-15T04:00:00-08:00",
       "temp_f": 52,
@@ -198,15 +190,23 @@
       "wind_dir": "SSE",
       "shortForecast": "Rain",
       "precip_prob": 95
+    },
+    {
+      "t": "2026-02-16T03:00:00-08:00",
+      "temp_f": 53,
+      "wind_mph": 7,
+      "wind_dir": "W",
+      "shortForecast": "Rain",
+      "precip_prob": 93
     }
   ],
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-02-15T03:00:00-08:00",
+      "t_start": "2026-02-15T04:00:00-08:00",
       "t_end": "2026-02-15T06:00:00-08:00",
       "temp_f": 52,
-      "text": "A chance of rain. Mostly cloudy, with a low around 52. Southeast wind around 12 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible."
+      "text": "A chance of rain. Mostly cloudy, with a low around 52. East southeast wind around 12 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible."
     },
     {
       "name": "Sunday",
