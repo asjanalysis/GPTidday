@@ -4,9 +4,17 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-15T15:33:09.931Z",
+  "generated_at": "2026-02-15T15:52:17.639Z",
   "current": null,
   "hourly": [
+    {
+      "t": "2026-02-15T06:00:00-08:00",
+      "temp_f": 53,
+      "wind_mph": 13,
+      "wind_dir": "ESE",
+      "shortForecast": "Chance Light Rain",
+      "precip_prob": 49
+    },
     {
       "t": "2026-02-15T07:00:00-08:00",
       "temp_f": 53,
@@ -190,23 +198,15 @@
       "wind_dir": "E",
       "shortForecast": "Rain",
       "precip_prob": 90
-    },
-    {
-      "t": "2026-02-16T06:00:00-08:00",
-      "temp_f": 51,
-      "wind_mph": 10,
-      "wind_dir": "E",
-      "shortForecast": "Rain",
-      "precip_prob": 85
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-02-15T07:00:00-08:00",
+      "t_start": "2026-02-15T06:00:00-08:00",
       "t_end": "2026-02-15T18:00:00-08:00",
       "temp_f": 58,
-      "text": "Rain. Mostly cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South southeast wind 14 to 20 mph, with gusts as high as 29 mph. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible."
+      "text": "Rain. Mostly cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South southeast wind 13 to 20 mph, with gusts as high as 29 mph. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible."
     },
     {
       "name": "Tonight",
