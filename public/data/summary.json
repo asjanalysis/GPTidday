@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-15T16:15:44.031Z",
+  "generated_at": "2026-02-15T16:50:09.319Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-15T16:15:42.646Z",
+    "generated_at": "2026-02-15T16:50:07.832Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,16 +18,16 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-15T16:15:41.307Z",
+    "generated_at": "2026-02-15T16:50:06.452Z",
     "latest": {
-      "t": "2026-02-15T15:30:00.000Z",
+      "t": "2026-02-15T16:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.04,
-      "hs_ft": 6.6929136,
+      "hs_m": 2.06,
+      "hs_ft": 6.7585304,
       "tp_s": 13.333333,
-      "ta_s": 6.786996,
-      "tz_s": 5.8288,
+      "ta_s": 7.182807,
+      "tz_s": 6.1192636,
       "dp_deg_true": 287.21875,
       "lat": 36.759167,
       "lon": -121.95028
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-15T16:15:44.031Z",
+    "generated_at": "2026-02-15T16:50:09.318Z",
     "current": null,
     "hourly": [
       {
@@ -238,10 +238,10 @@
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-02-15T06:00:00-08:00",
+        "t_start": "2026-02-15T08:00:00-08:00",
         "t_end": "2026-02-15T18:00:00-08:00",
         "temp_f": 58,
-        "text": "Rain. Mostly cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South southeast wind 13 to 20 mph, with gusts as high as 29 mph. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible."
+        "text": "Rain. Mostly cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South southeast wind 14 to 20 mph, with gusts as high as 29 mph. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible."
       },
       {
         "name": "Tonight",
