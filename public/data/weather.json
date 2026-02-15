@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-15T19:14:42.578Z",
+  "generated_at": "2026-02-15T19:40:27.568Z",
   "current": null,
   "hourly": [
     {
@@ -203,7 +203,7 @@
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-02-15T11:00:00-08:00",
+      "t_start": "2026-02-15T07:00:00-08:00",
       "t_end": "2026-02-15T18:00:00-08:00",
       "temp_f": 58,
       "text": "Rain. Mostly cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South southeast wind 14 to 20 mph, with gusts as high as 29 mph. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible."
