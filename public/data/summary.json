@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-15T18:48:36.543Z",
+  "generated_at": "2026-02-15T19:14:42.578Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-15T18:48:36.542Z",
+    "generated_at": "2026-02-15T19:14:41.676Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,16 +18,16 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-15T18:48:34.730Z",
+    "generated_at": "2026-02-15T19:14:40.472Z",
     "latest": {
-      "t": "2026-02-15T18:00:00.000Z",
+      "t": "2026-02-15T18:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.04,
-      "hs_ft": 6.6929136,
+      "hs_m": 2.17,
+      "hs_ft": 7.1194228,
       "tp_s": 13.333333,
-      "ta_s": 7.226342,
-      "tz_s": 6.315588,
+      "ta_s": 7.243812,
+      "tz_s": 6.425174,
       "dp_deg_true": 285.8125,
       "lat": 36.759167,
       "lon": -121.95028
@@ -39,25 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-15T18:48:36.312Z",
+    "generated_at": "2026-02-15T19:14:42.578Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-15T09:00:00-08:00",
-        "temp_f": 53,
-        "wind_mph": 14,
-        "wind_dir": "SE",
-        "shortForecast": "Chance Light Rain",
-        "precip_prob": 39
-      },
-      {
-        "t": "2026-02-15T10:00:00-08:00",
-        "temp_f": 54,
-        "wind_mph": 14,
-        "wind_dir": "SE",
-        "shortForecast": "Chance Light Rain",
-        "precip_prob": 27
-      },
       {
         "t": "2026-02-15T11:00:00-08:00",
         "temp_f": 55,
@@ -233,15 +217,31 @@
         "wind_dir": "SSE",
         "shortForecast": "Rain",
         "precip_prob": 82
+      },
+      {
+        "t": "2026-02-16T09:00:00-08:00",
+        "temp_f": 51,
+        "wind_mph": 14,
+        "wind_dir": "S",
+        "shortForecast": "Rain Likely",
+        "precip_prob": 56
+      },
+      {
+        "t": "2026-02-16T10:00:00-08:00",
+        "temp_f": 52,
+        "wind_mph": 10,
+        "wind_dir": "SW",
+        "shortForecast": "Rain",
+        "precip_prob": 97
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-02-15T06:00:00-08:00",
+        "t_start": "2026-02-15T11:00:00-08:00",
         "t_end": "2026-02-15T18:00:00-08:00",
         "temp_f": 58,
-        "text": "Rain. Mostly cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South southeast wind 13 to 20 mph, with gusts as high as 29 mph. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible."
+        "text": "Rain. Mostly cloudy. High near 58, with temperatures falling to around 56 in the afternoon. South southeast wind 14 to 20 mph, with gusts as high as 29 mph. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible."
       },
       {
         "name": "Tonight",
