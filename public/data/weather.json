@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-16T02:11:23.411Z",
+  "generated_at": "2026-02-16T04:34:12.798Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-15T18:00:00-08:00",
-      "temp_f": 56,
-      "wind_mph": 17,
-      "wind_dir": "S",
-      "shortForecast": "Rain",
-      "precip_prob": 78
-    },
-    {
-      "t": "2026-02-15T19:00:00-08:00",
-      "temp_f": 56,
-      "wind_mph": 15,
-      "wind_dir": "S",
-      "shortForecast": "Showers And Thunderstorms",
-      "precip_prob": 82
-    },
     {
       "t": "2026-02-15T20:00:00-08:00",
       "temp_f": 55,
@@ -198,15 +182,31 @@
       "wind_dir": "WSW",
       "shortForecast": "Rain",
       "precip_prob": 92
+    },
+    {
+      "t": "2026-02-16T18:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 21,
+      "wind_dir": "WSW",
+      "shortForecast": "Rain",
+      "precip_prob": 92
+    },
+    {
+      "t": "2026-02-16T19:00:00-08:00",
+      "temp_f": 53,
+      "wind_mph": 18,
+      "wind_dir": "WSW",
+      "shortForecast": "Rain",
+      "precip_prob": 92
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-15T18:00:00-08:00",
+      "t_start": "2026-02-15T20:00:00-08:00",
       "t_end": "2026-02-16T06:00:00-08:00",
       "temp_f": 50,
-      "text": "Rain before 7pm, then showers and thunderstorms between 7pm and 1am, then rain. Cloudy. Low around 50, with temperatures rising to around 52 overnight. South southeast wind 7 to 17 mph, with gusts as high as 26 mph. Chance of precipitation is 100%. New rainfall amounts between 1 and 2 inches possible."
+      "text": "Showers and thunderstorms before 1am, then rain. Cloudy. Low around 50, with temperatures rising to around 52 overnight. Southeast wind 7 to 13 mph, with gusts as high as 21 mph. Chance of precipitation is 100%. New rainfall amounts between 1 and 2 inches possible."
     },
     {
       "name": "Washington's Birthday",
