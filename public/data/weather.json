@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-16T17:55:30.598Z",
+  "generated_at": "2026-02-16T18:39:12.868Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-16T09:00:00-08:00",
-      "temp_f": 50,
-      "wind_mph": 9,
-      "wind_dir": "NE",
-      "shortForecast": "Rain",
-      "precip_prob": 86
-    },
     {
       "t": "2026-02-16T10:00:00-08:00",
       "temp_f": 50,
@@ -198,15 +190,23 @@
       "wind_dir": "SW",
       "shortForecast": "Rain",
       "precip_prob": 80
+    },
+    {
+      "t": "2026-02-17T09:00:00-08:00",
+      "temp_f": 48,
+      "wind_mph": 22,
+      "wind_dir": "SW",
+      "shortForecast": "Rain",
+      "precip_prob": 92
     }
   ],
   "daily": [
     {
       "name": "Washington's Birthday",
-      "t_start": "2026-02-16T09:00:00-08:00",
+      "t_start": "2026-02-16T07:00:00-08:00",
       "t_end": "2026-02-16T18:00:00-08:00",
       "temp_f": 53,
-      "text": "Rain before 4pm, then showers and thunderstorms. Cloudy, with a high near 53. East southeast wind 9 to 18 mph, with gusts as high as 30 mph. Chance of precipitation is 100%. New rainfall amounts between 1 and 2 inches possible."
+      "text": "Rain before 4pm, then showers and thunderstorms. Cloudy, with a high near 53. East wind 9 to 18 mph, with gusts as high as 30 mph. Chance of precipitation is 100%. New rainfall amounts between 1 and 2 inches possible."
     },
     {
       "name": "Tonight",
