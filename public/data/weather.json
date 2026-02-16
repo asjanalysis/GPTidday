@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-16T06:50:46.009Z",
+  "generated_at": "2026-02-16T07:43:32.511Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-15T22:00:00-08:00",
-      "temp_f": 55,
-      "wind_mph": 10,
-      "wind_dir": "S",
-      "shortForecast": "Showers And Thunderstorms",
-      "precip_prob": 96
-    },
     {
       "t": "2026-02-15T23:00:00-08:00",
       "temp_f": 54,
@@ -198,12 +190,20 @@
       "wind_dir": "WNW",
       "shortForecast": "Rain",
       "precip_prob": 92
+    },
+    {
+      "t": "2026-02-16T22:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 18,
+      "wind_dir": "WNW",
+      "shortForecast": "Light Rain Likely",
+      "precip_prob": 65
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-15T22:00:00-08:00",
+      "t_start": "2026-02-15T23:00:00-08:00",
       "t_end": "2026-02-16T06:00:00-08:00",
       "temp_f": 51,
       "text": "Showers and thunderstorms before 1am, then rain. Cloudy, with a low around 51. Southeast wind 7 to 18 mph, with gusts as high as 23 mph. Chance of precipitation is 100%. New rainfall amounts between 1 and 2 inches possible."
