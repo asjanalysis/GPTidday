@@ -4,9 +4,17 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-16T21:16:01.116Z",
+  "generated_at": "2026-02-16T21:46:23.147Z",
   "current": null,
   "hourly": [
+    {
+      "t": "2026-02-16T12:00:00-08:00",
+      "temp_f": 52,
+      "wind_mph": 13,
+      "wind_dir": "NW",
+      "shortForecast": "Rain",
+      "precip_prob": 85
+    },
     {
       "t": "2026-02-16T13:00:00-08:00",
       "temp_f": 50,
@@ -190,23 +198,15 @@
       "wind_dir": "SSW",
       "shortForecast": "Showers And Thunderstorms",
       "precip_prob": 89
-    },
-    {
-      "t": "2026-02-17T12:00:00-08:00",
-      "temp_f": 50,
-      "wind_mph": 32,
-      "wind_dir": "SW",
-      "shortForecast": "Showers And Thunderstorms Likely",
-      "precip_prob": 69
     }
   ],
   "daily": [
     {
       "name": "Washington's Birthday",
-      "t_start": "2026-02-16T13:00:00-08:00",
+      "t_start": "2026-02-16T12:00:00-08:00",
       "t_end": "2026-02-16T18:00:00-08:00",
       "temp_f": 53,
-      "text": "Showers and thunderstorms before 4pm, then rain. Cloudy. High near 53, with temperatures falling to around 51 in the afternoon. West wind 12 to 16 mph, with gusts as high as 20 mph. Chance of precipitation is 100%. New rainfall amounts between a half and three quarters of an inch possible."
+      "text": "Rain before 1pm, then showers and thunderstorms between 1pm and 4pm, then rain. Cloudy. High near 53, with temperatures falling to around 51 in the afternoon. West northwest wind 12 to 16 mph, with gusts as high as 20 mph. Chance of precipitation is 100%. New rainfall amounts between a half and three quarters of an inch possible."
     },
     {
       "name": "Tonight",
