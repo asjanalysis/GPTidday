@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-16T21:46:23.148Z",
+  "generated_at": "2026-02-16T22:01:09.598Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-16T21:46:23.126Z",
+    "generated_at": "2026-02-16T22:01:09.458Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-16T21:46:21.859Z",
+    "generated_at": "2026-02-16T22:01:08.091Z",
     "latest": {
       "t": "2026-02-16T21:00:00.000Z",
       "station_id": "156",
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-16T21:46:23.147Z",
+    "generated_at": "2026-02-16T22:01:09.597Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-16T12:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 13,
-        "wind_dir": "NW",
-        "shortForecast": "Rain",
-        "precip_prob": 85
-      },
       {
         "t": "2026-02-16T13:00:00-08:00",
         "temp_f": 50,
@@ -233,6 +225,14 @@
         "wind_dir": "SSW",
         "shortForecast": "Showers And Thunderstorms",
         "precip_prob": 89
+      },
+      {
+        "t": "2026-02-17T12:00:00-08:00",
+        "temp_f": 50,
+        "wind_mph": 32,
+        "wind_dir": "SW",
+        "shortForecast": "Showers And Thunderstorms Likely",
+        "precip_prob": 69
       }
     ],
     "daily": [
