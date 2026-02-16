@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-16T16:27:45.913Z",
+  "generated_at": "2026-02-16T17:11:07.883Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-16T16:27:44.925Z",
+    "generated_at": "2026-02-16T17:11:06.879Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-16T16:27:43.540Z",
+    "generated_at": "2026-02-16T17:11:05.750Z",
     "latest": {
-      "t": "2026-02-16T15:30:00.000Z",
+      "t": "2026-02-16T16:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.04,
-      "hs_ft": 6.6929136,
-      "tp_s": 13.333333,
-      "ta_s": 10.0413,
-      "tz_s": 9.063941,
-      "dp_deg_true": 284.40625,
+      "hs_m": 1.95,
+      "hs_ft": 6.397638,
+      "tp_s": 14.285714,
+      "ta_s": 10.11328,
+      "tz_s": 9.13201,
+      "dp_deg_true": 285.8125,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-16T16:27:45.912Z",
+    "generated_at": "2026-02-16T17:11:07.882Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-16T08:00:00-08:00",
-        "temp_f": 51,
-        "wind_mph": 12,
-        "wind_dir": "E",
-        "shortForecast": "Rain",
-        "precip_prob": 97
-      },
       {
         "t": "2026-02-16T09:00:00-08:00",
         "temp_f": 50,
@@ -233,15 +225,23 @@
         "wind_dir": "SW",
         "shortForecast": "Rain Likely",
         "precip_prob": 67
+      },
+      {
+        "t": "2026-02-17T08:00:00-08:00",
+        "temp_f": 48,
+        "wind_mph": 21,
+        "wind_dir": "SW",
+        "shortForecast": "Rain",
+        "precip_prob": 80
       }
     ],
     "daily": [
       {
         "name": "Washington's Birthday",
-        "t_start": "2026-02-16T08:00:00-08:00",
+        "t_start": "2026-02-16T09:00:00-08:00",
         "t_end": "2026-02-16T18:00:00-08:00",
         "temp_f": 53,
-        "text": "Rain before 4pm, then showers and thunderstorms. Cloudy, with a high near 53. East wind 9 to 18 mph, with gusts as high as 30 mph. Chance of precipitation is 100%. New rainfall amounts between 1 and 2 inches possible."
+        "text": "Rain before 4pm, then showers and thunderstorms. Cloudy, with a high near 53. East southeast wind 9 to 18 mph, with gusts as high as 30 mph. Chance of precipitation is 100%. New rainfall amounts between 1 and 2 inches possible."
       },
       {
         "name": "Tonight",
