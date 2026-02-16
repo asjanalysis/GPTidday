@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-16T05:52:12.892Z",
+  "generated_at": "2026-02-16T06:50:46.010Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-16T05:52:11.769Z",
+    "generated_at": "2026-02-16T06:50:43.353Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-16T05:52:10.600Z",
+    "generated_at": "2026-02-16T06:50:42.034Z",
     "latest": {
-      "t": "2026-02-16T05:00:00.000Z",
+      "t": "2026-02-16T06:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.25,
-      "hs_ft": 7.38189,
+      "hs_m": 2.15,
+      "hs_ft": 7.053806,
       "tp_s": 14.285714,
-      "ta_s": 7.8123474,
-      "tz_s": 6.9679575,
-      "dp_deg_true": 294.25,
+      "ta_s": 7.883425,
+      "tz_s": 6.929927,
+      "dp_deg_true": 287.21875,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-16T05:52:12.891Z",
+    "generated_at": "2026-02-16T06:50:46.009Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-15T21:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 12,
-        "wind_dir": "SSE",
-        "shortForecast": "Showers And Thunderstorms",
-        "precip_prob": 98
-      },
       {
         "t": "2026-02-15T22:00:00-08:00",
         "temp_f": 55,
@@ -233,12 +225,20 @@
         "wind_dir": "W",
         "shortForecast": "Rain",
         "precip_prob": 92
+      },
+      {
+        "t": "2026-02-16T21:00:00-08:00",
+        "temp_f": 52,
+        "wind_mph": 18,
+        "wind_dir": "WNW",
+        "shortForecast": "Rain",
+        "precip_prob": 92
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-02-15T21:00:00-08:00",
+        "t_start": "2026-02-15T22:00:00-08:00",
         "t_end": "2026-02-16T06:00:00-08:00",
         "temp_f": 51,
         "text": "Showers and thunderstorms before 1am, then rain. Cloudy, with a low around 51. Southeast wind 7 to 18 mph, with gusts as high as 23 mph. Chance of precipitation is 100%. New rainfall amounts between 1 and 2 inches possible."
