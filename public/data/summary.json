@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-16T23:58:46.929Z",
+  "generated_at": "2026-02-17T02:41:11.295Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-16T23:58:46.636Z",
+    "generated_at": "2026-02-17T02:41:10.131Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-16T23:58:45.093Z",
+    "generated_at": "2026-02-17T02:41:08.352Z",
     "latest": {
-      "t": "2026-02-16T23:00:00.000Z",
+      "t": "2026-02-17T01:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.09,
-      "hs_ft": 6.856955599999999,
-      "tp_s": 11.764706,
-      "ta_s": 8.202799,
-      "tz_s": 6.9165096,
-      "dp_deg_true": 294.25,
+      "hs_m": 2.47,
+      "hs_ft": 8.1036748,
+      "tp_s": 12.5,
+      "ta_s": 8.435785,
+      "tz_s": 7.207268,
+      "dp_deg_true": 287.21875,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,33 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-16T23:58:46.928Z",
+    "generated_at": "2026-02-17T02:41:11.294Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-16T15:00:00-08:00",
-        "temp_f": 51,
-        "wind_mph": 15,
-        "wind_dir": "W",
-        "shortForecast": "Showers And Thunderstorms",
-        "precip_prob": 84
-      },
-      {
-        "t": "2026-02-16T16:00:00-08:00",
-        "temp_f": 50,
-        "wind_mph": 16,
-        "wind_dir": "W",
-        "shortForecast": "Light Rain",
-        "precip_prob": 90
-      },
-      {
-        "t": "2026-02-16T17:00:00-08:00",
-        "temp_f": 51,
-        "wind_mph": 15,
-        "wind_dir": "WSW",
-        "shortForecast": "Light Rain Likely",
-        "precip_prob": 73
-      },
       {
         "t": "2026-02-16T18:00:00-08:00",
         "temp_f": 52,
@@ -233,16 +209,33 @@
         "wind_dir": "WSW",
         "shortForecast": "Showers And Thunderstorms",
         "precip_prob": 86
+      },
+      {
+        "t": "2026-02-17T15:00:00-08:00",
+        "temp_f": 49,
+        "wind_mph": 24,
+        "wind_dir": "W",
+        "shortForecast": "Showers And Thunderstorms",
+        "precip_prob": 79
+      },
+      {
+        "t": "2026-02-17T16:00:00-08:00",
+        "temp_f": 49,
+        "wind_mph": 25,
+        "wind_dir": "W",
+        "shortForecast": "Showers And Thunderstorms",
+        "precip_prob": 99
+      },
+      {
+        "t": "2026-02-17T17:00:00-08:00",
+        "temp_f": 50,
+        "wind_mph": 25,
+        "wind_dir": "W",
+        "shortForecast": "Showers And Thunderstorms",
+        "precip_prob": 99
       }
     ],
     "daily": [
-      {
-        "name": "Washington's Birthday",
-        "t_start": "2026-02-16T15:00:00-08:00",
-        "t_end": "2026-02-16T18:00:00-08:00",
-        "temp_f": 53,
-        "text": "Showers and thunderstorms before 4pm, then rain. Cloudy. High near 53, with temperatures falling to around 51 in the afternoon. West wind around 16 mph, with gusts as high as 20 mph. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible."
-      },
       {
         "name": "Tonight",
         "t_start": "2026-02-16T18:00:00-08:00",
@@ -262,7 +255,7 @@
         "t_start": "2026-02-17T18:00:00-08:00",
         "t_end": "2026-02-18T06:00:00-08:00",
         "temp_f": 43,
-        "text": "Showers and thunderstorms before 1am, then rain. Cloudy, with a low around 43. West northwest wind 3 to 29 mph, with gusts as high as 36 mph. Chance of precipitation is 100%. New rainfall amounts between a quarter and half of an inch possible."
+        "text": "Showers and thunderstorms before 1am, then rain. Cloudy. Low around 43, with temperatures rising to around 45 overnight. West northwest wind 3 to 29 mph, with gusts as high as 36 mph. Chance of precipitation is 100%. New rainfall amounts between a quarter and half of an inch possible."
       },
       {
         "name": "Wednesday",
@@ -276,14 +269,14 @@
         "t_start": "2026-02-18T18:00:00-08:00",
         "t_end": "2026-02-19T06:00:00-08:00",
         "temp_f": 45,
-        "text": "Rain. Mostly cloudy, with a low around 45. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible."
+        "text": "Rain. Mostly cloudy, with a low around 45. South wind 6 to 25 mph, with gusts as high as 32 mph. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible."
       },
       {
         "name": "Thursday",
         "t_start": "2026-02-19T06:00:00-08:00",
         "t_end": "2026-02-19T18:00:00-08:00",
         "temp_f": 52,
-        "text": "Rain. Mostly cloudy, with a high near 52."
+        "text": "Rain. Mostly cloudy, with a high near 52. Chance of precipitation is 90%. New rainfall amounts between a quarter and half of an inch possible."
       },
       {
         "name": "Thursday Night",
@@ -333,6 +326,13 @@
         "t_end": "2026-02-23T06:00:00-08:00",
         "temp_f": 53,
         "text": "Rain. Mostly cloudy, with a low around 53."
+      },
+      {
+        "name": "Monday",
+        "t_start": "2026-02-23T06:00:00-08:00",
+        "t_end": "2026-02-23T18:00:00-08:00",
+        "temp_f": 58,
+        "text": "Rain before 5pm. Cloudy, with a high near 58."
       }
     ]
   }
