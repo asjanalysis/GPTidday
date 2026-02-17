@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-17T02:41:11.294Z",
+  "generated_at": "2026-02-17T04:32:08.976Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-16T18:00:00-08:00",
-      "temp_f": 52,
-      "wind_mph": 13,
-      "wind_dir": "SW",
-      "shortForecast": "Light Rain Likely",
-      "precip_prob": 67
-    },
-    {
-      "t": "2026-02-16T19:00:00-08:00",
-      "temp_f": 52,
-      "wind_mph": 8,
-      "wind_dir": "W",
-      "shortForecast": "Light Rain Likely",
-      "precip_prob": 62
-    },
     {
       "t": "2026-02-16T20:00:00-08:00",
       "temp_f": 52,
@@ -198,15 +182,31 @@
       "wind_dir": "W",
       "shortForecast": "Showers And Thunderstorms",
       "precip_prob": 99
+    },
+    {
+      "t": "2026-02-17T18:00:00-08:00",
+      "temp_f": 50,
+      "wind_mph": 22,
+      "wind_dir": "WSW",
+      "shortForecast": "Showers And Thunderstorms",
+      "precip_prob": 99
+    },
+    {
+      "t": "2026-02-17T19:00:00-08:00",
+      "temp_f": 50,
+      "wind_mph": 24,
+      "wind_dir": "W",
+      "shortForecast": "Showers And Thunderstorms",
+      "precip_prob": 99
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-16T18:00:00-08:00",
+      "t_start": "2026-02-16T20:00:00-08:00",
       "t_end": "2026-02-17T06:00:00-08:00",
       "temp_f": 47,
-      "text": "Rain. Mostly cloudy, with a low around 47. West wind 8 to 16 mph, with gusts as high as 20 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible."
+      "text": "Rain. Mostly cloudy, with a low around 47. West northwest wind 8 to 16 mph, with gusts as high as 20 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible."
     },
     {
       "name": "Tuesday",
