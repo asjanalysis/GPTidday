@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-17T15:31:38.052Z",
+  "generated_at": "2026-02-17T16:33:03.621Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-17T15:31:32.028Z",
+    "generated_at": "2026-02-17T16:33:02.587Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-17T15:31:30.579Z",
+    "generated_at": "2026-02-17T16:33:01.128Z",
     "latest": {
-      "t": "2026-02-17T15:00:00.000Z",
+      "t": "2026-02-17T16:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.6,
-      "hs_ft": 8.530184,
+      "hs_m": 2.96,
+      "hs_ft": 9.7112864,
       "tp_s": 11.111111,
-      "ta_s": 7.433209,
-      "tz_s": 6.528169,
-      "dp_deg_true": 298.46875,
+      "ta_s": 7.564908,
+      "tz_s": 6.687103,
+      "dp_deg_true": 294.25,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-17T15:31:38.051Z",
+    "generated_at": "2026-02-17T16:33:03.620Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-17T07:00:00-08:00",
-        "temp_f": 49,
-        "wind_mph": 20,
-        "wind_dir": "SW",
-        "shortForecast": "Rain",
-        "precip_prob": 87
-      },
       {
         "t": "2026-02-17T08:00:00-08:00",
         "temp_f": 49,
@@ -230,6 +222,14 @@
         "t": "2026-02-18T06:00:00-08:00",
         "temp_f": 44,
         "wind_mph": 7,
+        "wind_dir": "WNW",
+        "shortForecast": "Light Rain",
+        "precip_prob": 88
+      },
+      {
+        "t": "2026-02-18T07:00:00-08:00",
+        "temp_f": 44,
+        "wind_mph": 8,
         "wind_dir": "WNW",
         "shortForecast": "Light Rain",
         "precip_prob": 88
