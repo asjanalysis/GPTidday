@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-17T14:35:28.782Z",
+  "generated_at": "2026-02-17T15:31:38.051Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-17T06:00:00-08:00",
-      "temp_f": 50,
-      "wind_mph": 18,
-      "wind_dir": "SW",
-      "shortForecast": "Chance Light Rain",
-      "precip_prob": 69
-    },
     {
       "t": "2026-02-17T07:00:00-08:00",
       "temp_f": 49,
@@ -198,15 +190,23 @@
       "wind_dir": "WNW",
       "shortForecast": "Light Rain",
       "precip_prob": 88
+    },
+    {
+      "t": "2026-02-18T06:00:00-08:00",
+      "temp_f": 44,
+      "wind_mph": 7,
+      "wind_dir": "WNW",
+      "shortForecast": "Light Rain",
+      "precip_prob": 88
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-02-17T06:00:00-08:00",
+      "t_start": "2026-02-17T07:00:00-08:00",
       "t_end": "2026-02-17T18:00:00-08:00",
       "temp_f": 53,
-      "text": "Rain before 10am, then showers and thunderstorms. Cloudy. High near 53, with temperatures falling to around 50 in the afternoon. West southwest wind 18 to 30 mph, with gusts as high as 38 mph. Chance of precipitation is 100%. New rainfall amounts between a half and three quarters of an inch possible."
+      "text": "Rain before 10am, then showers and thunderstorms. Cloudy. High near 53, with temperatures falling to around 50 in the afternoon. West southwest wind 20 to 30 mph, with gusts as high as 38 mph. Chance of precipitation is 100%. New rainfall amounts between a half and three quarters of an inch possible."
     },
     {
       "name": "Tonight",
