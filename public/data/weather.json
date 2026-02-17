@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-17T12:28:32.743Z",
+  "generated_at": "2026-02-17T13:46:06.771Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-17T04:00:00-08:00",
-      "temp_f": 50,
-      "wind_mph": 6,
-      "wind_dir": "W",
-      "shortForecast": "Slight Chance Light Rain",
-      "precip_prob": 6
-    },
     {
       "t": "2026-02-17T05:00:00-08:00",
       "temp_f": 50,
@@ -198,15 +190,23 @@
       "wind_dir": "NW",
       "shortForecast": "Light Rain",
       "precip_prob": 57
+    },
+    {
+      "t": "2026-02-18T04:00:00-08:00",
+      "temp_f": 45,
+      "wind_mph": 7,
+      "wind_dir": "NW",
+      "shortForecast": "Light Rain",
+      "precip_prob": 88
     }
   ],
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-02-17T04:00:00-08:00",
+      "t_start": "2026-02-17T05:00:00-08:00",
       "t_end": "2026-02-17T06:00:00-08:00",
       "temp_f": 47,
-      "text": "A chance of rain. Mostly cloudy. Low around 47, with temperatures rising to around 50 overnight. West southwest wind 6 to 13 mph. Chance of precipitation is 30%. New rainfall amounts between a tenth and quarter of an inch possible."
+      "text": "A chance of rain. Mostly cloudy. Low around 47, with temperatures rising to around 50 overnight. West southwest wind around 13 mph. Chance of precipitation is 30%. New rainfall amounts between a tenth and quarter of an inch possible."
     },
     {
       "name": "Tuesday",
