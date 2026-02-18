@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-18T13:19:39.232Z",
+  "generated_at": "2026-02-18T14:14:21.590Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-18T05:00:00-08:00",
-      "temp_f": 44,
-      "wind_mph": 6,
-      "wind_dir": "NNW",
-      "shortForecast": "Light Rain Likely",
-      "precip_prob": 71
-    },
     {
       "t": "2026-02-18T06:00:00-08:00",
       "temp_f": 44,
@@ -198,25 +190,26 @@
       "wind_dir": "E",
       "shortForecast": "Rain",
       "precip_prob": 97
+    },
+    {
+      "t": "2026-02-19T05:00:00-08:00",
+      "temp_f": 49,
+      "wind_mph": 10,
+      "wind_dir": "ENE",
+      "shortForecast": "Rain",
+      "precip_prob": 97
     }
   ],
   "daily": [
     {
-      "name": "Overnight",
-      "t_start": "2026-02-18T05:00:00-08:00",
-      "t_end": "2026-02-18T06:00:00-08:00",
-      "temp_f": 42,
-      "text": "Rain likely. Mostly cloudy. Low around 42, with temperatures rising to around 44 overnight. North northwest wind around 6 mph. Chance of precipitation is 70%. New rainfall amounts between a tenth and quarter of an inch possible."
-    },
-    {
-      "name": "Wednesday",
+      "name": "Today",
       "t_start": "2026-02-18T06:00:00-08:00",
       "t_end": "2026-02-18T18:00:00-08:00",
       "temp_f": 51,
       "text": "Rain likely. Partly sunny, with a high near 51. Northwest wind 0 to 18 mph, with gusts as high as 23 mph. Chance of precipitation is 70%. New rainfall amounts between a tenth and quarter of an inch possible."
     },
     {
-      "name": "Wednesday Night",
+      "name": "Tonight",
       "t_start": "2026-02-18T18:00:00-08:00",
       "t_end": "2026-02-19T06:00:00-08:00",
       "temp_f": 46,
@@ -227,7 +220,7 @@
       "t_start": "2026-02-19T06:00:00-08:00",
       "t_end": "2026-02-19T18:00:00-08:00",
       "temp_f": 51,
-      "text": "Rain. Mostly cloudy, with a high near 51. North northwest wind 5 to 21 mph, with gusts as high as 28 mph. Chance of precipitation is 100%. New rainfall amounts between a quarter and half of an inch possible."
+      "text": "Rain. Mostly cloudy. High near 51, with temperatures falling to around 49 in the afternoon. North northwest wind 5 to 21 mph, with gusts as high as 28 mph. Chance of precipitation is 100%. New rainfall amounts between a quarter and half of an inch possible."
     },
     {
       "name": "Thursday Night",
@@ -241,14 +234,14 @@
       "t_start": "2026-02-20T06:00:00-08:00",
       "t_end": "2026-02-20T18:00:00-08:00",
       "temp_f": 51,
-      "text": "A slight chance of rain before 10am. Mostly sunny, with a high near 51. Chance of precipitation is 20%."
+      "text": "A slight chance of rain before 10am. Mostly sunny, with a high near 51. North northwest wind 2 to 7 mph. Chance of precipitation is 20%."
     },
     {
       "name": "Friday Night",
       "t_start": "2026-02-20T18:00:00-08:00",
       "t_end": "2026-02-21T06:00:00-08:00",
       "temp_f": 43,
-      "text": "A slight chance of rain after 4am. Partly cloudy, with a low around 43."
+      "text": "A slight chance of rain after 4am. Partly cloudy, with a low around 43. Chance of precipitation is 20%."
     },
     {
       "name": "Saturday",
@@ -298,6 +291,13 @@
       "t_end": "2026-02-24T18:00:00-08:00",
       "temp_f": 60,
       "text": "Rain. Mostly cloudy, with a high near 60."
+    },
+    {
+      "name": "Tuesday Night",
+      "t_start": "2026-02-24T18:00:00-08:00",
+      "t_end": "2026-02-25T06:00:00-08:00",
+      "temp_f": 51,
+      "text": "Rain. Mostly cloudy, with a low around 51."
     }
   ]
 }
