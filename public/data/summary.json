@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-18T08:58:16.977Z",
+  "generated_at": "2026-02-18T09:55:10.977Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-18T08:58:16.847Z",
+    "generated_at": "2026-02-18T09:55:10.495Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-18T08:58:15.577Z",
+    "generated_at": "2026-02-18T09:55:09.323Z",
     "latest": {
-      "t": "2026-02-18T08:00:00.000Z",
+      "t": "2026-02-18T09:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 3.45,
-      "hs_ft": 11.318898,
-      "tp_s": 9.876543,
-      "ta_s": 7.753473,
-      "tz_s": 6.925279,
-      "dp_deg_true": 275.96875,
+      "hs_m": 3.87,
+      "hs_ft": 12.6968508,
+      "tp_s": 13.333333,
+      "ta_s": 8.252525,
+      "tz_s": 7.3561077,
+      "dp_deg_true": 290.03125,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-18T08:58:16.977Z",
+    "generated_at": "2026-02-18T09:55:10.976Z",
     "current": null,
     "hourly": [
       {
@@ -238,10 +238,10 @@
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-02-18T00:00:00-08:00",
+        "t_start": "2026-02-18T01:00:00-08:00",
         "t_end": "2026-02-18T06:00:00-08:00",
         "temp_f": 42,
-        "text": "A chance of showers and thunderstorms before 1am, then rain likely. Mostly cloudy. Low around 42, with temperatures rising to around 44 overnight. Northwest wind 6 to 15 mph, with gusts as high as 31 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible."
+        "text": "Rain likely. Mostly cloudy. Low around 42, with temperatures rising to around 44 overnight. Northwest wind 6 to 15 mph, with gusts as high as 26 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible."
       },
       {
         "name": "Wednesday",
