@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-18T03:38:32.047Z",
+  "generated_at": "2026-02-18T05:12:59.476Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-17T19:00:00-08:00",
-      "temp_f": 48,
-      "wind_mph": 21,
-      "wind_dir": "W",
-      "shortForecast": "Showers And Thunderstorms",
-      "precip_prob": 86
-    },
-    {
-      "t": "2026-02-17T20:00:00-08:00",
-      "temp_f": 48,
-      "wind_mph": 18,
-      "wind_dir": "WNW",
-      "shortForecast": "Showers And Thunderstorms",
-      "precip_prob": 78
-    },
     {
       "t": "2026-02-17T21:00:00-08:00",
       "temp_f": 49,
@@ -198,15 +182,31 @@
       "wind_dir": "WNW",
       "shortForecast": "Mostly Cloudy",
       "precip_prob": 14
+    },
+    {
+      "t": "2026-02-18T19:00:00-08:00",
+      "temp_f": 49,
+      "wind_mph": 8,
+      "wind_dir": "WNW",
+      "shortForecast": "Chance Light Rain",
+      "precip_prob": 29
+    },
+    {
+      "t": "2026-02-18T20:00:00-08:00",
+      "temp_f": 49,
+      "wind_mph": 8,
+      "wind_dir": "SSW",
+      "shortForecast": "Chance Rain",
+      "precip_prob": 39
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-17T19:00:00-08:00",
+      "t_start": "2026-02-17T21:00:00-08:00",
       "t_end": "2026-02-18T06:00:00-08:00",
       "temp_f": 42,
-      "text": "Showers and thunderstorms before 1am, then rain likely. Mostly cloudy. Low around 42, with temperatures rising to around 44 overnight. Northwest wind 7 to 21 mph, with gusts as high as 25 mph. Chance of precipitation is 90%. New rainfall amounts between a quarter and half of an inch possible."
+      "text": "Showers and thunderstorms before 1am, then rain likely. Mostly cloudy. Low around 42, with temperatures rising to around 44 overnight. Northwest wind 7 to 17 mph, with gusts as high as 23 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible."
     },
     {
       "name": "Wednesday",
