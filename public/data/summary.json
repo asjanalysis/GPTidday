@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-18T07:18:23.219Z",
+  "generated_at": "2026-02-18T08:00:56.463Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-18T07:18:21.226Z",
+    "generated_at": "2026-02-18T08:00:53.728Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,16 +18,16 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-18T07:18:20.049Z",
+    "generated_at": "2026-02-18T08:00:52.968Z",
     "latest": {
-      "t": "2026-02-18T06:30:00.000Z",
+      "t": "2026-02-18T07:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 4.07,
-      "hs_ft": 13.353018800000001,
+      "hs_m": 3.84,
+      "hs_ft": 12.598425599999999,
       "tp_s": 12.5,
-      "ta_s": 8.210996,
-      "tz_s": 7.358085,
+      "ta_s": 8.211054,
+      "tz_s": 7.360155,
       "dp_deg_true": 292.84375,
       "lat": 36.759167,
       "lon": -121.95028
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-18T07:18:23.218Z",
+    "generated_at": "2026-02-18T08:00:56.463Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-17T23:00:00-08:00",
-        "temp_f": 48,
-        "wind_mph": 15,
-        "wind_dir": "NW",
-        "shortForecast": "Showers And Thunderstorms Likely",
-        "precip_prob": 61
-      },
       {
         "t": "2026-02-18T00:00:00-08:00",
         "temp_f": 46,
@@ -233,15 +225,23 @@
         "wind_dir": "SW",
         "shortForecast": "Chance Light Rain",
         "precip_prob": 36
+      },
+      {
+        "t": "2026-02-18T23:00:00-08:00",
+        "temp_f": 50,
+        "wind_mph": 16,
+        "wind_dir": "SSW",
+        "shortForecast": "Chance Rain",
+        "precip_prob": 54
       }
     ],
     "daily": [
       {
-        "name": "Tonight",
-        "t_start": "2026-02-17T23:00:00-08:00",
+        "name": "Overnight",
+        "t_start": "2026-02-18T00:00:00-08:00",
         "t_end": "2026-02-18T06:00:00-08:00",
         "temp_f": 42,
-        "text": "Showers and thunderstorms likely before 1am, then rain likely. Mostly cloudy. Low around 42, with temperatures rising to around 44 overnight. Northwest wind 6 to 15 mph, with gusts as high as 31 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible."
+        "text": "A chance of showers and thunderstorms before 1am, then rain likely. Mostly cloudy. Low around 42, with temperatures rising to around 44 overnight. Northwest wind 6 to 15 mph, with gusts as high as 31 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible."
       },
       {
         "name": "Wednesday",
