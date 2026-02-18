@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-18T16:05:11.179Z",
+  "generated_at": "2026-02-18T17:16:44.547Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-18T16:05:05.617Z",
+    "generated_at": "2026-02-18T17:16:43.050Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-18T16:05:04.134Z",
+    "generated_at": "2026-02-18T17:16:41.202Z",
     "latest": {
-      "t": "2026-02-18T15:00:00.000Z",
+      "t": "2026-02-18T16:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 3.61,
-      "hs_ft": 11.8438324,
-      "tp_s": 11.764706,
-      "ta_s": 9.066736,
-      "tz_s": 8.27078,
-      "dp_deg_true": 283,
+      "hs_m": 3.71,
+      "hs_ft": 12.1719164,
+      "tp_s": 12.5,
+      "ta_s": 9.323345,
+      "tz_s": 8.495868,
+      "dp_deg_true": 291.4375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-18T16:05:11.178Z",
+    "generated_at": "2026-02-18T17:16:44.546Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-18T08:00:00-08:00",
-        "temp_f": 43,
-        "wind_mph": 8,
-        "wind_dir": "NNW",
-        "shortForecast": "Light Rain Likely",
-        "precip_prob": 70
-      },
       {
         "t": "2026-02-18T09:00:00-08:00",
         "temp_f": 44,
@@ -233,12 +225,20 @@
         "wind_dir": "ENE",
         "shortForecast": "Rain",
         "precip_prob": 97
+      },
+      {
+        "t": "2026-02-19T08:00:00-08:00",
+        "temp_f": 48,
+        "wind_mph": 5,
+        "wind_dir": "NNW",
+        "shortForecast": "Rain",
+        "precip_prob": 97
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-02-18T08:00:00-08:00",
+        "t_start": "2026-02-18T09:00:00-08:00",
         "t_end": "2026-02-18T18:00:00-08:00",
         "temp_f": 51,
         "text": "Rain likely. Partly sunny, with a high near 51. Northwest wind 0 to 18 mph, with gusts as high as 22 mph. Chance of precipitation is 70%. New rainfall amounts between a tenth and quarter of an inch possible."
