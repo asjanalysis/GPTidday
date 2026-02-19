@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-19T15:26:48.339Z",
+  "generated_at": "2026-02-19T16:12:41.752Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-19T06:00:00-08:00",
-      "temp_f": 48,
-      "wind_mph": 21,
-      "wind_dir": "W",
-      "shortForecast": "Showers And Thunderstorms Likely",
-      "precip_prob": 68
-    },
-    {
-      "t": "2026-02-19T07:00:00-08:00",
-      "temp_f": 48,
-      "wind_mph": 20,
-      "wind_dir": "W",
-      "shortForecast": "Showers And Thunderstorms",
-      "precip_prob": 88
-    },
     {
       "t": "2026-02-19T08:00:00-08:00",
       "temp_f": 48,
@@ -198,15 +182,31 @@
       "wind_dir": "N",
       "shortForecast": "Partly Cloudy",
       "precip_prob": 8
+    },
+    {
+      "t": "2026-02-20T06:00:00-08:00",
+      "temp_f": 44,
+      "wind_mph": 2,
+      "wind_dir": "NNE",
+      "shortForecast": "Partly Sunny",
+      "precip_prob": 8
+    },
+    {
+      "t": "2026-02-20T07:00:00-08:00",
+      "temp_f": 43,
+      "wind_mph": 2,
+      "wind_dir": "NE",
+      "shortForecast": "Partly Sunny",
+      "precip_prob": 8
     }
   ],
   "daily": [
     {
       "name": "Today",
-      "t_start": "2026-02-19T06:00:00-08:00",
+      "t_start": "2026-02-19T08:00:00-08:00",
       "t_end": "2026-02-19T18:00:00-08:00",
       "temp_f": 51,
-      "text": "Showers and thunderstorms before 10am, then rain likely between 10am and 3pm. Partly sunny, with a high near 51. West northwest wind 20 to 25 mph, with gusts as high as 35 mph. Chance of precipitation is 90%. New rainfall amounts between a quarter and half of an inch possible."
+      "text": "Showers and thunderstorms before 10am, then rain likely between 10am and 3pm. Partly sunny, with a high near 51. West northwest wind 20 to 25 mph, with gusts as high as 35 mph. Chance of precipitation is 80%. New rainfall amounts between a quarter and half of an inch possible."
     },
     {
       "name": "Tonight",
