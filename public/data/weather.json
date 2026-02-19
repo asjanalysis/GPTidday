@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-19T19:47:23.724Z",
+  "generated_at": "2026-02-19T20:17:16.808Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-19T11:00:00-08:00",
-      "temp_f": 49,
-      "wind_mph": 21,
-      "wind_dir": "WNW",
-      "shortForecast": "Chance Light Rain",
-      "precip_prob": 54
-    },
     {
       "t": "2026-02-19T12:00:00-08:00",
       "temp_f": 48,
@@ -198,15 +190,23 @@
       "wind_dir": "ESE",
       "shortForecast": "Mostly Cloudy",
       "precip_prob": 2
+    },
+    {
+      "t": "2026-02-20T11:00:00-08:00",
+      "temp_f": 47,
+      "wind_mph": 2,
+      "wind_dir": "SE",
+      "shortForecast": "Partly Sunny",
+      "precip_prob": 2
     }
   ],
   "daily": [
     {
-      "name": "Today",
-      "t_start": "2026-02-19T11:00:00-08:00",
+      "name": "This Afternoon",
+      "t_start": "2026-02-19T12:00:00-08:00",
       "t_end": "2026-02-19T18:00:00-08:00",
       "temp_f": 51,
-      "text": "A chance of rain before 5pm. Mostly sunny, with a high near 51. Northwest wind 21 to 25 mph, with gusts as high as 35 mph. Chance of precipitation is 50%. New rainfall amounts less than a tenth of an inch possible."
+      "text": "A chance of rain before 5pm. Mostly sunny, with a high near 51. Northwest wind around 25 mph, with gusts as high as 35 mph. Chance of precipitation is 50%. New rainfall amounts less than a tenth of an inch possible."
     },
     {
       "name": "Tonight",
