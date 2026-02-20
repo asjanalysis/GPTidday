@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-20T11:59:39.624Z",
+  "generated_at": "2026-02-20T13:18:00.290Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-20T11:59:37.153Z",
+    "generated_at": "2026-02-20T13:17:44.783Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-20T11:59:35.808Z",
+    "generated_at": "2026-02-20T13:17:43.148Z",
     "latest": {
-      "t": "2026-02-20T11:00:00.000Z",
+      "t": "2026-02-20T12:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 3.16,
-      "hs_ft": 10.3674544,
-      "tp_s": 11.111111,
-      "ta_s": 8.593135,
-      "tz_s": 7.771929,
-      "dp_deg_true": 297.0625,
+      "hs_m": 2.75,
+      "hs_ft": 9.02231,
+      "tp_s": 11.764706,
+      "ta_s": 8.191141,
+      "tz_s": 7.4665055,
+      "dp_deg_true": 301.28125,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,25 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-20T11:59:39.623Z",
+    "generated_at": "2026-02-20T13:18:00.289Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-20T03:00:00-08:00",
-        "temp_f": 45,
-        "wind_mph": 5,
-        "wind_dir": "NNW",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 2
-      },
-      {
-        "t": "2026-02-20T04:00:00-08:00",
-        "temp_f": 45,
-        "wind_mph": 3,
-        "wind_dir": "NNW",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 1
-      },
       {
         "t": "2026-02-20T05:00:00-08:00",
         "temp_f": 43,
@@ -233,15 +217,31 @@
         "wind_dir": "E",
         "shortForecast": "Partly Cloudy",
         "precip_prob": 2
+      },
+      {
+        "t": "2026-02-21T03:00:00-08:00",
+        "temp_f": 45,
+        "wind_mph": 3,
+        "wind_dir": "E",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 2
+      },
+      {
+        "t": "2026-02-21T04:00:00-08:00",
+        "temp_f": 44,
+        "wind_mph": 5,
+        "wind_dir": "E",
+        "shortForecast": "Partly Cloudy",
+        "precip_prob": 3
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-02-20T03:00:00-08:00",
+        "t_start": "2026-02-20T01:00:00-08:00",
         "t_end": "2026-02-20T06:00:00-08:00",
         "temp_f": 42,
-        "text": "Mostly cloudy, with a low around 42. North northwest wind around 5 mph."
+        "text": "Mostly cloudy, with a low around 42. North northwest wind 3 to 7 mph."
       },
       {
         "name": "Friday",
