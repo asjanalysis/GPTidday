@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-20T02:23:26.648Z",
+  "generated_at": "2026-02-20T04:24:51.151Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-19T18:00:00-08:00",
-      "temp_f": 50,
-      "wind_mph": 22,
-      "wind_dir": "NW",
-      "shortForecast": "Partly Cloudy",
-      "precip_prob": 4
-    },
-    {
-      "t": "2026-02-19T19:00:00-08:00",
-      "temp_f": 49,
-      "wind_mph": 18,
-      "wind_dir": "NW",
-      "shortForecast": "Partly Cloudy",
-      "precip_prob": 4
-    },
     {
       "t": "2026-02-19T20:00:00-08:00",
       "temp_f": 48,
@@ -198,15 +182,31 @@
       "wind_dir": "WSW",
       "shortForecast": "Mostly Sunny",
       "precip_prob": 4
+    },
+    {
+      "t": "2026-02-20T18:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 2,
+      "wind_dir": "WSW",
+      "shortForecast": "Partly Cloudy",
+      "precip_prob": 4
+    },
+    {
+      "t": "2026-02-20T19:00:00-08:00",
+      "temp_f": 50,
+      "wind_mph": 1,
+      "wind_dir": "W",
+      "shortForecast": "Partly Cloudy",
+      "precip_prob": 4
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-19T18:00:00-08:00",
+      "t_start": "2026-02-19T20:00:00-08:00",
       "t_end": "2026-02-20T06:00:00-08:00",
       "temp_f": 42,
-      "text": "Partly cloudy, with a low around 42. North northwest wind 3 to 22 mph, with gusts as high as 30 mph."
+      "text": "Partly cloudy, with a low around 42. North northwest wind 3 to 16 mph, with gusts as high as 23 mph."
     },
     {
       "name": "Friday",
