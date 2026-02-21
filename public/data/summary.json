@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-21T04:19:33.260Z",
+  "generated_at": "2026-02-21T05:14:15.555Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-21T04:19:30.973Z",
+    "generated_at": "2026-02-21T05:14:14.995Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-21T04:19:29.576Z",
+    "generated_at": "2026-02-21T05:14:13.285Z",
     "latest": {
-      "t": "2026-02-21T03:30:00.000Z",
+      "t": "2026-02-21T04:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.58,
-      "hs_ft": 5.1837272,
-      "tp_s": 11.111111,
-      "ta_s": 7.8925285,
-      "tz_s": 7.2132297,
-      "dp_deg_true": 294.25,
+      "hs_m": 1.71,
+      "hs_ft": 5.6102364,
+      "tp_s": 9.876543,
+      "ta_s": 7.904001,
+      "tz_s": 7.286627,
+      "dp_deg_true": 297.0625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-21T04:19:33.259Z",
+    "generated_at": "2026-02-21T05:14:15.554Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-20T20:00:00-08:00",
-        "temp_f": 50,
-        "wind_mph": 2,
-        "wind_dir": "N",
-        "shortForecast": "Mostly Clear",
-        "precip_prob": 0
-      },
       {
         "t": "2026-02-20T21:00:00-08:00",
         "temp_f": 49,
@@ -233,12 +225,20 @@
         "wind_dir": "S",
         "shortForecast": "Mostly Clear",
         "precip_prob": 2
+      },
+      {
+        "t": "2026-02-21T20:00:00-08:00",
+        "temp_f": 54,
+        "wind_mph": 17,
+        "wind_dir": "S",
+        "shortForecast": "Partly Cloudy",
+        "precip_prob": 1
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-02-20T20:00:00-08:00",
+        "t_start": "2026-02-20T21:00:00-08:00",
         "t_end": "2026-02-21T06:00:00-08:00",
         "temp_f": 42,
         "text": "Mostly clear. Low around 42, with temperatures rising to around 45 overnight. East wind 2 to 7 mph."
