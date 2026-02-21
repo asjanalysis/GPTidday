@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-21T13:50:33.845Z",
+  "generated_at": "2026-02-21T14:13:00.761Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-21T05:00:00-08:00",
-      "temp_f": 45,
-      "wind_mph": 6,
-      "wind_dir": "ESE",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 0
-    },
     {
       "t": "2026-02-21T06:00:00-08:00",
       "temp_f": 45,
@@ -198,25 +190,26 @@
       "wind_dir": "ESE",
       "shortForecast": "Mostly Cloudy",
       "precip_prob": 4
+    },
+    {
+      "t": "2026-02-22T05:00:00-08:00",
+      "temp_f": 49,
+      "wind_mph": 6,
+      "wind_dir": "E",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 4
     }
   ],
   "daily": [
     {
-      "name": "Overnight",
-      "t_start": "2026-02-21T05:00:00-08:00",
-      "t_end": "2026-02-21T06:00:00-08:00",
-      "temp_f": 42,
-      "text": "Mostly cloudy. Low around 42, with temperatures rising to around 45 overnight. East southeast wind around 6 mph."
-    },
-    {
-      "name": "Saturday",
+      "name": "Today",
       "t_start": "2026-02-21T06:00:00-08:00",
       "t_end": "2026-02-21T18:00:00-08:00",
       "temp_f": 56,
       "text": "Mostly sunny, with a high near 56. South southeast wind 6 to 17 mph, with gusts as high as 24 mph."
     },
     {
-      "name": "Saturday Night",
+      "name": "Tonight",
       "t_start": "2026-02-21T18:00:00-08:00",
       "t_end": "2026-02-22T06:00:00-08:00",
       "temp_f": 47,
@@ -227,7 +220,7 @@
       "t_start": "2026-02-22T06:00:00-08:00",
       "t_end": "2026-02-22T18:00:00-08:00",
       "temp_f": 59,
-      "text": "Partly sunny, with a high near 59. Southeast wind around 6 mph."
+      "text": "Partly sunny. High near 59, with temperatures falling to around 57 in the afternoon. Southeast wind around 6 mph."
     },
     {
       "name": "Sunday Night",
@@ -241,14 +234,14 @@
       "t_start": "2026-02-23T06:00:00-08:00",
       "t_end": "2026-02-23T18:00:00-08:00",
       "temp_f": 63,
-      "text": "Partly sunny, with a high near 63."
+      "text": "Partly sunny, with a high near 63. Southeast wind 1 to 5 mph."
     },
     {
       "name": "Monday Night",
       "t_start": "2026-02-23T18:00:00-08:00",
       "t_end": "2026-02-24T06:00:00-08:00",
       "temp_f": 56,
-      "text": "Rain likely after 10pm. Mostly cloudy, with a low around 56."
+      "text": "Rain likely after 10pm. Mostly cloudy, with a low around 56. Chance of precipitation is 60%. New rainfall amounts between a tenth and quarter of an inch possible."
     },
     {
       "name": "Tuesday",
@@ -298,6 +291,13 @@
       "t_end": "2026-02-27T18:00:00-08:00",
       "temp_f": 65,
       "text": "Mostly sunny, with a high near 65."
+    },
+    {
+      "name": "Friday Night",
+      "t_start": "2026-02-27T18:00:00-08:00",
+      "t_end": "2026-02-28T06:00:00-08:00",
+      "temp_f": 54,
+      "text": "A slight chance of rain after 4am. Mostly cloudy, with a low around 54."
     }
   ]
 }
