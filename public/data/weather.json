@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-21T00:00:50.917Z",
+  "generated_at": "2026-02-21T02:42:48.782Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-20T16:00:00-08:00",
-      "temp_f": 51,
-      "wind_mph": 6,
-      "wind_dir": "W",
-      "shortForecast": "Mostly Sunny",
-      "precip_prob": 1
-    },
-    {
-      "t": "2026-02-20T17:00:00-08:00",
-      "temp_f": 52,
-      "wind_mph": 5,
-      "wind_dir": "W",
-      "shortForecast": "Sunny",
-      "precip_prob": 1
-    },
     {
       "t": "2026-02-20T18:00:00-08:00",
       "temp_f": 51,
@@ -198,16 +182,25 @@
       "wind_dir": "SSW",
       "shortForecast": "Sunny",
       "precip_prob": 2
+    },
+    {
+      "t": "2026-02-21T16:00:00-08:00",
+      "temp_f": 55,
+      "wind_mph": 20,
+      "wind_dir": "SSW",
+      "shortForecast": "Sunny",
+      "precip_prob": 3
+    },
+    {
+      "t": "2026-02-21T17:00:00-08:00",
+      "temp_f": 56,
+      "wind_mph": 20,
+      "wind_dir": "SSW",
+      "shortForecast": "Sunny",
+      "precip_prob": 3
     }
   ],
   "daily": [
-    {
-      "name": "This Afternoon",
-      "t_start": "2026-02-20T16:00:00-08:00",
-      "t_end": "2026-02-20T18:00:00-08:00",
-      "temp_f": 52,
-      "text": "Mostly sunny, with a high near 52. West wind around 6 mph."
-    },
     {
       "name": "Tonight",
       "t_start": "2026-02-20T18:00:00-08:00",
@@ -227,7 +220,7 @@
       "t_start": "2026-02-21T18:00:00-08:00",
       "t_end": "2026-02-22T06:00:00-08:00",
       "temp_f": 48,
-      "text": "Partly cloudy, with a low around 48. South southeast wind 9 to 18 mph, with gusts as high as 28 mph."
+      "text": "Partly cloudy. Low around 48, with temperatures rising to around 50 overnight. South southeast wind 9 to 18 mph, with gusts as high as 28 mph."
     },
     {
       "name": "Sunday",
@@ -241,14 +234,14 @@
       "t_start": "2026-02-22T18:00:00-08:00",
       "t_end": "2026-02-23T06:00:00-08:00",
       "temp_f": 50,
-      "text": "Mostly cloudy, with a low around 50."
+      "text": "Mostly cloudy, with a low around 50. Southeast wind 1 to 8 mph."
     },
     {
       "name": "Monday",
       "t_start": "2026-02-23T06:00:00-08:00",
       "t_end": "2026-02-23T18:00:00-08:00",
       "temp_f": 63,
-      "text": "A slight chance of rain after 4pm. Partly sunny, with a high near 63."
+      "text": "A slight chance of rain after 4pm. Partly sunny, with a high near 63. Chance of precipitation is 20%."
     },
     {
       "name": "Monday Night",
@@ -298,6 +291,13 @@
       "t_end": "2026-02-27T06:00:00-08:00",
       "temp_f": 54,
       "text": "A slight chance of rain. Partly cloudy, with a low around 54."
+    },
+    {
+      "name": "Friday",
+      "t_start": "2026-02-27T06:00:00-08:00",
+      "t_end": "2026-02-27T18:00:00-08:00",
+      "temp_f": 65,
+      "text": "A slight chance of rain before 5pm. Mostly sunny, with a high near 65."
     }
   ]
 }
