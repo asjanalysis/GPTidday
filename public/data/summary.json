@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-21T11:36:02.317Z",
+  "generated_at": "2026-02-21T11:51:38.580Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-21T11:36:02.316Z",
+    "generated_at": "2026-02-21T11:51:37.197Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-21T11:36:00.384Z",
+    "generated_at": "2026-02-21T11:51:36.000Z",
     "latest": {
       "t": "2026-02-21T11:00:00.000Z",
       "station_id": "156",
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-21T11:36:01.793Z",
+    "generated_at": "2026-02-21T11:51:38.579Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-21T02:00:00-08:00",
-        "temp_f": 45,
-        "wind_mph": 3,
-        "wind_dir": "E",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 0
-      },
       {
         "t": "2026-02-21T03:00:00-08:00",
         "temp_f": 45,
@@ -233,15 +225,23 @@
         "wind_dir": "ESE",
         "shortForecast": "Partly Cloudy",
         "precip_prob": 1
+      },
+      {
+        "t": "2026-02-22T02:00:00-08:00",
+        "temp_f": 49,
+        "wind_mph": 7,
+        "wind_dir": "ESE",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 1
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-02-21T02:00:00-08:00",
+        "t_start": "2026-02-21T03:00:00-08:00",
         "t_end": "2026-02-21T06:00:00-08:00",
         "temp_f": 42,
-        "text": "Partly cloudy. Low around 42, with temperatures rising to around 45 overnight. East southeast wind around 6 mph."
+        "text": "Mostly cloudy. Low around 42, with temperatures rising to around 45 overnight. East southeast wind around 6 mph."
       },
       {
         "name": "Saturday",
