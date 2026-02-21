@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-21T02:42:48.782Z",
+  "generated_at": "2026-02-21T04:19:33.259Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-20T18:00:00-08:00",
-      "temp_f": 51,
-      "wind_mph": 2,
-      "wind_dir": "W",
-      "shortForecast": "Mostly Clear",
-      "precip_prob": 1
-    },
-    {
-      "t": "2026-02-20T19:00:00-08:00",
-      "temp_f": 51,
-      "wind_mph": 2,
-      "wind_dir": "WNW",
-      "shortForecast": "Mostly Clear",
-      "precip_prob": 0
-    },
     {
       "t": "2026-02-20T20:00:00-08:00",
       "temp_f": 50,
@@ -198,15 +182,31 @@
       "wind_dir": "SSW",
       "shortForecast": "Sunny",
       "precip_prob": 3
+    },
+    {
+      "t": "2026-02-21T18:00:00-08:00",
+      "temp_f": 55,
+      "wind_mph": 18,
+      "wind_dir": "S",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 3
+    },
+    {
+      "t": "2026-02-21T19:00:00-08:00",
+      "temp_f": 55,
+      "wind_mph": 17,
+      "wind_dir": "S",
+      "shortForecast": "Mostly Clear",
+      "precip_prob": 2
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-20T18:00:00-08:00",
+      "t_start": "2026-02-20T20:00:00-08:00",
       "t_end": "2026-02-21T06:00:00-08:00",
       "temp_f": 42,
-      "text": "Mostly clear. Low around 42, with temperatures rising to around 45 overnight. East northeast wind 2 to 7 mph."
+      "text": "Mostly clear. Low around 42, with temperatures rising to around 45 overnight. East wind 2 to 7 mph."
     },
     {
       "name": "Saturday",
