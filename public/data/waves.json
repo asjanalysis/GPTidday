@@ -4,17 +4,17 @@
     "primary_station_id": "156",
     "fallback_station_id": "158"
   },
-  "generated_at": "2026-02-22T20:36:56.857Z",
+  "generated_at": "2026-02-22T20:56:34.587Z",
   "latest": {
-    "t": "2026-02-22T19:30:00.000Z",
+    "t": "2026-02-22T20:00:00.000Z",
     "station_id": "156",
     "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-    "hs_m": 1.57,
-    "hs_ft": 5.1509188,
-    "tp_s": 11.764706,
-    "ta_s": 6.5634584,
-    "tz_s": 5.9887815,
-    "dp_deg_true": 280.1875,
+    "hs_m": 1.66,
+    "hs_ft": 5.4461943999999995,
+    "tp_s": 11.111111,
+    "ta_s": 6.596921,
+    "tz_s": 6.05318,
+    "dp_deg_true": 271.75,
     "lat": 36.759167,
     "lon": -121.95028
   }
