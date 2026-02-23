@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-23T11:02:51.320Z",
+  "generated_at": "2026-02-23T11:49:04.817Z",
   "current": null,
   "hourly": [
     {
@@ -203,7 +203,7 @@
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-02-23T03:00:00-08:00",
+      "t_start": "2026-02-23T01:00:00-08:00",
       "t_end": "2026-02-23T06:00:00-08:00",
       "temp_f": 49,
       "text": "Partly cloudy. Low around 49, with temperatures rising to around 51 overnight. Northeast wind around 1 mph."
