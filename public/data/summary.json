@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-23T19:43:31.630Z",
+  "generated_at": "2026-02-23T20:25:55.646Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-23T19:43:28.365Z",
+    "generated_at": "2026-02-23T20:25:54.291Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-23T19:43:26.660Z",
+    "generated_at": "2026-02-23T20:25:53.189Z",
     "latest": {
-      "t": "2026-02-23T19:00:00.000Z",
+      "t": "2026-02-23T19:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.96,
-      "hs_ft": 6.4304464,
-      "tp_s": 10.526316,
-      "ta_s": 8.766913,
-      "tz_s": 7.972773,
-      "dp_deg_true": 283,
+      "hs_m": 2.03,
+      "hs_ft": 6.660105199999999,
+      "tp_s": 9.876543,
+      "ta_s": 8.69391,
+      "tz_s": 8.046201,
+      "dp_deg_true": 287.21875,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-23T19:43:31.629Z",
+    "generated_at": "2026-02-23T20:25:55.645Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-23T11:00:00-08:00",
-        "temp_f": 57,
-        "wind_mph": 2,
-        "wind_dir": "SE",
-        "shortForecast": "Mostly Sunny",
-        "precip_prob": 1
-      },
       {
         "t": "2026-02-23T12:00:00-08:00",
         "temp_f": 58,
@@ -233,15 +225,23 @@
         "wind_dir": "SSE",
         "shortForecast": "Chance Light Rain",
         "precip_prob": 48
+      },
+      {
+        "t": "2026-02-24T11:00:00-08:00",
+        "temp_f": 57,
+        "wind_mph": 5,
+        "wind_dir": "SSE",
+        "shortForecast": "Chance Light Rain",
+        "precip_prob": 48
       }
     ],
     "daily": [
       {
-        "name": "Today",
-        "t_start": "2026-02-23T11:00:00-08:00",
+        "name": "This Afternoon",
+        "t_start": "2026-02-23T12:00:00-08:00",
         "t_end": "2026-02-23T18:00:00-08:00",
         "temp_f": 62,
-        "text": "Mostly sunny. High near 62, with temperatures falling to around 60 in the afternoon. South wind around 5 mph."
+        "text": "Mostly sunny. High near 62, with temperatures falling to around 60 in the afternoon. South southwest wind around 5 mph."
       },
       {
         "name": "Tonight",
