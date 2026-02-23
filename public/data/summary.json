@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-22T23:59:54.351Z",
+  "generated_at": "2026-02-23T02:54:47.410Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-22T23:59:53.503Z",
+    "generated_at": "2026-02-23T02:54:46.086Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-22T23:59:52.281Z",
+    "generated_at": "2026-02-23T02:54:45.176Z",
     "latest": {
-      "t": "2026-02-22T23:00:00.000Z",
+      "t": "2026-02-23T02:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.98,
-      "hs_ft": 6.4960632,
-      "tp_s": 10.526316,
-      "ta_s": 7.2441034,
-      "tz_s": 6.592852,
-      "dp_deg_true": 274.5625,
+      "hs_m": 1.99,
+      "hs_ft": 6.5288715999999996,
+      "tp_s": 9.876543,
+      "ta_s": 7.7855883,
+      "tz_s": 7.1551714,
+      "dp_deg_true": 266.125,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,33 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-22T23:59:54.350Z",
+    "generated_at": "2026-02-23T02:54:47.409Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-22T15:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 6,
-        "wind_dir": "SSW",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
-      {
-        "t": "2026-02-22T16:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 6,
-        "wind_dir": "SSW",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
-      {
-        "t": "2026-02-22T17:00:00-08:00",
-        "temp_f": 59,
-        "wind_mph": 3,
-        "wind_dir": "SW",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-02-22T18:00:00-08:00",
         "temp_f": 58,
@@ -233,16 +209,33 @@
         "wind_dir": "SW",
         "shortForecast": "Mostly Sunny",
         "precip_prob": 3
+      },
+      {
+        "t": "2026-02-23T15:00:00-08:00",
+        "temp_f": 62,
+        "wind_mph": 5,
+        "wind_dir": "SW",
+        "shortForecast": "Mostly Sunny",
+        "precip_prob": 3
+      },
+      {
+        "t": "2026-02-23T16:00:00-08:00",
+        "temp_f": 61,
+        "wind_mph": 5,
+        "wind_dir": "WSW",
+        "shortForecast": "Mostly Sunny",
+        "precip_prob": 6
+      },
+      {
+        "t": "2026-02-23T17:00:00-08:00",
+        "temp_f": 61,
+        "wind_mph": 2,
+        "wind_dir": "WSW",
+        "shortForecast": "Mostly Sunny",
+        "precip_prob": 6
       }
     ],
     "daily": [
-      {
-        "name": "This Afternoon",
-        "t_start": "2026-02-22T15:00:00-08:00",
-        "t_end": "2026-02-22T18:00:00-08:00",
-        "temp_f": 59,
-        "text": "Sunny, with a high near 59. Southwest wind around 6 mph."
-      },
       {
         "name": "Tonight",
         "t_start": "2026-02-22T18:00:00-08:00",
@@ -262,7 +255,7 @@
         "t_start": "2026-02-23T18:00:00-08:00",
         "t_end": "2026-02-24T06:00:00-08:00",
         "temp_f": 54,
-        "text": "A chance of rain after 10pm. Mostly cloudy, with a low around 54. South wind around 1 mph. Chance of precipitation is 40%."
+        "text": "A chance of rain after 10pm. Mostly cloudy. Low around 54, with temperatures rising to around 56 overnight. South wind around 1 mph. Chance of precipitation is 40%."
       },
       {
         "name": "Tuesday",
@@ -276,14 +269,14 @@
         "t_start": "2026-02-24T18:00:00-08:00",
         "t_end": "2026-02-25T06:00:00-08:00",
         "temp_f": 56,
-        "text": "Rain likely before 10pm, then rain likely and patchy fog between 10pm and 4am, then areas of fog and a slight chance of rain. Cloudy, with a low around 56. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible."
+        "text": "Rain likely before 10pm, then rain likely and patchy fog between 10pm and 4am, then areas of fog and a slight chance of rain. Cloudy, with a low around 56. South wind 0 to 7 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible."
       },
       {
         "name": "Wednesday",
         "t_start": "2026-02-25T06:00:00-08:00",
         "t_end": "2026-02-25T18:00:00-08:00",
         "temp_f": 64,
-        "text": "Areas of fog and a slight chance of rain before 1pm. Mostly cloudy, with a high near 64."
+        "text": "Areas of fog and a slight chance of rain before 1pm. Mostly cloudy, with a high near 64. Chance of precipitation is 20%. New rainfall amounts less than a tenth of an inch possible."
       },
       {
         "name": "Wednesday Night",
@@ -333,6 +326,13 @@
         "t_end": "2026-03-01T06:00:00-08:00",
         "temp_f": 55,
         "text": "Mostly cloudy, with a low around 55."
+      },
+      {
+        "name": "Sunday",
+        "t_start": "2026-03-01T06:00:00-08:00",
+        "t_end": "2026-03-01T18:00:00-08:00",
+        "temp_f": 62,
+        "text": "Partly sunny, with a high near 62."
       }
     ]
   }
