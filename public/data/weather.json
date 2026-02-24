@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-24T01:02:16.822Z",
+  "generated_at": "2026-02-24T03:42:12.654Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-23T17:00:00-08:00",
-      "temp_f": 60,
-      "wind_mph": 2,
-      "wind_dir": "SW",
-      "shortForecast": "Partly Sunny",
-      "precip_prob": 5
-    },
-    {
-      "t": "2026-02-23T18:00:00-08:00",
-      "temp_f": 60,
-      "wind_mph": 1,
-      "wind_dir": "SW",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 6
-    },
     {
       "t": "2026-02-23T19:00:00-08:00",
       "temp_f": 59,
@@ -198,22 +182,31 @@
       "wind_dir": "SW",
       "shortForecast": "Rain Likely",
       "precip_prob": 58
+    },
+    {
+      "t": "2026-02-24T17:00:00-08:00",
+      "temp_f": 58,
+      "wind_mph": 5,
+      "wind_dir": "N",
+      "shortForecast": "Rain Likely",
+      "precip_prob": 66
+    },
+    {
+      "t": "2026-02-24T18:00:00-08:00",
+      "temp_f": 59,
+      "wind_mph": 3,
+      "wind_dir": "W",
+      "shortForecast": "Rain Likely",
+      "precip_prob": 71
     }
   ],
   "daily": [
     {
-      "name": "This Afternoon",
-      "t_start": "2026-02-23T15:00:00-08:00",
-      "t_end": "2026-02-23T18:00:00-08:00",
-      "temp_f": 62,
-      "text": "Partly sunny. High near 62, with temperatures falling to around 60 in the afternoon. Southwest wind around 5 mph."
-    },
-    {
       "name": "Tonight",
-      "t_start": "2026-02-23T18:00:00-08:00",
+      "t_start": "2026-02-23T19:00:00-08:00",
       "t_end": "2026-02-24T06:00:00-08:00",
       "temp_f": 54,
-      "text": "A chance of rain after 10pm. Mostly cloudy. Low around 54, with temperatures rising to around 56 overnight. South wind around 1 mph. Chance of precipitation is 30%."
+      "text": "A chance of rain after 10pm. Mostly cloudy. Low around 54, with temperatures rising to around 56 overnight. South southeast wind around 1 mph. Chance of precipitation is 30%."
     },
     {
       "name": "Tuesday",
@@ -241,7 +234,7 @@
       "t_start": "2026-02-25T18:00:00-08:00",
       "t_end": "2026-02-26T06:00:00-08:00",
       "temp_f": 53,
-      "text": "Mostly cloudy, with a low around 53."
+      "text": "Mostly cloudy, with a low around 53. North wind 1 to 6 mph."
     },
     {
       "name": "Thursday",
@@ -298,6 +291,13 @@
       "t_end": "2026-03-02T06:00:00-08:00",
       "temp_f": 51,
       "text": "A slight chance of rain before 4am. Mostly cloudy, with a low around 51."
+    },
+    {
+      "name": "Monday",
+      "t_start": "2026-03-02T06:00:00-08:00",
+      "t_end": "2026-03-02T18:00:00-08:00",
+      "temp_f": 62,
+      "text": "Mostly sunny, with a high near 62."
     }
   ]
 }
