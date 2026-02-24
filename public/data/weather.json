@@ -4,7 +4,7 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-24T19:37:16.789Z",
+  "generated_at": "2026-02-24T20:01:29.993Z",
   "current": null,
   "hourly": [
     {
@@ -202,11 +202,11 @@
   ],
   "daily": [
     {
-      "name": "Today",
-      "t_start": "2026-02-24T11:00:00-08:00",
+      "name": "This Afternoon",
+      "t_start": "2026-02-24T12:00:00-08:00",
       "t_end": "2026-02-24T18:00:00-08:00",
       "temp_f": 61,
-      "text": "Rain likely after 1pm. Mostly cloudy. High near 61, with temperatures falling to around 59 in the afternoon. South wind 5 to 8 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible."
+      "text": "Rain likely after 1pm. Mostly cloudy. High near 61, with temperatures falling to around 59 in the afternoon. South southwest wind 5 to 8 mph. Chance of precipitation is 70%. New rainfall amounts between a quarter and half of an inch possible."
     },
     {
       "name": "Tonight",
