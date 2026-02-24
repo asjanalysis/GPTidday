@@ -4,25 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-24T03:42:12.654Z",
+  "generated_at": "2026-02-24T05:12:35.467Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-23T19:00:00-08:00",
-      "temp_f": 59,
-      "wind_mph": 1,
-      "wind_dir": "SSW",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 7
-    },
-    {
-      "t": "2026-02-23T20:00:00-08:00",
-      "temp_f": 58,
-      "wind_mph": 0,
-      "wind_dir": "",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 11
-    },
     {
       "t": "2026-02-23T21:00:00-08:00",
       "temp_f": 58,
@@ -198,15 +182,31 @@
       "wind_dir": "W",
       "shortForecast": "Rain Likely",
       "precip_prob": 71
+    },
+    {
+      "t": "2026-02-24T19:00:00-08:00",
+      "temp_f": 59,
+      "wind_mph": 2,
+      "wind_dir": "S",
+      "shortForecast": "Rain",
+      "precip_prob": 75
+    },
+    {
+      "t": "2026-02-24T20:00:00-08:00",
+      "temp_f": 59,
+      "wind_mph": 1,
+      "wind_dir": "S",
+      "shortForecast": "Rain Likely",
+      "precip_prob": 74
     }
   ],
   "daily": [
     {
       "name": "Tonight",
-      "t_start": "2026-02-23T19:00:00-08:00",
+      "t_start": "2026-02-23T21:00:00-08:00",
       "t_end": "2026-02-24T06:00:00-08:00",
       "temp_f": 54,
-      "text": "A chance of rain after 10pm. Mostly cloudy. Low around 54, with temperatures rising to around 56 overnight. South southeast wind around 1 mph. Chance of precipitation is 30%."
+      "text": "A chance of rain after 10pm. Cloudy. Low around 54, with temperatures rising to around 56 overnight. South southeast wind around 1 mph. Chance of precipitation is 30%."
     },
     {
       "name": "Tuesday",
