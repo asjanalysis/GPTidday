@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-27T17:47:05.791Z",
+  "generated_at": "2026-02-27T18:21:42.523Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-27T17:47:05.703Z",
+    "generated_at": "2026-02-27T18:21:41.870Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-27T17:47:05.108Z",
+    "generated_at": "2026-02-27T18:21:40.515Z",
     "latest": {
-      "t": "2026-02-27T17:00:00.000Z",
+      "t": "2026-02-27T17:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 0.64,
-      "hs_ft": 2.0997376,
-      "tp_s": 12.5,
-      "ta_s": 5.653323,
-      "tz_s": 4.53762,
-      "dp_deg_true": 271.75,
+      "hs_m": 0.62,
+      "hs_ft": 2.0341208,
+      "tp_s": 13.333333,
+      "ta_s": 5.960982,
+      "tz_s": 4.7618613,
+      "dp_deg_true": 278.78125,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-27T17:47:05.791Z",
+    "generated_at": "2026-02-27T18:21:42.522Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-27T09:00:00-08:00",
-        "temp_f": 60,
-        "wind_mph": 2,
-        "wind_dir": "NNE",
-        "shortForecast": "Partly Sunny",
-        "precip_prob": 1
-      },
       {
         "t": "2026-02-27T10:00:00-08:00",
         "temp_f": 62,
@@ -233,15 +225,23 @@
         "wind_dir": "NE",
         "shortForecast": "Mostly Sunny",
         "precip_prob": 2
+      },
+      {
+        "t": "2026-02-28T09:00:00-08:00",
+        "temp_f": 62,
+        "wind_mph": 2,
+        "wind_dir": "N",
+        "shortForecast": "Mostly Sunny",
+        "precip_prob": 2
       }
     ],
     "daily": [
       {
         "name": "Today",
-        "t_start": "2026-02-27T09:00:00-08:00",
+        "t_start": "2026-02-27T06:00:00-08:00",
         "t_end": "2026-02-27T18:00:00-08:00",
         "temp_f": 69,
-        "text": "Partly sunny, with a high near 69. Northwest wind 2 to 6 mph."
+        "text": "Partly sunny, with a high near 69. North northwest wind 2 to 6 mph."
       },
       {
         "name": "Tonight",
