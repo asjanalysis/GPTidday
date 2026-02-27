@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-02-27T08:33:42.646Z",
+  "generated_at": "2026-02-27T09:22:42.135Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-02-27T00:00:00-08:00",
-      "temp_f": 59,
-      "wind_mph": 3,
-      "wind_dir": "N",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 3
-    },
     {
       "t": "2026-02-27T01:00:00-08:00",
       "temp_f": 58,
@@ -198,12 +190,20 @@
       "wind_dir": "NNE",
       "shortForecast": "Mostly Cloudy",
       "precip_prob": 1
+    },
+    {
+      "t": "2026-02-28T00:00:00-08:00",
+      "temp_f": 63,
+      "wind_mph": 3,
+      "wind_dir": "NNE",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 1
     }
   ],
   "daily": [
     {
-      "name": "Tonight",
-      "t_start": "2026-02-26T21:00:00-08:00",
+      "name": "Overnight",
+      "t_start": "2026-02-27T01:00:00-08:00",
       "t_end": "2026-02-27T06:00:00-08:00",
       "temp_f": 57,
       "text": "Mostly cloudy, with a low around 57. North wind around 3 mph."
