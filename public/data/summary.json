@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-28T14:57:14.647Z",
+  "generated_at": "2026-02-28T15:24:37.022Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-02-28T14:57:14.569Z",
+    "generated_at": "2026-02-28T15:24:36.619Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-02-28T14:57:13.592Z",
+    "generated_at": "2026-02-28T15:24:35.193Z",
     "latest": {
-      "t": "2026-02-28T14:00:00.000Z",
+      "t": "2026-02-28T14:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 0.61,
-      "hs_ft": 2.0013123999999998,
+      "hs_m": 0.7,
+      "hs_ft": 2.296588,
       "tp_s": 11.764706,
-      "ta_s": 5.3652225,
-      "tz_s": 4.2079916,
-      "dp_deg_true": 267.53125,
+      "ta_s": 5.597596,
+      "tz_s": 4.3475537,
+      "dp_deg_true": 259.09375,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,25 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-02-28T14:57:14.647Z",
+    "generated_at": "2026-02-28T15:24:37.021Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-02-28T05:00:00-08:00",
-        "temp_f": 61,
-        "wind_mph": 2,
-        "wind_dir": "N",
-        "shortForecast": "Mostly Cloudy",
-        "precip_prob": 1
-      },
-      {
-        "t": "2026-02-28T06:00:00-08:00",
-        "temp_f": 61,
-        "wind_mph": 2,
-        "wind_dir": "N",
-        "shortForecast": "Mostly Sunny",
-        "precip_prob": 1
-      },
       {
         "t": "2026-02-28T07:00:00-08:00",
         "temp_f": 61,
@@ -233,25 +217,34 @@
         "wind_dir": "",
         "shortForecast": "Mostly Cloudy",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-03-01T05:00:00-08:00",
+        "temp_f": 55,
+        "wind_mph": 0,
+        "wind_dir": "",
+        "shortForecast": "Patchy Fog",
+        "precip_prob": 2
+      },
+      {
+        "t": "2026-03-01T06:00:00-08:00",
+        "temp_f": 55,
+        "wind_mph": 0,
+        "wind_dir": "",
+        "shortForecast": "Areas Of Fog",
+        "precip_prob": 3
       }
     ],
     "daily": [
       {
-        "name": "Overnight",
-        "t_start": "2026-02-28T05:00:00-08:00",
-        "t_end": "2026-02-28T06:00:00-08:00",
-        "temp_f": 59,
-        "text": "Mostly cloudy. Low around 59, with temperatures rising to around 61 overnight. North wind around 2 mph."
-      },
-      {
-        "name": "Saturday",
-        "t_start": "2026-02-28T06:00:00-08:00",
+        "name": "Today",
+        "t_start": "2026-02-28T07:00:00-08:00",
         "t_end": "2026-02-28T18:00:00-08:00",
         "temp_f": 69,
-        "text": "Mostly sunny. High near 69, with temperatures falling to around 64 in the afternoon. West northwest wind 2 to 7 mph."
+        "text": "Mostly sunny. High near 69, with temperatures falling to around 64 in the afternoon. West wind 2 to 7 mph."
       },
       {
-        "name": "Saturday Night",
+        "name": "Tonight",
         "t_start": "2026-02-28T18:00:00-08:00",
         "t_end": "2026-03-01T06:00:00-08:00",
         "temp_f": 54,
@@ -262,7 +255,7 @@
         "t_start": "2026-03-01T06:00:00-08:00",
         "t_end": "2026-03-01T18:00:00-08:00",
         "temp_f": 60,
-        "text": "Areas of fog before 10am. Partly sunny, with a high near 60. West northwest wind 0 to 10 mph."
+        "text": "Areas of fog before 10am. Partly sunny. High near 60, with temperatures falling to around 58 in the afternoon. West northwest wind 0 to 10 mph."
       },
       {
         "name": "Sunday Night",
@@ -276,7 +269,7 @@
         "t_start": "2026-03-02T06:00:00-08:00",
         "t_end": "2026-03-02T18:00:00-08:00",
         "temp_f": 60,
-        "text": "Patchy fog and a slight chance of rain before 10am. Mostly sunny, with a high near 60. Chance of precipitation is 20%."
+        "text": "Patchy fog and a slight chance of rain before 10am. Mostly sunny, with a high near 60. West northwest wind 0 to 9 mph. Chance of precipitation is 20%."
       },
       {
         "name": "Monday Night",
@@ -333,6 +326,13 @@
         "t_end": "2026-03-06T18:00:00-08:00",
         "temp_f": 64,
         "text": "Sunny, with a high near 64."
+      },
+      {
+        "name": "Friday Night",
+        "t_start": "2026-03-06T18:00:00-08:00",
+        "t_end": "2026-03-07T06:00:00-08:00",
+        "temp_f": 52,
+        "text": "Mostly clear, with a low around 52."
       }
     ]
   }
