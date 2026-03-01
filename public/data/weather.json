@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-03-01T08:56:18.529Z",
+  "generated_at": "2026-03-01T09:28:52.625Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-03-01T00:00:00-08:00",
-      "temp_f": 58,
-      "wind_mph": 0,
-      "wind_dir": "",
-      "shortForecast": "Mostly Cloudy",
-      "precip_prob": 0
-    },
     {
       "t": "2026-03-01T01:00:00-08:00",
       "temp_f": 57,
@@ -198,15 +190,23 @@
       "wind_dir": "W",
       "shortForecast": "Mostly Cloudy",
       "precip_prob": 8
+    },
+    {
+      "t": "2026-03-02T00:00:00-08:00",
+      "temp_f": 54,
+      "wind_mph": 2,
+      "wind_dir": "W",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 9
     }
   ],
   "daily": [
     {
       "name": "Overnight",
-      "t_start": "2026-03-01T00:00:00-08:00",
+      "t_start": "2026-03-01T01:00:00-08:00",
       "t_end": "2026-03-01T06:00:00-08:00",
       "temp_f": 55,
-      "text": "Patchy fog after 1am. Mostly cloudy, with a low around 55. Northwest wind around 1 mph."
+      "text": "Patchy fog. Mostly cloudy, with a low around 55. Northwest wind around 1 mph."
     },
     {
       "name": "Sunday",
