@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-02T00:55:48.833Z",
+  "generated_at": "2026-03-02T03:29:04.585Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-03-02T00:55:48.458Z",
+    "generated_at": "2026-03-02T03:29:04.134Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-03-02T00:55:47.039Z",
+    "generated_at": "2026-03-02T03:29:02.890Z",
     "latest": {
-      "t": "2026-03-02T00:00:00.000Z",
+      "t": "2026-03-02T02:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 0.93,
-      "hs_ft": 3.0511812000000003,
-      "tp_s": 14.285714,
-      "ta_s": 4.368753,
-      "tz_s": 3.8405979,
-      "dp_deg_true": 214.09375,
+      "hs_m": 0.95,
+      "hs_ft": 3.1167979999999997,
+      "tp_s": 12.5,
+      "ta_s": 5.405839,
+      "tz_s": 4.6316442,
+      "dp_deg_true": 295.65625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,33 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-03-02T00:55:48.833Z",
+    "generated_at": "2026-03-02T03:29:04.584Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-03-01T16:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 9,
-        "wind_dir": "W",
-        "shortForecast": "Mostly Sunny",
-        "precip_prob": 1
-      },
-      {
-        "t": "2026-03-01T17:00:00-08:00",
-        "temp_f": 59,
-        "wind_mph": 8,
-        "wind_dir": "W",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
-      {
-        "t": "2026-03-01T18:00:00-08:00",
-        "temp_f": 58,
-        "wind_mph": 6,
-        "wind_dir": "W",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 0
-      },
       {
         "t": "2026-03-01T19:00:00-08:00",
         "temp_f": 57,
@@ -233,22 +209,39 @@
         "wind_dir": "W",
         "shortForecast": "Mostly Sunny",
         "precip_prob": 8
+      },
+      {
+        "t": "2026-03-02T16:00:00-08:00",
+        "temp_f": 59,
+        "wind_mph": 10,
+        "wind_dir": "WNW",
+        "shortForecast": "Mostly Sunny",
+        "precip_prob": 2
+      },
+      {
+        "t": "2026-03-02T17:00:00-08:00",
+        "temp_f": 58,
+        "wind_mph": 10,
+        "wind_dir": "WNW",
+        "shortForecast": "Mostly Sunny",
+        "precip_prob": 2
+      },
+      {
+        "t": "2026-03-02T18:00:00-08:00",
+        "temp_f": 58,
+        "wind_mph": 10,
+        "wind_dir": "WNW",
+        "shortForecast": "Partly Cloudy",
+        "precip_prob": 2
       }
     ],
     "daily": [
       {
-        "name": "This Afternoon",
-        "t_start": "2026-03-01T13:00:00-08:00",
-        "t_end": "2026-03-01T18:00:00-08:00",
-        "temp_f": 60,
-        "text": "Patchy fog before 2pm. Mostly sunny, with a high near 60. West southwest wind around 9 mph."
-      },
-      {
         "name": "Tonight",
-        "t_start": "2026-03-01T18:00:00-08:00",
+        "t_start": "2026-03-01T19:00:00-08:00",
         "t_end": "2026-03-02T06:00:00-08:00",
         "temp_f": 52,
-        "text": "Patchy fog after 2am. Mostly cloudy, with a low around 52. West wind 0 to 6 mph. New rainfall amounts less than a tenth of an inch possible."
+        "text": "Patchy fog after 2am. Mostly cloudy, with a low around 52. West wind 0 to 5 mph. New rainfall amounts less than a tenth of an inch possible."
       },
       {
         "name": "Monday",
@@ -276,7 +269,7 @@
         "t_start": "2026-03-03T18:00:00-08:00",
         "t_end": "2026-03-04T06:00:00-08:00",
         "temp_f": 51,
-        "text": "Partly cloudy, with a low around 51."
+        "text": "Partly cloudy, with a low around 51. Northwest wind 3 to 10 mph."
       },
       {
         "name": "Wednesday",
@@ -333,6 +326,13 @@
         "t_end": "2026-03-08T06:00:00-07:00",
         "temp_f": 52,
         "text": "Mostly clear, with a low around 52."
+      },
+      {
+        "name": "Sunday",
+        "t_start": "2026-03-08T06:00:00-07:00",
+        "t_end": "2026-03-08T18:00:00-07:00",
+        "temp_f": 66,
+        "text": "Mostly sunny, with a high near 66."
       }
     ]
   }
