@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-02T06:02:46.760Z",
+  "generated_at": "2026-03-02T07:12:04.208Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-03-02T06:02:46.730Z",
+    "generated_at": "2026-03-02T07:12:04.060Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,16 +18,16 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-03-02T06:02:45.320Z",
+    "generated_at": "2026-03-02T07:12:02.379Z",
     "latest": {
-      "t": "2026-03-02T05:30:00.000Z",
+      "t": "2026-03-02T06:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.02,
-      "hs_ft": 3.3464568,
+      "hs_m": 1.01,
+      "hs_ft": 3.3136484,
       "tp_s": 11.764706,
-      "ta_s": 5.522824,
-      "tz_s": 4.6289244,
+      "ta_s": 5.493617,
+      "tz_s": 4.621518,
       "dp_deg_true": 283,
       "lat": 36.759167,
       "lon": -121.95028
@@ -39,25 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-03-02T06:02:46.759Z",
+    "generated_at": "2026-03-02T07:12:04.207Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-03-01T21:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 2,
-        "wind_dir": "W",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 1
-      },
-      {
-        "t": "2026-03-01T22:00:00-08:00",
-        "temp_f": 55,
-        "wind_mph": 2,
-        "wind_dir": "W",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 8
-      },
       {
         "t": "2026-03-01T23:00:00-08:00",
         "temp_f": 55,
@@ -233,6 +217,22 @@
         "wind_dir": "NW",
         "shortForecast": "Mostly Clear",
         "precip_prob": 2
+      },
+      {
+        "t": "2026-03-02T21:00:00-08:00",
+        "temp_f": 56,
+        "wind_mph": 7,
+        "wind_dir": "NW",
+        "shortForecast": "Mostly Clear",
+        "precip_prob": 2
+      },
+      {
+        "t": "2026-03-02T22:00:00-08:00",
+        "temp_f": 56,
+        "wind_mph": 3,
+        "wind_dir": "NNW",
+        "shortForecast": "Mostly Clear",
+        "precip_prob": 3
       }
     ],
     "daily": [
