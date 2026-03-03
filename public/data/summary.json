@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-03T21:51:08.656Z",
+  "generated_at": "2026-03-03T22:15:05.435Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-03-03T21:51:08.372Z",
+    "generated_at": "2026-03-03T22:15:04.345Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-03-03T21:51:07.188Z",
+    "generated_at": "2026-03-03T22:15:02.937Z",
     "latest": {
-      "t": "2026-03-03T21:00:00.000Z",
+      "t": "2026-03-03T21:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
       "hs_m": 0.9,
       "hs_ft": 2.952756,
-      "tp_s": 7.142857,
-      "ta_s": 4.6256666,
-      "tz_s": 4.056414,
-      "dp_deg_true": 274.5625,
+      "tp_s": 7.692308,
+      "ta_s": 4.2500534,
+      "tz_s": 3.7729216,
+      "dp_deg_true": 263.3125,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-03-03T21:51:08.655Z",
+    "generated_at": "2026-03-03T22:15:05.434Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-03-03T13:00:00-08:00",
-        "temp_f": 60,
-        "wind_mph": 6,
-        "wind_dir": "W",
-        "shortForecast": "Sunny",
-        "precip_prob": 0
-      },
       {
         "t": "2026-03-03T14:00:00-08:00",
         "temp_f": 61,
@@ -233,15 +225,23 @@
         "wind_dir": "NW",
         "shortForecast": "Sunny",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-03-04T13:00:00-08:00",
+        "temp_f": 60,
+        "wind_mph": 14,
+        "wind_dir": "NW",
+        "shortForecast": "Sunny",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "This Afternoon",
-        "t_start": "2026-03-03T13:00:00-08:00",
+        "t_start": "2026-03-03T14:00:00-08:00",
         "t_end": "2026-03-03T18:00:00-08:00",
         "temp_f": 62,
-        "text": "Sunny, with a high near 62. West northwest wind 6 to 10 mph."
+        "text": "Sunny, with a high near 62. West northwest wind around 10 mph."
       },
       {
         "name": "Tonight",
