@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-03-03T13:12:48.363Z",
+  "generated_at": "2026-03-03T14:05:33.920Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-03-03T05:00:00-08:00",
-      "temp_f": 51,
-      "wind_mph": 1,
-      "wind_dir": "NNW",
-      "shortForecast": "Partly Cloudy",
-      "precip_prob": 0
-    },
     {
       "t": "2026-03-03T06:00:00-08:00",
       "temp_f": 52,
@@ -198,25 +190,26 @@
       "wind_dir": "NNW",
       "shortForecast": "Mostly Cloudy",
       "precip_prob": 2
+    },
+    {
+      "t": "2026-03-04T05:00:00-08:00",
+      "temp_f": 51,
+      "wind_mph": 5,
+      "wind_dir": "NW",
+      "shortForecast": "Mostly Cloudy",
+      "precip_prob": 2
     }
   ],
   "daily": [
     {
-      "name": "Overnight",
-      "t_start": "2026-03-03T05:00:00-08:00",
-      "t_end": "2026-03-03T06:00:00-08:00",
-      "temp_f": 50,
-      "text": "Partly cloudy, with a low around 50. North northwest wind around 1 mph."
-    },
-    {
-      "name": "Tuesday",
+      "name": "Today",
       "t_start": "2026-03-03T06:00:00-08:00",
       "t_end": "2026-03-03T18:00:00-08:00",
       "temp_f": 62,
       "text": "Patchy fog before 10am. Sunny, with a high near 62. Northwest wind 1 to 10 mph."
     },
     {
-      "name": "Tuesday Night",
+      "name": "Tonight",
       "t_start": "2026-03-03T18:00:00-08:00",
       "t_end": "2026-03-04T06:00:00-08:00",
       "temp_f": 50,
@@ -227,7 +220,7 @@
       "t_start": "2026-03-04T06:00:00-08:00",
       "t_end": "2026-03-04T18:00:00-08:00",
       "temp_f": 60,
-      "text": "Mostly sunny, with a high near 60. Northwest wind 5 to 18 mph, with gusts as high as 26 mph."
+      "text": "Mostly sunny. High near 60, with temperatures falling to around 57 in the afternoon. Northwest wind 5 to 18 mph, with gusts as high as 26 mph."
     },
     {
       "name": "Wednesday Night",
@@ -241,7 +234,7 @@
       "t_start": "2026-03-05T06:00:00-08:00",
       "t_end": "2026-03-05T18:00:00-08:00",
       "temp_f": 60,
-      "text": "Sunny, with a high near 60."
+      "text": "Sunny, with a high near 60. North northwest wind 9 to 17 mph, with gusts as high as 26 mph."
     },
     {
       "name": "Thursday Night",
@@ -298,6 +291,13 @@
       "t_end": "2026-03-09T18:00:00-07:00",
       "temp_f": 65,
       "text": "Mostly sunny, with a high near 65."
+    },
+    {
+      "name": "Monday Night",
+      "t_start": "2026-03-09T18:00:00-07:00",
+      "t_end": "2026-03-10T06:00:00-07:00",
+      "temp_f": 52,
+      "text": "Mostly cloudy, with a low around 52."
     }
   ]
 }
