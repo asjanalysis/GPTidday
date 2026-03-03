@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-03T17:29:23.139Z",
+  "generated_at": "2026-03-03T18:07:11.017Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-03-03T17:29:22.548Z",
+    "generated_at": "2026-03-03T18:07:10.356Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-03-03T17:29:21.421Z",
+    "generated_at": "2026-03-03T18:07:09.252Z",
     "latest": {
-      "t": "2026-03-03T16:30:00.000Z",
+      "t": "2026-03-03T17:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 0.96,
-      "hs_ft": 3.1496063999999997,
-      "tp_s": 7.692308,
-      "ta_s": 5.3376927,
-      "tz_s": 4.825455,
-      "dp_deg_true": 271.75,
+      "hs_m": 0.95,
+      "hs_ft": 3.1167979999999997,
+      "tp_s": 7.142857,
+      "ta_s": 5.478114,
+      "tz_s": 4.937113,
+      "dp_deg_true": 273.15625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-03-03T17:29:23.139Z",
+    "generated_at": "2026-03-03T18:07:11.017Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-03-03T09:00:00-08:00",
-        "temp_f": 53,
-        "wind_mph": 1,
-        "wind_dir": "NNE",
-        "shortForecast": "Patchy Fog",
-        "precip_prob": 0
-      },
       {
         "t": "2026-03-03T10:00:00-08:00",
         "temp_f": 54,
@@ -231,6 +223,14 @@
         "temp_f": 53,
         "wind_mph": 5,
         "wind_dir": "NNW",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 2
+      },
+      {
+        "t": "2026-03-04T09:00:00-08:00",
+        "temp_f": 55,
+        "wind_mph": 5,
+        "wind_dir": "NW",
         "shortForecast": "Mostly Cloudy",
         "precip_prob": 2
       }
