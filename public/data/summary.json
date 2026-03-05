@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-05T07:53:43.907Z",
+  "generated_at": "2026-03-05T08:31:22.498Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-03-05T07:53:43.675Z",
+    "generated_at": "2026-03-05T08:31:21.553Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-03-05T07:53:41.887Z",
+    "generated_at": "2026-03-05T08:31:20.524Z",
     "latest": {
-      "t": "2026-03-05T07:00:00.000Z",
+      "t": "2026-03-05T07:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.99,
-      "hs_ft": 6.5288715999999996,
-      "tp_s": 8.333334,
-      "ta_s": 5.956288,
-      "tz_s": 5.4670267,
-      "dp_deg_true": 290.03125,
+      "hs_m": 1.87,
+      "hs_ft": 6.1351708,
+      "tp_s": 7.692308,
+      "ta_s": 5.906168,
+      "tz_s": 5.383262,
+      "dp_deg_true": 294.25,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,53 +39,45 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-03-05T07:53:43.906Z",
+    "generated_at": "2026-03-05T08:31:22.497Z",
     "current": null,
     "hourly": [
       {
-        "t": "2026-03-04T23:00:00-08:00",
-        "temp_f": 53,
-        "wind_mph": 14,
-        "wind_dir": "NNW",
-        "shortForecast": "Clear",
-        "precip_prob": 0
-      },
-      {
         "t": "2026-03-05T00:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 13,
+        "temp_f": 54,
+        "wind_mph": 23,
         "wind_dir": "NNW",
         "shortForecast": "Clear",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T01:00:00-08:00",
-        "temp_f": 52,
-        "wind_mph": 12,
+        "temp_f": 53,
+        "wind_mph": 22,
         "wind_dir": "NNW",
         "shortForecast": "Clear",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T02:00:00-08:00",
-        "temp_f": 51,
-        "wind_mph": 10,
+        "temp_f": 52,
+        "wind_mph": 20,
         "wind_dir": "NNW",
         "shortForecast": "Clear",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T03:00:00-08:00",
-        "temp_f": 50,
-        "wind_mph": 9,
+        "temp_f": 51,
+        "wind_mph": 16,
         "wind_dir": "NNW",
         "shortForecast": "Clear",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T04:00:00-08:00",
-        "temp_f": 50,
-        "wind_mph": 8,
+        "temp_f": 51,
+        "wind_mph": 14,
         "wind_dir": "NNW",
         "shortForecast": "Clear",
         "precip_prob": 0
@@ -93,23 +85,23 @@
       {
         "t": "2026-03-05T05:00:00-08:00",
         "temp_f": 50,
-        "wind_mph": 8,
+        "wind_mph": 14,
         "wind_dir": "NNW",
         "shortForecast": "Clear",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T06:00:00-08:00",
-        "temp_f": 49,
-        "wind_mph": 9,
+        "temp_f": 50,
+        "wind_mph": 14,
         "wind_dir": "NNW",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T07:00:00-08:00",
-        "temp_f": 49,
-        "wind_mph": 9,
+        "temp_f": 50,
+        "wind_mph": 13,
         "wind_dir": "NNW",
         "shortForecast": "Sunny",
         "precip_prob": 0
@@ -117,7 +109,7 @@
       {
         "t": "2026-03-05T08:00:00-08:00",
         "temp_f": 50,
-        "wind_mph": 9,
+        "wind_mph": 13,
         "wind_dir": "NNW",
         "shortForecast": "Sunny",
         "precip_prob": 0
@@ -125,7 +117,7 @@
       {
         "t": "2026-03-05T09:00:00-08:00",
         "temp_f": 53,
-        "wind_mph": 9,
+        "wind_mph": 14,
         "wind_dir": "NNW",
         "shortForecast": "Sunny",
         "precip_prob": 0
@@ -133,15 +125,15 @@
       {
         "t": "2026-03-05T10:00:00-08:00",
         "temp_f": 55,
-        "wind_mph": 9,
+        "wind_mph": 16,
         "wind_dir": "NNW",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T11:00:00-08:00",
-        "temp_f": 56,
-        "wind_mph": 12,
+        "temp_f": 57,
+        "wind_mph": 16,
         "wind_dir": "NNW",
         "shortForecast": "Sunny",
         "precip_prob": 0
@@ -149,15 +141,15 @@
       {
         "t": "2026-03-05T12:00:00-08:00",
         "temp_f": 58,
-        "wind_mph": 14,
+        "wind_mph": 16,
         "wind_dir": "NNW",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T13:00:00-08:00",
-        "temp_f": 60,
-        "wind_mph": 14,
+        "temp_f": 59,
+        "wind_mph": 18,
         "wind_dir": "NNW",
         "shortForecast": "Sunny",
         "precip_prob": 0
@@ -165,55 +157,55 @@
       {
         "t": "2026-03-05T14:00:00-08:00",
         "temp_f": 60,
-        "wind_mph": 16,
+        "wind_mph": 20,
         "wind_dir": "NNW",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T15:00:00-08:00",
-        "temp_f": 61,
-        "wind_mph": 17,
+        "temp_f": 60,
+        "wind_mph": 21,
         "wind_dir": "NNW",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T16:00:00-08:00",
-        "temp_f": 62,
-        "wind_mph": 17,
+        "temp_f": 61,
+        "wind_mph": 21,
         "wind_dir": "NNW",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T17:00:00-08:00",
-        "temp_f": 61,
-        "wind_mph": 17,
+        "temp_f": 60,
+        "wind_mph": 20,
         "wind_dir": "NW",
         "shortForecast": "Sunny",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T18:00:00-08:00",
-        "temp_f": 60,
-        "wind_mph": 16,
+        "temp_f": 59,
+        "wind_mph": 18,
         "wind_dir": "NW",
         "shortForecast": "Clear",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T19:00:00-08:00",
-        "temp_f": 59,
-        "wind_mph": 15,
-        "wind_dir": "NW",
+        "temp_f": 58,
+        "wind_mph": 20,
+        "wind_dir": "NNW",
         "shortForecast": "Clear",
         "precip_prob": 0
       },
       {
         "t": "2026-03-05T20:00:00-08:00",
         "temp_f": 57,
-        "wind_mph": 13,
+        "wind_mph": 18,
         "wind_dir": "NNW",
         "shortForecast": "Clear",
         "precip_prob": 0
@@ -221,7 +213,7 @@
       {
         "t": "2026-03-05T21:00:00-08:00",
         "temp_f": 56,
-        "wind_mph": 10,
+        "wind_mph": 17,
         "wind_dir": "NNW",
         "shortForecast": "Clear",
         "precip_prob": 0
@@ -229,47 +221,55 @@
       {
         "t": "2026-03-05T22:00:00-08:00",
         "temp_f": 56,
-        "wind_mph": 8,
+        "wind_mph": 16,
         "wind_dir": "NNW",
+        "shortForecast": "Clear",
+        "precip_prob": 0
+      },
+      {
+        "t": "2026-03-05T23:00:00-08:00",
+        "temp_f": 55,
+        "wind_mph": 18,
+        "wind_dir": "N",
         "shortForecast": "Clear",
         "precip_prob": 0
       }
     ],
     "daily": [
       {
-        "name": "Tonight",
-        "t_start": "2026-03-04T20:00:00-08:00",
+        "name": "Overnight",
+        "t_start": "2026-03-05T00:00:00-08:00",
         "t_end": "2026-03-05T06:00:00-08:00",
-        "temp_f": 48,
-        "text": "Clear. Low around 48, with temperatures rising to around 50 overnight. North northwest wind 8 to 17 mph, with gusts as high as 25 mph."
+        "temp_f": 49,
+        "text": "Clear, with a low around 49. North northwest wind 14 to 23 mph, with gusts as high as 36 mph."
       },
       {
         "name": "Thursday",
         "t_start": "2026-03-05T06:00:00-08:00",
         "t_end": "2026-03-05T18:00:00-08:00",
-        "temp_f": 63,
-        "text": "Sunny. High near 63, with temperatures falling to around 61 in the afternoon. North northwest wind 9 to 17 mph, with gusts as high as 25 mph."
+        "temp_f": 62,
+        "text": "Sunny. High near 62, with temperatures falling to around 60 in the afternoon. North northwest wind 13 to 21 mph, with gusts as high as 30 mph."
       },
       {
         "name": "Thursday Night",
         "t_start": "2026-03-05T18:00:00-08:00",
         "t_end": "2026-03-06T06:00:00-08:00",
-        "temp_f": 49,
-        "text": "Clear. Low around 49, with temperatures rising to around 52 overnight. North northwest wind 8 to 16 mph, with gusts as high as 23 mph."
+        "temp_f": 50,
+        "text": "Clear. Low around 50, with temperatures rising to around 53 overnight. North northwest wind 16 to 22 mph, with gusts as high as 40 mph."
       },
       {
         "name": "Friday",
         "t_start": "2026-03-06T06:00:00-08:00",
         "t_end": "2026-03-06T18:00:00-08:00",
         "temp_f": 64,
-        "text": "Sunny, with a high near 64. North northwest wind 7 to 14 mph, with gusts as high as 20 mph."
+        "text": "Sunny, with a high near 64. North northwest wind 7 to 18 mph, with gusts as high as 36 mph."
       },
       {
         "name": "Friday Night",
         "t_start": "2026-03-06T18:00:00-08:00",
         "t_end": "2026-03-07T06:00:00-08:00",
-        "temp_f": 50,
-        "text": "Mostly clear, with a low around 50. North wind 6 to 14 mph, with gusts as high as 20 mph."
+        "temp_f": 51,
+        "text": "Mostly clear, with a low around 51. North wind 8 to 14 mph, with gusts as high as 20 mph."
       },
       {
         "name": "Saturday",
@@ -282,8 +282,8 @@
         "name": "Saturday Night",
         "t_start": "2026-03-07T18:00:00-08:00",
         "t_end": "2026-03-08T06:00:00-07:00",
-        "temp_f": 52,
-        "text": "Clear, with a low around 52."
+        "temp_f": 53,
+        "text": "Clear, with a low around 53."
       },
       {
         "name": "Sunday",
@@ -296,36 +296,36 @@
         "name": "Sunday Night",
         "t_start": "2026-03-08T18:00:00-07:00",
         "t_end": "2026-03-09T06:00:00-07:00",
-        "temp_f": 52,
-        "text": "Mostly clear, with a low around 52."
+        "temp_f": 53,
+        "text": "Mostly clear, with a low around 53."
       },
       {
         "name": "Monday",
         "t_start": "2026-03-09T06:00:00-07:00",
         "t_end": "2026-03-09T18:00:00-07:00",
         "temp_f": 65,
-        "text": "Mostly sunny, with a high near 65."
+        "text": "Sunny, with a high near 65."
       },
       {
         "name": "Monday Night",
         "t_start": "2026-03-09T18:00:00-07:00",
         "t_end": "2026-03-10T06:00:00-07:00",
-        "temp_f": 51,
-        "text": "Partly cloudy, with a low around 51."
+        "temp_f": 52,
+        "text": "Partly cloudy, with a low around 52."
       },
       {
         "name": "Tuesday",
         "t_start": "2026-03-10T06:00:00-07:00",
         "t_end": "2026-03-10T18:00:00-07:00",
-        "temp_f": 64,
-        "text": "Mostly sunny, with a high near 64."
+        "temp_f": 65,
+        "text": "Mostly sunny, with a high near 65."
       },
       {
         "name": "Tuesday Night",
         "t_start": "2026-03-10T18:00:00-07:00",
         "t_end": "2026-03-11T06:00:00-07:00",
         "temp_f": 50,
-        "text": "Partly cloudy, with a low around 50."
+        "text": "Mostly clear, with a low around 50."
       },
       {
         "name": "Wednesday",
