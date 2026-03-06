@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T22:31:49.497Z",
+  "generated_at": "2026-03-06T22:57:50.854Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-03-06T22:31:49.277Z",
+    "generated_at": "2026-03-06T22:57:50.492Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-03-06T22:31:47.596Z",
+    "generated_at": "2026-03-06T22:57:48.729Z",
     "latest": {
       "t": "2026-03-06T22:00:00.000Z",
       "station_id": "156",
@@ -39,7 +39,7 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-03-06T22:31:49.496Z",
+    "generated_at": "2026-03-06T22:57:50.853Z",
     "current": null,
     "hourly": [
       {
@@ -238,10 +238,10 @@
     "daily": [
       {
         "name": "This Afternoon",
-        "t_start": "2026-03-06T14:00:00-08:00",
+        "t_start": "2026-03-06T13:00:00-08:00",
         "t_end": "2026-03-06T18:00:00-08:00",
         "temp_f": 64,
-        "text": "Sunny. High near 64, with temperatures falling to around 62 in the afternoon. North wind around 9 mph."
+        "text": "Sunny. High near 64, with temperatures falling to around 62 in the afternoon. North northwest wind 6 to 9 mph."
       },
       {
         "name": "Tonight",
