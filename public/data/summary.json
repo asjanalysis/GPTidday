@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-07T06:47:41.111Z",
+  "generated_at": "2026-03-07T07:18:39.915Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-03-07T06:47:40.858Z",
+    "generated_at": "2026-03-07T07:18:39.418Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,7 +18,7 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-03-07T06:47:39.494Z",
+    "generated_at": "2026-03-07T07:18:38.351Z",
     "latest": {
       "t": "2026-03-07T06:00:00.000Z",
       "station_id": "156",
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-03-07T06:47:41.110Z",
+    "generated_at": "2026-03-07T07:18:39.914Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-03-06T22:00:00-08:00",
-        "temp_f": 56,
-        "wind_mph": 3,
-        "wind_dir": "N",
-        "shortForecast": "Clear",
-        "precip_prob": 0
-      },
       {
         "t": "2026-03-06T23:00:00-08:00",
         "temp_f": 56,
@@ -233,15 +225,23 @@
         "wind_dir": "ESE",
         "shortForecast": "Mostly Clear",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-03-07T22:00:00-08:00",
+        "temp_f": 57,
+        "wind_mph": 2,
+        "wind_dir": "ESE",
+        "shortForecast": "Clear",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-03-06T22:00:00-08:00",
+        "t_start": "2026-03-06T23:00:00-08:00",
         "t_end": "2026-03-07T06:00:00-08:00",
         "temp_f": 50,
-        "text": "Mostly clear, with a low around 50. East northeast wind around 5 mph."
+        "text": "Mostly clear, with a low around 50. East wind around 5 mph."
       },
       {
         "name": "Saturday",
