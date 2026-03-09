@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-09T10:55:44.751Z",
+  "generated_at": "2026-03-09T11:33:14.238Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-03-09T10:55:44.750Z",
+    "generated_at": "2026-03-09T11:33:13.149Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-03-09T10:55:43.160Z",
+    "generated_at": "2026-03-09T11:33:11.924Z",
     "latest": {
-      "t": "2026-03-09T10:00:00.000Z",
+      "t": "2026-03-09T10:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 1.66,
-      "hs_ft": 5.4461943999999995,
-      "tp_s": 12.5,
-      "ta_s": 7.2513204,
-      "tz_s": 6.579082,
-      "dp_deg_true": 287.21875,
+      "hs_m": 1.63,
+      "hs_ft": 5.347769199999999,
+      "tp_s": 9.090909,
+      "ta_s": 7.0859923,
+      "tz_s": 6.308731,
+      "dp_deg_true": 295.65625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-03-09T10:55:44.585Z",
+    "generated_at": "2026-03-09T11:33:14.237Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-03-09T03:00:00-07:00",
-        "temp_f": 53,
-        "wind_mph": 1,
-        "wind_dir": "NNW",
-        "shortForecast": "Areas Of Fog",
-        "precip_prob": 0
-      },
       {
         "t": "2026-03-09T04:00:00-07:00",
         "temp_f": 53,
@@ -233,12 +225,20 @@
         "wind_dir": "NE",
         "shortForecast": "Partly Cloudy",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-03-10T03:00:00-07:00",
+        "temp_f": 52,
+        "wind_mph": 1,
+        "wind_dir": "NNE",
+        "shortForecast": "Mostly Cloudy",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Overnight",
-        "t_start": "2026-03-09T03:00:00-07:00",
+        "t_start": "2026-03-09T04:00:00-07:00",
         "t_end": "2026-03-09T06:00:00-07:00",
         "temp_f": 51,
         "text": "Areas of fog. Partly cloudy, with a low around 51. North northwest wind around 1 mph."
