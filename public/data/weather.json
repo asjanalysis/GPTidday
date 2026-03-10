@@ -4,17 +4,9 @@
     "lon": -121.9535707,
     "provider": "NWS api.weather.gov"
   },
-  "generated_at": "2026-03-10T07:51:50.686Z",
+  "generated_at": "2026-03-10T08:25:43.621Z",
   "current": null,
   "hourly": [
-    {
-      "t": "2026-03-10T00:00:00-07:00",
-      "temp_f": 54,
-      "wind_mph": 2,
-      "wind_dir": "N",
-      "shortForecast": "Partly Cloudy",
-      "precip_prob": 0
-    },
     {
       "t": "2026-03-10T01:00:00-07:00",
       "temp_f": 53,
@@ -198,15 +190,23 @@
       "wind_dir": "NNW",
       "shortForecast": "Clear",
       "precip_prob": 0
+    },
+    {
+      "t": "2026-03-11T00:00:00-07:00",
+      "temp_f": 52,
+      "wind_mph": 3,
+      "wind_dir": "NNW",
+      "shortForecast": "Clear",
+      "precip_prob": 0
     }
   ],
   "daily": [
     {
-      "name": "Tonight",
-      "t_start": "2026-03-09T23:00:00-07:00",
+      "name": "Overnight",
+      "t_start": "2026-03-10T01:00:00-07:00",
       "t_end": "2026-03-10T06:00:00-07:00",
       "temp_f": 49,
-      "text": "Partly cloudy, with a low around 49. North northwest wind around 3 mph."
+      "text": "Mostly cloudy, with a low around 49. North northwest wind around 2 mph."
     },
     {
       "name": "Tuesday",

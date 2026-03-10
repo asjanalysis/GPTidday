@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10T07:51:50.687Z",
+  "generated_at": "2026-03-10T08:25:43.622Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-03-10T07:51:49.352Z",
+    "generated_at": "2026-03-10T08:25:42.310Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-03-10T07:51:48.389Z",
+    "generated_at": "2026-03-10T08:25:40.985Z",
     "latest": {
-      "t": "2026-03-10T07:00:00.000Z",
+      "t": "2026-03-10T07:30:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.58,
-      "hs_ft": 8.4645672,
+      "hs_m": 2.68,
+      "hs_ft": 8.7926512,
       "tp_s": 9.876543,
-      "ta_s": 7.6452155,
-      "tz_s": 7.0057287,
-      "dp_deg_true": 297.0625,
+      "ta_s": 7.4542313,
+      "tz_s": 6.870211,
+      "dp_deg_true": 294.25,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-03-10T07:51:50.686Z",
+    "generated_at": "2026-03-10T08:25:43.621Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-03-10T00:00:00-07:00",
-        "temp_f": 54,
-        "wind_mph": 2,
-        "wind_dir": "N",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 0
-      },
       {
         "t": "2026-03-10T01:00:00-07:00",
         "temp_f": 53,
@@ -233,15 +225,23 @@
         "wind_dir": "NNW",
         "shortForecast": "Clear",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-03-11T00:00:00-07:00",
+        "temp_f": 52,
+        "wind_mph": 3,
+        "wind_dir": "NNW",
+        "shortForecast": "Clear",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
-        "name": "Tonight",
-        "t_start": "2026-03-09T23:00:00-07:00",
+        "name": "Overnight",
+        "t_start": "2026-03-10T01:00:00-07:00",
         "t_end": "2026-03-10T06:00:00-07:00",
         "temp_f": 49,
-        "text": "Partly cloudy, with a low around 49. North northwest wind around 3 mph."
+        "text": "Mostly cloudy, with a low around 49. North northwest wind around 2 mph."
       },
       {
         "name": "Tuesday",
