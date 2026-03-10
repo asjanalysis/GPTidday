@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10T06:06:02.418Z",
+  "generated_at": "2026-03-10T07:05:45.863Z",
   "tides": {
     "meta": {
       "station": "9413745",
@@ -7,7 +7,7 @@
       "datum": "MLLW",
       "time_zone": "America/Los_Angeles"
     },
-    "generated_at": "2026-03-10T06:05:59.678Z",
+    "generated_at": "2026-03-10T07:05:45.429Z",
     "predictions": [],
     "observations": [],
     "next_extrema": []
@@ -18,17 +18,17 @@
       "primary_station_id": "156",
       "fallback_station_id": "158"
     },
-    "generated_at": "2026-03-10T06:05:58.480Z",
+    "generated_at": "2026-03-10T07:05:43.604Z",
     "latest": {
-      "t": "2026-03-10T05:30:00.000Z",
+      "t": "2026-03-10T06:00:00.000Z",
       "station_id": "156",
       "station_name": "MONTEREY CANYON OUTER, CA BUOY - 156p1",
-      "hs_m": 2.39,
-      "hs_ft": 7.841207600000001,
+      "hs_m": 2.66,
+      "hs_ft": 8.7270344,
       "tp_s": 10.526316,
-      "ta_s": 7.145967,
-      "tz_s": 6.383982,
-      "dp_deg_true": 292.84375,
+      "ta_s": 7.2993135,
+      "tz_s": 6.6058645,
+      "dp_deg_true": 297.0625,
       "lat": 36.759167,
       "lon": -121.95028
     }
@@ -39,17 +39,9 @@
       "lon": -121.9535707,
       "provider": "NWS api.weather.gov"
     },
-    "generated_at": "2026-03-10T06:06:02.417Z",
+    "generated_at": "2026-03-10T07:05:45.862Z",
     "current": null,
     "hourly": [
-      {
-        "t": "2026-03-09T23:00:00-07:00",
-        "temp_f": 55,
-        "wind_mph": 3,
-        "wind_dir": "N",
-        "shortForecast": "Partly Cloudy",
-        "precip_prob": 0
-      },
       {
         "t": "2026-03-10T00:00:00-07:00",
         "temp_f": 54,
@@ -233,12 +225,20 @@
         "wind_dir": "NNW",
         "shortForecast": "Mostly Clear",
         "precip_prob": 0
+      },
+      {
+        "t": "2026-03-10T23:00:00-07:00",
+        "temp_f": 53,
+        "wind_mph": 3,
+        "wind_dir": "NNW",
+        "shortForecast": "Clear",
+        "precip_prob": 0
       }
     ],
     "daily": [
       {
         "name": "Tonight",
-        "t_start": "2026-03-09T23:00:00-07:00",
+        "t_start": "2026-03-09T22:00:00-07:00",
         "t_end": "2026-03-10T06:00:00-07:00",
         "temp_f": 49,
         "text": "Partly cloudy, with a low around 49. North northwest wind around 3 mph."
