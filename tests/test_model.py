@@ -1,12 +1,13 @@
 import unittest
 from unittest.mock import patch
-from urllib.error import HTTPError, URLError
 
 from scripts.refresh_data import (
+    extract_product_node,
     feature_score,
-    is_working_product_url,
     infer_style_tags,
+    is_probable_product_page,
     normalize_category,
+    parse_price,
     relevance,
 )
 
@@ -32,39 +33,25 @@ class ModelTests(unittest.TestCase):
     def test_feature_score(self):
         self.assertGreaterEqual(feature_score(['skate', 'surf'], 'Checkerboard slip on'), 35)
 
-    @patch('scripts.refresh_data.urlopen')
-    def test_is_working_product_url_success(self, mock_urlopen):
-        mock_response = mock_urlopen.return_value.__enter__.return_value
-        mock_response.status = 200
+    def test_parse_price(self):
+        self.assertEqual(parse_price('$49.99'), 49.99)
+        self.assertEqual(parse_price(None), 0)
 
-        ok, reason = is_working_product_url('https://example.com/product')
+    def test_product_page_detection(self):
+        self.assertTrue(is_probable_product_page('https://shop.example.com/products/toddler-shoe', '<html>buy now</html>', 'Toddler shoe'))
+        self.assertFalse(is_probable_product_page('https://shop.example.com/search?q=shoe', '<html>search results</html>', 'Search results'))
 
-        self.assertTrue(ok)
-        self.assertIsNone(reason)
-
-    @patch('scripts.refresh_data.urlopen')
-    def test_is_working_product_url_http_error(self, mock_urlopen):
-        mock_urlopen.side_effect = HTTPError(
-            url='https://example.com/product',
-            code=404,
-            msg='Not Found',
-            hdrs=None,
-            fp=None,
-        )
-
-        ok, reason = is_working_product_url('https://example.com/product')
-
-        self.assertFalse(ok)
-        self.assertEqual(reason, 'HTTP 404')
-
-    @patch('scripts.refresh_data.urlopen')
-    def test_is_working_product_url_network_error(self, mock_urlopen):
-        mock_urlopen.side_effect = URLError('Temporary failure in name resolution')
-
-        ok, reason = is_working_product_url('https://example.com/product')
-
-        self.assertFalse(ok)
-        self.assertIn('Temporary failure', reason)
+    def test_extract_product_node(self):
+        html = '''
+        <html><head></head><body>
+          <script type="application/ld+json">
+          {"@context":"https://schema.org","@type":"Product","name":"Toddler Tee"}
+          </script>
+        </body></html>
+        '''
+        node = extract_product_node(html)
+        self.assertIsNotNone(node)
+        self.assertEqual(node.get('name'), 'Toddler Tee')
 
 
 if __name__ == '__main__':
