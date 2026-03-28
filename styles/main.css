@@ -32,6 +32,11 @@ main { display: grid; gap: 1rem; }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
 .img-wrap { position: relative; }
 .img-wrap img { width: 100%; aspect-ratio: 1/1; object-fit: cover; background: #0c0d11; }
+
+.img-wrap.img-error, .detail-image-wrap.img-error { display: grid; place-items: center; min-height: 220px; background: #0d1018; border: 1px dashed #3d465b; }
+.img-wrap.img-error::after, .detail-image-wrap.img-error::after { content: 'Image unavailable'; font-size: .8rem; opacity: .75; }
+.detail-image-wrap { max-width: 500px; }
+
 .pill, .sale { position: absolute; top: .6rem; padding: .2rem .5rem; border-radius: 999px; font-size: .7rem; }
 .pill { left: .6rem; background: #000b; }
 .sale { right: .6rem; background: var(--sunset); color: #111; }

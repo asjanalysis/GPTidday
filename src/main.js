@@ -14,10 +14,18 @@ function trackOutbound(product) {
       detail: {
         product_id: product.id,
         retailer_name: product.retailer_name,
-        source_url: product.source_product_url
+        source_url: product.canonical_product_url || product.source_product_url
       }
     })
   );
+}
+
+function safeCurrency(price, currency = 'USD') {
+  try {
+    return new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(price);
+  } catch {
+    return `$${Number(price || 0).toFixed(2)}`;
+  }
 }
 
 function saveFavorites() {
@@ -37,11 +45,15 @@ function nav() {
   `;
 }
 
+function productImage(p, cls = '') {
+  return `<img class="${cls}" src="${p.image_url}" alt="${p.title} from ${p.retailer_name}" loading="lazy" onerror="this.closest('.img-wrap,.detail-image-wrap')?.classList.add('img-error'); this.remove();" />`;
+}
+
 function productCard(p) {
   const saved = favorites.has(p.id);
   return `<article class="card">
     <div class="img-wrap">
-      <img src="${p.image_url}" alt="${p.title} from ${p.retailer_name}" loading="lazy" />
+      ${productImage(p)}
       <span class="pill">${p.retailer_name}</span>
       ${p.original_price ? '<span class="sale">Sale</span>' : ''}
     </div>
@@ -50,10 +62,10 @@ function productCard(p) {
       <h3><a href="#/product/${p.slug}">${p.title}</a></h3>
       <p class="meta">${p.category} • ${p.age_range}${p.gender ? ` • ${p.gender}` : ''}</p>
       <div class="tags">${p.style_tags.slice(0, 4).map((t) => `<span>${t}</span>`).join('')}</div>
-      <p class="price"><strong>$${p.current_price.toFixed(2)}</strong>${p.original_price ? `<s>$${p.original_price.toFixed(2)}</s>` : ''}</p>
+      <p class="price"><strong>${safeCurrency(p.current_price, p.currency)}</strong>${p.original_price ? `<s>${safeCurrency(p.original_price, p.currency)}</s>` : ''}</p>
       <div class="actions">
         <button type="button" data-fav="${p.id}">${saved ? '★ Saved' : '☆ Save'}</button>
-        <a data-out="${p.id}" target="_blank" rel="noreferrer" href="${p.source_product_url}">View on retailer site ↗</a>
+        <a data-out="${p.id}" target="_blank" rel="noreferrer" href="${p.canonical_product_url || p.source_product_url}">View on retailer site ↗</a>
       </div>
     </div>
   </article>`;
@@ -61,7 +73,7 @@ function productCard(p) {
 
 function freshnessBanner() {
   const generated = data.generated_at ? new Date(data.generated_at).toLocaleString() : 'unknown';
-  return `<p class="freshness">Catalog refreshed: <strong>${generated}</strong>. Pricing/availability are sourced from retailers and can change at any time.</p>`;
+  return `<p class="freshness">Catalog refreshed: <strong>${generated}</strong>. Only products that pass live page + image validation are published.</p>`;
 }
 
 function homePage() {
@@ -142,7 +154,7 @@ function browsePage() {
     ${filterControls(options)}
     <p class="small">Showing ${visible.length} of ${filtered.length} products</p>
     <div class="grid">${visible.map(productCard).join('')}</div>
-    ${filtered.length === 0 ? '<p class="empty">No matching items found. Try fewer filters.</p>' : ''}
+    ${filtered.length === 0 ? '<p class="empty">No active validated items available right now. Try again after the next refresh.</p>' : ''}
     ${showLoadMore ? '<button type="button" class="load-more" data-load-more="true">Load more</button>' : ''}
   </main>${footer()}`;
 }
@@ -150,7 +162,7 @@ function browsePage() {
 function productPage(slug) {
   const product = data.products.find((item) => item.slug === slug);
   if (!product) {
-    return `${nav()}<main><p class="empty">Product not found. It may have been removed by the source retailer.</p></main>${footer()}`;
+    return `${nav()}<main><p class="empty">Product not found. It may have been removed after failing active-product validation.</p></main>${footer()}`;
   }
 
   const related = data.products
@@ -158,17 +170,18 @@ function productPage(slug) {
     .slice(0, 4);
 
   return `${nav()}<main class="detail">
-    <img class="detail-img" src="${product.image_url}" alt="${product.title}" />
+    <div class="detail-image-wrap">${productImage(product, 'detail-img')}</div>
     <section>
       <p class="kicker">${product.brand} • ${product.retailer_name}</p>
       <h1>${product.title}</h1>
       <p>${product.description_short || ''}</p>
-      <p class="price"><strong>$${product.current_price.toFixed(2)}</strong>${product.original_price ? `<s>$${product.original_price.toFixed(2)}</s>` : ''}</p>
+      <p class="price"><strong>${safeCurrency(product.current_price, product.currency)}</strong>${product.original_price ? `<s>${safeCurrency(product.original_price, product.currency)}</s>` : ''}</p>
       <p>Age: ${product.age_range} • Category: ${product.category}</p>
       <p>Sizes: ${product.sizes.length ? product.sizes.join(', ') : 'See retailer page for current size availability'}</p>
       <p class="meta">Retailer: ${product.retailer_name} (${product.retailer_domain})</p>
+      <p class="meta">Last checked: ${product.last_checked_at ? new Date(product.last_checked_at).toLocaleString() : 'unknown'}</p>
       <div class="tags">${product.style_tags.map((tag) => `<span>${tag}</span>`).join('')}</div>
-      <a class="cta" data-out="${product.id}" target="_blank" rel="noreferrer" href="${product.source_product_url}">View on retailer site ↗</a>
+      <a class="cta" data-out="${product.id}" target="_blank" rel="noreferrer" href="${product.canonical_product_url || product.source_product_url}">View on retailer site ↗</a>
     </section>
     <section>
       <h2>Related picks</h2>
@@ -196,8 +209,9 @@ function aboutPage() {
     <h1>About & methodology</h1>
     <p>Tiny Thrash Threads is a curated discovery site for infant/toddler punk, surf, skate, and streetwear-adjacent apparel. We do not process payments or checkout.</p>
     <p>Catalog refresh time: <strong>${data.generated_at ? new Date(data.generated_at).toLocaleString() : 'unknown'}</strong>.</p>
-    <h2>How curation works</h2>
-    <p>Products are normalized from retailer metadata into one schema, filtered by age/style relevance, tagged by style keywords, category-normalized, and deduplicated by content hash.</p>
+    <h2>How validation works</h2>
+    <p>Each candidate product is fetched from the retailer source URL, redirected to final URL, validated as a product-detail page, parsed from structured metadata, and verified for live price + working image URL. Failed candidates are excluded from the public catalog.</p>
+    <p>Products can disappear when retailers remove listings or when images/prices are no longer valid.</p>
     <h2>Source refresh status</h2>
     ${sources}
     <h2>Refresh warnings</h2>
@@ -206,7 +220,7 @@ function aboutPage() {
 }
 
 function footer() {
-  return `<footer><small>Aggregator only • External retailers own checkout • ${data.product_count} products indexed</small></footer>`;
+  return `<footer><small>Aggregator only • External retailers own checkout • ${data.product_count} validated products indexed</small></footer>`;
 }
 
 function attachSharedListeners() {
@@ -288,6 +302,8 @@ async function init() {
     const response = await fetch('data/products.generated.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`Failed to load catalog (${response.status})`);
     data = await response.json();
+    data.products = (data.products || []).filter((product) => product.is_active === true && product.validation_status === 'passed');
+    data.product_count = data.products.length;
     render();
     window.addEventListener('hashchange', render);
   } catch (error) {
