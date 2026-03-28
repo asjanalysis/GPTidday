@@ -60,13 +60,14 @@ Refresh pipeline behavior:
 1. Fetch public retailer page HTML.
 2. Parse Product JSON-LD.
 3. Normalize to one schema.
-4. Apply curation logic:
+4. Verify each source product URL responds successfully (non-404/non-5xx) before inclusion.
+5. Apply curation logic:
    - include/exclude keyword rules
    - style-tag inference
    - category normalization
    - dedupe by product hash
-5. If live fetch fails, use curated fallback snapshot (`data/fallback_products.json`).
-6. If both live and fallback fail and a previous generated snapshot exists, preserve previous products to avoid an empty catalog.
+6. If live fetch fails, use curated fallback snapshot (`data/fallback_products.json`).
+7. If both live and fallback fail and a previous generated snapshot exists, preserve previous products to avoid an empty catalog.
 
 ## Refresh product data
 

@@ -9,6 +9,7 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
+from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 OUTPUT_PATH = Path('data/products.generated.json')
@@ -183,6 +184,23 @@ def fetch_jsonld(url: str) -> dict[str, Any] | None:
     return None
 
 
+def is_working_product_url(url: str) -> tuple[bool, str | None]:
+    request = Request(url, headers={'User-Agent': 'Mozilla/5.0 TinyThrashThreadsBot/1.0'}, method='HEAD')
+
+    try:
+        with urlopen(request, timeout=20) as response:
+            status_code = getattr(response, 'status', response.getcode())
+            if status_code >= 400:
+                return False, f'HTTP {status_code}'
+            return True, None
+    except HTTPError as error:
+        return False, f'HTTP {error.code}'
+    except URLError as error:
+        return False, str(error.reason)
+    except Exception as error:
+        return False, str(error)
+
+
 def normalize_product(seed: dict[str, Any], node: dict[str, Any], now: str) -> Product | None:
     title = str(node.get('name') or '').strip()
     image = node.get('image')
@@ -275,6 +293,9 @@ def build_payload() -> dict[str, Any]:
             normalized = normalize_product(seed, node, now)
             if not normalized:
                 raise RuntimeError('Source product failed relevance/normalization')
+            live_link_ok, live_link_error = is_working_product_url(normalized.source_product_url)
+            if not live_link_ok:
+                raise RuntimeError(f'Source product URL is not reachable ({live_link_error})')
             products.append(normalized)
             source_statuses.append({'retailer_name': seed['retailer_name'], 'status': 'live'})
         except Exception as error:
@@ -284,7 +305,13 @@ def build_payload() -> dict[str, Any]:
             if fallback_node:
                 normalized_fallback = normalize_product(seed, fallback_node, now)
                 if normalized_fallback:
-                    products.append(normalized_fallback)
+                    fallback_link_ok, fallback_link_error = is_working_product_url(normalized_fallback.source_product_url)
+                    if fallback_link_ok:
+                        products.append(normalized_fallback)
+                    else:
+                        warnings.append(
+                            f'Fallback record for {retailer_label} was excluded because the source URL is not reachable ({fallback_link_error}).'
+                        )
                 else:
                     warnings.append(f'Fallback record for {retailer_label} did not pass normalization.')
             else:
