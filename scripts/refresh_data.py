@@ -16,6 +16,7 @@ from urllib.request import Request, urlopen
 
 OUTPUT_PATH = Path('data/products.generated.json')
 REJECTED_PATH = Path('data/products.rejected.json')
+FALLBACK_PATH = Path('data/fallback_products.json')
 NOW = lambda: datetime.datetime.utcnow().replace(microsecond=0).isoformat() + 'Z'
 
 ADAPTERS: list[dict[str, Any]] = [
@@ -563,6 +564,84 @@ def dedupe_products(products: list[Product]) -> tuple[list[Product], int]:
     return sorted(out.values(), key=lambda x: (-SOURCE_TYPE_PRIORITY.get(x.source_type, 0), -x.featured_score, x.title)), collisions
 
 
+def load_fallback_products(now: str) -> list[Product]:
+    if not FALLBACK_PATH.exists():
+        return []
+    try:
+        rows = json.loads(FALLBACK_PATH.read_text(encoding='utf-8'))
+    except Exception:
+        return []
+    if not isinstance(rows, list):
+        return []
+
+    out: list[Product] = []
+    for idx, row in enumerate(rows):
+        if not isinstance(row, dict):
+            continue
+        title = (row.get('title') or row.get('name') or '').strip()
+        image_url = (row.get('image_url') or row.get('image') or '').strip()
+        source_url = (row.get('source_product_url') or row.get('canonical_product_url') or row.get('url') or '').strip()
+        if not title or not image_url or not source_url:
+            continue
+        brand = (row.get('brand') or row.get('retailer_name') or 'Unknown').strip()
+        retailer_name = (row.get('retailer_name') or brand).strip()
+        retailer_domain = (row.get('retailer_domain') or urlparse(source_url).netloc or 'unknown').replace('www.', '')
+        price = parse_price(row.get('current_price', row.get('price', 0)))
+        style_tags = infer_style_tags(f"{title} {row.get('description_short', row.get('description', ''))}", row.get('style_tags', []))
+        category = row.get('category') or normalize_category('', title)
+        pid = hashlib.sha1(f"fallback:{title}:{source_url}:{idx}".encode()).hexdigest()[:12]
+        product = Product(
+            id=pid,
+            slug=slugify(f"{brand}-{title}-{pid[:6]}"),
+            title=title,
+            brand=brand,
+            retailer_name=retailer_name,
+            retailer_domain=retailer_domain,
+            source_type=row.get('source_type', 'official_brand'),
+            source_group=row.get('source_group', 'fallback'),
+            marketplace=bool(row.get('marketplace', False)),
+            source_listing_url=row.get('source_listing_url', source_url),
+            source_product_url=source_url,
+            canonical_product_url=source_url,
+            image_url=image_url,
+            additional_images=row.get('additional_images', []),
+            current_price=price if price > 0 else 1.0,
+            original_price=parse_price(row.get('original_price')) if row.get('original_price') else None,
+            currency=row.get('currency', 'USD'),
+            availability=row.get('availability', 'in_stock'),
+            category=category,
+            subcategory=row.get('subcategory', category),
+            age_range=row.get('age_range', 'kids'),
+            sizes=row.get('sizes', []),
+            gender_target=row.get('gender_target', 'neutral'),
+            style_tags=style_tags,
+            discovered_at=row.get('discovered_at', now),
+            last_checked_at=now,
+            source_adapter='fallback_catalog',
+            is_active=True,
+            validation_status='soft_pass',
+            validation_errors=[],
+            relevance_score=score_candidate(Product(
+                id='0', slug='0', title=title, brand=brand, retailer_name=retailer_name, retailer_domain=retailer_domain,
+                source_type=row.get('source_type', 'official_brand'), source_group='fallback', marketplace=bool(row.get('marketplace', False)),
+                source_listing_url=source_url, source_product_url=source_url, canonical_product_url=source_url, image_url=image_url, additional_images=[],
+                current_price=price if price > 0 else 1.0, original_price=None, currency='USD', availability='in_stock', category=category, subcategory=category,
+                age_range=row.get('age_range', 'kids'), sizes=[], gender_target='neutral', style_tags=style_tags, discovered_at=now, last_checked_at=now,
+                source_adapter='fallback_catalog', is_active=True, validation_status='soft_pass', validation_errors=[], relevance_score=0, dedupe_key='tmp'
+            )),
+            dedupe_key=hashlib.sha1(f"fallback|{title}|{brand}|{source_url}".encode()).hexdigest(),
+            seller_name=row.get('seller_name'),
+            marketplace_confidence=row.get('marketplace_confidence'),
+            marketplace_query_context=row.get('marketplace_query_context'),
+            description_short=row.get('description_short', row.get('description', '')),
+            featured_score=0,
+            recently_updated=True,
+        )
+        product.featured_score = product.relevance_score + (SOURCE_TYPE_PRIORITY.get(product.source_type, 0) * 10)
+        out.append(product)
+    return out
+
+
 def build_payload() -> tuple[dict[str, Any], dict[str, Any]]:
     now = NOW()
     candidates, rejected_rows, health = discover_candidates(now)
@@ -582,6 +661,14 @@ def build_payload() -> tuple[dict[str, Any], dict[str, Any]]:
 
     deduped, collisions = dedupe_products(validated)
     published = [p for p in deduped if p.is_active and p.validation_status == 'passed']
+    warnings: list[str] = []
+    if not published:
+        fallback_products = load_fallback_products(now)
+        if fallback_products:
+            published = fallback_products
+            warnings.append('Live adapters returned zero publishable products; serving curated fallback catalog snapshot.')
+        else:
+            warnings.append('Live adapters returned zero publishable products and no usable fallback catalog was available.')
 
     by_adapter: dict[str, dict[str, int]] = defaultdict(lambda: {'discovered': 0, 'published': 0, 'rejected': 0})
     for c in candidates:
@@ -624,6 +711,7 @@ def build_payload() -> tuple[dict[str, Any], dict[str, Any]]:
             'top_rejection_reasons': reason_counts.most_common(20),
             'duplicate_collisions': collisions,
         },
+        'warnings': warnings,
     }
 
     rejected_payload = {'generated_at': now, 'rejected_count': len(rejected_rows), 'rejected': rejected_rows}

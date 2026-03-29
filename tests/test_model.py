@@ -10,6 +10,7 @@ from scripts.refresh_data import (
     pick_image_from_chunk,
     validate_candidate,
     Product,
+    load_fallback_products,
 )
 
 
@@ -72,6 +73,16 @@ class ModelTests(unittest.TestCase):
         out, reason = validate_candidate(p)
         self.assertFalse(out.is_active)
         self.assertIn(reason, {'no parseable price', 'source product URL 404s', 'no usable primary image'})
+
+    def test_fallback_catalog_is_publishable(self):
+        fallback = load_fallback_products('2026-01-01T00:00:00Z')
+        self.assertGreaterEqual(len(fallback), 1)
+        first = fallback[0]
+        self.assertTrue(first.is_active)
+        self.assertEqual(first.validation_status, 'soft_pass')
+        self.assertTrue(first.source_product_url.startswith('https://'))
+        self.assertTrue(first.image_url.startswith('https://'))
+        self.assertGreater(first.current_price, 0)
 
 
 if __name__ == '__main__':

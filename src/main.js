@@ -8,6 +8,37 @@ let favorites = new Set(JSON.parse(localStorage.getItem('ttt-favorites') || '[]'
 let data = { generated_at: '', product_count: 0, products: [], sources: [], warnings: [] };
 let visibleCount = PAGE_SIZE;
 
+function sanitizeProduct(raw) {
+  const styleTags = Array.isArray(raw?.style_tags) ? raw.style_tags.filter(Boolean) : [];
+  const sizes = Array.isArray(raw?.sizes) ? raw.sizes.filter(Boolean) : [];
+  const price = Number(raw?.current_price);
+  const title = String(raw?.title || '').trim();
+  const image = String(raw?.image_url || '').trim();
+  const sourceUrl = String(raw?.canonical_product_url || raw?.source_product_url || '').trim();
+  if (!title || !image || !sourceUrl || !Number.isFinite(price) || price <= 0) return null;
+  return {
+    ...raw,
+    id: String(raw?.id || `${raw?.retailer_name || 'product'}-${raw?.slug || title}`),
+    slug: String(raw?.slug || title.toLowerCase().replace(/[^a-z0-9]+/g, '-')),
+    title,
+    brand: String(raw?.brand || raw?.retailer_name || 'Unknown'),
+    retailer_name: String(raw?.retailer_name || 'Unknown retailer'),
+    retailer_domain: String(raw?.retailer_domain || 'unknown'),
+    source_product_url: String(raw?.source_product_url || sourceUrl),
+    canonical_product_url: sourceUrl,
+    image_url: image,
+    category: String(raw?.category || 'clothing'),
+    age_range: String(raw?.age_range || 'kids'),
+    style_tags: styleTags,
+    sizes,
+    description_short: String(raw?.description_short || ''),
+    current_price: price,
+    currency: String(raw?.currency || 'USD'),
+    validation_status: String(raw?.validation_status || 'soft_pass'),
+    is_active: raw?.is_active !== false
+  };
+}
+
 function trackOutbound(product) {
   window.dispatchEvent(
     new CustomEvent('outbound_product_click', {
@@ -305,7 +336,10 @@ async function init() {
     const response = await fetch('data/products.generated.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`Failed to load catalog (${response.status})`);
     data = await response.json();
-    data.products = (data.products || []).filter((product) => product.is_active === true && ['passed', 'soft_pass'].includes(product.validation_status));
+    data.products = (data.products || [])
+      .filter((product) => product?.is_active === true && ['passed', 'soft_pass'].includes(product?.validation_status))
+      .map(sanitizeProduct)
+      .filter(Boolean);
     data.product_count = data.products.length;
     render();
     window.addEventListener('hashchange', render);
