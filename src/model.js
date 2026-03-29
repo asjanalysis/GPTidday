@@ -74,15 +74,16 @@ export function styleScore(styleTags, title) {
 
 export function applyFilters(products, f) {
   const filtered = products.filter((p) => {
-    const text = `${p.title} ${p.description_short} ${p.style_tags.join(' ')}`.toLowerCase();
+    const tags = Array.isArray(p.style_tags) ? p.style_tags : [];
+    const text = `${p.title || ''} ${p.description_short || ''} ${tags.join(' ')}`.toLowerCase();
     if (f.query && !text.includes(f.query.toLowerCase())) return false;
     if (f.ageRange !== 'all' && p.age_range !== f.ageRange) return false;
     if (f.category !== 'all' && p.category !== f.category) return false;
     if (f.brand !== 'all' && p.brand !== f.brand) return false;
     if (f.retailer !== 'all' && p.retailer_name !== f.retailer) return false;
-    if (f.styleTag !== 'all' && !p.style_tags.includes(f.styleTag)) return false;
+    if (f.styleTag !== 'all' && !tags.includes(f.styleTag)) return false;
     if (f.gender !== 'all' && (p.gender_target || p.gender) !== f.gender) return false;
-    if (p.current_price < f.minPrice || p.current_price > f.maxPrice) return false;
+    if (Number(p.current_price) < f.minPrice || Number(p.current_price) > f.maxPrice) return false;
     return true;
   });
 
@@ -97,10 +98,10 @@ export function applyFilters(products, f) {
 
 export function getFilterOptions(products) {
   return {
-    ages: [...new Set(products.map((p) => p.age_range))],
-    categories: [...new Set(products.map((p) => p.category))],
-    brands: [...new Set(products.map((p) => p.brand))],
-    retailers: [...new Set(products.map((p) => p.retailer_name))],
-    styleTags: [...new Set(products.flatMap((p) => p.style_tags))]
+    ages: [...new Set(products.map((p) => p.age_range).filter(Boolean))],
+    categories: [...new Set(products.map((p) => p.category).filter(Boolean))],
+    brands: [...new Set(products.map((p) => p.brand).filter(Boolean))],
+    retailers: [...new Set(products.map((p) => p.retailer_name).filter(Boolean))],
+    styleTags: [...new Set(products.flatMap((p) => (Array.isArray(p.style_tags) ? p.style_tags : [])))]
   };
 }
