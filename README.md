@@ -30,6 +30,6 @@ npm run catalog:report
 
 ## Adapter coverage
 
-- surf_skate_official: O’Neill, Vans, Quiksilver, Billabong, Hurley, Volcom
-- alt_punk_official: Red Devil Clothing, Blackcraft
+- surf_skate_official: O’Neill, Vans, Brixton, Quiksilver, Billabong, Hurley, Volcom
+- alt_punk_official: Red Devil Clothing, Blackcraft, Kreepsville 666, T.U.K. Shoes, Blaspheme Boutique, Hell Bunny, Disturbia
 - marketplace: TeePublic Hardcore Punk, TeePublic Punk Rock, Etsy Kids Gothic Clothing

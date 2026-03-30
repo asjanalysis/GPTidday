@@ -23,14 +23,21 @@ SHOPIFY_STORES = [
     {"brand": "O'Neill",    "domain": "us.oneill.com",      "source_group": "surf_skate_official"},
     {"brand": "Vans",       "domain": "www.vans.com",       "source_group": "surf_skate_official"},
     # Surf / skate brands
-    {"brand": "Quiksilver", "domain": "www.quiksilver.com", "source_group": "surf_skate_official"},
-    {"brand": "Billabong",  "domain": "www.billabong.com",  "source_group": "surf_skate_official"},
-    {"brand": "Hurley",     "domain": "www.hurley.com",     "source_group": "surf_skate_official"},
-    {"brand": "Volcom",     "domain": "www.volcom.com",     "source_group": "surf_skate_official"},
+    {"brand": "Brixton",    "domain": "brixton.com",        "source_group": "surf_skate_official"},
+    {"brand": "Quiksilver", "domain": "quiksilver.com",     "source_group": "surf_skate_official"},
+    {"brand": "Billabong",  "domain": "billabong.com",      "source_group": "surf_skate_official"},
+    {"brand": "Hurley",     "domain": "hurley.com",         "source_group": "surf_skate_official"},
+    {"brand": "Volcom",     "domain": "volcom.com",         "source_group": "surf_skate_official"},
     {"brand": "Roxy",       "domain": "www.roxy.com",       "source_group": "surf_skate_official"},
     {"brand": "RVCA",       "domain": "www.rvca.com",       "source_group": "surf_skate_official"},
     # Punk / alternative brands
-    {"brand": "Blackcraft", "domain": "blackcraftcult.com", "source_group": "punk_alt_official"},
+    {"brand": "Blackcraft", "domain": "blackcraftcult.com",         "source_group": "punk_alt_official"},
+    {"brand": "Kreepsville 666", "domain": "store.kreepsville666.com", "source_group": "punk_alt_official"},
+    {"brand": "T.U.K. Shoes", "domain": "tukshoes.com",             "source_group": "punk_alt_official"},
+    {"brand": "Blaspheme Boutique", "domain": "blasphemeboutique.com", "source_group": "punk_alt_official"},
+    {"brand": "Red Devil Clothing", "domain": "reddevilclothing.com",   "source_group": "punk_alt_official"},
+    {"brand": "Hell Bunny", "domain": "hellbunny.com",               "source_group": "punk_alt_official"},
+    {"brand": "Disturbia", "domain": "disturbia.us",                 "source_group": "punk_alt_official"},
 ]
 
 # Keywords that indicate an infant/toddler/young kids product
