@@ -20,6 +20,8 @@ import urllib.error
 from datetime import datetime, timezone
 
 SHOPIFY_STORES = [
+    {"brand": "O'Neill",    "domain": "us.oneill.com",      "source_group": "surf_skate_official"},
+    {"brand": "Vans",       "domain": "www.vans.com",       "source_group": "surf_skate_official"},
     # Surf / skate brands
     {"brand": "Quiksilver", "domain": "www.quiksilver.com", "source_group": "surf_skate_official"},
     {"brand": "Billabong",  "domain": "www.billabong.com",  "source_group": "surf_skate_official"},

@@ -7339,6 +7339,16 @@
   ],
   "sources": [
     {
+      "adapter": "vans",
+      "domain": "www.vans.com",
+      "products_fetched": 0
+    },
+    {
+      "adapter": "oneill",
+      "domain": "us.oneill.com",
+      "products_fetched": 0
+    },
+    {
       "adapter": "quiksilver",
       "domain": "www.quiksilver.com",
       "products_fetched": 5
