@@ -1,0 +1,13 @@
+{
+  "assetStatus": "Original image URLs could not be downloaded from this execution environment because direct HTTP requests to scoliosiscarecenters.com and Playwright browser installation/downloads returned 403 Forbidden. The replacement page preserves original image roles and alt text as data-original-image attributes and uses lightweight local SVG placeholders that should be swapped for the original WordPress media files before production if asset access is available.",
+  "images": [
+    {"originalLabel": "Scoliosis Care Centers logo", "newUsage": "Header brand", "suggestedAlt": "Scoliosis Care Centers", "role": "logo"},
+    {"originalLabel": "Early scoliosis detection example using ScoliSnap screening", "newUsage": "What to expect section", "suggestedAlt": "Early scoliosis detection example using ScoliSnap screening", "role": "supporting"},
+    {"originalLabel": "Briana — scoliosis patient at Scoliosis Care Centers", "newUsage": "Testimonials card", "suggestedAlt": "Briana, scoliosis patient at Scoliosis Care Centers", "role": "testimonial"},
+    {"originalLabel": "Maryam — avoided surgery with scoliosis care", "newUsage": "Testimonials card", "suggestedAlt": "Maryam, scoliosis care patient", "role": "testimonial"},
+    {"originalLabel": "Leah — parent of scoliosis patient", "newUsage": "Testimonials card", "suggestedAlt": "Leah, parent of a scoliosis patient", "role": "testimonial"},
+    {"originalLabel": "Hannah — scoliosis patient experience", "newUsage": "Testimonials card", "suggestedAlt": "Hannah, scoliosis patient experience", "role": "testimonial"},
+    {"originalLabel": "Kaylee — scoliosis success story", "newUsage": "Testimonials card", "suggestedAlt": "Kaylee, scoliosis success story", "role": "testimonial"},
+    {"originalLabel": "Laurie — traveled for scoliosis treatment", "newUsage": "Testimonials card", "suggestedAlt": "Laurie, patient who traveled for scoliosis treatment", "role": "testimonial"}
+  ]
+}
