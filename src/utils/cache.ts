@@ -1,12 +1,13 @@
 type CacheEntry<T> = { value: T; expires: number };
 
-export async function cachedFetch<T>(key: string, ttlMs: number, loader: () => Promise<T>, force = false): Promise<T> {
+export async function cachedFetch<T>(key: string, ttlMs: number, loader: () => Promise<T>, force = false, isValid?: (value: unknown) => value is T): Promise<T> {
   if (!force) {
     try {
       const raw = localStorage.getItem(`capitola:${key}`);
       if (raw) {
-        const entry = JSON.parse(raw) as CacheEntry<T>;
-        if (entry.expires > Date.now()) return entry.value;
+        const entry = JSON.parse(raw) as CacheEntry<unknown>;
+        if (entry.expires > Date.now() && (!isValid || isValid(entry.value))) return entry.value as T;
+        localStorage.removeItem(`capitola:${key}`);
       }
     } catch { /* Local storage may be unavailable. */ }
   }
