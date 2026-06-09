@@ -12,24 +12,25 @@ import { Card, ErrorState, Metric, Skeleton } from './components/Common';
 import { Hero } from './components/Hero';
 import { SparkChart } from './components/SparkChart';
 
-function nearestForecast(hours?: MarineForecastHour[]) {
+function nearestForecast(hours: MarineForecastHour[] | undefined, now: number) {
   if (!hours?.length) return undefined;
-  return hours.reduce((nearest, hour) => Math.abs(+new Date(hour.time) - Date.now()) < Math.abs(+new Date(nearest.time) - Date.now()) ? hour : nearest);
+  return hours.reduce((nearest, hour) => Math.abs(+new Date(hour.time) - now) < Math.abs(+new Date(nearest.time) - now) ? hour : nearest);
 }
 
 export default function App() {
   const { weather, tides, marine, buoys, health, loading, refreshedAt, refresh } = useConditions();
+  const now = refreshedAt ? new Date(refreshedAt).getTime() : 0;
   const primaryBuoy = buoys.find(buoy => buoy.stationId === '46240') ?? buoys[0];
-  const currentMarine = nearestForecast(marine?.hourly);
+  const currentMarine = nearestForecast(marine?.hourly, now);
   const tide = tidePhase(tides?.points ?? []);
   const coastalHazards = weather?.alerts?.filter(alert => /surf|beach|coast|craft|marine|fog/i.test(alert.event)) ?? [];
   const waveCheck = waveAgreement(primaryBuoy, currentMarine);
   const confidence = waveCheck.status === 'good' ? 'high' : waveCheck.status === 'minor' ? 'medium' : 'low';
   const score = calculateSurfScore({ waveHeightFt: primaryBuoy?.waveHeightFt ?? currentMarine?.waveHeightFt, periodSec: primaryBuoy?.dominantPeriodSec ?? currentMarine?.wavePeriodSec, waveDirectionDeg: primaryBuoy?.meanWaveDirectionDeg ?? currentMarine?.waveDirectionDeg, windSpeedMph: weather?.windSpeedMph, windDirectionDeg: weather?.windDirectionDeg, tideTrend: tide.trend, tideHeightFt: tide.currentHeightFt, hazards: coastalHazards.length, confidence, stale: isStale(primaryBuoy?.observedAt) });
-  const nextHigh = tides?.extremes.find(point => point.type === 'H' && +new Date(point.time) > Date.now());
-  const nextLow = tides?.extremes.find(point => point.type === 'L' && +new Date(point.time) > Date.now());
-  const forecastHours = marine?.hourly.filter(hour => +new Date(hour.time) >= Date.now() - 3_600_000).slice(0, 24) ?? [];
-  const weatherHours = weather?.hourly?.filter(hour => +new Date(hour.time) >= Date.now() - 3_600_000).slice(0, 12) ?? [];
+  const nextHigh = tides?.extremes.find(point => point.type === 'H' && +new Date(point.time) > now);
+  const nextLow = tides?.extremes.find(point => point.type === 'L' && +new Date(point.time) > now);
+  const forecastHours = marine?.hourly.filter(hour => +new Date(hour.time) >= now - 3_600_000).slice(0, 24) ?? [];
+  const weatherHours = weather?.hourly?.filter(hour => +new Date(hour.time) >= now - 3_600_000).slice(0, 12) ?? [];
 
   return <>
     <main>

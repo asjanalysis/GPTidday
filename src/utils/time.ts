@@ -11,13 +11,20 @@ export function pacificDateRange(days = 2) {
   return { begin: pacificDateKey(begin), end: pacificDateKey(end) };
 }
 
-export const formatTime = (iso?: string, options?: Intl.DateTimeFormatOptions) => iso ? new Intl.DateTimeFormat('en-US', {
-  timeZone: LOCATION.timeZone, hour: 'numeric', minute: '2-digit', ...options,
-}).format(new Date(iso)) : '—';
+function safeFormat(iso: string | undefined, fallback: string, options: Intl.DateTimeFormatOptions) {
+  if (!iso) return fallback;
+  const date = new Date(iso);
+  if (!Number.isFinite(date.getTime())) return fallback;
+  return new Intl.DateTimeFormat('en-US', { timeZone: LOCATION.timeZone, ...options }).format(date);
+}
 
-export const formatDateTime = (iso?: string) => iso ? new Intl.DateTimeFormat('en-US', {
-  timeZone: LOCATION.timeZone, month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit',
-}).format(new Date(iso)) : 'Unavailable';
+export const formatTime = (iso?: string, options?: Intl.DateTimeFormatOptions) => safeFormat(iso, '—', {
+  hour: 'numeric', minute: '2-digit', ...options,
+});
+
+export const formatDateTime = (iso?: string) => safeFormat(iso, 'Unavailable', {
+  month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit',
+});
 
 export const dataAgeMinutes = (iso?: string, now = Date.now()) => iso ? Math.max(0, (now - new Date(iso).getTime()) / 60_000) : Infinity;
 export const isStale = (iso?: string, thresholdMinutes = 120, now = Date.now()) => dataAgeMinutes(iso, now) > thresholdMinutes;

@@ -7,22 +7,10 @@ import { fetchMarineForecast } from '../data/sources/openMeteoMarine';
 import type { MarineForecast, SourceHealth, TideData, WaveObservation, WeatherSnapshot } from '../types';
 import { cachedFetch } from '../utils/cache';
 import { isStale } from '../utils/time';
+import { isBuoy, isMarine, isTides, isWeather } from '../utils/validation';
 
 type ConditionsState = { weather?: WeatherSnapshot; tides?: TideData; buoys: WaveObservation[]; marine?: MarineForecast; health: SourceHealth[]; loading: boolean; refreshedAt?: string };
 const initial: ConditionsState = { buoys: [], health: [], loading: true };
-
-function isRecord(value: unknown): value is Record<string, unknown> {
-  return typeof value === 'object' && value !== null;
-}
-
-const isWeather = (value: unknown): value is WeatherSnapshot =>
-  isRecord(value) && Array.isArray(value.alerts) && Array.isArray(value.hourly);
-const isTides = (value: unknown): value is TideData =>
-  isRecord(value) && Array.isArray(value.points) && Array.isArray(value.extremes);
-const isMarine = (value: unknown): value is MarineForecast =>
-  isRecord(value) && Array.isArray(value.hourly);
-const isBuoy = (value: unknown): value is WaveObservation =>
-  isRecord(value) && typeof value.stationId === 'string' && typeof value.observedAt === 'string';
 
 export function useConditions() {
   const [state, setState] = useState(initial);
@@ -54,6 +42,9 @@ export function useConditions() {
     });
     setState({ weather, tides, marine, buoys, health, loading: false, refreshedAt: new Date().toISOString() });
   }, []);
-  useEffect(() => { void load(); }, [load]);
+  useEffect(() => {
+    const timer = window.setTimeout(() => { void load(); }, 0);
+    return () => window.clearTimeout(timer);
+  }, [load]);
   return { ...state, refresh: () => load(true) };
 }
