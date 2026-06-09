@@ -13,7 +13,13 @@ beforeEach(() => {
 });
 
 it('keeps the dashboard visible when cached source data is malformed', async () => {
-  localStorage.setItem('capitola:tides', JSON.stringify({ value: {}, expires: Date.now() + 60_000 }));
+  localStorage.setItem('capitola:tides', JSON.stringify({
+    value: {
+      source: 'NOAA CO-OPS', stationId: '9413745', fetchedAt: new Date().toISOString(), points: [],
+      extremes: [{ time: new Date().toISOString(), heightFt: 'not-a-number', type: 'H' }],
+    },
+    expires: Date.now() + 60_000,
+  }));
 
   const { container } = render(<App />);
 
