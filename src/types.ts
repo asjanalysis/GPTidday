@@ -1,76 +1,27 @@
-export type Alert = {
+export type VideoPlatform = 'youtube' | 'vimeo' | 'reddit' | 'tiktok' | 'instagram' | 'manual' | 'other';
+
+export type VideoItem = {
   id: string;
-  event: string;
-  severity?: string;
-  headline?: string;
+  title: string;
   description?: string;
-  instruction?: string;
-  ends?: string;
-  url?: string;
+  platform: VideoPlatform;
+  sourceName: string;
+  creator?: string;
+  originalUrl: string;
+  embedUrl?: string;
+  thumbnailUrl?: string;
+  duration?: string;
+  publishedAt?: string;
+  tags: string[];
+  categories: string[];
+  funnyScore: number;
+  wtfScore: number;
+  absurdScore: number;
+  freshnessScore: number;
+  overallScore: number;
+  matureAudience?: boolean;
+  moderationFlags?: string[];
 };
 
-export type WeatherHour = {
-  time: string;
-  tempF?: number;
-  precipitationChance?: number;
-  windSpeedMph?: number;
-  windGustMph?: number;
-  windDirectionDeg?: number;
-  windDirectionCardinal?: string;
-  condition?: string;
-};
-
-export type WeatherSnapshot = {
-  source: string;
-  observedAt: string;
-  airTempF?: number;
-  windSpeedMph?: number;
-  windGustMph?: number;
-  windDirectionDeg?: number;
-  windDirectionCardinal?: string;
-  condition?: string;
-  alerts?: Alert[];
-  hourly?: WeatherHour[];
-  marineSummary?: string;
-};
-
-export type TidePoint = { time: string; heightFt: number; type?: 'H' | 'L' };
-
-export type TideData = {
-  source: string;
-  stationId: string;
-  points: TidePoint[];
-  extremes: TidePoint[];
-  fetchedAt: string;
-};
-
-export type WaveObservation = {
-  source: string;
-  stationId?: string;
-  observedAt: string;
-  waveHeightFt?: number;
-  dominantPeriodSec?: number;
-  averagePeriodSec?: number;
-  meanWaveDirectionDeg?: number;
-  seaTempF?: number;
-  windSpeedMph?: number;
-  windDirectionDeg?: number;
-  raw?: unknown;
-};
-
-export type MarineForecastHour = {
-  time: string;
-  waveHeightFt?: number;
-  wavePeriodSec?: number;
-  waveDirectionDeg?: number;
-  swellHeightFt?: number;
-  swellPeriodSec?: number;
-  swellDirectionDeg?: number;
-  windWaveHeightFt?: number;
-};
-
-export type MarineForecast = { source: string; fetchedAt: string; hourly: MarineForecastHour[] };
-export type SourceHealth = { source: string; status: 'ok' | 'stale' | 'error' | 'missing'; lastUpdated?: string; message?: string };
-export type Webcam = { name: string; location: string; url: string; embedUrl?: string; note: string };
-export type ScoreResult = { score: number; label: 'Excellent' | 'Good' | 'Fair' | 'Poor' | 'Hazardous'; reasons: string[] };
-export type Agreement = { label: string; status: 'good' | 'minor' | 'poor'; detail: string };
+export type SortOption = 'Newest' | 'Weirdest' | 'Most Funny' | 'Most WTF' | 'Random';
+export type SourceAdapter<T> = { name: string; normalize: (input: T) => VideoItem | null };
