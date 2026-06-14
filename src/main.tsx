@@ -4,4 +4,16 @@ import App from './App';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import './styles.css';
 
-createRoot(document.getElementById('root')!).render(<StrictMode><ErrorBoundary><App/></ErrorBoundary></StrictMode>);
+const rootElement = document.getElementById('root');
+
+if (!rootElement) {
+  throw new Error('ABSURD.TV could not start because the #root element is missing.');
+}
+
+createRoot(rootElement).render(
+  <StrictMode>
+    <ErrorBoundary>
+      <App/>
+    </ErrorBoundary>
+  </StrictMode>,
+);
