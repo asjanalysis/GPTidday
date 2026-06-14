@@ -1,6 +1,31 @@
 import type { VideoItem } from '../types';
 
-const art = (seed: string) => `https://picsum.photos/seed/${seed}/900/560`;
+const artwork = {
+  'office-orbit': ['#ff3eb5', '#1b1733', 'MEETING', 'ESCAPED'],
+  'symbolic-door': ['#c8ff18', '#15261f', 'DOOR', 'SAYS NO'],
+  'pigeon-board': ['#18e0e8', '#25212c', 'Q4', 'BREAD'],
+  'cowboy-printer': ['#ff6b23', '#2d1b15', 'PAPER', 'JAM'],
+  'soup-weather': ['#ffd45c', '#342018', '100%', 'SOUP'],
+  'render-goose': ['#b58cff', '#171c31', 'MESH', 'MISSING'],
+  'human-buffering': ['#ff3eb5', '#241726', '12%', 'LOADING'],
+  'fish-lecture': ['#18e0e8', '#102733', 'NEEDS', 'WORK'],
+  'moon-terms': ['#d9d4ff', '#171526', 'ACCEPT', 'TIDES'],
+} satisfies Record<string, [string, string, string, string]>;
+
+const art = (seed: keyof typeof artwork) => {
+  const [accent, background, topLine, bottomLine] = artwork[seed];
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+    <rect width="900" height="560" fill="${background}"/>
+    <path d="M0 80h900M0 180h900M0 280h900M0 380h900M0 480h900" stroke="${accent}" stroke-opacity=".12" stroke-width="2"/>
+    <circle cx="710" cy="150" r="210" fill="${accent}" fill-opacity=".14"/>
+    <circle cx="710" cy="150" r="118" fill="none" stroke="${accent}" stroke-width="18"/>
+    <path d="M640 150h140M710 80v140" stroke="${accent}" stroke-width="18"/>
+    <text x="58" y="345" fill="#f7f3e8" font-family="Arial Black, sans-serif" font-size="106" letter-spacing="-7">${topLine}</text>
+    <text x="58" y="455" fill="${accent}" font-family="Arial Black, sans-serif" font-size="106" letter-spacing="-7">${bottomLine}</text>
+    <text x="62" y="74" fill="#f7f3e8" fill-opacity=".55" font-family="monospace" font-size="18">ABSURD.TV // LOCAL TRANSMISSION</text>
+  </svg>`;
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+};
 
 export const curatedVideos: VideoItem[] = [
   {
