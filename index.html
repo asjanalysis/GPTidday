@@ -3,142 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GrantKeeper — Nonprofit grant workspace</title>
+    <title>Prism — SoundCloud 3D Visualizer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="app-shell">
-      <aside class="sidebar" aria-label="Primary navigation">
-        <a class="brand" href="#top" aria-label="GrantKeeper home">
-          <span class="brand-mark">GK</span>
-          <span><strong>GrantKeeper</strong><small>Free for nonprofits</small></span>
-        </a>
-        <nav>
-          <a href="#dashboard" class="active">Dashboard</a>
-          <a href="#finder">Grant finder</a>
-          <a href="#tracker">Expense tracker</a>
-          <a href="#writer">Proposal studio</a>
-          <a href="#profile">Eligibility profile</a>
-        </nav>
-        <div class="ad-card" aria-label="Sponsored message placeholder">
-          <span>Sponsored</span>
-          <strong>Community Bank Grant Readiness Webinar</strong>
-          <p>Ad-supported placement keeps GrantKeeper free.</p>
+    <div class="noise"></div>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Prism home"><span class="brand-orb"></span>PRISM</a>
+      <p class="topbar-status"><span></span> LIVE CANVAS</p>
+      <button class="icon-button" id="fullscreenButton" aria-label="Toggle fullscreen">↗</button>
+    </header>
+
+    <main id="top">
+      <section class="visual-stage" aria-label="3D music visualizer">
+        <canvas id="visualizerCanvas"></canvas>
+        <div class="stage-topline"><span>SC / AUDIO REACTIVE</span><span id="clock">00:00</span></div>
+        <div class="stage-copy">
+          <p class="eyebrow">SOUNDCLOUD VISUAL EXPERIENCE</p>
+          <h1>See your sound<br /><em>in another dimension.</em></h1>
+          <p class="intro">Drop in a public SoundCloud link and let its rhythm shape a living field of light.</p>
         </div>
-      </aside>
+        <div class="stage-bottomline"><span>DRAG TO ORBIT</span><span>SCROLL TO ZOOM</span></div>
+      </section>
 
-      <main id="top">
-        <header class="hero" id="dashboard">
-          <div class="hero-copy">
-            <p class="eyebrow">Simple grant operations for mission-led teams</p>
-            <h1>Find funding, manage grant expenses, and draft stronger proposals in one calm workspace.</h1>
-            <p>GrantKeeper is a GitHub Pages-ready mockup for a future React app: no backend, no login, and local browser interactions that demonstrate the intended experience.</p>
-            <div class="hero-actions">
-              <a class="button primary" href="#finder">Find matching grants</a>
-              <a class="button secondary" href="#tracker">Track expenses</a>
-            </div>
-          </div>
-          <section class="summary-card" aria-label="Grant portfolio summary">
-            <div>
-              <span class="metric">$428k</span>
-              <small>Active award value</small>
-            </div>
-            <div>
-              <span class="metric">82%</span>
-              <small>Reporting readiness</small>
-            </div>
-            <div>
-              <span class="metric">6</span>
-              <small>Upcoming deadlines</small>
-            </div>
-          </section>
-        </header>
+      <section class="control-deck" aria-label="Visualizer controls">
+        <div class="deck-heading">
+          <p class="eyebrow">01 / LOAD A TRACK</p>
+          <h2>Plug into the pulse.</h2>
+        </div>
+        <form id="trackForm" class="track-form">
+          <label for="soundcloudUrl">SOUNDCLOUD URL</label>
+          <div class="url-row"><input id="soundcloudUrl" type="url" placeholder="https://soundcloud.com/artist/track" autocomplete="url" required /><button type="submit">VISUALIZE <span>↗</span></button></div>
+          <p class="form-note">Paste a public track or playlist link. Playback stays on SoundCloud.</p>
+        </form>
+        <div class="track-info" id="trackInfo">
+          <div class="cover-art cover-default" id="coverArt"><span>✦</span></div>
+          <div><p class="track-label">READY TO CONNECT</p><h3 id="trackTitle">Bring your own frequency</h3><p id="trackArtist">SoundCloud powered</p></div>
+          <button class="play-button" id="playButton" aria-label="Play or pause track">▶</button>
+        </div>
+      </section>
 
-        <section class="grid stats-grid" aria-label="Key reminders">
-          <article><span>Next report</span><strong>Youth Arts Grant</strong><p>Due July 15 · 12 receipts missing payment proof</p></article>
-          <article><span>Best new match</span><strong>Rural Equity Fund</strong><p>94% eligible based on profile and service area</p></article>
-          <article><span>Draft status</span><strong>Community Health Proposal</strong><p>Needs outcomes, budget narrative, and AI review</p></article>
-        </section>
-
-        <section class="module two-column" id="finder">
-          <div>
-            <p class="eyebrow">Module 1</p>
-            <h2>Grant finder with eligibility fit checks</h2>
-            <p>Search funding opportunities and compare them against a lightweight nonprofit profile: organization type, geography, mission area, annual budget, and population served.</p>
-            <form class="search-panel" id="grantSearchForm">
-              <label>Mission focus<input id="missionInput" value="food security" /></label>
-              <label>State or region<input id="regionInput" value="Ohio" /></label>
-              <label>Annual budget<select id="budgetInput"><option>Under $250k</option><option selected>$250k–$1M</option><option>$1M+</option></select></label>
-              <button class="button primary" type="submit">Refresh matches</button>
-            </form>
+      <section class="experience-grid">
+        <article class="mode-card">
+          <p class="eyebrow">02 / VISUAL MODE</p>
+          <div class="mode-list" id="modeList">
+            <button class="mode active" data-mode="nebula"><span>01</span> NEBULA <i></i></button>
+            <button class="mode" data-mode="tunnel"><span>02</span> TUNNEL <i></i></button>
+            <button class="mode" data-mode="prism"><span>03</span> PRISM <i></i></button>
           </div>
-          <div class="card-stack" id="grantMatches" aria-live="polite"></div>
-        </section>
-
-        <section class="module" id="tracker">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Module 2</p>
-              <h2>Multi-grant expense tracker</h2>
-              <p>Name each expense, assign it to a grant, add custom tags, and attach invoice/payment proof filenames for audit-ready organization.</p>
-            </div>
-            <button class="button secondary" id="seedExpenseButton">Add sample expense</button>
-          </div>
-          <div class="tracker-layout">
-            <form class="expense-form" id="expenseForm">
-              <label>Expense name<input id="expenseName" required placeholder="Program supplies" /></label>
-              <label>Vendor<input id="vendorName" required placeholder="Acme Office" /></label>
-              <label>Date<input id="expenseDate" required type="date" /></label>
-              <label>Amount<input id="expenseAmount" required type="number" min="0" step="0.01" placeholder="250.00" /></label>
-              <label>Grant<select id="grantName"><option>Youth Arts Grant</option><option>Community Health Fund</option><option>Rural Equity Fund</option></select></label>
-              <label>Tags<input id="expenseTags" placeholder="supplies, outreach" /></label>
-              <label>Invoice file<input id="invoiceFile" type="file" /></label>
-              <label>Proof of payment<input id="paymentFile" type="file" /></label>
-              <button class="button primary" type="submit">Save expense</button>
-            </form>
-            <div class="expense-list-panel">
-              <div class="search-row">
-                <input id="receiptSearch" placeholder="Search vendor, date, amount, tag…" />
-                <span id="expenseCount"></span>
-              </div>
-              <div id="expenseList" class="expense-list" aria-live="polite"></div>
-            </div>
-          </div>
-        </section>
-
-        <section class="module two-column" id="writer">
-          <div>
-            <p class="eyebrow">Module 3</p>
-            <h2>Proposal studio with bring-your-own AI</h2>
-            <p>Draft a proposal outline, open curated grant writing tutorials, and connect the user's own ChatGPT or Claude account through external links so this future app can avoid backend AI costs.</p>
-            <div class="link-grid">
-              <a href="https://www.candid.org/learning" target="_blank" rel="noreferrer">Candid learning tutorials</a>
-              <a href="https://www.grants.gov/learn-grants" target="_blank" rel="noreferrer">Grants.gov learning center</a>
-              <a href="https://chatgpt.com/" target="_blank" rel="noreferrer">Open ChatGPT</a>
-              <a href="https://claude.ai/" target="_blank" rel="noreferrer">Open Claude</a>
-            </div>
-          </div>
-          <form class="writer-card" id="proposalForm">
-            <label>Proposal title<input id="proposalTitle" value="Neighborhood Food Access Expansion" /></label>
-            <label>Need statement<textarea id="needStatement">Families in our service area need consistent access to fresh, culturally relevant groceries.</textarea></label>
-            <label>Goals<textarea id="proposalGoals">Expand mobile pantry routes, recruit volunteers, and measure household food security outcomes.</textarea></label>
-            <button class="button primary" type="submit">Generate outline</button>
-            <pre id="proposalOutput" aria-live="polite"></pre>
-          </form>
-        </section>
-
-        <section class="module profile" id="profile">
-          <p class="eyebrow">Eligibility profile</p>
-          <h2>Nonprofit snapshot used for grant matching</h2>
-          <div class="profile-grid">
-            <span>501(c)(3)</span><span>Ohio</span><span>Food security</span><span>Youth services</span><span>$640k annual budget</span><span>Rural + urban outreach</span>
-          </div>
-        </section>
-      </main>
-    </div>
+        </article>
+        <article class="mixer-card">
+          <p class="eyebrow">03 / TUNE THE FIELD</p>
+          <label>INTENSITY <output id="intensityValue">72</output><input id="intensity" type="range" min="20" max="100" value="72" /></label>
+          <label>ORBIT <output id="orbitValue">38</output><input id="orbit" type="range" min="0" max="100" value="38" /></label>
+          <label class="color-label">SPECTRUM <span class="swatches" id="swatches"><button class="swatch active" data-hue="270" style="--swatch:#8d6bff"></button><button class="swatch" data-hue="185" style="--swatch:#45e8e0"></button><button class="swatch" data-hue="335" style="--swatch:#ff5fbd"></button><button class="swatch" data-hue="35" style="--swatch:#ffa35d"></button></span></label>
+        </article>
+        <article class="how-card">
+          <p class="eyebrow">HOW IT WORKS</p>
+          <p>A kinetic 3D scene responds to playback motion. Choose a mode, shape the field, and go full screen when the beat hits.</p>
+          <a href="https://soundcloud.com" target="_blank" rel="noreferrer">EXPLORE SOUNDCLOUD <span>↗</span></a>
+        </article>
+      </section>
+    </main>
+    <div class="soundcloud-host" aria-hidden="true"><iframe id="soundcloudWidget" title="SoundCloud player" allow="autoplay"></iframe></div>
+    <script src="https://w.soundcloud.com/player/api.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
