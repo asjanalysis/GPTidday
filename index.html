@@ -8,6 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .form-note { min-height: 1.2em; }
+      .form-note[data-state="loading"] { color: #c5afff; }
+      .form-note[data-state="success"] { color: #72f4bc; }
+      .form-note[data-state="error"] { color: #ff9abf; }
+    </style>
   </head>
   <body>
     <div class="noise"></div>
@@ -37,7 +43,7 @@
         <form id="trackForm" class="track-form">
           <label for="soundcloudUrl">SOUNDCLOUD URL</label>
           <div class="url-row"><input id="soundcloudUrl" type="url" placeholder="https://soundcloud.com/artist/track" autocomplete="url" required /><button type="submit">VISUALIZE <span>↗</span></button></div>
-          <p class="form-note">Paste a public track or playlist link. Playback stays on SoundCloud.</p>
+          <p class="form-note" id="formStatus" role="status" aria-live="polite">Paste a public track or playlist link. Playback stays on SoundCloud.</p>
         </form>
         <div class="track-info" id="trackInfo">
           <div class="cover-art cover-default" id="coverArt"><span>✦</span></div>
@@ -69,7 +75,7 @@
       </section>
     </main>
     <div class="soundcloud-host" aria-hidden="true"><iframe id="soundcloudWidget" title="SoundCloud player" allow="autoplay"></iframe></div>
-    <script src="https://w.soundcloud.com/player/api.js"></script>
-    <script src="app.js"></script>
+    <script src="https://w.soundcloud.com/player/api.js" defer></script>
+    <script src="app.js" defer></script>
   </body>
 </html>
