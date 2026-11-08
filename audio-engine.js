@@ -57,10 +57,15 @@ export class AudioEngine extends EventTarget {
     if (!window.isSecureContext || !navigator.mediaDevices?.getDisplayMedia) {
       throw new Error('Tab audio needs desktop Chrome or Edge on HTTPS or localhost. You can still visualize local audio files in this browser.');
     }
+    const policy = document.permissionsPolicy || document.featurePolicy;
+    if (policy?.allowsFeature('display-capture') === false) {
+      throw new Error('This preview blocks tab sharing. Open Prism directly in a browser tab, then connect again.');
+    }
     const generation = ++this.captureGeneration;
-    // Must be called directly from a click. Captured video frames are never read.
+    // Start both requests while the click still grants user activation.
+    const initialization = this.initialize().then(() => null, error => error);
     const stream = await navigator.mediaDevices.getDisplayMedia({
-      video: { displaySurface: 'browser' }, audio: { suppressLocalAudioPlayback: false },
+      video: { displaySurface: 'browser' }, audio: true,
       preferCurrentTab: true, selfBrowserSurface: 'include', systemAudio: 'exclude',
     });
     if (generation !== this.captureGeneration) { stream.getTracks().forEach(track => track.stop()); return false; }
@@ -68,12 +73,22 @@ export class AudioEngine extends EventTarget {
       stream.getTracks().forEach(track => track.stop());
       throw new Error('No tab audio was shared. Choose this browser tab and enable “Share tab audio”, then connect again.');
     }
-    try { await this.initialize(); } catch (error) { stream.getTracks().forEach(track => track.stop()); throw error; }
-    if (generation !== this.captureGeneration) { stream.getTracks().forEach(track => track.stop()); return false; }
+    const initializationError = await initialization;
+    if (generation !== this.captureGeneration || initializationError) {
+      stream.getTracks().forEach(track => track.stop());
+      if (initializationError) throw initializationError;
+      return false;
+    }
     this.stopCapture(false);
+    try {
+      this.captureSource = this.context.createMediaStreamSource(stream);
+      this.setAnalyserSource(this.captureSource);
+    } catch (error) {
+      this.stopCapture(false);
+      stream.getTracks().forEach(track => track.stop());
+      throw error;
+    }
     this.stream = stream;
-    this.captureSource = this.context.createMediaStreamSource(stream);
-    this.setAnalyserSource(this.captureSource);
     // Never connect the captured source to the speakers: that would create echo.
     this.mode = 'capture';
     for (const track of stream.getTracks()) track.addEventListener('ended', () => {
