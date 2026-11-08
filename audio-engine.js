@@ -4,6 +4,7 @@ export class AudioEngine extends EventTarget {
     this.audio = new Audio();
     this.audio.preload = 'metadata';
     this.mode = 'none';
+    this.ambientPlayback = false;
     this.frequency = new Uint8Array(512);
     this.waveform = new Uint8Array(1024).fill(128);
     this.captureGeneration = 0;
@@ -95,10 +96,23 @@ export class AudioEngine extends EventTarget {
     if (this.mode === 'capture') this.mode = 'none';
     if (stream) this.emitCapture();
   }
-  sample() {
+  sample(visualTime = 0) {
     if (this.analyser && this.mode !== 'none') {
       this.analyser.getByteFrequencyData(this.frequency);
       this.analyser.getByteTimeDomainData(this.waveform);
+    } else if (this.ambientPlayback) {
+      // The SoundCloud iframe exposes playback events, but no audio samples.
+      // Use a generated signal until the listener shares tab audio.
+      const pulse = (1 + Math.sin(visualTime * 8)) / 2;
+      for (let i = 0; i < this.frequency.length; i++) {
+        const ripple = (1 + Math.sin(i * .18 - visualTime * 5)) / 2;
+        this.frequency[i] = (24 + 92 * pulse + 78 * ripple) / (1 + i * .011);
+      }
+      for (let i = 0; i < this.waveform.length; i++) {
+        const phase = i * .052;
+        const wave = Math.sin(phase + visualTime * 6) + .35 * Math.sin(phase * 2.1 - visualTime * 4);
+        this.waveform[i] = 128 + (18 + 23 * pulse) * wave;
+      }
     } else {
       this.frequency.fill(0);
       this.waveform.fill(128);

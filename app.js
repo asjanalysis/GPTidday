@@ -35,12 +35,13 @@ function setLoading(value) {
 function updateSignal() {
   const captured = audio.mode === 'capture';
   const live = captured || (audio.mode === 'local' && playing);
+  audio.ambientPlayback = playing && current?.kind === 'soundcloud';
   $('#signalBadge').classList.toggle('live', live);
   $('#signalLabel').textContent = captured ? 'LIVE / TAB AUDIO' : audio.mode === 'local' ? playing ? 'LIVE / AUDIO ANALYSIS' : 'PAUSED / AUDIO ANALYSIS' : playing ? 'AMBIENT / SOUNDCLOUD' : 'AMBIENT / NO AUDIO';
   $('#captureButton').classList.toggle('active', captured);
   $('#captureButton span').textContent = captured ? 'Disconnect audio' : 'Connect tab audio';
   $('#audioNoteTitle').textContent = live ? 'Listening to the actual audio.' : 'Made to move with music.';
-  $('#audioNoteText').textContent = captured ? 'Live frequencies from your shared tab. Nothing is recorded or uploaded.' : audio.mode === 'local' ? 'This audio file feeds the frequency and waveform analyzer directly.' : 'Connect tab audio for live SoundCloud analysis, or open a local audio file.';
+  $('#audioNoteText').textContent = captured ? 'Live frequencies from your shared tab. Nothing is recorded or uploaded.' : audio.mode === 'local' ? 'This audio file feeds the frequency and waveform analyzer directly.' : 'SoundCloud uses animated visuals during playback. Connect tab audio to react to the music, or open a local audio file.';
 }
 function updateProgress() {
   if (!scrubbing) {

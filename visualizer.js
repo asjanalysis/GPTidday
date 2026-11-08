@@ -48,7 +48,7 @@ export class Visualizer {
     const reduced = this.reducedMotion.matches;
     if (reduced && stamp - (this.lastDraw || 0) < 100) return;
     this.lastDraw = stamp;
-    const sample = this.engine.sample();
+    const sample = this.engine.sample(this.time);
     const intensity = this.settings.intensity / 100;
     const target = Math.min(1, sample.rms * 4) * intensity;
     this.energy += (target - this.energy) * .2;
