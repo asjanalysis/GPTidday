@@ -57,25 +57,46 @@ export class AudioEngine extends EventTarget {
     if (!window.isSecureContext || !navigator.mediaDevices?.getDisplayMedia) {
       throw new Error('Tab audio needs desktop Chrome or Edge on HTTPS or localhost. You can still visualize local audio files in this browser.');
     }
-    const generation = ++this.captureGeneration;
-    // Must be called directly from a click. Captured video frames are never read.
-    const stream = await navigator.mediaDevices.getDisplayMedia({
+    return this.captureInput('capture', () => navigator.mediaDevices.getDisplayMedia({
       video: { displaySurface: 'browser' }, audio: { suppressLocalAudioPlayback: false },
       preferCurrentTab: true, selfBrowserSurface: 'include', systemAudio: 'exclude',
-    });
-    if (generation !== this.captureGeneration) { stream.getTracks().forEach(track => track.stop()); return false; }
-    if (!stream.getAudioTracks().length) {
-      stream.getTracks().forEach(track => track.stop());
-      throw new Error('No tab audio was shared. Choose this browser tab and enable “Share tab audio”, then connect again.');
+    }), 'No tab audio was shared. Choose this browser tab and enable “Share tab audio”, then connect again.');
+  }
+  async captureMicrophone() {
+    if (!window.isSecureContext || !navigator.mediaDevices?.getUserMedia) {
+      throw new Error('Microphone access needs HTTPS and a browser that allows it. Open Prism directly in Safari and try again.');
     }
-    try { await this.initialize(); } catch (error) { stream.getTracks().forEach(track => track.stop()); throw error; }
-    if (generation !== this.captureGeneration) { stream.getTracks().forEach(track => track.stop()); return false; }
+    return this.captureInput('microphone', () => navigator.mediaDevices.getUserMedia({
+      audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false },
+      video: false,
+    }), 'The browser did not provide a microphone audio track.');
+  }
+  async captureInput(mode, requestStream, missingAudioMessage) {
+    const generation = ++this.captureGeneration;
+    // Start Web Audio and request permission during the same click.
+    const initialization = this.initialize().then(() => null, error => error);
+    const stream = await requestStream();
+    const stopTracks = () => stream.getTracks().forEach(track => track.stop());
+    if (generation !== this.captureGeneration) { stopTracks(); return false; }
+    if (!stream.getAudioTracks().some(track => track.readyState !== 'ended')) {
+      stopTracks();
+      throw new Error(missingAudioMessage);
+    }
+    const initializationError = await initialization;
+    if (generation !== this.captureGeneration) { stopTracks(); return false; }
+    if (initializationError) { stopTracks(); throw initializationError; }
     this.stopCapture(false);
+    try {
+      this.captureSource = this.context.createMediaStreamSource(stream);
+      this.setAnalyserSource(this.captureSource);
+    } catch (error) {
+      this.stopCapture(false);
+      stopTracks();
+      throw error;
+    }
+    // The captured signal feeds only the analyser to avoid speaker feedback.
     this.stream = stream;
-    this.captureSource = this.context.createMediaStreamSource(stream);
-    this.setAnalyserSource(this.captureSource);
-    // Never connect the captured source to the speakers: that would create echo.
-    this.mode = 'capture';
+    this.mode = mode;
     for (const track of stream.getTracks()) track.addEventListener('ended', () => {
       if (this.stream === stream) this.stopCapture();
     }, { once: true });
@@ -92,7 +113,7 @@ export class AudioEngine extends EventTarget {
       this.captureSource = null;
     }
     stream?.getTracks().forEach(track => track.stop());
-    if (this.mode === 'capture') this.mode = 'none';
+    if (this.mode === 'capture' || this.mode === 'microphone') this.mode = 'none';
     if (stream) this.emitCapture();
   }
   sample() {
