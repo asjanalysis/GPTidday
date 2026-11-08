@@ -277,17 +277,21 @@ function setVolume(value) {
 }
 $('#volume').addEventListener('input', event => setVolume(event.target.value));
 $('#muteButton').addEventListener('click', () => setVolume(settings.volume ? 0 : lastVolume));
+function captureStatus(message, state) {
+  $('#visualHint').textContent = message;
+  status(message, state);
+}
 $('#captureButton').addEventListener('click', async () => {
   if (capturePending) return;
-  if (audio.mode === 'capture') {audio.stopCapture();status('Tab audio disconnected. SoundCloud visuals are now ambient.');return;}
-  if (current?.kind === 'local') {status('Local audio is already connected directly to the analyzer. Load a SoundCloud link to connect tab audio.');return;}
+  if (audio.mode === 'capture') {audio.stopCapture();captureStatus('Tab audio disconnected. SoundCloud visuals are now ambient.');return;}
+  if (current?.kind === 'local') {captureStatus('Local audio is already connected directly to the analyzer. Load a SoundCloud link to connect tab audio.');return;}
   capturePending = true;$('#captureButton').disabled = true;
-  status('Choose this browser tab and enable “Share tab audio”. No audio or video is recorded.');
+  captureStatus('Choose this browser tab and enable “Share tab audio”. No audio or video is recorded.');
   try {
     const connected = await audio.captureTab();
-    if (connected) status('Tab audio connected. The visualizer now responds to actual frequencies and waveforms.', 'success');
+    if (connected) captureStatus('Tab audio connected. The visualizer now responds to actual frequencies and waveforms.', 'success');
   } catch (error) {
-    status(['NotAllowedError', 'AbortError'].includes(error.name) ? 'Audio sharing was canceled or denied. You can reconnect at any time; SoundCloud remains in ambient mode.' : error.message || 'Tab audio could not connect. Try desktop Chrome or Edge.', 'error');
+    captureStatus(['NotAllowedError', 'AbortError'].includes(error.name) ? 'Audio sharing was canceled or denied. Open Prism in its own desktop browser tab and try sharing that tab with audio enabled.' : error.message || 'Tab audio could not connect. Try desktop Chrome or Edge.', 'error');
   } finally {capturePending = false;$('#captureButton').disabled = false;updateSignal();}
 });
 function applySettings() {
