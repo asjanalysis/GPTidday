@@ -1,81 +1,72 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prism — SoundCloud 3D Visualizer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-      .form-note { min-height: 1.2em; }
-      .form-note[data-state="loading"] { color: #c5afff; }
-      .form-note[data-state="success"] { color: #72f4bc; }
-      .form-note[data-state="error"] { color: #ff9abf; }
-    </style>
-  </head>
-  <body>
-    <div class="noise"></div>
-    <header class="topbar">
-      <a class="brand" href="#top" aria-label="Prism home"><span class="brand-orb"></span>PRISM</a>
-      <p class="topbar-status"><span></span> LIVE CANVAS</p>
-      <button class="icon-button" id="fullscreenButton" aria-label="Toggle fullscreen">↗</button>
-    </header>
-
-    <main id="top">
-      <section class="visual-stage" aria-label="3D music visualizer">
-        <canvas id="visualizerCanvas"></canvas>
-        <div class="stage-topline"><span>SC / AUDIO REACTIVE</span><span id="clock">00:00</span></div>
-        <div class="stage-copy">
-          <p class="eyebrow">SOUNDCLOUD VISUAL EXPERIENCE</p>
-          <h1>See your sound<br /><em>in another dimension.</em></h1>
-          <p class="intro">Drop in a public SoundCloud link and let its rhythm shape a living field of light.</p>
-        </div>
-        <div class="stage-bottomline"><span>DRAG TO ORBIT</span><span>SCROLL TO ZOOM</span></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1014">
+  <meta name="description" content="Prism is a Sonique-inspired music player. Play SoundCloud links or local audio and explore live audio-reactive visuals.">
+  <title>Prism — A new dimension of sound</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <svg class="icon-defs" aria-hidden="true"><defs>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" stroke-width="4"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path d="m5 5 11 7-11 7Z" fill="currentColor" stroke="none"/><path d="M19 5v14"/></symbol>
+    <symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 4 5 9H2v6h3l6 5ZM15 8a6 6 0 0 1 0 8M18 4a11 11 0 0 1 0 16"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="m10 13 4-4m-5 7-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 0 2-2a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" transform="translate(1 0)"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+    <symbol id="i-audio" viewBox="0 0 24 24"><path d="M4 10v4M8 5v14M12 8v8M16 3v18M20 9v6"/></symbol>
+  </defs></svg>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Prism home"><span class="brand-mark">◈</span> prism<span class="brand-period">.</span><span class="brand-tag">MUSIC, IN MOTION</span></a>
+    <div class="top-actions"><span class="local-badge"><span class="dot"></span> YOUR MUSIC. YOUR SPACE.</span><button id="helpButton" class="text-button" aria-label="About audio visualization">How it works <svg><use href="#i-arrow"/></svg></button></div>
+  </header>
+  <main class="workspace">
+    <div class="workspace-heading"><div><p class="eyebrow">THE LISTENING ROOM</p><h1>A new dimension of sound<span>.</span></h1></div><button id="demoButton" class="button secondary"><svg><use href="#i-play"/></svg>Try audio demo</button></div>
+    <div class="studio">
+      <section class="visual-panel" id="visualPanel" aria-label="Music visualizer">
+        <canvas id="visualizerCanvas" aria-label="Audio visualization"></canvas>
+        <div class="visual-top"><span class="live-badge" id="signalBadge"><span class="dot"></span><span id="signalLabel">AMBIENT / NO AUDIO</span></span><div class="visual-actions"><button id="shufflePreset" class="glass-button" aria-label="Next visual preset">↻</button><button id="fullscreenButton" class="glass-button" aria-label="Enter fullscreen"><svg><use href="#i-expand"/></svg></button></div></div>
+        <div class="visual-caption"><p class="eyebrow">01 / PHOTON</p><h2 id="presetTitle">Let sound<br>take shape.</h2><p id="visualHint">Load a track. Find your frequency.</p></div>
+        <div class="visual-bottom"><span id="presetName">PHOTON FIELD</span><span id="motionHint">DRAG TO ROTATE · SCROLL TO ZOOM</span><button id="captureButton" class="capture-button"><svg><use href="#i-audio"/></svg><span>Connect tab audio</span></button></div>
       </section>
-
-      <section class="control-deck" aria-label="Visualizer controls">
-        <div class="deck-heading">
-          <p class="eyebrow">01 / LOAD A TRACK</p>
-          <h2>Plug into the pulse.</h2>
-        </div>
-        <form id="trackForm" class="track-form">
-          <label for="soundcloudUrl">SOUNDCLOUD URL</label>
-          <div class="url-row"><input id="soundcloudUrl" type="url" placeholder="https://soundcloud.com/artist/track" autocomplete="url" required /><button type="submit">VISUALIZE <span>↗</span></button></div>
-          <p class="form-note" id="formStatus" role="status" aria-live="polite">Paste a public track or playlist link. Playback stays on SoundCloud.</p>
-        </form>
-        <div class="track-info" id="trackInfo">
-          <div class="cover-art cover-default" id="coverArt"><span>✦</span></div>
-          <div><p class="track-label">READY TO CONNECT</p><h3 id="trackTitle">Bring your own frequency</h3><p id="trackArtist">SoundCloud powered</p></div>
-          <button class="play-button" id="playButton" aria-label="Play or pause track">▶</button>
-        </div>
-      </section>
-
-      <section class="experience-grid">
-        <article class="mode-card">
-          <p class="eyebrow">02 / VISUAL MODE</p>
-          <div class="mode-list" id="modeList">
-            <button class="mode active" data-mode="nebula"><span>01</span> NEBULA <i></i></button>
-            <button class="mode" data-mode="tunnel"><span>02</span> TUNNEL <i></i></button>
-            <button class="mode" data-mode="prism"><span>03</span> PRISM <i></i></button>
+      <aside class="sidebar" aria-label="Visualizer settings">
+        <section class="preset-section"><div class="section-heading"><h2>Visual presets</h2><span class="micro">01—04</span></div><p class="section-note">A different world for every track.</p>
+          <div class="preset-grid" id="presetGrid">
+            <button class="preset active" data-preset="photon" aria-pressed="true"><span class="preset-art photon-art"></span><span>Photon <small>01</small></span></button>
+            <button class="preset" data-preset="spectrum" aria-pressed="false"><span class="preset-art spectrum-art"></span><span>Spectrum <small>02</small></span></button>
+            <button class="preset" data-preset="tunnel" aria-pressed="false"><span class="preset-art tunnel-art"></span><span>Wormhole <small>03</small></span></button>
+            <button class="preset" data-preset="scope" aria-pressed="false"><span class="preset-art scope-art"></span><span>Oscilloscope <small>04</small></span></button>
           </div>
-        </article>
-        <article class="mixer-card">
-          <p class="eyebrow">03 / TUNE THE FIELD</p>
-          <label>INTENSITY <output id="intensityValue">72</output><input id="intensity" type="range" min="20" max="100" value="72" /></label>
-          <label>ORBIT <output id="orbitValue">38</output><input id="orbit" type="range" min="0" max="100" value="38" /></label>
-          <label class="color-label">SPECTRUM <span class="swatches" id="swatches"><button class="swatch active" data-hue="270" style="--swatch:#8d6bff"></button><button class="swatch" data-hue="185" style="--swatch:#45e8e0"></button><button class="swatch" data-hue="335" style="--swatch:#ff5fbd"></button><button class="swatch" data-hue="35" style="--swatch:#ffa35d"></button></span></label>
-        </article>
-        <article class="how-card">
-          <p class="eyebrow">HOW IT WORKS</p>
-          <p>A kinetic 3D scene responds to playback motion. Choose a mode, shape the field, and go full screen when the beat hits.</p>
-          <a href="https://soundcloud.com" target="_blank" rel="noreferrer">EXPLORE SOUNDCLOUD <span>↗</span></a>
-        </article>
+        </section>
+        <section class="tuning-section"><div class="section-heading"><h2>Make it yours</h2><button id="resetSettings" class="text-button">Reset</button></div>
+          <label class="range-label" for="intensity">Intensity <output id="intensityValue">70%</output></label><input id="intensity" type="range" min="10" max="100" value="70">
+          <label class="range-label" for="speed">Motion <output id="speedValue">45%</output></label><input id="speed" type="range" min="0" max="100" value="45">
+          <div class="range-label">Color palette <span id="paletteName">Aurora</span></div><div class="swatches" aria-label="Color palette"><button class="swatch active" data-palette="aurora" aria-label="Aurora palette" aria-pressed="true" style="--swatch:linear-gradient(135deg,#a3ffcf,#4b9aff)"></button><button class="swatch" data-palette="ember" aria-label="Ember palette" aria-pressed="false" style="--swatch:linear-gradient(135deg,#ffbb6b,#f35480)"></button><button class="swatch" data-palette="violet" aria-label="Violet palette" aria-pressed="false" style="--swatch:linear-gradient(135deg,#b4a0ff,#ff9ed7)"></button><button class="swatch" data-palette="ice" aria-label="Ice palette" aria-pressed="false" style="--swatch:linear-gradient(135deg,#e2fffd,#42b5d8)"></button></div>
+        </section>
+        <div class="audio-note"><svg><use href="#i-audio"/></svg><div><strong id="audioNoteTitle">Made to move with music.</strong><p id="audioNoteText">Connect tab audio for live SoundCloud analysis, or open a local audio file.</p></div></div>
+      </aside>
+      <section class="transport" aria-label="Playback controls">
+        <div class="track-identity"><div id="coverArt" class="cover-art">◈</div><div class="track-text"><p id="trackTitle">Your next favorite moment</p><span id="trackArtist">Add a SoundCloud link or open an audio file</span></div><a id="trackLink" class="track-external" href="https://soundcloud.com" target="_blank" rel="noopener noreferrer" aria-label="Open track on SoundCloud" hidden><svg><use href="#i-arrow"/></svg></a></div>
+        <div class="playback"><div class="playback-buttons"><button id="previousButton" class="icon-button previous" aria-label="Previous track" disabled><svg><use href="#i-next"/></svg></button><button id="playButton" class="play-button" aria-label="Play" disabled><svg><use href="#i-play"/></svg></button><button id="nextButton" class="icon-button" aria-label="Next track" disabled><svg><use href="#i-next"/></svg></button><button id="repeatButton" class="icon-button repeat-button" aria-label="Repeat track" aria-pressed="false">↻</button></div><div class="seek-row"><span id="currentTime">0:00</span><input type="range" id="seek" min="0" max="1000" value="0" aria-label="Seek in track" disabled><span id="duration">0:00</span></div></div>
+        <div class="volume-control"><button id="muteButton" class="icon-button" aria-label="Mute"><svg><use href="#i-volume"/></svg></button><input type="range" id="volume" min="0" max="100" value="75" aria-label="Volume"><output id="volumeValue">75%</output></div>
       </section>
-    </main>
-    <div class="soundcloud-host" aria-hidden="true"><iframe id="soundcloudWidget" title="SoundCloud player" allow="autoplay"></iframe></div>
-    <script src="https://w.soundcloud.com/player/api.js" defer></script>
-    <script src="app.js" defer></script>
-  </body>
+    </div>
+    <section class="library" aria-label="Music library">
+      <div class="library-heading"><div><p class="eyebrow">GOOD MUSIC STARTS HERE</p><h2>Bring your own frequency.</h2></div><label class="button secondary file-button" for="fileInput"><svg><use href="#i-plus"/></svg>Open audio files<input id="fileInput" type="file" accept="audio/*,.mp3,.wav,.ogg,.m4a,.flac" multiple></label></div>
+      <form id="trackForm" novalidate><label class="sr-only" for="soundcloudUrl">SoundCloud track or playlist URL</label><div class="url-entry"><svg><use href="#i-link"/></svg><input id="soundcloudUrl" type="url" placeholder="Paste a SoundCloud track or playlist link…" autocomplete="off" spellcheck="false" required><button class="button primary" id="loadButton" type="submit">Load track <svg><use href="#i-arrow"/></svg></button></div></form>
+      <p id="formStatus" class="status" role="status" aria-live="polite">Public tracks & playlists welcome. Local files stay on your device.</p>
+      <div class="queue-heading"><h3>Up next <span id="queueCount">00</span></h3><button id="clearQueue" class="text-button" disabled>Clear queue</button></div>
+      <div id="queue" class="queue"><div class="queue-empty"><span>＋</span><p>A little less silence. A little more you.<small>Load a link, drop an audio file, or try the demo above.</small></p></div></div>
+      <details id="embedDetails" class="embed-details" hidden><summary>SoundCloud player <span>Use this player if your browser requires a direct click to start audio.</span></summary><div id="embedHost"></div></details>
+    </section>
+    <footer><span><span class="footer-mark">◈</span> Built for the way music feels.</span><span>SONIQUE-INSPIRED. BROWSER-NATIVE.</span></footer>
+  </main>
+  <dialog id="helpDialog"><button id="closeHelp" class="dialog-close icon-button" aria-label="Close help">×</button><p class="eyebrow">SOUND → LIGHT</p><h2>Your listening room,<br>explained.</h2><p><strong>SoundCloud links</strong> play through the official SoundCloud player. Public tracks, playlists, and SoundCloud share links are supported. Some tracks have regional, sign-in, or embedding restrictions.</p><p><strong>For real audio-reactive visuals:</strong> in desktop Chrome or Edge, select “Connect tab audio”, choose this browser tab, and enable “Share tab audio”. Only the audio is analyzed locally; no screen frames are used, recorded, or uploaded. Stop sharing at any time.</p><p><strong>Local audio files</strong> connect directly to the analyzer. Open or drop MP3, WAV, OGG, or other audio your browser supports. The audio demo also runs through the same live analyzer.</p><p>SoundCloud’s iframe cannot expose raw audio to this page. Until tab audio is connected, SoundCloud uses an explicitly labeled ambient animation, not a simulated spectrum. Tab audio capture requires HTTPS or localhost and a supporting desktop browser.</p><p class="keyboard-note">SPACE — play / pause &nbsp; · &nbsp; F — fullscreen &nbsp; · &nbsp; V — next preset</p></dialog>
+  <div id="dropOverlay" class="drop-overlay" hidden>Drop audio files to play<span>Your music stays on your device.</span></div>
+</body>
 </html>
