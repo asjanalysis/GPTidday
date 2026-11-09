@@ -314,14 +314,15 @@ h1>span {
   display:flex;
   flex-wrap:wrap;
   justify-content:flex-end;
-  gap:6px;
+  gap:12px;
 }
 .capture-button {
   pointer-events:auto;
   display:flex;
   gap:7px;
   align-items:center;
-  padding:8px 10px;
+  min-height:44px;
+  padding:8px 12px;
   background:#172a2fbe;
   border:1px solid #6aa6aa55;
   border-radius:5px;
@@ -1171,7 +1172,7 @@ dialog strong {
   }
   .capture-button {
     font-size:9px;
-    padding:8px;
+    padding:8px 10px;
   }
   .queue-empty {
     justify-content:flex-start;
