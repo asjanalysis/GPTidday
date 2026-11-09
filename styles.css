@@ -310,6 +310,12 @@ h1>span {
   font-size:8px;
   color:#8098a6;
 }
+.capture-actions {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:6px;
+}
 .capture-button {
   pointer-events:auto;
   display:flex;

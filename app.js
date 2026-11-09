@@ -34,13 +34,16 @@ function setLoading(value) {
 }
 function updateSignal() {
   const captured = audio.mode === 'capture';
-  const live = captured || (audio.mode === 'local' && playing);
+  const microphone = audio.mode === 'microphone';
+  const live = microphone || captured || (audio.mode === 'local' && playing);
   $('#signalBadge').classList.toggle('live', live);
-  $('#signalLabel').textContent = captured ? 'LIVE / TAB AUDIO' : audio.mode === 'local' ? playing ? 'LIVE / AUDIO ANALYSIS' : 'PAUSED / AUDIO ANALYSIS' : playing ? 'AMBIENT / SOUNDCLOUD' : 'AMBIENT / NO AUDIO';
+  $('#signalLabel').textContent = microphone ? 'LIVE / MICROPHONE' : captured ? 'LIVE / TAB AUDIO' : audio.mode === 'local' ? playing ? 'LIVE / AUDIO ANALYSIS' : 'PAUSED / AUDIO ANALYSIS' : playing ? 'AMBIENT / SOUNDCLOUD' : 'AMBIENT / NO AUDIO';
   $('#captureButton').classList.toggle('active', captured);
   $('#captureButton span').textContent = captured ? 'Disconnect audio' : 'Connect tab audio';
+  $('#micButton').classList.toggle('active', microphone);
+  $('#micButton span').textContent = microphone ? 'Stop microphone' : 'Use microphone';
   $('#audioNoteTitle').textContent = live ? 'Listening to the actual audio.' : 'Made to move with music.';
-  $('#audioNoteText').textContent = captured ? 'Live frequencies from your shared tab. Nothing is recorded or uploaded.' : audio.mode === 'local' ? 'This audio file feeds the frequency and waveform analyzer directly.' : 'Connect tab audio for live SoundCloud analysis, or open a local audio file.';
+  $('#audioNoteText').textContent = microphone ? 'Visualizing sound near your microphone. Nothing is recorded or uploaded.' : captured ? 'Live frequencies from your shared tab. Nothing is recorded or uploaded.' : audio.mode === 'local' ? 'This audio file feeds the frequency and waveform analyzer directly.' : 'Use your microphone with speakers, share tab audio, or open a local audio file.';
 }
 function updateProgress() {
   if (!scrubbing) {
@@ -62,7 +65,7 @@ function showTrack() {
   $('#coverArt').textContent = art ? '' : '◈';
   $('#visualPanel').classList.toggle('has-track', !!current);
   $('#presetTitle').textContent = current ? 'You’re in your element.' : PRESETS[settings.preset].title;
-  $('#visualHint').textContent = current ? current.kind === 'soundcloud' ? 'SoundCloud playback · connect tab audio to react to music' : 'Live audio. A whole new perspective.' : 'Load a track. Find your frequency.';
+  $('#visualHint').textContent = current ? current.kind === 'soundcloud' ? 'SoundCloud playback · use microphone or share tab audio' : 'Live audio. A whole new perspective.' : 'Load a track. Find your frequency.';
   renderQueue();
 }
 function renderQueue() {
@@ -281,14 +284,48 @@ $('#captureButton').addEventListener('click', async () => {
   if (capturePending) return;
   if (audio.mode === 'capture') {audio.stopCapture();status('Tab audio disconnected. SoundCloud visuals are now ambient.');return;}
   if (current?.kind === 'local') {status('Local audio is already connected directly to the analyzer. Load a SoundCloud link to connect tab audio.');return;}
-  capturePending = true;$('#captureButton').disabled = true;
+  capturePending = true;$('#captureButton').disabled = true;$('#micButton').disabled = true;
   status('Choose this browser tab and enable “Share tab audio”. No audio or video is recorded.');
   try {
     const connected = await audio.captureTab();
     if (connected) status('Tab audio connected. The visualizer now responds to actual frequencies and waveforms.', 'success');
   } catch (error) {
     status(['NotAllowedError', 'AbortError'].includes(error.name) ? 'Audio sharing was canceled or denied. You can reconnect at any time; SoundCloud remains in ambient mode.' : error.message || 'Tab audio could not connect. Try desktop Chrome or Edge.', 'error');
-  } finally {capturePending = false;$('#captureButton').disabled = false;updateSignal();}
+  } finally {capturePending = false;$('#captureButton').disabled = false;$('#micButton').disabled = false;updateSignal();}
+});
+function microphoneStatus(message, state) {
+  $('#visualHint').textContent = message;
+  status(message, state);
+}
+$('#micButton').addEventListener('click', async () => {
+  if (capturePending) return;
+  if (audio.mode === 'microphone') {
+    audio.stopCapture();
+    microphoneStatus('Microphone disconnected.');
+    return;
+  }
+  if (current?.kind === 'local') {
+    microphoneStatus('This audio file already drives the visualizer directly.');
+    return;
+  }
+  capturePending = true;
+  $('#micButton').disabled = true;
+  $('#captureButton').disabled = true;
+  microphoneStatus('Allow microphone access, then play music through speakers.');
+  try {
+    if (await audio.captureMicrophone()) {
+      microphoneStatus('Microphone on. Play music through speakers so Prism can hear it.', 'success');
+    }
+  } catch (error) {
+    microphoneStatus(error.name === 'NotAllowedError'
+      ? 'Microphone access was denied. Allow it in your browser’s site settings and try again.'
+      : error.message || 'Could not connect to the microphone.', 'error');
+  } finally {
+    capturePending = false;
+    $('#micButton').disabled = false;
+    $('#captureButton').disabled = false;
+    updateSignal();
+  }
 });
 function applySettings() {
   document.querySelectorAll('[data-preset]').forEach(button => {
